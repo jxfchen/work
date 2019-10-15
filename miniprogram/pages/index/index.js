@@ -26,7 +26,8 @@ Page({
         region: ['山东省', '济南市', '全部'],
         arrow_img:"/images/arrow.png",
         background: ["/images/timg.jpg", "/images/timg.jpg", "/images/timg.jpg"],
-        background1: "/images/timg.jpg",
+        notice_img:"/images/address.png",
+        logo1:"/images/task1.png"
       }
       this.setData(list);
   },

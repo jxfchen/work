@@ -12,19 +12,32 @@
       </view>
     </view>
     <view class="rotation_chart">
-      <swiper indicator-dots="true" autoplay="true" circular="false" vertical="{{vertical}}" interval="2000" duration="500">
+      <swiper indicator-dots="true" autoplay="true" circular="false" vertical="{{vertical}}" interval="5000" previous-margin="50rpx">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
-            <image src="{{background}}{{item}}"></image>
+            <image src="{{item}}" class="swiper_img"></image>
           </swiper-item>
         </block>
       </swiper>
     </view>
+
+    <view class="notice">
+      <image src="{{notice_img}}" class="notice_img"></image>
+      <text class="notice_text">恭喜020000号推客成功提现12800元!</text>
+    </view>
   </view>
   <view class="middle">
+    <view class="middle_top">
+      <image class="logo1" src="{{logo1}}"></image>
+      <text class="push_text">推一单，赚一单</text>
+      <image class="more_img" src="{{address_img}}"></image>
+      <text class="more">更多</text>
+    </view>
+    <view class="middle_main">
+    
+    </view>
 
   </view>
   <view class="bottom">
-
   </view>
 </view>
