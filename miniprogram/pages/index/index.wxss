@@ -1,0 +1,25 @@
+/**index.wxss**/
+.address{
+  background-color: #FF6D64;
+  height: 180rpx;
+}
+.address_img{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.section{
+  float: left;
+}
+.picker{
+  color: white;
+  width: 105rpx;
+  float: left;
+}
+.arrow_img{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 14rpx;
+}

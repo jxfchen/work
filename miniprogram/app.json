@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order/order",
+    "pages/task/task",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF6D64",
+    "navigationBarTitleText": "团餐推客",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color":"#9C9C9C",
+    "selectedColor": "#FF6D64",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index1.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "推单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order1.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "images/task.png",
+        "selectedIconPath": "images/task1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png"
+      }
+
+    ]
+  }
+}
