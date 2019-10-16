@@ -1,4 +1,4 @@
 /**app.wxss**/
 .container {
- font-size: 0.9rem;
+ font-size: 32rpx;
 } 

@@ -1,73 +1,362 @@
 /**index.wxss**/
-.address{
-  background-color: #FF6D64;
+
+.address {
+  background-color: #ff6d64;
   height: 180rpx;
 }
-.address_img{
-  width: 40rpx;
-  height: 40rpx;
+
+.address_img {
+  width: 28rpx;
+  height: 32rpx;
   float: left;
-  margin-left: 30rpx;
+  margin-left: 31rpx;
   margin-right: 30rpx;
   margin-top: 3.5px;
 }
-.section{
+
+.section {
   float: left;
-}
-.picker{
-  color: white;
-  width: 105rpx;
-  float: left;
-}
-.arrow_img{
-  width: 30rpx;
-  height: 30rpx;
-  margin-top: 14rpx;
-}
-.rotation_chart{
-  position: relative; 
-  top: -60px;
-}
-.swiper_img{
-  height: 170px;
-  margin-bottom: 50px;
-}
-.notice{
-  background-color: black;
-  opacity:0.5;
-  width: 75%;
-  height: 27px;
-  border-radius: 20px;
-  position: relative;
-  top: -90px;
-  margin-left: 40px;
 }
 
-.notice_img{
-  float: left;
-  margin: 5px 10px;
-  width:18px;
-  height: 18px;
-}
-.notice_text{
+.picker {
   color: white;
-  font-size: 0.6rem;
-}
-.middle{
-  position: relative;
-  top: -45px;
-  z-index:99;
-}
-.logo1{
-  width: 20px;
-  height: 20px;
+  width: 96rpx;
   float: left;
 }
-.more{
-  float: right;
+
+.arrow_img {
+  margin-left: 15rpx;
+  width: 22rpx;
+  height: 24rpx;
+  margin-top: 18rpx;
 }
-.more_img{
+
+.rotation_chart {
+  margin: 0 30rpx;
+  position: relative;
+  top: -60px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+/* .swiper_img {
+  border-radius: 12rpx;
+  width: 690rpx;
+  height: 320rpx;
+} */
+
+.notice {
+  background-color: #000;
+  opacity: 60%;
+  width: 495rpx;
+  height: 43rpx;
+  border-radius: 12px;
+  position: relative;
+  top: -85px;
+  margin-left: 129rpx;
+}
+
+.notice_img {
+  float: left;
+  margin: 11rpx 0 11rpx 43rpx;
+  width: 26rpx;
+  height: 21rpx;
+}
+
+.notice_text {
+  margin: 6rpx 24rpx 7rpx 16rpx;
+  color: white;
+  font-size: 22rpx;
+}
+
+.middle {
+  position: relative;
+  top: -35px;
+}
+
+.logo1 {
+  margin-left: 30rpx;
+  width: 45rpx;
+  height: 40rpx;
+  float: left;
+  margin-top: 6rpx;
+}
+
+.push_text {
+  margin-left: 17rpx;
+  color: #333;
+  font-size: 34rpx;
+  line-height: 48rpx;
+  font-weight: bold;
+}
+
+.more {
   float: right;
-  width: 20px;
-  height: 20px;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.more_img {
+  float: right;
+  width: 17rpx;
+  height: 27rpx;
+  margin-right: 30rpx;
+  margin-top: 8rpx;
+  margin-left: 10rpx;
+}
+
+.card {
+  width: 374rpx;
+  height: 509rpx;
+  background: rgba(255, 246, 245, 1);
+  box-shadow: 0px 10px 12px 0px rgba(253, 224, 222, 1);
+  border-radius: 12px;
+  margin: 23rpx 30rpx 53rpx 30rpx;
+}
+
+.card_ad {
+  width: 374rpx;
+  height: 44rpx;
+  background-color: #000;
+  background: rgba(0, 0, 0, 0.6);
+  position: relative;
+  top: -50rpx;
+}
+
+.card_img {
+  width: 374rpx;
+  height: 287rpx;
+  border-radius: 12px;
+}
+
+.ad_img {
+  width: 90rpx;
+  height: 28rpx;
+  margin: 8rpx 11rpx 8rpx 11rpx;
+  float: left;
+}
+
+.ad_text {
+  width: 203rpx;
+  height: 37rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Medium, PingFangSC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.card_text {
+  position: relative;
+  top: -30rpx;
+}
+
+.text_title {
+  width: 244rpx;
+  height: 37rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Medium, PingFangSC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 37rpx;
+  margin: 19rpx 106rpx 6rpx 24rpx;
+}
+
+.card_btn {
+  width: 303rpx;
+  height: 55rpx;
+  background: linear-gradient(270deg, rgba(251, 92, 81, 1) 0%, rgba(255, 127, 119, 1) 100%);
+  border-radius: 28rpx;
+  margin: 16rpx 39rpx 27rpx 32rpx;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  top: -30rpx;
+}
+
+.btn_text {
+  width: 68rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFangSC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  top: -20rpx;
+}
+
+.bottom {
+  width: 750rpx;
+  height: 2760rpx;
+  background: #f6f6f6;
+  position: relative;
+  top: -75rpx;
+}
+
+.bottom_top {
+  padding-top: 16rpx;
+  padding-bottom: 29rpx;
+  margin-left: 29rpx;
+}
+
+.list {
+  position: relative;
+}
+
+.liLeft {
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  width: 100%;
+}
+
+.liRight {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  width: 100%;
+}
+
+.li_warp {
+  width: 44%;
+}
+
+.li {
+  width: 100%;
+  margin-bottom: 40rpx;
+  background-color: white;
+  border-radius: 12rpx;
+}
+
+.li_pic {
+  position: relative;
+  color: #fff;
+  border-radius: 12rpx;
+  overflow: hidden;
+}
+
+.li_pic .pic_warp {
+  width: 100%;
+}
+
+.li_pic .pic_warp.picHeight_ {
+  height: 250rpx;
+}
+
+.li_pic .pic_warp image {
+  width: 100%;
+  height: 100%;
+}
+
+.li_pic .pic_text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 24rpx;
+  z-index: 1;
+  background: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 30%, #000 100%);
+}
+
+.li_pic .pic_text .label {
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 20rpx;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  border-radius: 40rpx;
+}
+
+.li .tlt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-top: 16rpx;
+  margin-bottom: 4rpx;
+}
+
+.view_notice_contain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 120rpx;
+  background: white;
+  font-size: 26rpx;
+}
+
+.image_notice {
+  margin-left: 5rpx;
+}
+.swiper_container{
+font-size:22rpx;
+font-family:PingFangSC-Regular,PingFangSC;
+font-weight:400;
+color:rgba(255,255,255,1);
+position: relative;
+top: -35rpx;
+left: 90rpx;
+}
+
+
+.rotation_chart {
+  position: relative;
+}
+
+.swiper-block {
+  height: 480rpx;
+  width: 100%;
+}
+
+.swiper-item {
+  border-radius: 12rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: unset;
+}
+
+.slide-image {
+  border-radius: 12rpx;
+  box-shadow: 0px 0px 30rpx rgba(0, 0, 0, 0.2);
+  
+  z-index: 1;
+}
+
+/* .active {
+  transform: scale(1.14);
+  transition: all 0.2s ease-in 0s;
+  z-index: 20;
+} */
+
+/* dot定位位置 */
+
+.rotation_chart .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/* 未经过前dot */
+
+.rotation_chart .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background-color: #FFDAD2;
+  border-radius: 8rpx;
+  transition: all 0.6s ease-in-out;
+}
+
+/* 经过后dot */
+
+.rotation_chart .dots .dot.active {
+  width: 24rpx;
+  background: #FF9D97;
 }
