@@ -11,6 +11,11 @@
     "navigationBarTitleText": "团餐推客",
     "navigationBarTextStyle": "white"
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color":"#9C9C9C",
