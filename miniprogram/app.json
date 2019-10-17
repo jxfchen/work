@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/workingmeal_intr/workingmeal_intr",
     "pages/order/order",
     "pages/task/task",
     "pages/me/me"

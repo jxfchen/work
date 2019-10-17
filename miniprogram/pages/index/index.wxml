@@ -21,14 +21,14 @@
         </block>
       </swiper> -->
       <swiper style="width:690rpx;height:320rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000' duration='1000' indicator-color='rgba(0, 0, 0, .3)' indicator-active-color='red'>
-        <block wx:key='unique' wx:for='{{background}}'>
+        <block wx:key='*this' wx:for='{{background}}'>
           <swiper-item  style="border-radius: 12rpx;">
             <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
           </swiper-item>
         </block>
       </swiper>
       <view class="dots">
-        <block wx:for="{{background}}" wx:key="unique">
+        <block wx:for="{{background}}" wx:key="*this">
           <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
         </block>
       </view>
@@ -160,4 +160,5 @@
   <view style="position:relative;top:-75rpx;">
     <view style="font-size:24rpx;font-family:PingFangSC-Light,PingFangSC;font-weight:300;color:rgba(153,153,153,1);width:100%;text-align:center;background-color:#F6F6F6;height:80rpx;padding-top:20rpx;position:absolute">我是有底线的哟～</view>
   </view>
+  <navigator url="/pages/workingmeal_intr/workingmeal_intr?title=workingmeal_intr" hover-class="navigator-hover">跳转到工作餐业务介绍</navigator>
 </view>
