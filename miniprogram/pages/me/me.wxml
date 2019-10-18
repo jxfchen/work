@@ -1,1 +1,124 @@
-<view>me</view>
+<view>
+  <view style="width:750rpx;height:179rpx;background-color:#FF514C"></view>
+  <view class="card">
+    <image class="header" src="/images/header.jpg"></image>
+    <view class="message">
+      <view class="nikname">Panet.H</view>
+      <view class="attestation"></view>
+      <text style="font-size:20rpx;color:white;position:relative;top:-100rpx;left:180rpx;">已认证</text>
+      <view class="text">邀请ID:126742102</view>
+      <view class="copy">复制</view>
+    </view>
+    <view class="money">
+        <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:relative;top:-80rpx;left:75rpx;">￥</view>
+        <view style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);position:relative;top:-100rpx;left:75rpx;">5678.00</view>
+        <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:relative;top:-160rpx;left:483rpx;">￥</view>
+        <view style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:relative;top:-180rpx;left:483rpx;">20</view>
+        <view style="background-color:#FF564B;width:48rpx;height:21rpx;border-radius:11rpx 11rpx 11rpx 0rpx;position:relative;top:-175rpx;left:570rpx"></view>
+        <text style="color:white;font-size:16rpx;position:relative;top:-224rpx;left:490rpx;">帮助</text>
+    </view>
+    <view style="font-size:28rpx;position:absolute;top:285rpx;left:84rpx">个人推单总收益</view>
+    <view style="width:2rpx;height:22rpx;background:rgba(0,0,0,1);opacity:0.2;border-radius:1rpx;position:absolute;top:295rpx;left:355rpx"></view>
+    <view style="font-size:28rpx;position:absolute;top:285rpx;left:439rpx">团队贡献收益</view>
+  </view>
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,196,80,1) 0%,rgba(251,232,127,1) 100%);position:absolute;top:440rpx;left:102rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;position:absolute;top:520rpx;left:81rpx">收益明细</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(248,149,88,1) 0%,rgba(252,203,160,1) 100%);position:absolute;top:440rpx;left:338rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;position:absolute;top:520rpx;left:323rpx">提现记录</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 100%);position:absolute;top:440rpx;left:584rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;position:absolute;top:520rpx;left:565rpx">邀请经理</view>
+  </view>
+  <view style="width:66rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;position:absolute;top:430rpx;left:651rpx">
+  <view style="font-size:16rpx;color:rgba(255,255,255,1);padding-left:8rpx;">开宝箱</view>
+  </view>
+  <view style="width:750rpx;height:30rpx;background:rgba(246,246,246,1);margin-top:55rpx;">
+  </view>
+  <view>
+    <view style="font-size:32rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:43rpx;margin-left:29rpx;">推客团队系统
+    </view>
+    <view style="font-size:20rpx;color:rgba(46,52,55,1);opacity:0.4;position:absolute;top:655rpx;left:237rpx;">(团队推单帮我赚钱）
+    </view>
+
+    <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,196,80,1) 0%,rgba(251,232,127,1) 100%);position:absolute;top:716rpx;left:102rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;position:absolute;top:791rpx;left:63rpx">我的推客团队</view>
+  </view>
+
+    <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(248,149,88,1) 0%,rgba(252,203,160,1) 100%);position:absolute;top:716rpx;left:338rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;position:absolute;top:791rpx;left:302rpx">邀请推客经理</view>
+  </view>
+  <view style="width:750rpx;height:30rpx;background:rgba(246,246,246,1);margin-top:160rpx;"></view>
+  </view>
+    <view style="font-size:32rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:43rpx;margin-left:29rpx;">我的工具
+    </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,196,80,1) 0%,rgba(251,232,127,1) 100%);position:absolute;top:1020rpx;left:102rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;top:1100rpx;left:81rpx">新手指导</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(248,149,88,1) 0%,rgba(252,203,160,1) 100%);position:absolute;top:1020rpx;left:338rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;top:1100rpx;left:323rpx">推客规则</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 100%);position:absolute;top:1020rpx;left:583rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;top:1100rpx;left:559rpx">社群活动</view>
+  </view>
+  <view style="width:66rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;position:absolute;top:1009rpx;left:651rpx">
+  <view style="font-size:16rpx;color:rgba(255,255,255,1);padding-left:8rpx;">NEW</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,196,80,1) 0%,rgba(251,232,127,1) 100%);position:absolute;top:1180rpx;left:102rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;top:1260rpx;left:90rpx">商学院</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(248,149,88,1) 0%,rgba(252,203,160,1) 100%);position:absolute;top:1180rpx;left:338rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;top:1260rpx;left:323rpx">专属客服</view>
+  </view>
+
+  <view>
+    <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 100%);position:absolute;top:1180rpx;left:583rpx"></image>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;top:1260rpx;left:584rpx">设置</view>
+  </view>
+  <view style="width:750rpx;height:30rpx;background:rgba(246,246,246,1);margin-top:360rpx;"></view>
+  <view style="font-size:32rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:43rpx;margin-left:29rpx;">热门问题
+    </view>
+    <view style="font-size:20rpx;color:rgba(46,52,55,1);opacity:0.4;position:absolute;top:1420rpx;left:178rpx;">(客服微信号：1234)
+    </view>
+    <view>
+      <image style="width:41rpx;height:45rpx;background-color:black;margin:48rpx 20rpx 21rpx 48px;"></image>
+      <view style="font-size:28rpx;font-family:PingFangSC;font-weight:bold;color:rgba(46,52,55,1);position:absolute;top:1490rpx;left:150rpx;">常见问题？      </view>
+      <view style="font-size:20rpx;color:rgba(46,52,55,1);opacity:0.6;position:absolute;top:1525rpx;left:150rpx;">“如何提现‘、”维护收益是什么，如何操作”？</view>
+      <image src="/images/arrow1.png" style="width:14rpx;height:28rpx;opacity:0.4;position:absolute;top:1525rpx;left:675rpx;"></image>
+    </view>
+    <view style="width:690rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;margin:0 auto;"></view>
+    <view>
+      <image style="width:41rpx;height:45rpx;background-color:black;margin:48rpx 20rpx 21rpx 48px;"></image>
+      <view style="font-size:28rpx;font-family:PingFangSC;font-weight:bold;color:rgba(46,52,55,1);position:absolute;top:1620rpx;left:150rpx;">操作手册      </view>
+      <view style="font-size:20rpx;color:rgba(46,52,55,1);opacity:0.6;position:absolute;top:1655rpx;left:150rpx;">如何完成第一笔推单</view>
+      <image src="/images/arrow1.png" style="width:14rpx;height:28rpx;opacity:0.4;position:absolute;top:1645rpx;left:675rpx;"></image>
+    </view>
+    <view style="width:690rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;margin:0 auto;"></view>
+    <view>
+      <image style="width:41rpx;height:45rpx;background-color:black;margin:48rpx 20rpx 21rpx 48px;"></image>
+      <view style="font-size:28rpx;font-family:PingFangSC;font-weight:bold;color:rgba(46,52,55,1);position:absolute;top:1750rpx;left:150rpx;">推单收益和维护收益的区别</view>
+      <view style="font-size:20rpx;color:rgba(46,52,55,1);opacity:0.6;position:absolute;top:1785rpx;left:150rpx;">点击查看详情</view>
+      <image src="/images/arrow1.png" style="width:14rpx;height:28rpx;opacity:0.4;position:absolute;top:1785rpx;left:675rpx;"></image>
+    </view>
+    <view style="width:690rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;margin:0 auto;"></view>
+    <view style="width:750rpx;height:140rpx;background-color:#FFFFFF">
+    </view>
+    <view style="width:94rpx;height:94rpx;background:rgba(255,255,255,1);box-shadow:0px 4px 13px 0px rgba(192,189,190,0.75);border-radius:50%;position: fixed;bottom: 35rpx;right:0;"></view>
+</view>
