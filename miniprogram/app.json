@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/me/me",
-    "pages/task_revenue/task_revenue",
+    "pages/push_team/push_team",
     "pages/index/index",
+    "pages/income_details/income_details",
+    "pages/me/me",
     "pages/workingmeal_intr/workingmeal_intr",
     "pages/order/order",
     "pages/task/task"
@@ -20,7 +21,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "color":"#9C9C9C",
+    "color": "#9C9C9C",
     "selectedColor": "#FF6D64",
     "list": [
       {
@@ -47,7 +48,6 @@
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me1.png"
       }
-
     ]
   }
 }

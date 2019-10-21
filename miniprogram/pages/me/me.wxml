@@ -41,15 +41,20 @@
   <view style="width:750rpx;height:30rpx;background:rgba(246,246,246,1);margin-top:55rpx;">
   </view>
   <view>
+    
     <view style="font-size:32rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:43rpx;margin-left:29rpx;">推客团队系统
     </view>
+    
     <view style="font-size:20rpx;color:rgba(46,52,55,1);opacity:0.4;position:absolute;top:655rpx;left:237rpx;">(团队推单帮我赚钱）
     </view>
 
     <view>
+    <navigator url="/pages/push_team/push_team?title=push_team" hover-class="navigator-hover">
     <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(255,196,80,1) 0%,rgba(251,232,127,1) 100%);position:absolute;top:716rpx;left:102rpx"></image>
     <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.9;position:absolute;position:absolute;top:791rpx;left:63rpx">我的推客团队</view>
+    </navigator>
   </view>
+  
 
     <view>
     <image style="width:66rpx;height:66rpx;border-radius:50%;background:linear-gradient(0deg,rgba(248,149,88,1) 0%,rgba(252,203,160,1) 100%);position:absolute;top:716rpx;left:338rpx"></image>

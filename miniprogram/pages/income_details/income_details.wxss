@@ -1,0 +1,24 @@
+/* pages/income_details/income_details.wxss */
+
+.card {
+  width: 690rpx;
+  height: 305rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 1rpx 25rpx 0rpx rgba(219, 219, 219, 0.52);
+  border-radius: 15rpx;
+  margin: 0 30rpx 30rpx 30rpx;
+  position: absolute;
+  top:31rpx;
+}
+.btn{
+  width:87rpx;
+  height:31rpx;
+  background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);
+  border-radius:16rpx;
+  font-size:24rpx;
+  color:rgba(255,255,255,1);
+  line-height:31rpx;
+  text-align: center;
+  margin: 30rpx 30rpx 27rpx 573rpx; 
+}
+

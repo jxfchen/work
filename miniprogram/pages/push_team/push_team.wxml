@@ -1,0 +1,74 @@
+<!--pages/push_team/push_team.wxml-->
+<view style="background-color:#F6F6F6;width:750rpx;height:2400rpx;">
+  <view class="card">
+    <view style="margin-top:40rpx;">
+      <view style="font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:183rpx;float:left;line-height:71rpx;">￥</view>
+      <view style="font-size:60rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;">9876.87</view>
+    </view>
+    <view style="font-size:28rpx;color:rgba(46,52,55,1);font-weight:bold;margin-left:247rpx;margin-top:8rpx;margin-bottom:10rpx;">团队累计收益</view>
+    <view style="width:48rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;font-size:16rpx;color:rgba(255,255,255,1);line-height:21rpx;text-align:center;position:absolute;top:112rpx;left:418rpx;">帮助</view>
+    <view style="margin-top:20rpx;">
+      <view style="float:left;">
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:85rpx;">20笔</view>
+        <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);margin-left:77rpx;">成交推单</view>
+      </view>
+      <view style="width:2rpx;height:22rpx;background:rgba(0,0,0,1);opacity:0.2;border-radius:1rpx;margin-left:48rpx;margin-top:40rpx;float:left;"></view>
+      <view style="float:left;">
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:85rpx;">12人</view>
+        <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);margin-left:52rpx;">推客团队人数</view>
+      </view>
+      <view style="width:2rpx;height:22rpx;background:rgba(0,0,0,1);opacity:0.2;border-radius:1rpx;margin-left:48rpx;margin-top:40rpx;float:left;"></view>
+      <view style="float:left;">
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:85rpx;">9人</view>
+        <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);margin-left:49rpx;">累计邀请</view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="title">团队成员列表</view>
+    <view style="width:689rpx;height:148rpx;background:rgba(255,255,255,1);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:10rpx;margin-top:34rpx;margin-left:30rpx;">
+      <view style="width:85rpx;height:81rpx;border-radius:50%;background-color:#D5FEFE;position:absolute;top:451rpx;left:60rpx;"></view>
+      <view style="width:85rpx;height:81rpx;border-radius:50%;background-color:#D5FEFE;position:absolute;top:451rpx;left:163rpx;"></view>
+      <view style="width:85rpx;height:81rpx;border-radius:50%;background-color:#D5FEFE;position:absolute;top:451rpx;left:268rpx;"></view>
+      <view style="width:85rpx;height:81rpx;border-radius:50%;background-color:#D5FEFE;position:absolute;top:451rpx;left:376rpx;"></view>
+      <view style="width:85rpx;height:81rpx;border-radius:50%;background-color:#D5FEFE;position:absolute;top:451rpx;left:479rpx;"></view>
+      <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);position:absolute;top:473rpx;left:588rpx;">25名</view>
+      <image src="/images/arrow1.png" style="width:14rpx;height:28rpx;opacity:0.4;margin-top:71rpx;margin-left:654rpx;"></image>
+    </view>
+  </view>
+  <view>
+    <view class="title" style="padding-top:31rpx;">团队贡献排行榜</view>
+    <view style="padding-top:30rpx;width:690rpx;height:694rpx;background:rgba(255,255,255,1);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:10rpx; margin-left:31rpx;margin-top:30rpx;">
+      <view style="width:355rpx;height:70rpx;background:rgba(255,86,75,1);opacity:0.11;border-radius:33rpx;margin: auto;">
+        <view style="width:164rpx;height:53rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));box-shadow:0rpx 7rpx 18rpx 0rpx rgba(241,146,126,0.79);border-radius:25rpx;font-size:26rpx;font-weight:500;color:rgba(255,255,255,1);z-index:999">经理推客</view>
+        
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="title" style="padding-top:31rpx;">赚钱小贴士</view>
+    <view style="padding-top:30rpx;width:690rpx;height:200rpx;background:rgba(255,255,255,1);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:10rpx; margin-left:29rpx;margin-top:34rpx;">
+      <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin-left:32rpx;float:left"></view>
+      <view style="height:27rpx;font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;position:absolute;left:86rpx;">推客经理、推客员工的定义</view>
+      <view style="width:606rpx;height:86rpx;font-size:24rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:1560rpx;left:86rpx;">你作为推客团队组织者,邀请加入的推客成员自动成为你团队的推客经理，推客经理邀请加入的成员自动成为你的推客员工。
+      </view>
+    </view>
+
+    <view style="padding-top:30rpx;width:690rpx;height:200rpx;background:rgba(255,255,255,1);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:10rpx; margin-left:29rpx;margin-top:34rpx;">
+      <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin-left:32rpx;float:left"></view>
+      <view style="height:27rpx;font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;position:absolute;left:86rpx;">增加你的推客团队规模</view>
+      <view style="width:606rpx;height:86rpx;font-size:24rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:1820rpx;left:86rpx;">你作为推客团队组织者，可以享受本团队推客经理定推单收益的10%和推客员工收益的5%。更大的团队规模，有助于增加你的收入。
+      </view>
+    </view>
+
+    <view style="padding-top:30rpx;width:690rpx;height:170rpx;background:rgba(255,255,255,1);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:10rpx; margin-left:29rpx;margin-top:34rpx;">
+      <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin-left:32rpx;float:left"></view>
+      <view style="height:27rpx;font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;position:absolute;left:86rpx;">提高推客团队质量</view>
+      <view style="width:606rpx;height:86rpx;font-size:24rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:2090rpx;left:86rpx;">邀请具备一定企业客户资源的朋友加入，你的推客团队将会更加高效的为你赚钱。
+      </view>
+    </view>
+  </view>
+  <view style="font-size:24rpx;font-weight:300;text-align:center;color:rgba(54,60,64,1);opacity:0.4;padding-top:140rpx;">我是有底线的吆～</view>
+</view>

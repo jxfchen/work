@@ -1,0 +1,23 @@
+/* pages/push_team/push_team.wxss */
+
+.card {
+  width: 690rpx;
+  height: 290rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 1rpx 25rpx 0rpx rgba(219, 219, 219, 0.52);
+  border-radius: 15rpx;
+  margin: 0 30rpx 30rpx 30rpx;
+  position: absolute;
+  top: 31rpx;
+}
+
+.title {
+  height: 30rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(46, 52, 55, 1);
+  line-height: 32rpx;
+  padding-top: 351rpx;
+  padding-left: 33rpx;
+}

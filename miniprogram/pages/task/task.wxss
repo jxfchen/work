@@ -1,1 +1,67 @@
 /* pages/task/task.wxss */
+.remind {
+  width: 750rpx;
+  height: 170rpx;
+  background-color: #ff564b;
+}
+
+.bell_img {
+  width: 22rpx;
+  height: 27rpx;
+  margin-left: 49rpx;
+  margin-right: 15rpx;
+  float: left;
+  margin-top: 8rpx;
+}
+
+.bell_text {
+  color: white;
+  font-size: 24rpx;
+}
+
+.detailed {
+  width: 690rpx;
+  height: 301rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 1rpx 25rpx 0rpx rgba(219, 219, 219, 0.52);
+  border-radius: 15rpx;
+  margin: 0 auto;
+  position: relative;
+  top: -100rpx;
+}
+
+.btn {
+  width: 87rpx;
+  height: 31rpx;
+  background: linear-gradient(0deg, rgba(255, 86, 75, 1) 0%, rgba(255, 128, 121, 1) 98%);
+  border-radius: 16rpx;
+  font-size: 24rpx;
+  color: white;
+  position: absolute;
+  margin: 31rpx 32rpx 34rpx 571rpx;
+}
+
+.mon1 {
+  font-size: 36rpx;
+  font-family: San Francisco Display;
+  font-weight: bold;
+  color: rgba(255, 86, 75, 1);
+  position: absolute;
+  margin: 113rpx 24rpx 25rpx 210rpx;
+}
+
+.mon2 {
+  font-size: 60rpx;
+  font-weight: bold;
+  color: rgba(255, 86, 75, 1);
+  position: absolute;
+  margin: 82rpx 211rpx 24rpx 242rpx;
+}
+.text{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:bold;
+  color:rgba(255,128,121,1);
+  position: absolute;
+  margin: 162rpx 255rpx 51rpx 268rpx;
+}

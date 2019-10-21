@@ -52,8 +52,10 @@
     <view class="middle_top">
       <image class="logo1" src="/images/push.png"></image>
       <text class="push_text">推一单，赚一单</text>
-      <image class="more_img" src="/images/arrow1.png"></image>
-      <text class="more">更多</text>
+      <navigator url="/pages/workingmeal_intr/workingmeal_intr?title=workingmeal_intr" hover-class="navigator-hover" style="float:right;">
+        <image class="more_img" src="/images/arrow1.png"></image>
+        <text class="more">更多</text>
+      </navigator>
     </view>
     <view class="middle_main">
       <scroll-view scroll-x="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
@@ -160,5 +162,5 @@
   <view style="position:relative;top:-75rpx;">
     <view style="font-size:24rpx;font-family:PingFangSC-Light,PingFangSC;font-weight:300;color:rgba(153,153,153,1);width:100%;text-align:center;background-color:#F6F6F6;height:80rpx;padding-top:20rpx;position:absolute">我是有底线的哟～</view>
   </view>
-  <navigator url="/pages/workingmeal_intr/workingmeal_intr?title=workingmeal_intr" hover-class="navigator-hover">跳转到工作餐业务介绍</navigator>
+  
 </view>

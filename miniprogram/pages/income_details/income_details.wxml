@@ -1,0 +1,55 @@
+<!--pages/income_details/income_details.wxml-->
+<view style="background-color:#F6F6F6;width:750rpx;height:1468rpx;">
+  <view class="card">
+    <view class="btn">提现</view>
+    <view>
+      <view style="font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:183rpx;float:left;line-height:71rpx;">￥</view>
+      <view style="font-size:60rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;">2087.56</view>
+    </view>
+    <view style="font-size:28rpx;color:rgba(46,52,55,1);font-weight:bold;text-align:center;">当前余额</view>
+    <view style="float:left;">
+      <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:85rpx;">￥20</view>
+      <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);margin-left:77rpx;">我的推单</view>
+    </view>
+    <view style="width:2rpx;height:22rpx;background:rgba(0,0,0,1);opacity:0.2;border-radius:1rpx;margin-left:48rpx;margin-top:40rpx;float:left;"></view>
+    <view style="float:left;">
+      <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:85rpx;">￥20</view>
+      <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);margin-left:77rpx;">团队推单</view>
+    </view>
+    <view style="width:2rpx;height:22rpx;background:rgba(0,0,0,1);opacity:0.2;border-radius:1rpx;margin-left:48rpx;margin-top:40rpx;float:left;"></view>
+    <view style="float:left;">
+      <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);margin-left:85rpx;">￥20</view>
+      <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);margin-left:77rpx;">任务累计</view>
+    </view>
+  </view>
+  <view style="font-size:24rpx;padding-top:366rpx;color:rgba(46,52,55,1);opacity:0.7;font-weight:bold;padding-left:29rpx;float:left;">收益明细说明：全部收益情况均展示在此。</view>
+  <view style="width:28rpx;height:28rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 100%);border-radius:50%;margin-left:476rpx;position:absolute;top:370rpx;"></view>
+  <view style="width:690rpx;height:181rpx;background:rgba(255,255,255,1);box-shadow:0px 1px 25px 0px rgba(219,219,219,0.52);border-radius:10rpx;position:absolute;top:420rpx;left:29rpx;">
+    <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin:32rpx 21rpx 27rpx 31rpx;float:left;"></view>
+    <view style="height:29rpx;font-size:30rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:29rpx;height:29rpx;line-height:32rpx;float:left;">推客推单收益--审核通过</view>
+    <view style="magin-right:27rpx;height:15rpx;font-size:20rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;padding-top:31rpx;padding-left:562rpx;">2019.09.09</view>
+    <view style="height:25rpx;font-size:26rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:80rpx;left:60rpx;">推单编号：2766789</view>
+    <view style="width:40rpx;height:26rpx;font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;top:110rpx;left:60rpx;">￥20</view>
+    <view style="width:68rpx;height:68rpx;background:rgba(227,246,233,1);border-radius:50%;position:absolute;top:90rpx;left:592rpx;"></view>
+  </view>
+
+  <view style="width:690rpx;height:181rpx;background:rgba(255,255,255,1);box-shadow:0px 1px 25px 0px rgba(219,219,219,0.52);border-radius:10rpx;position:absolute;top:631rpx;left:29rpx;">
+    <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin:32rpx 21rpx 27rpx 31rpx;float:left;"></view>
+    <view style="height:29rpx;font-size:30rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:29rpx;height:29rpx;line-height:32rpx;float:left;">推客推单收益</view>
+    <view style="width:51rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;color:rgba(255,255,255,1);font-size:16rpx;line-height:18rpx;position:absolute;top:21rpx;left:243rpx;text-align:center">详细</view>
+    <view style="magin-right:27rpx;height:15rpx;font-size:20rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;padding-top:31rpx;padding-left:562rpx;">2019.09.09</view>
+    <view style="height:25rpx;font-size:26rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:80rpx;left:60rpx;">推单编号：2766789</view>
+    <view style="width:40rpx;height:26rpx;font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;top:110rpx;left:60rpx;">￥20</view>
+    <view style="width:68rpx;height:68rpx;background:rgba(227,246,233,1);border-radius:50%;position:absolute;top:90rpx;left:592rpx;"></view>
+  </view>
+
+  <view style="width:690rpx;height:181rpx;background:rgba(255,255,255,1);box-shadow:0px 1px 25px 0px rgba(219,219,219,0.52);border-radius:10rpx;position:absolute;top:840rpx;left:29rpx;">
+    <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin:32rpx 21rpx 27rpx 31rpx;float:left;"></view>
+    <view style="height:29rpx;font-size:30rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:29rpx;height:29rpx;line-height:32rpx;float:left;">提现成功</view>
+    <view style="width:51rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;color:rgba(255,255,255,1);font-size:16rpx;line-height:18rpx;position:absolute;top:21rpx;left:187rpx;text-align:center">详细</view>
+    <view style="magin-right:27rpx;height:15rpx;font-size:20rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;padding-top:31rpx;padding-left:562rpx;">2019.09.09</view>
+    <view style="width:40rpx;height:26rpx;font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;top:95rpx;left:60rpx;">￥20</view>
+    <view style="width:68rpx;height:68rpx;background:rgba(253,229,220,1);border-radius:50%;position:absolute;top:90rpx;left:592rpx;"></view>
+  </view>
+
+</view>
