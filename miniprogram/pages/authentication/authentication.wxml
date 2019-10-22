@@ -1,0 +1,4 @@
+<!--pages/authentication/authentication.wxml-->
+<view>
+  身份认证
+</view>

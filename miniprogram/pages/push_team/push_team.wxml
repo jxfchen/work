@@ -41,9 +41,42 @@
     <view class="title" style="padding-top:31rpx;">团队贡献排行榜</view>
     <view style="padding-top:30rpx;width:690rpx;height:694rpx;background:rgba(255,255,255,1);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:10rpx; margin-left:31rpx;margin-top:30rpx;">
       <view style="width:355rpx;height:70rpx;background:rgba(255,86,75,1);opacity:0.11;border-radius:33rpx;margin: auto;">
-        <view style="width:164rpx;height:53rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));box-shadow:0rpx 7rpx 18rpx 0rpx rgba(241,146,126,0.79);border-radius:25rpx;font-size:26rpx;font-weight:500;color:rgba(255,255,255,1);z-index:999">经理推客</view>
-        
       </view>
+      <view style="width:164rpx;height:53rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));box-shadow:0rpx 7rpx 18rpx 0rpx rgba(241,146,126,0.79);border-radius:25rpx;font-size:26rpx;font-weight:500;color:rgba(255,255,255,1);position:absolute;left:210rpx;top:690rpx;text-align:center;line-height:50rpx;">经理推客</view>
+      <view style="font-size:26rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:18rpx;position:absolute;left:395rpx;top:707rpx;">员工推客</view>
+      <view>
+        <view style="width:35rpx;height:35rpx;background:rgba(251,225,113,1);margin-left:31rpx;float:left;margin-top:71rpx;"></view>
+        <image style="width:71rpx;height:67rpx;border-radius:50%;background-color:#C7FEFE;margin-left:24rpx;margin-top:52rpx;float:left;"></image>
+        <view style="font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;padding-top:75rpx;padding-left:13rpx;float:left">塔塔</view>
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;float:right;margin-top:55rpx;margin-right:30rpx;">￥500</view>
+        <view style="font-size:20rpx;color:rgba(46,52,55,1);line-height:71rpx;float:right;margin-top:55rpx;margin-right:12rpx;opacity:0.6;">累计消费</view>
+        <view style="width:629rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;position:absolute;top:902rpx;left:60rpx;"></view>
+      </view>
+      <view>
+        <view style="width:35rpx;height:35rpx;background:rgba(251,225,113,1);position:absolute;top:939rpx;left:63rpx;"></view>
+        <image style="width:71rpx;height:67rpx;border-radius:50%;background-color:#C7FEFE;position:absolute;left:121rpx;top:925rpx;"></image>
+        <view style="font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;position:absolute;left:200rpx;top:944rpx;">塔塔</view>
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;left:593rpx;top:932rpx;">￥500</view>
+        <view style="font-size:20rpx;color:rgba(46,52,55,1);line-height:71rpx;position:absolute;left:500rpx;top:935rpx;opacity:0.6;">累计消费</view>
+        <view style="width:629rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;position:absolute;top:1014rpx;left:60rpx;"></view>
+      </view>
+      <view>
+        <view style="width:35rpx;height:35rpx;background:rgba(251,225,113,1);position:absolute;top:1057rpx;left:63rpx;"></view>
+        <image style="width:71rpx;height:67rpx;border-radius:50%;background-color:#C7FEFE;position:absolute;left:121rpx;top:1043rpx;"></image>
+        <view style="font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;position:absolute;left:200rpx;top:1069rpx;">塔塔</view>
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;left:593rpx;top:1041rpx;">￥500</view>
+        <view style="font-size:20rpx;color:rgba(46,52,55,1);line-height:71rpx;position:absolute;left:500rpx;top:1043rpx;opacity:0.6;">累计消费</view>
+        <view style="width:629rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;position:absolute;top:1125rpx;left:60rpx;"></view>
+      </view>
+      <view>
+        <view style="width:35rpx;height:35rpx;background:rgba(251,225,113,1);position:absolute;top:1174rpx;left:63rpx;"></view>
+        <image style="width:71rpx;height:67rpx;border-radius:50%;background-color:#C7FEFE;position:absolute;left:121rpx;top:1144rpx;"></image>
+        <view style="font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;position:absolute;left:200rpx;top:1172rpx;">塔塔</view>
+        <view style="font-size:32rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;left:593rpx;top:1151rpx;">￥500</view>
+        <view style="font-size:20rpx;color:rgba(46,52,55,1);line-height:71rpx;position:absolute;left:500rpx;top:1151rpx;opacity:0.6;">累计消费</view>
+        <view style="width:629rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;position:absolute;top:1237rpx;left:60rpx;"></view>
+      </view>
+    <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;position:absolute;top:1300rpx;left:335rpx;">查看更多</view>
     </view>
   </view>
 
