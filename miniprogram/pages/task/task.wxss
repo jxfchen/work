@@ -26,8 +26,9 @@
   box-shadow: 0rpx 1rpx 25rpx 0rpx rgba(219, 219, 219, 0.52);
   border-radius: 15rpx;
   margin: 0 auto;
-  position: relative;
-  top: -100rpx;
+  position: absolute;
+  top: 60rpx;
+  left:30rpx;
 }
 
 .btn {

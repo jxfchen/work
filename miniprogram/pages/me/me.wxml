@@ -5,17 +5,17 @@
     <view class="message">
       <view class="nikname">Panet.H</view>
       <view class="attestation"></view>
-      <text style="font-size:20rpx;color:white;position:relative;top:-100rpx;left:180rpx;">已认证</text>
+      <text style="font-size:20rpx;color:white;font-weight:bold;position:absolute;top:95rpx;left:390rpx;">已认证</text>
       <view class="text">邀请ID:126742102</view>
       <view class="copy">复制</view>
     </view>
     <view class="money">
-        <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:relative;top:-80rpx;left:75rpx;">￥</view>
-        <view style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);position:relative;top:-100rpx;left:75rpx;">5678.00</view>
-        <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:relative;top:-160rpx;left:483rpx;">￥</view>
-        <view style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:relative;top:-180rpx;left:483rpx;">20</view>
-        <view style="background-color:#FF564B;width:48rpx;height:21rpx;border-radius:11rpx 11rpx 11rpx 0rpx;position:relative;top:-175rpx;left:570rpx"></view>
-        <text style="color:white;font-size:16rpx;position:relative;top:-224rpx;left:490rpx;">帮助</text>
+        <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:absolute;left:75rpx;top:236rpx;">￥</view>
+        <view style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);position:absolute;top:216rpx;left:102rpx;">5678.00</view>
+        <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:absolute;top:236rpx;left:483rpx;">￥</view>
+        <view style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);float:left;position:absolute;top:216rpx;left:510rpx;">20</view>
+        <view style="background-color:#FF564B;width:48rpx;height:21rpx;border-radius:11rpx 11rpx 11rpx 0rpx;position:absolute;top:218rpx;left:568rpx"></view>
+        <text style="color:white;font-size:16rpx;position:absolute;top:220rpx;left:575rpx;">帮助</text>
     </view>
     <view style="font-size:28rpx;position:absolute;top:285rpx;left:84rpx">个人推单总收益</view>
     <view style="width:2rpx;height:22rpx;background:rgba(0,0,0,1);opacity:0.2;border-radius:1rpx;position:absolute;top:295rpx;left:355rpx"></view>

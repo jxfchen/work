@@ -5,7 +5,7 @@
     </view>
     <view class="detailed">
       <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover"> 
-        <view class="btn"><view style="margin-left:18rpx;">明细</view></view>
+        <view class="btn"><view style="line-height:30rpx;text-align:center">明细</view></view>
       </navigator>
         <view class="mon1">￥</view>
         <view class="mon2">2087.56</view>
@@ -18,30 +18,31 @@
           <view style="font-size:30rpx;font-weight:bold;color:rgba(255,86,75,1);position: absolute;margin:235rpx 31rpx 36rpx 606rpx;">￥20</view>
         </view>
     </view>
-    <view style="position:relative;top:-30px;margin-left:30rpx;margin-bottom:42rpx;">
+    <view style="position:absolute;top:410rpx;left:30rpx;margin-bottom:42rpx;">
       <image src="/images/show2.jpg" style="width:690rpx;height:124rpx;border-radius:62rpx;position:absolute;">
       </image>
     </view>
-    <view style="font-size:32rpx;color:rgba(46,52,55,1);font-weight:bold; margin:93rpx 0 42rpx 30rpx;">基础任务</view>
+    <view style="font-size:32rpx;color:rgba(46,52,55,1);font-weight:bold;position:absolute;top:595rpx;left:30rpx;">基础任务</view>
 
 
     <view>
-        <view style="width:690rpx;height:138rpx;background:rgba(255,255,255,0.99);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:15rpx;margin:0 auto;">
+        <view style="width:690rpx;height:138rpx;background:rgba(255,255,255,0.99);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:15rpx;margin:0 auto;position:absolute;top:667rpx;left:30rpx;">
           <image style="width:76rpx;height:76rpx;border-radius:50%;margin:29rpx 24rpx 33rpx 30rpx;float:left;" src="/images/show1.jpg"></image>
           <view>
             <view style="font-size:28rpx;font-weight:bold;padding-top:35rpx;float:left;">邀请好友</view>
             <view style="width:74rpx;height:30rpx;background:rgba(253,224,124,1);border-radius:15rpx;margin-left:251rpx;position:absolute;margin-top:42rpx;">
                 <image src="/images/me.png" style="width:27rpx;height:26rpx;float:left;margin-top:5rpx;"></image>
                 <text style="font-size:24rpx;color:white;float:left">￥2</text>
-            <view style="font-size:20rpx;opacity:0.6;width:690rpx;height:138rpx;position:absolute;left:-120rpx;top:35rpx;">邀请好友，每个赚取2元</view>
             </view>
+            
+            <view style="font-size:20rpx;opacity:0.6;width:230rpx;height:20rpx;position:absolute;top:81rpx;left:130rpx;">邀请好友，每个赚取2元</view>
           </view>
           <view>
-            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:relative;top:45rpx;line-height:50rpx;">立即领取</button>
+            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:absolute;top:45rpx;left:504rpx;line-height:50rpx;">立即领取</button>
           </view>
         </view>
     </view>
-    <view style="position:relative;top:31rpx;">
+    <view style="position:absolute;top:836rpx;left:30rpx;">
         <view style="width:690rpx;height:138rpx;background:rgba(255,255,255,0.99);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:15rpx;margin:0 auto;">
           <image style="width:76rpx;height:76rpx;border-radius:50%;margin:29rpx 24rpx 33rpx 30rpx;float:left;" src="/images/show1.jpg"></image>
           <view>
@@ -50,14 +51,14 @@
                 <image src="/images/me.png" style="width:27rpx;height:26rpx;float:left;margin-top:5rpx;"></image>
                 <text style="font-size:24rpx;color:white;float:left">￥2</text>
             </view>
-            <view style="font-size:20rpx;opacity:0.6;width:690rpx;height:138rpx;position:absolute;left:160rpx;top:80rpx;">邀请好友，每个赚取2元</view>
+            <view style="font-size:20rpx;opacity:0.6;width:230rpx;height:20rpx;position:absolute;left:130rpx;top:80rpx;">邀请好友，每个赚取2元</view>
           </view>
           <view>
-            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:relative;top:45rpx;line-height:50rpx;">立即领取</button>
+            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:absolute;top:47rpx;left:504rpx;line-height:50rpx;">立即领取</button>
           </view>
         </view>
     </view>
-    <view style="position:relative;top:62rpx;">
+    <view style="position:absolute;top:1004rpx;left:30rpx;">
         <view style="width:690rpx;height:138rpx;background:rgba(255,255,255,0.99);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:15rpx;margin:0 auto;">
           <image style="width:76rpx;height:76rpx;border-radius:50%;margin:29rpx 24rpx 33rpx 30rpx;float:left;" src="/images/show1.jpg"></image>
           <view>
@@ -66,26 +67,26 @@
                 <image src="/images/me.png" style="width:27rpx;height:26rpx;float:left;margin-top:5rpx;"></image>
                 <text style="font-size:24rpx;color:white;float:left">￥2</text>
             </view>
-            <view style="font-size:20rpx;opacity:0.6;width:690rpx;height:138rpx;position:absolute;left:160rpx;top:80rpx;">邀请好友，每个赚取2元</view>
+            <view style="font-size:20rpx;opacity:0.6;width:230rpx;height:20rpx;position:absolute;left:130rpx;top:80rpx;">邀请好友，每个赚取2元</view>
           </view>
           <view>
-            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:relative;top:45rpx;line-height:50rpx;">立即领取</button>
+            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:absolute;top:47rpx;left:504rpx;line-height:50rpx;">立即领取</button>
           </view>
         </view>
     </view>
-    <view style="position:relative;top:93rpx;">
+    <view style="position:absolute;top:1173rpx;left:30rpx;">
         <view style="width:690rpx;height:138rpx;background:rgba(255,255,255,0.99);box-shadow:0rpx 1rpx 25rpx 0rpx rgba(219,219,219,0.52);border-radius:15rpx;margin:0 auto;">
           <image style="width:76rpx;height:76rpx;border-radius:50%;margin:29rpx 24rpx 33rpx 30rpx;float:left;" src="/images/show1.jpg"></image>
           <view>
             <view style="font-size:28rpx;font-weight:bold;padding-top:35rpx;float:left;">完成身份证认证</view>
-            <view style="font-size:20rpx;opacity:0.6;width:690rpx;height:138rpx;position:absolute;left:160rpx;top:80rpx;">通过身份证认证，可以享受更多收益权限</view>
+            <view style="font-size:20rpx;opacity:0.6;width:369rpx;height:20rpx;position:absolute;left:130rpx;top:80rpx;">通过身份证认证，可以享受更多收益权限</view>
           </view>
           <view>
             <navigator url="/pages/authentication/authentication?title=authentication" hover-class="navigator-hover"> 
-            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:relative;top:45rpx;line-height:50rpx;">立即认证</button>
+            <button style="float:right;width:154rpx;height:50rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:25rpx;font-size:24rpx;color:white;margin-right:32rpx;position:absolute;top:47rpx;left:504rpx;line-height:50rpx;">立即认证</button>
             </navigator>
           </view>
         </view>
     </view>
-    <view style="font-size:24rpx;color:rgba(54,60,64,1);opacity:0.4;text-align:center;margin-top:170rpx;">我是有底线的吆～</view>
+    <view style="font-size:24rpx;color:rgba(54,60,64,1);opacity:0.4;position:absolute;top:1393rpx;left:281rpx;">我是有底线的吆～</view>
 </view>

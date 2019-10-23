@@ -16,39 +16,23 @@ Page({
       position: 'center',
       height: ''
     }, {
-      pic: '/images/show2.jpg',
+      pic: '/images/show1.jpg',
       position: 'center',
       height: ''
     }, {
       pic: '/images/show1.jpg',
+      position: 'center',
+      height: ''
+    }, {
+      pic: '/images/show2.jpg',
+      position: 'center',
+      height: ''
+    }, {
+      pic: '/images/show2.jpg',
       position: 'center',
       height: ''
     }, {
       pic: '/images/show.jpg',
-      position: 'center',
-      height: ''
-    }, {
-      pic: '/images/show2.jpg',
-      position: 'center',
-      height: ''
-    }, {
-      pic: '/images/show1.jpg',
-      position: 'center',
-      height: ''
-    }, {
-      pic: '/images/show1.jpg',
-      position: 'center',
-      height: ''
-    }, {
-      pic: '/images/show2.jpg',
-      position: 'center',
-      height: ''
-    }, {
-      pic: '/images/show2.jpg',
-      position: 'center',
-      height: ''
-    }, {
-      pic: '/images/show1.jpg',
       position: 'center',
       height: ''
     }],
@@ -103,7 +87,7 @@ Page({
         region: ['山东省', '济南市', '全部'],
         arrow_img:"/images/arrow.png",
         background: ["/images/timg.jpg", "/images/timg.jpg", "/images/timg.jpg"],
-        notice_img:"/images/address.png",
+        notice_img:"/images/notice.png",
         logo1:"/images/task1.png"
       }
       this.setData(list);

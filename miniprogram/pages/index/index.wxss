@@ -58,13 +58,13 @@
 
 .notice_img {
   float: left;
-  margin: 11rpx 0 11rpx 43rpx;
+  margin: 10rpx 0 11rpx 43rpx;
   width: 26rpx;
-  height: 21rpx;
+  height: 23rpx;
 }
 
 .notice_text {
-  margin: 6rpx 24rpx 7rpx 16rpx;
+  margin: 0rpx 24rpx 7rpx 16rpx;
   color: white;
   font-size: 22rpx;
 }
@@ -76,8 +76,8 @@
 
 .logo1 {
   margin-left: 30rpx;
-  width: 45rpx;
-  height: 40rpx;
+  width: 44rpx;
+  height: 35rpx;
   float: left;
   margin-top: 6rpx;
 }
@@ -185,7 +185,7 @@
 
 .bottom {
   width: 750rpx;
-  height: 2760rpx;
+  height: 1717rpx;
   background: #f6f6f6;
   position: relative;
   top: -75rpx;
