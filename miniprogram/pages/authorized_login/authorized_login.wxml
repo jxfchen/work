@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    团餐推客
+  </view>
+  <view style="margin-top:50rpx">允许微信授权后，体验更多功能</view>
+  <view>请授权</view>
+  <button style="margin-top:400rpx;width:500rpx;" bindtap="bindViewTap">授权</button>
+</view>

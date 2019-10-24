@@ -1,67 +1,67 @@
 .intr_img {
-  width: 690rpx;
-  height: 320rpx;
+  width: 646rpx;
+  height: 334rpx;
   border-radius: 6rpx;
-  margin: 40rpx 28rpx 36rpx 32rpx;
+  margin: 40rpx 52rpx 36rpx 52rpx;
 }
 
 .circular {
-  width: 10rpx;
-  height: 11rpx;
-  background: rgba(255, 86, 75, 0.6);
-  border: 5rpx solid rgba(255, 221, 219, 0.77);
-  border-radius: 50%;
-  margin: 10rpx 18rpx 30rpx 34rpx;
+  width: 8rpx;
+  height: 20rpx;
+  background: linear-gradient(180deg, rgba(253, 140, 116, 1) 0%, rgba(246, 103, 89, 1) 100%);
+  margin-top: 8rpx;
   float: left;
 }
 
 .cir_text {
-  width: 654rpx;
-  height: 55rpx;
+  width: 648rpx;
+  height: 68rpx;
   font-size: 24rpx;
-  margin-top: 40rpx;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: rgba(255, 86, 75, 1);
+  font-family: PingFangSC-Medium, PingFang SC;
+  color: rgba(100, 100, 100, 1);
+  line-height: 34rpx;
+  margin-left: 20rpx;
 }
 
 .label_text {
-  float: left;
   font-size: 20rpx;
-  font-family: PingFang SC;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 1);
-  margin-left: 17rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(243, 94, 81, 1);
+  line-height: 45rpx;
+  text-align: center;
 }
 
 .label {
-  width: 134rpx;
-  height: 35rpx;
-  background: rgba(31, 168, 255, 1);
-  border-radius: 17rpx;
-  margin-right: 45rpx;
+  float: left;
+  width: 144rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  border: 1px solid rgba(250, 96, 87, 1);
 }
 
 .label2 {
-  width: 137rpx;
-  height: 35rpx;
-  background: rgba(255, 189, 31, 1);
-  border-radius: 17rpx;
-  margin-right: 45rpx;
+  float: left;
+  width: 84rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  margin-left: 10rpx;
 }
 
 .label3 {
-  width: 71rpx;
-  height: 35rpx;
-  background: linear-gradient(0deg, rgba(255, 86, 75, 1) 0%, rgba(255, 128, 121, 1) 98%);
-  border-radius: 17rpx;
+  float: left;
+  width: 180rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  margin-left: 10rpx;
 }
 
 .divider {
   width: 750rpx;
-  height: 30rpx;
+  height: 20rpx;
   background: rgba(246, 246, 246, 1);
-  margin-top: 60rpx;
 }
 
 .profit_tit {
@@ -70,66 +70,44 @@
   font-weight: bold;
   color: rgba(46, 52, 55, 1);
   line-height: 32rpx;
-  float: left;
-  margin: 33rpx 0 0 30rpx;
-}
-
-.profit_pipelining {
-  font-size: 24rpx;
-  font-family: PingFang SC;
-  font-weight: 400;
-  color: rgba(46, 52, 55, 1);
-  line-height: 32rpx;
-  opacity: 0.8;
-  float: right;
-  margin: 38rpx 14rpx 0 0;
 }
 
 .arrow {
   float: right;
   width: 14rpx;
   height: 28rpx;
-  float: right;
   opacity: 0.4;
   margin: 38rpx 31rpx 0 0;
 }
 
 .profit_p1 {
-  width: 181rpx;
-  height: 25rpx;
-  font-size: 26rpx;
-  font-family: PingFang SC;
-  font-weight: bold;
-  color: rgba(46, 52, 55, 1);
-  line-height: 32rpx;
-  opacity: 0.9;
+  font-size: 24rpx;
+  color: rgba(243, 105, 99, 1);
+  line-height: 34rpx;
   float: left;
-  margin-left: 63rpx;
-  margin-top: 5rpx;
+  margin-left: 26rpx;
+  margin-top: 8rpx;
+  margin-right: 20rpx;
 }
 
 .arrow1 {
   width: 14rpx;
-  height: 28rpx;
-  opacity: 0.4;
-  float: right;
-  margin-right: 31rpx;
-  margin-top: 7rpx;
+  height: 22rpx;
+  position: absolute;
+  top:96rpx;
+  left: 684rpx;
 }
-
-.line {
-  width: 690rpx;
-  height: 2rpx;
-  background: rgba(0, 0, 0, 1);
-  opacity: 0.05;
-  margin: 0 auto;
-  margin-top: 60rpx;
-  margin-bottom: 30rpx;
+.arrow2 {
+  width: 14rpx;
+  height: 22rpx;
+  position: absolute;
+  top:195rpx;
+  left: 684rpx;
 }
 
 .bottom {
-  width: 749rpx;
-  height: 98rpx;
+  width: 750rpx;
+  height: 112rpx;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 16px 0px rgba(255, 87, 76, 0.26);
   position: fixed;
@@ -143,20 +121,21 @@
   background-color: white;
   border-radius: 25rpx;
   float: left;
-  margin:28rpx 24rpx 20rpx 0;
-  font-size:24rpx;
-  color:rgba(255,86,75,1);
-  font-weight:bold;
+  margin: 28rpx 24rpx 20rpx 0;
+  font-size: 24rpx;
+  color: rgba(255, 86, 75, 1);
+  font-weight: bold;
 }
 
 .btn2 {
-  width: 247rpx;
-  height: 50rpx;
-  background: linear-gradient(90deg, rgba(255, 86, 75, 1), rgba(255, 127, 119, 1));
-  border-radius: 25rpx;
-   float: left;
-  margin:28rpx 24rpx 20rpx 0;
-  font-size:24rpx;
-  color:rgba(255,255,255,1);
-  font-weight:bold;
+  width: 444rpx;
+  height: 80rpx;
+  background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
+  border-radius: 200rpx;
+  float: left;
+  font-size: 34rpx;
+  color: rgba(255, 255, 255, 1);
+  line-height: 78rpx;
+  text-align: center;
+  margin-top: 16rpx;
 }

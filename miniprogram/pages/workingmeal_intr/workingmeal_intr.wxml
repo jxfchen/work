@@ -1,65 +1,90 @@
 <view>
   <view style="text-align:center"> {{title}} </view>
   <view class="introduction">
-    <image class="intr_img" src="/images/show1.jpg"></image>
-
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" indicator-active-color="white" indicator-color="rgba(255, 255, 255, .5)" style="width:750rpx;height:500rpx;">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <image bindchange='imageChange' id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' style="width:750rpx;height:500rpx;" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view style="height:340rpx;width:750rpx;">
     <view>
-      <text style="font-size:26rpx;color:rgba(46,52,55,1);opacity:0.8;margin: 20rpx 17rpx 0 32rpx;float:left;font-weight:bold;">预计收益：</text>
-      <text style="font-size:48rpx;font-weight:bold;color:rgba(255,86,75,1);"><text style="font-size:30rpx">￥</text>1567 —<text style="font-size:30rpx">￥</text>1990</text>
+      <text style="font-size:24rpx;color:rgba(100,100,100,1);margin: 62rpx 20rpx 0 30rpx;float:left;font-weight:bold;">预计收益</text>
+      <text style="font-size:60rpx;font-weight:bold;color:rgba(243,94,81,1);position:absolute;top:526rpx;"><text style="font-size:36rpx">￥</text>1599 -9999</text>
     </view>
     <view>
-      <text style="font-size:32rpx;font-weight:bold;color:rgba(46,52,55,1);font-family:PingFang SC;margin-left:34rpx">企业工作用餐、会议餐、活动餐业务</text>
+      <text style="font-size:40rpx;font-weight:bold;color:rgba(56,56,56,1);left:30rpx;position:absolute;top:614rpx;">企业工作用餐&会议餐&活动餐业务</text>
     </view>
     <view>
-      <view>
+      <view style="position:absolute;top:698rpx;left:30rpx;">
         <view class="circular"></view>
-        <view class="cir_text">为北京五环内企业提供工作餐、会议用餐、活动餐等餐饮解决方案</view>
+        <view class="cir_text">为北京五环内企业提供工作餐、会议用餐、活动餐等餐饮解决方案。北京市内多家高标准厨房</view>
       </view>
-      <view>
+      <view style="position:absolute;top:786rpx;left:30rpx;">
         <view class="circular"></view>
-        <view class="cir_text">北京市内多家高标准厨房</view>
+        <view class="cir_text">已经服务了北京市上百家客户。最棒的团餐服务商～～
+        </view>
       </view>
     </view>
+    <view class="divider" style="position:absolute;top:840rpx;"></view>
+  </view>
+  <view style="position:absolute;top:886rpx;">
     <view>
-      <view class="label" style="float:left">
-        <text class="label_text">最棒的团餐</text>
+      <view style="width:84rpx;height:40rpx;font-size:28rpx;font-weight:bold;color:rgba(50,50,50,1);line-height:40rpx;margin:0rpx 14rpx 26rpx 30rpx;float:left;">关键词</view>
+      <view class="label">
+        <view class="label_text">关键词关键</view>
       </view>
-      <view class="label2" style="float:left">
-        <text class="label_text">上百家客户</text>
+      <view class="label2">
+        <view class="label_text">关键</view>
       </view>
-      <view class="label3" style="float:left">
-        <text class="label_text">北京</text>
+      <view class="label2">
+        <view class="label_text">关键</view>
       </view>
+      <view class="label3">
+        <view class="label_text">关键词关键关键</view>
+      </view>
+      <image src="/images/ellipsis.png" style="width:32rpx;height:9rpx;position:absolute;top:20rpx;left:680rpx;"></image>
     </view>
   </view>
-  <view class="divider"></view>
-  <view class="profit">
+  <view style="width:750rpx;height:20rpx;background:rgba(244,244,244,1);position:absolute;top:952rpx;"></view>
+
+  <view class="profit" style="position:absolute;top:1008rpx">
+    <view>
+      <image src="/images/money.png" style="width:30rpx;height:32rpx;float:left;margin:0rpx 18rpx 32rpx 30rpx"></image>
+      <view class="profit_tit">收益方式</view>
+    </view>
+
+    <view style="width:690rpx;height:88rpx;background:rgba(244,244,244,1);border-radius:44rpx;margin-left:30rpx;margin-top:32rpx;margin-bottom:20rpx;">
+      <view class="profit_p1">推客推单收益</view>
+      <view style="font-size:24rpx;color:rgba(102,102,102,1);padding-top:8rpx;">完成一笔推单即可获得：500～1000元收</view>
+      <view style="font-size:24rpx;color:rgba(102,102,102,1);padding-left:188rpx;">完成一笔推单即可获得：500～1000元收</view>
+      <image class="arrow1" src="/images/arrow2.png"></image>
+    </view>
+
+    <view style="width:690rpx;height:50rpx;background:rgba(244,244,244,1);border-radius:25rpx;margin-left:30rpx;margin-top:32rpx;margin-bottom:30rpx;">
+      <view style="font-size:24rpx;color:rgba(243,105,99,1);float: left;margin-left:26rpx;margin-top:8rpx;margin-right:20rpx;">合伙人推单收益</view>
+      <view style="font-size:24rpx;color:rgba(102,102,102,1);padding-top:8rpx;">成为客户维护人可获得按月的维护收益</view>
+      <image class="arrow2" src="/images/arrow2.png"></image>
+    </view>
+    <view style="width:750rpx;height:30rpx;background:rgba(246,246,246,1);"></view>
+    <view>
       <view>
-          <view class="profit_tit">收益方式</view>
-          <image class="arrow" src="/images/arrow1.png"></image>
-          <view class="profit_pipelining">流水分成</view>
+        <view style="width:228rpx;height:2rpx;margin-left:30rpx;margin-top:48rpx;background-color:#D9D9D9;float:left;"></view>
+        <view style="font-size:28rpx;color:rgba(112,112,110,1);margin-left:34rpx;margin-top:28rpx;float:left;">业务详情介绍</view>
+        <view style="width:228rpx;height:2rpx;background-color:#D9D9D9;position:absolute;top:335rpx;left:492rpx;"></view>
       </view>
-      <view style="padding-top:100rpx;">
-          <view class="profit_p1">推客推单收益</view>
-          <view style="font-size:24rpx;opacity:0.7;color:rgba(46,52,55,1);float:left;">完成一笔推单即可获得:<text style="font-size:26rpx;font-weight:bold;color:rgba(255,86,75,1);">￥20 -￥500</text>收益</view>
-          <image class="arrow1" src="/images/arrow1.png"></image>
-      </view>
-      <view class="line"></view>
-      <view style="margin-bottom:29rpx;">
-        <view style="font-size:26rpx;opacity:0.9; font-weight: bold;float: left;margin:0 15rpx 0 65rpx;">合伙人推单收益</view>
-        <view style="font-size:24rpx;opacity:0.7;color:rgba(46,52,55,1);">成为客户维护人可获得按月的维护收益</view>
-      </view>
-      <view style="width:750rpx;height:30rpx;background:rgba(246,246,246,1);"></view>
-      <view>
-          <view class="profit_tit">业务详情</view>
-          <image class="intr_img" src="/images/show1.jpg"></image>
-      </view>
-      <view class="bottom">
-          <image src="/images/index1.png" style="width:77rpx;height:65rpx;float:left;margin:17rpx 18rpx 16rpx 42rpx;"></image>
-          <image src="/images/me1.png" style="width:77rpx;height:65rpx;float:left;margin:20rpx 42rpx 16rpx 0rpx;"></image>
-          <button class="btn1"><text class="label_text" style="color:#FF706B;margin-left:0rpx;">生成推广页面</text></button>
-          <button class="btn2"><text class="label_text" style="margin-left:25rpx;">推一单，赚一笔</text></button>
-      </view>
+      <image class="intr_img" src="/images/show1.jpg"></image>
+    </view>
+    
   </view>
   <view style="width:100%;height:80rpx;"></view>
+  <view class="bottom">
+      <image src="/images/homepage.png" style="width:56rpx;height:52rpx;float:left;margin:30rpx 54rpx 30rpx 60rpx;"></image>
+      <image src="/images/service.png" style="width:54rpx;height:54rpx;float:left;margin:30rpx 60rpx 28rpx 0rpx;"></image>
+      <view class="btn2">
+        推一单，赚一笔
+      </view>
+    </view>
 </view>
