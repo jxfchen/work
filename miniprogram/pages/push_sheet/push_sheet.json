@@ -1,5 +1,6 @@
 {
   "navigationBarBackgroundColor": "#F45C52",
   "navigationBarTextStyle": "white",
-  "navigationBarTitleText": ""
+  "navigationBarTitleText": "推单功能页面",
+  "backgroundColor": "#eeeeee"
 }

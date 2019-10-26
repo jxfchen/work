@@ -83,8 +83,10 @@
   <view class="bottom">
       <image src="/images/homepage.png" style="width:56rpx;height:52rpx;float:left;margin:30rpx 54rpx 30rpx 60rpx;"></image>
       <image src="/images/service.png" style="width:54rpx;height:54rpx;float:left;margin:30rpx 60rpx 28rpx 0rpx;"></image>
-      <view class="btn2">
-        推一单，赚一笔
-      </view>
+      <navigator url="/pages/push_sheet/push_sheet?title=push_sheet" hover-class="navigator-hover">
+        <view class="btn2">
+          推一单，赚一笔
+        </view>
+      </navigator>
     </view>
 </view>

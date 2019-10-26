@@ -1,0 +1,138 @@
+/* pages/push_sheet/push_sheet.wxss */
+
+.rotation_chart {
+  margin: 0 8rpx;
+  position: absolute;
+  top: 26rpx;
+  border-radius: 12px;
+}
+
+/* dot定位位置 */
+
+.rotation_chart .dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+/* 未经过前dot */
+
+.rotation_chart .dots .dot {
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background-color: #fecdaa;
+  border-radius: 8rpx;
+  transition: all 0.6s ease-in-out;
+}
+
+/* 经过后dot */
+
+.rotation_chart .dots .dot.active {
+  width: 24rpx;
+  background: #f45c52;
+}
+
+.title {
+  width: 590rpx;
+  height: 68rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(244, 92, 82, 1);
+  line-height: 34rpx;
+  text-align: center;
+  margin-left: 80rpx;
+  padding-top: 40rpx;
+}
+
+/* 单选框 */
+
+.radio-group {
+}
+
+.radio-group label {
+}
+
+radio {
+  margin: 0rpx 10rpx 40rpx 18rpx;
+  width: 200rpx;
+  height: 82rpx;
+  border-radius: 41rpx;
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(244, 92, 82, 1);
+  line-height: 70rpx;
+  text-align: center;
+}
+
+radio ::before {
+  width: 200rpx;
+  height: 82rpx;
+  background: rgba(244, 92, 82, 1);
+  border-radius: 41rpx;
+}
+
+/* 单选框未选中 */
+
+radio .wx-radio-input {
+  display: none;
+}
+.item{
+  width: 200rpx;
+  height: 82rpx;
+  float: left;
+}
+.service_selection label {
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  color: rgba(244, 92, 82, 1);
+  font-size: 28rpx;
+  border-radius: 41rpx;
+}
+
+.service_selection .is_checked {
+  width: 200rpx;
+  height: 82rpx;
+  background: rgba(244, 92, 82, 1);
+  border-radius: 41rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 70rpx;
+}
+
+/* 遮罩层 */
+.mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9000;
+  opacity: 0.5;
+}
+/* 弹出层 */
+.modalDlg{
+  width:690rpx;
+  height:790rpx;
+  position: fixed;
+  top: 230rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius:5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+/* 弹出层里面的按钮 */
