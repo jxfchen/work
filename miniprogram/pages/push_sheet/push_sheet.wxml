@@ -45,6 +45,8 @@
         </view>
       </view>
     </view>
+
+    <!-- 餐次需求 -->
     <view style="width:690rpx;height:498rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx">
       </image>

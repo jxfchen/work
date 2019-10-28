@@ -9,10 +9,10 @@ Page({
     swiperCurrent: 0,
     background: ["/images/push_banner.png", "/images/push_banner.png", "/images/push_banner.png"],
     items: [
-      { name: 'a', value: '日常工作餐', checked: 'true' },
-      { name: 'b', value: '会议用餐' },
-      { name: 'c', value: '剧组餐' },
-      { name: 'd', value: '食堂承包' },
+      { name: '日常工作餐', value: '日常工作餐', checked: 'true' },
+      { name: '会议用餐', value: '会议用餐' },
+      { name: '剧组餐', value: '剧组餐' },
+      { name: '食堂承包', value: '食堂承包' },
     ],
     allGoodsFilte: [
       { name: '早餐', value: '0', checked: true },

@@ -135,4 +135,4 @@ radio .wx-radio-input {
   align-items: center;
 }
  
-/* 弹出层里面的按钮 */
+/* 多选框 */
