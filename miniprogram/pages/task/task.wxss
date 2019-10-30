@@ -1,34 +1,31 @@
 /* pages/task/task.wxss */
 .remind {
-  width: 750rpx;
-  height: 170rpx;
-  background-color: #ff564b;
+  width:750rpx;
+height:80rpx;
+background:rgba(246,246,246,1);
 }
 
 .bell_img {
-  width: 22rpx;
-  height: 27rpx;
-  margin-left: 49rpx;
-  margin-right: 15rpx;
+  width: 30rpx;
+  height: 34rpx;
+  margin-left: 106rpx;
+  margin-right: 20rpx;
   float: left;
-  margin-top: 8rpx;
+  margin-top: 26rpx;
 }
 
 .bell_text {
-  color: white;
-  font-size: 24rpx;
+  color:rgba(244,92,82,1);
+  font-size:24rpx;
+  line-height:34rpx;
+  font-weight:500;
+  padding-top: 26rpx;
 }
 
 .detailed {
-  width: 690rpx;
-  height: 301rpx;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0rpx 1rpx 25rpx 0rpx rgba(219, 219, 219, 0.52);
-  border-radius: 15rpx;
+  width: 706rpx;
+  height: 302rpx;
   margin: 0 auto;
-  position: absolute;
-  top: 60rpx;
-  left:30rpx;
 }
 
 .btn {
@@ -39,7 +36,7 @@
   font-size: 24rpx;
   color: white;
   position: absolute;
-  margin: 31rpx 32rpx 34rpx 571rpx;
+  top:204rpx;
 }
 
 .mon1 {
@@ -47,7 +44,6 @@
   font-family: San Francisco Display;
   font-weight: bold;
   color: rgba(255, 86, 75, 1);
-  position: absolute;
   margin: 113rpx 24rpx 25rpx 210rpx;
 }
 

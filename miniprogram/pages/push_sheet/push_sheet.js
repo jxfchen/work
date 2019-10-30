@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    istarget:true,
     showModal: false,
     swiperCurrent: 0,
     background: ["/images/push_banner.png", "/images/push_banner.png", "/images/push_banner.png"],
@@ -19,6 +20,20 @@ Page({
       { name: '午餐', value: '1', checked: false },
       { name: '晚餐', value: '2', checked: false },
     ],  
+  },
+  breakfastTap: function (e) {
+    console.log(1111);
+    if (e.detail.istarget === false) {
+      this.setData({
+        istarget: true,
+      })
+    }
+    else{
+      this.setData({
+        istarget: false,
+      })
+    }
+    
   },
   serviceValChange: function (e) {
     var allGoodsFilte = this.data.allGoodsFilte;

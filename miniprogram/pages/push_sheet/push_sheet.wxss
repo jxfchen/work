@@ -83,11 +83,13 @@ radio ::before {
 radio .wx-radio-input {
   display: none;
 }
-.item{
+
+.item {
   width: 200rpx;
   height: 82rpx;
   float: left;
 }
+
 .service_selection label {
   border: 1rpx solid rgba(250, 96, 87, 1);
   color: rgba(244, 92, 82, 1);
@@ -108,7 +110,8 @@ radio .wx-radio-input {
 }
 
 /* 遮罩层 */
-.mask{
+
+.mask {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -118,10 +121,12 @@ radio .wx-radio-input {
   z-index: 9000;
   opacity: 0.5;
 }
+
 /* 弹出层 */
-.modalDlg{
-  width:690rpx;
-  height:790rpx;
+
+.modalDlg {
+  width: 690rpx;
+  height: 790rpx;
   position: fixed;
   top: 230rpx;
   left: 0;
@@ -129,10 +134,58 @@ radio .wx-radio-input {
   z-index: 9999;
   margin: 0 auto;
   background-color: #fff;
-  border-radius:5px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
- 
+
 /* 多选框 */
+
+.breakfast {
+  width: 200rpx;
+  height: 82rpx;
+  border-radius: 41rpx;
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  float: left;
+  font-size: 28rpx;
+  color: rgba(244, 92, 82, 1);
+  background-color: white;
+  line-height: 80rpx;
+  margin-right: 15rpx;
+  text-align: center;
+  margin-left: 18rpx;
+}
+
+.breakfast_after {
+  width: 200rpx;
+  height: 82rpx;
+  border-radius: 41rpx;
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  float: left;
+  font-size: 28rpx;
+  background: rgba(244, 92, 82, 1) ;
+  color: rgba(255, 255, 255, 1);
+  line-height: 80rpx;
+  margin-right: 15rpx;
+  text-align: center;
+  margin-left: 18rpx;
+}
+
+.dinner {
+  width: 200rpx;
+  height: 82rpx;
+  border-radius: 41rpx;
+  border: 1rpx solid rgba(250, 96, 87, 1);
+  background-color: white;
+  float: right;
+  font-size: 28rpx;
+  color: rgba(244, 92, 82, 1);
+  line-height: 80rpx;
+  margin-right: 15rpx;
+  text-align: center;
+}
+.dinner-hover {
+  background: rgba(244, 92, 82, 1) ;
+  color: rgba(255, 255, 255, 1);
+}

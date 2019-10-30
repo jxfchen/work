@@ -45,8 +45,6 @@
         </view>
       </view>
     </view>
-
-    <!-- 餐次需求 -->
     <view style="width:690rpx;height:498rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx">
       </image>
@@ -66,24 +64,27 @@
           </block>
         </view>
       </checkbox-group> -->
-      <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:18rpx;margin-right:28rpx;float:left;">
+      <!-- <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:18rpx;margin-right:28rpx;float:left;">
         早餐
-      </view>
-      <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-right:28rpx;float:left;">
+      </view> -->
+      <button class='{{istarget===true?"breakfast_after":"breakfast"}}' bindtap="breakfastTap">早餐</button>
+      <button class="breakfast" hover-class="breakfast-hover">午餐</button>
+      <button class="dinner" hover-class="dinner-hover">晚餐</button>
+      <!-- <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-right:28rpx;float:left;">
         午餐
-      </view>
-      <view style="width:200rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);float:right;font-size:28rpx;color:rgba(244,92,82,1);line-height:80rpx;margin-right:28rpx;margin-right:15rpx;text-align:center;">晚餐
-      </view>
+      </view>  
+      <view style="width:200rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);float:right;font-size:28rpx;color:rgba(244,92,82,1);line-height:80rpx;margin-right:15rpx;text-align:center;">晚餐
+      </view> -->
       <view style="margin-top:40rpx;">
         <view style="font-size:28rpx;color:rgba(112,112,110,1);line-height:40px;margin-left:20rpx;margin-right:50rpx;float:left;margin-top:40rpx;">早餐</view>
         <view class="section section_gap" style="padding-top:80rpx;width:674rpx;">
-          <slider name="slider" show-value></slider>
+          <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" max="50"></slider>
         </view>
       </view>
       <view style="margin-top:40rpx;">
         <view style="font-size:28rpx;color:rgba(112,112,110,1);line-height:40px;margin-left:20rpx;margin-right:50rpx;float:left;">午餐</view>
         <view class="section section_gap" style="padding-top:8rpx;width:674rpx;">
-          <slider name="slider" show-value></slider>
+          <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" max="50"></slider>
         </view>
       </view>
     </view>
@@ -96,7 +97,7 @@
       </image>
       <input class="weui-input" type="number" placeholder="如无法确定精确人数，填写大致人数即可" style="font-size:28rpx;width:43rpx;width:575rpx;height:80rpx;background:rgba(244,244,244,1);border-radius:8rpx;margin-left:20rpx;padding-left:75rpx;">
       </input>
-      <image src="/images/num.png" style="width:42rpx;height:42rpx;position:absolute;top:1670rpx;left:70rpx;"></image>
+      <image src="/images/num.png" style="width:42rpx;height:42rpx;position:absolute;top:1664rpx;left:70rpx;"></image>
     </view>
 
 
@@ -109,10 +110,10 @@
       </image>
       <input class="weui-input" type="number" placeholder="您的联系方式，手机号/或者微信" style="font-size:28rpx;width:43rpx;width:575rpx;height:80rpx;background:rgba(244,244,244,1);border-radius:8rpx;margin-left:20rpx;padding-left:75rpx;">
       </input>
-      <image src="/images/phone.png" style="width:42rpx;height:42rpx;position:absolute;top:1966rpx;left:70rpx;"></image>
+      <image src="/images/phone.png" style="width:42rpx;height:42rpx;position:absolute;top:1960rpx;left:70rpx;"></image>
       <input class="weui-input" type="number" placeholder="客户联系方式，手机号/或者微信" style="font-size:28rpx;width:43rpx;width:575rpx;height:80rpx;background:rgba(244,244,244,1);border-radius:8rpx;margin-left:20rpx;padding-left:75rpx;margin-top:20rpx;">
       </input>
-      <image src="/images/phone.png" style="width:42rpx;height:42rpx;position:absolute;top:2067rpx;left:70rpx;"></image>
+      <image src="/images/phone.png" style="width:42rpx;height:42rpx;position:absolute;top:2060rpx;left:70rpx;"></image>
     </view>
 
     <view style="width:690rpx;height:282rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
