@@ -6,51 +6,72 @@
   border-radius: 15rpx;
   margin: 0 auto;
   position: relative;
-  top: -139rpx;
+  top: -156rpx;
 }
 
 .header {
-  width: 125rpx;
-  height: 117rpx;
+  width: 88rpx;
+  height: 88rpx;
   border-radius: 50%;
-  margin: 55rpx 45rpx 51rpx 38rpx;
+  margin: 58rpx 20rpx 51rpx 40rpx;
   float: left;
 }
 
 .nikname {
-  font-size: 36rpx;
+  font-size: 40rpx;
   font-family: San Francisco Display;
   font-weight: bold;
   color: rgba(46, 52, 55, 1);
-  padding-top: 81rpx;
+  padding-top: 60rpx;
 }
 
-.attestation{
-  width:97rpx;
-  height:34rpx;
-  border-radius:17rpx;
-  background-color: #FF5B58;
+.attestation {
+  width: 88rpx;
+  height: 34rpx;
+  background: linear-gradient(180deg, rgba(98, 99, 113, 1) 0%, rgba(64, 64, 75, 1) 100%);
+  border-radius: 19rpx;
   color: white;
-  position: relative;
-  top:-45rpx;
-  left:370rpx;
-}
-.text{
-  font-size:26rpx;
-  font-family:PingFangSC;
-  color:rgba(255,86,75,1);
-  font-weight: bolder;
   position: absolute;
-  top: 130rpx;
-  left: 207rpx;
+  top: 72rpx;
+  left: 328rpx;
+  font-size: 20rpx;
+  line-height: 35rpx;
+  text-align: center;
 }
-.copy{
-  font-size:26rpx;
-  font-family:PingFangSC;
-  font-weight:400;
-  color:rgba(46,52,55,1);
-  opacity:0.7;
+
+.text {
+  font-size: 24rpx;
+  font-family: PingFangSC;
+  color: rgba(136, 136, 136, 1);
+  font-weight: 400;
+}
+
+.copy {
+  width: 98rpx;
+  height: 22rpx;
+  background: rgba(254, 226, 222, 1);
+  border-radius: 11rpx;
+  font-size: 16rpx;
+  font-weight: 400;
+  color: rgba(244, 92, 82, 1);
+  float: left;
+  text-align: center;
+  line-height: 20rpx;
+}
+
+.get {
+  width: 120rpx;
+  height: 50rpx;
+  background: rgba(254, 226, 222, 1);
+  border-radius: 200rpx 0rpx 0rpx 200rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(244, 92, 82, 1);
+  line-height: 54rpx;
+  text-align: center;
+  float: left;
   position: absolute;
-  top: 130rpx;
-  left: 450rpx;
+  top:66rpx;
+  right:0rpx;
 }

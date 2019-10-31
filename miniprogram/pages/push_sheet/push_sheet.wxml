@@ -38,7 +38,7 @@
       <view class="page__bd">
         <view class="section section_gap">
           <radio-group class="radio-group" bindchange="radioChange">
-            <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+            <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" hover-class="dinner-hover">
               <text>{{item.value}}</text>
             </radio>
           </radio-group>
@@ -68,7 +68,7 @@
         早餐
       </view> -->
       <button class='{{istarget===true?"breakfast_after":"breakfast"}}' bindtap="breakfastTap">早餐</button>
-      <button class="breakfast" hover-class="breakfast-hover">午餐</button>
+      <button class="breakfast" hover-class="dinner-hover">午餐</button>
       <button class="dinner" hover-class="dinner-hover">晚餐</button>
       <!-- <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-right:28rpx;float:left;">
         午餐
