@@ -1,14 +1,31 @@
 /* pages/income_details/income_details.wxss */
+.remind {
+  width:750rpx;
+height:80rpx;
+background:rgba(246,246,246,1);
+}
 
+.bell_img {
+  width: 30rpx;
+  height: 34rpx;
+  margin-left: 106rpx;
+  margin-right: 20rpx;
+  float: left;
+  margin-top: 26rpx;
+}
+
+.bell_text {
+  color:rgba(244,92,82,1);
+  font-size:24rpx;
+  line-height:34rpx;
+  font-weight:500;
+  padding-top: 26rpx;
+}
 .card {
   width: 690rpx;
-  height: 305rpx;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0rpx 1rpx 25rpx 0rpx rgba(219, 219, 219, 0.52);
-  border-radius: 15rpx;
-  margin: 0 30rpx 30rpx 30rpx;
-  position: absolute;
-  top:31rpx;
+  height: 286rpx;
+  margin-top:20rpx;
+  margin-left: 30rpx; 
 }
 .btn{
   width:87rpx;
