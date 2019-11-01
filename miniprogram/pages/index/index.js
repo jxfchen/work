@@ -95,6 +95,19 @@ Page({
       key: 'XXXX-XXXX-XXXX-XXXX' //这里自己的key秘钥进行填充
     });
 
+    // 授权跳转
+    wx.getSetting({
+      success: (res) => {
+        if (res.authSetting['scope.userInfo']) {
+          console.log(1)//已授权
+        } else {
+          console.log(2)//未授权
+          wx.redirectTo({
+            url: '../authorized_login/authorized_login',
+          })
+        }
+      }
+    })
   },
 
   /**
