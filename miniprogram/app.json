@@ -1,19 +1,16 @@
 {
   "pages": [
-<<<<<<< HEAD
-    "pages/index/index",
-=======
     "pages/me/me",
+    "pages/task/task",
+    "pages/index/index",
+    "pages/authorized_login/authorized_login",
     "pages/push_team/push_team",
     "pages/income_details/income_details",
->>>>>>> 53581149bfe7d4ab232e3fc09f02b1fec17f2c5e
-    "pages/authorized_login/authorized_login",
     "pages/workingmeal_intr/workingmeal_intr",
-    "pages/me/me",
     "pages/push_sheet/push_sheet",
-    "pages/task/task",
     "pages/order/order",
-    "pages/authentication/authentication"
+    "pages/authentication/authentication",
+    "pages/cash_withdrawal/cash_withdrawal"
   ],
   "window": {
     "backgroundTextStyle": "light",

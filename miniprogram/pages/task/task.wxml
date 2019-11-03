@@ -3,120 +3,119 @@
     <image class="bell_img" src="/images/task_news.png"></image>
     <view class="bell_text">新手必看！为什么很多推客能做到月入8000元！</view>
   </view>
-  <view style="width:750rpx;height:36rpx;background-color:white;"></view>
-  <view style="width:750rpx;height:508rpx;background-color:white;">
-    <view style="width: 706rpx;height: 302rpx;margin:0 auto;background: url(/images/task_background.png);background-size:706rpx 302rpx;">
-      <view style="font-size:30rpx;font-weight:500;color:white;padding-top:34rpx;margin-left:264rpx;">任务收益余额</view>
-      <view style="font-size:36rpx;color:white;margin-left:264rpx;float:left;line-height:50rpx;padding-top:18rpx;">￥</view>
-      <view style="font-size:60rpx;color:white;float:left;line-height:70rpx;">1599</view>
+  <view class="separate"></view>
+  <view class="card">
+    <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content">
+      <view class="task_revenue">任务收益余额</view>
+      <view class="money_logo">￥</view>
+      <view class="task_num">1599</view>
       <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
-        <image src="/images/task_arrow.png" style="width:40rpx;height:36rpx;margin-top:17rpx;margin-left:28rpx;">
+        <image src="/images/task_arrow.png" class="arrow_img">
         </image>
       </navigator>
-      <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);line-height:34rpx;position:absolute;top:292rpx;left:160rpx;font-weight:300;">
+      <view class="today_revenue">
         今日任务收益
       </view>
-      <view style="font-size:25rpx;font-weight:500;color:rgba(255,255,255,1);position:absolute;top:345rpx;left:202rpx;">￥</view>
-      <view style="font-size:42rpx;font-weight:500;color:rgba(255,255,255,1);position:absolute;top:326rpx;left:220rpx;">15</view>
-      <view style="width:2rpx;height:37rpx;background-color:white;position:absolute;top:318rpx;left:374rpx;"></view>
-      <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);line-height:34rpx;position:absolute;top:292rpx;left:448rpx;font-weight:300;">
+      <view class="RMB">￥</view>
+      <view class="today_num">15</view>
+      <view class="card_separate"></view>
+      <view class="all_revenve">
         累计任务收益
       </view>
-      <view style="font-size:25rpx;font-weight:500;color:rgba(255,255,255,1);position:absolute;top:345rpx;left:460rpx;">￥</view>
-      <view style="font-size:42rpx;font-weight:500;color:rgba(255,255,255,1);position:absolute;top:326rpx;left:480rpx;">3849</view>
-      <image src="/images/task_banner.png" style="width:690rpx;height:128rpx;padding-top:188rpx;padding-left:10rpx;"></image>
+      <view class="all_RMB">￥</view>
+      <view class="all_num">3849</view>
+      <image src="/images/task_banner.png" class="task_banner"></image>
     </view>
   </view>
 </view>
-<view style="width:750rpx;height:20rpx;background:rgba(244,244,244,1);"></view>
-<view style="width:750rpx;height:720rpx;">
+<view class="divide"></view>
+<view class="bottom">
   <view>
-    <view style="width:29rpx;height:29rpx;background-color:#F66759;float:left;margin:44rpx 14rpx 0 32rpx"></view>
-    <view style="font-size:30rpx;font-weight:600;padding-top:33rpx;">任务基础</view>
+    <view class="task_logo"></view>
+    <view class="task_tit">任务基础</view>
   </view>
-  <view style="width:750rpx;height:100rpx;display:block;">
+  <view class="part">
     <view>
-      <image src="/images/task_invite.png" style="width:80rpx;height:80rpx;margin:40rpx 40rpx 32rpx 30rpx;float:left;"></image>
-      <view style="float:left;">
-        <view style="font-size:30rpx;font-weight:600;color:rgba(50,50,50,1);margin-top:40rpx;">
+      <image src="/images/task_invite.png" class="part_img"></image>
+      <view class="part_middle">
+        <view class="part_tit1">
           邀请好友
         </view>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(136,136,136,1);">
+        <view class="part_tit2">
           邀请好友,每个赚取<text style="color:#F35F52">2</text>元
         </view>
       </view>
-      <view style="float:left;width:118rpx;height:54rpx;border-radius:27px;background:#FD8C74;margin-left:220rpx;margin-top:50rpx;box-shadow:0px 4px 14px 0px rgba(255,171,163,1);">
-        <image src="/images/task_money.png" style="width:26rpx;height:26rpx;margin-left:14rpx;margin-top:14rpx;float:left;margin-right:4rpx;">
+      <view class="button">
+        <image src="/images/task_money.png" class="button_image">
         </image>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);line-height:54rpx;">+2元</view>
+        <view class="add_money">+2元</view>
       </view>
     </view>
   </view>
-  <view style="width:600rpx;height:2rpx;background-color:#F1F1F1;margin-top:60rpx;margin-left:150rpx;"></view>
+  <view class="line"></view>
 
 
 
-  <view style="width:750rpx;height:100rpx;display:block;">
+  <view class="part">
     <view>
-      <image src="/images/task_push.png" style="width:80rpx;height:80rpx;margin:40rpx 40rpx 32rpx 30rpx;float:left;"></image>
-      <view style="float:left;">
-        <view style="font-size:30rpx;font-weight:600;color:rgba(50,50,50,1);margin-top:40rpx;">
+      <image src="/images/task_push.png" class="part_img"></image>
+      <view class="part_middle">
+        <view class="part_tit1">
           完成第一个推单
         </view>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(136,136,136,1);">
+        <view  class="part_tit2">
           邀请好友,每个赚取2元
         </view>
       </view>
-      <view style="float:left;width:118rpx;height:54rpx;border-radius:27px;background:#FD8C74;margin-left:220rpx;margin-top:50rpx;box-shadow:0px 4px 14px 0px rgba(255,171,163,1);">
-        <image src="/images/task_money.png" style="width:26rpx;height:26rpx;margin-left:14rpx;margin-top:14rpx;float:left;margin-right:4rpx;">
+      <view class="button">
+        <image src="/images/task_money.png" class="button_image">
         </image>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);line-height:54rpx;">+2元</view>
+        <view class="add_money">+2元</view>
       </view>
     </view>
   </view>
-  <view style="width:600rpx;height:2rpx;background-color:#F1F1F1;margin-top:60rpx;margin-left:150rpx;"></view>
+  <view class="line"></view>
 
-  <view style="width:750rpx;height:100rpx;display:block;">
+  <view class="part">
     <view>
-      <image src="/images/task_push.png" style="width:80rpx;height:80rpx;margin:40rpx 40rpx 32rpx 30rpx;float:left;"></image>
-      <view style="float:left;">
-        <view style="font-size:30rpx;font-weight:600;color:rgba(50,50,50,1);margin-top:40rpx;">
+      <image src="/images/task_cash.png" class="part_img"></image>
+      <view class="part_middle">
+        <view class="part_tit1">
           设置提现账号
         </view>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(136,136,136,1);">
+        <view class="part_tit2">
           邀请好友,每个赚取2元
         </view>
       </view>
-      <view style="float:left;width:118rpx;height:54rpx;border-radius:27px;background:#4776E1;margin-left:220rpx;margin-top:50rpx;box-shadow:0px 4px 14px 0px rgba(146,179,255,1);">
-        <image src="/images/task_finish.png" style="width:26rpx;height:26rpx;margin-left:14rpx;margin-top:14rpx;float:left;margin-right:4rpx;">
+      <view class="button2">
+        <image src="/images/task_finish.png" class="button_image">
         </image>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);line-height:54rpx;">完成</view>
+        <view class="complete">完成</view>
       </view>
     </view>
   </view>
-  <view style="width:600rpx;height:2rpx;background-color:#F1F1F1;margin-top:60rpx;margin-left:150rpx;"></view>
+  <view class="line"></view>
 
-  <view style="width:750rpx;height:100rpx;display:block;">
+  <view class="part">
     <view>
-      <image src="/images/task_push.png" style="width:80rpx;height:80rpx;margin:40rpx 40rpx 32rpx 30rpx;float:left;"></image>
-      <view style="float:left;">
-        <view style="font-size:30rpx;font-weight:600;color:rgba(50,50,50,1);margin-top:40rpx;">
+      <image src="/images/task_identity.png" class="part_img"></image>
+      <view class="part_middle">
+        <view class="part_tit1">
           完成身份认证
         </view>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(136,136,136,1);">
+        <view class="part_tit2">
           通过身份认证，可以享受更多收益权限！
         </view>
       </view>
-      <view style="float:left;width:118rpx;height:54rpx;border-radius:27px;background:#FD8C74;margin-left:20rpx;margin-top:50rpx;box-shadow:0px 4px 14px 0px rgba(255,171,163,1);">
-        <image src="/images/task_money.png" style="width:26rpx;height:26rpx;margin-left:14rpx;margin-top:14rpx;float:left;margin-right:4rpx;">
+      <view class="button3">
+        <image src="/images/task_money.png" class="button_image">
         </image>
-        <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);line-height:54rpx;">+2元</view>
+        <view class="add_money">+2元</view>
       </view>
     </view>
   </view>
-  <view style="width:600rpx;height:2rpx;background-color:#F1F1F1;margin-top:60rpx;margin-left:150rpx;"></view>
+  <view class="line"></view>
 </view>
-<view style="width:750rpx;height:38rpx;background-color:#F4F4F4"></view>
-<image src="/images/task_server.png" style="position: fixed;top:330rpx;width:152rpx;height:152rpx;right:0;">
-
+<view class="foot"></view>
+<image src="/images/task_server.png" class="server">
 </image>

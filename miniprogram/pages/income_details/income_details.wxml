@@ -3,60 +3,93 @@
   <view class="remind">
     <image class="bell_img" src="/images/task_news.png"></image>
     <view class="bell_text">收益明细说明：全部收益情况均展示在此。
+    <image src="/images/close1.png" class="close_btn" bindtap="closetap"></image>
     </view>
   </view>  
   <view style="width:750rpx;height:326rpx;background:rgba(255,255,255,1);">
-    <view class="card" style="background: url(/images/task_background.png);background-size:690rpx 286rpx;">
+    <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 302rpx;">
       <view>
-        <view style="font-size:30rpx;color:white;font-weight:500;margin-left:256rpx;padding-top:30rpx;line-height:42rpx;">余额（元）</view>
-        <image src="/images/question mark.png" style="width:32rpx;height:32rpx;position:absolute;top:70rpx;left:476rpx"></image>
-        <view style="font-size:36rpx;font-weight:500;color:rgba(255,255,255,1);margin-left:216rpx;float:left;line-height:71rpx;">￥</view>
-        <view style="font-size:60rpx;font-weight:500;color:rgba(255,255,255,1);line-height:54rpx;">9876.87</view>
+        <view class="card_tit">余额（元）</view>
+        <view class="gocash">去提现</view>
+        <view class="money">￥</view>
+        <view class="card_num">9876.87</view>
       </view>
-      <view style="margin-top:26rpx;">
+      <view style="margin-top:16rpx;">
         <view style="float:left;">
-          <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);margin-left:16rpx;opacity:0.8;">我的累计收益(元)</view>
-          <view style="font-size:42rpx;font-weight:500;color:rgba(255,255,255,1);margin-left:74rpx;line-height:58rpx;">24</view>
+          <view class="myincome">我的累计收益(元)</view>
+          <view class="myincome_num">24</view>
         </view>
-        <view style="width:2rpx;height:36rpx;background:#FFFFFF;margin-left:30rpx;margin-top:26rpx;float:left;"></view>
+        <view class="vertical_line"></view>
         <view style="float:left;">
-          <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);margin-left:24rpx;opacity:0.8;">团队累计收益(元)</view>
-          <view style="font-size:42rpx;font-weight:500;color:rgba(255,255,255,1);margin-left:90rpx;line-height:58rpx;">32</view>
+          <view  class="teamincome">团队累计收益(元)</view>
+          <view class="teamincome_num">32</view>
         </view>
-        <view style="width:2rpx;height:36rpx;background:#FFFFFF;margin-left:22rpx;margin-top:26rpx;float:left;"></view>
+        <view  class="vertical_line"></view>
         <view style="float:left;">
-          <view style="font-size:24rpx;font-weight:400;color:rgba(255,255,255,1);margin-left:26rpx;opacity:0.8;">任务累计收益(元)</view>
-          <view style="font-size:42rpx;font-weight:500;color:rgba(255,255,255,1);margin-left:68rpx;line-height:58rpx;">88</view>
+          <view class="taskincome">任务累计收益(元)</view>
+          <view class="taskincome_num">88</view>
         </view>
       </view>
     </view>
   </view>
-  <view style="width:690rpx;height:181rpx;background:rgba(255,255,255,1);box-shadow:0px 1px 25px 0px rgba(219,219,219,0.52);border-radius:10rpx;position:absolute;top:420rpx;left:29rpx;">
-    <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin:32rpx 21rpx 27rpx 31rpx;float:left;"></view>
-    <view style="height:29rpx;font-size:30rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:29rpx;height:29rpx;line-height:32rpx;float:left;">推客推单收益--审核通过</view>
-    <view style="magin-right:27rpx;height:15rpx;font-size:20rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;padding-top:31rpx;padding-left:562rpx;">2019.09.09</view>
-    <view style="height:25rpx;font-size:26rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:80rpx;left:60rpx;">推单编号：2766789</view>
-    <view style="width:40rpx;height:26rpx;font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;top:110rpx;left:60rpx;">￥20</view>
-    <view style="width:68rpx;height:68rpx;background:rgba(227,246,233,1);border-radius:50%;position:absolute;top:90rpx;left:592rpx;"></view>
+  <view class="separate"></view>
+  <view  class="list">
+    <view class="list_logo"></view>
+    <view class="list_title">推客推单收益</view>
+    <view class="pass">
+      <image src="/images/task_finish.png" class="pass_img"></image>
+      <view class="pass_text">审核通过</view>
+    </view>
+    <view class="list_time">2019.09.09</view>
+    <view class="line"></view>
+    <view class="push_number">推单编号</view>
+    <view class="push_num">2839499</view>
+    <view class="add">+</view>
+    <view class="num">9860.05</view>
   </view>
 
-  <view style="width:690rpx;height:181rpx;background:rgba(255,255,255,1);box-shadow:0px 1px 25px 0px rgba(219,219,219,0.52);border-radius:10rpx;position:absolute;top:631rpx;left:29rpx;">
-    <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin:32rpx 21rpx 27rpx 31rpx;float:left;"></view>
-    <view style="height:29rpx;font-size:30rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:29rpx;height:29rpx;line-height:32rpx;float:left;">推客推单收益</view>
-    <view style="width:51rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;color:rgba(255,255,255,1);font-size:16rpx;line-height:18rpx;position:absolute;top:21rpx;left:243rpx;text-align:center">详细</view>
-    <view style="magin-right:27rpx;height:15rpx;font-size:20rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;padding-top:31rpx;padding-left:562rpx;">2019.09.09</view>
-    <view style="height:25rpx;font-size:26rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.7;position:absolute;top:80rpx;left:60rpx;">推单编号：2766789</view>
-    <view style="width:40rpx;height:26rpx;font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;top:110rpx;left:60rpx;">￥20</view>
-    <view style="width:68rpx;height:68rpx;background:rgba(227,246,233,1);border-radius:50%;position:absolute;top:90rpx;left:592rpx;"></view>
+  <view class="separate"></view>
+  <view  class="list">
+    <view class="list_logo"></view>
+    <view class="list_title">团队推单收益</view>
+    <view class="details">
+      详情
+    </view>
+    <view class="list_time">2019.09.09</view>
+    <view class="line"></view>
+    <view class="push_number">推单编号</view>
+    <view class="push_num">2839499</view>
+    <view class="add">+</view>
+    <view class="num">9860.05</view>
   </view>
 
-  <view style="width:690rpx;height:181rpx;background:rgba(255,255,255,1);box-shadow:0px 1px 25px 0px rgba(219,219,219,0.52);border-radius:10rpx;position:absolute;top:840rpx;left:29rpx;">
-    <view style="width:6rpx;height:26rpx;background:rgba(255,86,75,1);border-radius:3rpx;margin:32rpx 21rpx 27rpx 31rpx;float:left;"></view>
-    <view style="height:29rpx;font-size:30rpx;font-weight:bold;color:rgba(46,52,55,1);margin-top:29rpx;height:29rpx;line-height:32rpx;float:left;">提现成功</view>
-    <view style="width:51rpx;height:21rpx;background:linear-gradient(0deg,rgba(255,86,75,1) 0%,rgba(255,128,121,1) 98%);border-radius:11rpx 11rpx 11rpx 0rpx;color:rgba(255,255,255,1);font-size:16rpx;line-height:18rpx;position:absolute;top:21rpx;left:187rpx;text-align:center">详细</view>
-    <view style="magin-right:27rpx;height:15rpx;font-size:20rpx;color:rgba(46,52,55,1);line-height:32rpx;opacity:0.6;padding-top:31rpx;padding-left:562rpx;">2019.09.09</view>
-    <view style="width:40rpx;height:26rpx;font-size:36rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:71rpx;position:absolute;top:95rpx;left:60rpx;">￥20</view>
-    <view style="width:68rpx;height:68rpx;background:rgba(253,229,220,1);border-radius:50%;position:absolute;top:90rpx;left:592rpx;"></view>
+  <view class="separate"></view>
+  <view  class="list">
+    <view class="list_logo"></view>
+    <view class="list_title">推客推单收益</view>
+    <view class="details">
+      详情
+    </view>
+    <view class="list_time">2019.09.09</view>
+    <view class="line"></view>
+    <view class="push_number">推单编号</view>
+    <view class="push_num">2839499</view>
+    <view class="add">+</view>
+    <view class="num">9860.05</view>
   </view>
 
+  <view class="separate"></view>
+  <view  class="list">
+    <view class="list_logo"></view>
+    <view class="list_title" style="margin-right:80rpx;">完成收益  完成*任务</view>
+    <view class="list_time">2019.09.09</view>
+    <view class="line"></view>
+    <view class="push_number">推单编号</view>
+    <view class="push_num">2839499</view>
+    <view class="add">+</view>
+    <view class="num">9860.05</view>
+  </view>
+  <view class="bottom"></view>
+
+  
 </view>
