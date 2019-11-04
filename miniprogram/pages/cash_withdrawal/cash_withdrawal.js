@@ -5,14 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      status: false,
   },
-
+    clicktap: function (e) {
+        var status=this.data.status;
+        if (status == false) {
+            this.setData({
+                status: true
+            })
+        } else {
+            this.setData({
+                status: false
+            })
+        }
+        console.log(status);
+    },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
+      
   },
 
   /**

@@ -1,1 +1,152 @@
-/* pages/cash_withdrawal/cash_withdrawal.wxss */
+.contain {
+    width: 750rpx;
+    height: 1496rpx;
+    background-color: #f4f4f4;
+}
+
+.main {
+    width: 750rpx;
+    height: 254rpx;
+    background: rgba(255, 255, 255, 1);
+}
+
+.card {
+    width: 706rpx;
+    height: 190rpx;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 36rpx;
+    left: 22rpx;
+}
+
+.card_text {
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 30rpx;
+    text-align: center;
+}
+
+.RMB {
+    font-size: 36rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 50rpx;
+    margin: 16rpx 0 0 220rpx;
+    float: left;
+}
+
+.RMB_num {
+    font-size: 60rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 64rpx;
+}
+
+.record {
+    width: 138rpx;
+    height: 50rpx;
+    background: rgba(254, 226, 222, 1);
+    border-radius: 200rpx 0rpx 0rpx 200rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(244, 92, 82, 1);
+    line-height: 50rpx;
+    text-align: center;
+    position: absolute;
+    top: 54rpx;
+    left: 560rpx;
+}
+
+.cash_num {
+    width: 750rpx;
+    height: 342rpx;
+    background: rgba(255, 255, 255, 1);
+    margin-top: 20rpx;
+}
+
+.cash_title {
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(50, 50, 50, 1);
+    padding-left: 30rpx;
+    padding-top: 40rpx;
+}
+
+.yuan100 {
+    width: 216rpx;
+    height: 70rpx;
+    background: rgba(245, 245, 245, 1);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+    line-height: 72rpx;
+    text-align: center;
+    margin-top: 40rpx;
+    margin-left: 25rpx;
+    float: left;
+}
+
+.selection{
+    width: 216rpx;
+    height: 70rpx;
+    background:rgba(244,92,82,1);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    color:rgba(255,255,255,1);
+    line-height: 72rpx;
+    text-align: center;
+    margin-top: 40rpx;
+    margin-left: 25rpx;
+    float: left;
+}
+
+.cash_way {
+    width: 750rpx;
+    height: 380rpx;
+    background: rgba(255, 255, 255, 1);
+    margin-top: 20rpx;
+}
+
+.weixin {
+    width: 40rpx;
+    height: 40rpx;
+    margin-top: 42rpx;
+    margin-left: 30rpx;
+    float: left;
+}
+
+.weixin_text {
+    font-size: 30rpx;
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+    line-height: 42rpx;
+    margin-top: 40rpx;
+    margin-left: 18rpx;
+    float: left;
+}
+
+.choice {
+    width: 36rpx;
+    height: 36rpx;
+    margin-left: 442rpx;
+    margin-top: 44rpx;
+}
+
+.btn {
+    width: 574rpx;
+    height: 96rpx;
+    background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
+    box-shadow: 0rpx 4rpx 14rpx 0rpx rgba(244, 99, 85, 1);
+    border-radius: 48rpx;
+    font-size: 34rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 88rpx;
+    text-align: center;
+    margin-top: 60rpx;
+    margin-left: 88rpx;
+}

@@ -10,7 +10,9 @@
     <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 302rpx;">
       <view>
         <view class="card_tit">余额（元）</view>
-        <view class="gocash">去提现</view>
+        <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
+            <view class="gocash">去提现</view>
+        </navigator>
         <view class="money">￥</view>
         <view class="card_num">9876.87</view>
       </view>

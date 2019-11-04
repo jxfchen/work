@@ -1,2 +1,27 @@
-<!--pages/cash_withdrawal/cash_withdrawal.wxml-->
-<text>pages/cash_withdrawal/cash_withdrawal.wxml</text>
+<view class="contain">
+    <view class="main">
+        <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 190rpx;background-repeat:no-repeat;">
+            <view class="card_text">余额（元）</view>
+            <view class="RMB">￥</view>
+            <view class="RMB_num">9860.05</view>
+            <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
+                <view class="record">提现记录</view>
+            </navigator>
+        </view>
+    </view>
+    <view class="cash_num">
+        <view class="cash_title">选择支付金额</view>
+        <view class='{{status==false?"yuan100":"selection"}}' bindtap="clicktap">100元</view>
+        <view class="yuan100">200元</view>
+        <view class="yuan100">500元</view>
+        <view class="yuan100">1000元</view>
+        <view class="yuan100">2000元</view>
+    </view>
+    <view class="cash_way">
+        <view class="cash_title">选择支付方式</view>
+        <image src="/images/weixin.png" class="weixin"></image>
+        <view class="weixin_text">微信支付</view>
+        <image src="/images/choice.png" class="choice"></image>
+        <view class="btn">立即提现</view>
+    </view>
+</view>

@@ -31,14 +31,14 @@
             </view>
         </view>
     </navigator>
-
-    <view>
-        <image class="record_img" src="/images/me/record.png"></image>
-        <view class="record_text">
-            提现记录
+    <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
+        <view>
+            <image class="record_img" src="/images/me/record.png"></image>
+            <view class="record_text">
+                提现记录
+            </view>
         </view>
-    </view>
-
+    </navigator>
     <view>
         <image src="/images/me/invite.png" class="invite_img"></image>
         <view class="invite_text">
@@ -52,7 +52,7 @@
     <view class="push_team">
         <image src="/images/me/system.png" class="push_img"></image>
         <view class="push_text">推客团队系统</view>
-        <view  class="push_text2">（团队推单帮我赚钱）</view>
+        <view class="push_text2">（团队推单帮我赚钱）</view>
         <view style="margin-top:50rpx;">
             <image class="team_img" src="/images/me/team.png"></image>
             <navigator url="/pages/push_team/push_team?title=push_team" hover-class="navigator-hover">
@@ -71,7 +71,7 @@
     </view>
 
 
-    <view class="tool" >
+    <view class="tool">
         <image src="/images/me/system.png" class="push_img"></image>
         <view class="push_text">我的工具</view>
 
@@ -95,12 +95,12 @@
 
         <view>
             <image class="school_img" src="/images/me/school.png"></image>
-            <view class="school_text" >商学院</view>
-            <view class="school_text2" >赚钱秘籍</view>
+            <view class="school_text">商学院</view>
+            <view class="school_text2">赚钱秘籍</view>
         </view>
 
         <view>
-            <image  class="service_img" src="/images/me/service.png"></image>
+            <image class="service_img" src="/images/me/service.png"></image>
             <view class="service_text">专属客服</view>
             <view class="service_text2">来，交个朋友</view>
         </view>
@@ -113,16 +113,16 @@
     </view>
 
     <view class="bottom">
-        <image src="/images/me/hotquestion.png"  class="push_img"></image>
+        <image src="/images/me/hotquestion.png" class="push_img"></image>
         <view class="bottom_title">热门问题</view>
-        <view  class="list1">
+        <view class="list1">
             <image class="list_img" src="/images/me/team.png"></image>
             <view style="float:left;">
                 <view class="bottom_tit">常见问题？</view>
-                <view class="bottom_tit2" >"如何提现"、"维护收益是什么"，如何操作？</view>
+                <view class="bottom_tit2">"如何提现"、"维护收益是什么"，如何操作？</view>
             </view>
             <image src="/images/me/arrow.png" class="bottom_arrow"></image>
-            <view  class="bottom_line"></view>
+            <view class="bottom_line"></view>
         </view>
 
 
@@ -133,7 +133,7 @@
                 <view class="bottom_tit2">如何完成第一笔推单？</view>
             </view>
             <image src="/images/me/arrow.png" class="bottom_arrow2"></image>
-            <view  class="bottom_line"></view>
+            <view class="bottom_line"></view>
         </view>
 
         <view style="margin-top:68rpx;">
