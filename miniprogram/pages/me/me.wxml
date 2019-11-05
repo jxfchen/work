@@ -2,7 +2,9 @@
     <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
     </view>
     <view class="card">
-        <image class="header" src="/images/me/header.png"></image>
+        <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
+            <image class="header" src="/images/me/header.png"></image>
+        </navigator>
         <view class="message">
             <view class="nikname">去拉萨啦</view>
             <view class="attestation">已认证</view>

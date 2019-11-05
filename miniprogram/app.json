@@ -1,7 +1,9 @@
 {
     "pages": [
-        "pages/cash_withdrawal/cash_withdrawal",
+        "pages/order/order",
         "pages/me/me",
+        "pages/my_information/my_information",
+        "pages/cash_withdrawal/cash_withdrawal",
         "pages/withdrawals_record/withdrawals_record",
         "pages/task/task",
         "pages/index/index",
@@ -10,7 +12,6 @@
         "pages/income_details/income_details",
         "pages/workingmeal_intr/workingmeal_intr",
         "pages/push_sheet/push_sheet",
-        "pages/order/order",
         "pages/authentication/authentication"
     ],
     "window": {

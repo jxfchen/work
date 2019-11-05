@@ -18,16 +18,6 @@ Page({
    */
   onReady: function () {
 
-    $(function () {
-      $('.weui-navbar__item').on('click', function () {
-        $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
-
-        //内容切换
-        $(".weui-tab__panel .weui_tab_bd_item_active").removeClass('weui_tab_bd_item_active');
-        var data_toggle = jQuery(this).attr("href");
-        $(data_toggle).addClass("weui_tab_bd_item_active");
-      });
-    });
   },
 
   /**

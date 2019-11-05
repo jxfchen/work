@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+    "navigationBarBackgroundColor": "#F45C52",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "推客推单"
 }

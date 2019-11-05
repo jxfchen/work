@@ -1,8 +1,8 @@
 <view>
-  <view style="width:355rpx;height:70rpx;background:rgba(255,86,75,1);opacity:0.11;border-radius:33rpx;margin-left:224rpx;margin-top:32rpx;"></view>
-  <view style="width:164rpx;height:53rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));box-shadow:0rpx 7rpx 18rpx 0rpx rgba(241,146,126,0.79);border-radius:25rpx;font-size:26rpx;font-weight:bold;color:rgba(255,255,255,1);line-height:50rpx;text-align:center;position:absolute;left:233rpx;top:41rpx;">推客推单
+  <view class="top"></view>
+  <view class="manager">经理推客
   </view>
-  <view style="font-size:26rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:18rpx;position:absolute;left:418rpx;top:52rpx;">合伙人推单</view>
+  <view class="staff">员工推客</view>
   <view>
   <div class="weui-tab">
    <div class="weui-navbar">
