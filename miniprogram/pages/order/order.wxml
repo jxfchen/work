@@ -1,59 +1,64 @@
 <view>
-  <view class="top"></view>
-  <view class="manager">经理推客
-  </view>
-  <view class="staff">员工推客</view>
-  <view>
-  <div class="weui-tab">
-   <div class="weui-navbar">
-        <a class="weui-navbar__item weui-bar__item_on" href="#tab1">
-            全部状态
-        </a>
-        <a class="weui-navbar__item" href="#tab2">
-           审核中
-        </a>
-        <a class="weui-navbar__item" href="#tab3">
-            审核未通过
-        </a>
-        <a class="weui-navbar__item" href="#tab4">
-            审核通过
-        </a>
-        <a class="weui-navbar__item" href="#tab5">
-            谈单成功
-        </a>
-    </div>
-    <div class="weui-tab__panel">
-        <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
-            <view class="card">
-              <view>
-                <view style="font-size:24rpx;color:rgba(51,51,51,1);line-height:71rpx;opacity:0.8;float:left;margin-left:31rpx;">推客推单编号：238563</view>
-                <view style="font-size:24rpx;font-weight:bold;color:rgba(51,51,51,1);line-height:71rpx;opacity:0.6;margin-left:591rpx;">审核中</view>
-              </view>
-              <view style="width:629rpx;height:2rpx;background:rgba(0,0,0,1);opacity:0.05;margin-left:31rpx;"></view>
-              <view>
-                <view style="font-size:28rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:71rpx;margin-left:32rpx;float:left;">工作餐推单002</view>
-                <view style="font-size:18rpx;color:rgba(51,51,51,1);line-height:18rpx;opacity:0.6;margin-left:573rpx;padding-top:21rpx;padding-bottom:36rpx;">今天 10:36</view>
-              </view>
-              <view style="font-size:26rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:71rpx;opacity:0.9;margin-left:32rpx;">早餐+午餐</view>
-              <view style="width:29rpx;height:27rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));margin-left:32rpx;margin-right:13rpx;float:left"></view>
-              <view style="font-size:24rpx;font-weight:bold;color:rgba(46,52,55,1);opacity:0.6;height:24rpx;line-height:20rpx;float:left">餐标：</view>
-              <view style="font-size:24rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:20rpx;float:left;">早15元、午25元</view>
-              <view style="width:29rpx;height:27rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));position:absolute;top:451rpx;left:434rpx;"></view>
-              <view style="font-size:24rpx;font-weight:bold;color:rgba(46,52,55,1);line-height:20rpx;opacity:0.6;position:absolute;top:451rpx;left:469rpx;">人数：</view>
-              <view style="font-size:24rpx;font-weight:bold;color:rgba(255,86,75,1);line-height:20rpx;position:absolute;top:451rpx;left:531rpx;">180人</view>
-               <view style="width:173rpx;height:50rpx;border:2rpx solid;border:1px solid #FF564B;border-radius:25rpx;line-height:46rpx;color:rgba(255,87,76,1);font-size:24rpx;font-weight:bold;position:absolute;text-align:center;top:498rpx;left:316rpx;">查看详情</view>
-               <view style="width:173rpx;height:50rpx;background:linear-gradient(90deg,rgba(255,86,75,1),rgba(255,127,119,1));border-radius:25rpx;line-height:46rpx;color:white;font-size:24rpx;font-weight:bold;position:absolute;text-align:center;top:498rpx;left:517rpx;">推一单</view>
-            </view>
-           
+    <view class="top"></view>
+    <view class="manager">经理推客
+    </view>
+    <view class="staff">员工推客</view>
+    <view>
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <a class="weui-navbar__item weui-bar__item_on" href="#tab1">
+                    全部状态
+                </a>
+                <a class="weui-navbar__item" href="#tab2">
+                    审核中
+                </a>
+                <a class="weui-navbar__item" href="#tab3">
+                    审核未通过
+                </a>
+                <a class="weui-navbar__item" href="#tab4">
+                    审核通过
+                </a>
+                <a class="weui-navbar__item" href="#tab5">
+                    谈单成功
+                </a>
+            </div>
+            <div class="weui-tab__panel">
+                <div id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+                    <view class="card">
+                        <view>
+                            <view class="card_logo"></view>
+                            <view class="card_title">工作餐推单002</view>
+                            <view class="card_btn">
+                                <image src="/images/task_finish.png" class="btn_img"></image>
+                                <view class="btn_text">审核通过</view>
+                            </view>
+                            <view class="card_time">2019.09.06 09:25</view>
+                        </view>
 
+                        <view class="card_line"></view>
+                        <view>
+                            <view class="card_push">推单编号</view>
+                            <view class="push_num">238563</view>
+                        </view>
+                        <view class="card_foot">早餐+午餐</view>
+                        <view class="foot_money">早15元、午25元</view>
+                        <view class="foot_number">用餐人数</view>
+                        <view class="num">180人</view>
+                        <view class="name_btn">备注推单名称</view>
+                        <navigator url="/pages/push_details/push_details?title=push_details">
+                            <view class="look_btn">查看订单</view>
+                        </navigator>
+                    </view>
+
+
+                </div>
+                <div id="tab2" class="weui_tab_bd_item">
+                    内容二
+                </div>
+                <div id="tab3" class="weui_tab_bd_item">
+                    内容三
+                </div>
+            </div>
         </div>
-        <div id="tab2" class="weui_tab_bd_item">
-            内容二
-        </div>
-        <div id="tab3" class="weui_tab_bd_item">
-            内容三
-        </div>
-    </div>
-</div>
-  </view>
+    </view>
 </view>
