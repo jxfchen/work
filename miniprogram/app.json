@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/identity_authentication/identity_authentication",
         "pages/me/me",
         "pages/push_details/push_details",
@@ -8,7 +9,6 @@
         "pages/cash_withdrawal/cash_withdrawal",
         "pages/withdrawals_record/withdrawals_record",
         "pages/task/task",
-        "pages/index/index",
         "pages/authorized_login/authorized_login",
         "pages/push_team/push_team",
         "pages/income_details/income_details",

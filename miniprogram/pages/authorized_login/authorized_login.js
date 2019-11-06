@@ -1,6 +1,9 @@
 //index.js
+
 //获取应用实例
 const app = getApp()
+// 引入接口
+var e = require("../../utils/http.js");
 
 Page({
   data: {
@@ -15,6 +18,8 @@ Page({
         wx.getSetting({
           success(res) {
             if (res.authSetting['scope.userInfo']) {
+              var openid = wx.getStorageSync('openid')
+              console.log(openid)
               wx.switchTab({
                 url: '../index/index',
               })

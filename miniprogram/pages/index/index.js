@@ -100,10 +100,23 @@ Page({
       success: (res) => {
         if (res.authSetting['scope.userInfo']) {
           console.log(1)//已授权
+          wx.getUserInfo({
+            success(res) {
+              console.log(res.userInfo)
+              wx.setStorage({
+                key: 'avatarUrl',
+                data: res.userInfo.avatarUrl
+              })
+              wx.setStorage({
+                key: 'name',
+                data: res.userInfo.nickName
+              })
+            }
+          })
         } else {
           console.log(2)//未授权
           wx.redirectTo({
-            url: '../authorized_login/authorized_login',
+            url: '/pages/authorized_login/authorized_login',
           })
         }
       }
