@@ -1,0 +1,30 @@
+<view class="contain">
+    <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+        <view class="btn">
+            <view class="btn3">1</view>
+            <view class="btn1">2</view>
+            <view class="btn2">3</view>
+            <view class="line"></view>
+        </view>
+    </view>
+     <image class="arrow_top" src="/images/arrow_top.png"></image>
+    <view class="card">
+        <view class="card_title">账号确认</view>
+        <view class="card_text">请确认微信钱包是本人信息</view>
+    </view>
+    <view class="part1">
+        <view class="part1_logo"></view>
+        <view class="part1_text1">团餐推客会将放款佣金收益直接支付到您的微信钱包。位了发放的安全性和准确性，请确认现在使用的微信账号
+钱包，已绑定本人（与民片或工牌姓名相同的）银行卡。</view>
+        <image src="/images/weixin_wallet.png" class="part1_img"></image>
+        <view class="part1_text2">查看微信“我”——“支付”——“钱包”——“银行卡”确保已绑定本人真实姓名银行卡</view>
+    </view>
+    <view class="part2">
+         <view class="part1_logo"></view>
+        <view class="part2_text1">认证成功后，有机会收到我们发放的5.21元开工红包！</view>
+        <view class="part1_text2">如果您现在使用的微信账号钱包，不是您本人，请您更换后再认证，以便佣金正常发放。</view>
+        <navigator url="/pages/certification_third/certification_third?title=certification_third">
+            <view class="next_step">下一步</view>
+        </navigator>
+    </view>
+</view>
