@@ -1,11 +1,11 @@
 {
     "pages": [
+        "pages/me/me",
         "pages/index/index",
         "pages/certification_first/certification_first",
         "pages/certification_second/certification_second",
         "pages/certification_third/certification_third",
         "pages/identity_authentication/identity_authentication",
-        "pages/me/me",
         "pages/push_details/push_details",
         "pages/order/order",
         "pages/my_information/my_information",
