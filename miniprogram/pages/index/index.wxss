@@ -122,14 +122,15 @@
   height: 44rpx;
   background-color: #000;
   background: rgba(0, 0, 0, 0.6);
-  position: relative;
-  top: -50rpx;
+  position: absolute;
+  bottom: 0;
 }
 
 .card_img {
   width: 374rpx;
   height: 287rpx;
-  border-radius: 12px;
+  position:relative;
+  border-radius:12px 12px 0 0;
 }
 
 .ad_img {
@@ -157,11 +158,11 @@
   width: 244rpx;
   height: 37rpx;
   font-size: 26rpx;
-  font-family: PingFangSC-Medium, PingFangSC;
-  font-weight: bold;
+  font-weight: 600;
   color: rgba(51, 51, 51, 1);
-  line-height: 37rpx;
-  margin: 19rpx 106rpx 6rpx 24rpx;
+  float: left;
+  margin: 0rpx 106rpx 6rpx 24rpx;
+  padding-top: 35rpx;
 }
 
 .push_revenue {
@@ -203,7 +204,6 @@
 .bottom_top {
   padding-top: 16rpx;
   padding-bottom: 29rpx;
-  margin-left: 29rpx;
 }
 
 .list {
