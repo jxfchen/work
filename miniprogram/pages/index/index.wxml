@@ -11,43 +11,46 @@
                 </picker>
             </view>
         </view>
-        <!-- 轮播图 -->
-        <view class="rotation_chart">
-            <!-- <swiper  autoplay="true" interval="10000" style="width:690rpx;height:320rpx;">
+        <view class="rotation">
+            <view class="rotation_chart">
+                <!-- <swiper  autoplay="true" interval="10000" style="width:690rpx;height:320rpx;">
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
             <image src="{{item}}" class="swiper_img"></image>
           </swiper-item>
         </block>
       </swiper> -->
-            <swiper style="width:690rpx;height:320rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000'>
-                <block wx:key='*this' wx:for='{{background}}'>
-                    <swiper-item style="border-radius: 12rpx;">
-                        <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
-                    </swiper-item>
-                </block>
-            </swiper>
-            <view class="dots">
-                <block wx:for="{{background}}" wx:key="*this">
-                    <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
-                </block>
+                <swiper style="width:690rpx;height:320rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000'>
+                    <block wx:key='*this' wx:for='{{background}}'>
+                        <swiper-item style="border-radius: 12rpx;">
+                            <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+                        </swiper-item>
+                    </block>
+                </swiper>
+                <view class="dots">
+                    <block wx:for="{{background}}" wx:key="*this">
+                        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+                    </block>
+                </view>
+            </view>
+
+            <view class="notice">
+                <image src="{{notice_img}}" class="notice_img"></image>
+                <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="5000">
+                    <block wx:for="{{noticeList}}">
+                        <swiper-item>
+                            <view class="swiper_item">{{item.content0}}</view>
+                            <view class="swiper_item">{{item.content1}}</view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+
+                <!-- <text class="notice_text">恭喜02000号推客成功提现12800元！</text> -->
             </view>
         </view>
-
-        <view class="notice">
-            <image src="{{notice_img}}" class="notice_img"></image>
-            <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="5000">
-                <block wx:for="{{noticeList}}">
-                    <swiper-item>
-                        <view class="swiper_item">{{item.content0}}</view>
-                        <view class="swiper_item">{{item.content1}}</view>
-                    </swiper-item>
-                </block>
-            </swiper>
-
-            <!-- <text class="notice_text">恭喜02000号推客成功提现12800元！</text> -->
-        </view>
     </view>
+    <!-- 轮播图 -->
+
     <view class="middle">
         <view class="middle_top">
             <image class="logo1" src="/images/push.png"></image>
@@ -69,7 +72,7 @@
                         </image>
                         <view class="card_text">
                             <text class="text_title">团餐、企业员工餐</text>
-                            <text class="push_revenue">推客收益：<text  class="push_money">500.00</text>起<text>(通过后秒到账)</text></text>
+                            <text class="push_revenue">推客收益：<text  class="push_money">500.00</text>起(通过后秒到账)</text>
                             <text class="push_revenue">合伙收益：<text class="push_money">1K-9K</text>/月</text>
                         </view>
                         <button class="card_btn">
@@ -86,7 +89,7 @@
                         </image>
                         <view class="card_text">
                             <text class="text_title">团餐、企业员工餐</text>
-                            <text class="push_revenue">推客收益：<text class="push_money">500.00</text>起<text>(通过后秒到账)</text></text>
+                            <text class="push_revenue">推客收益：<text class="push_money">500.00</text>起(通过后秒到账)</text>
                             <text class="push_revenue">合伙收益：<text class="push_money" >1K-9K</text>/月</text>
                         </view>
                         <view class="card_btn">
@@ -96,7 +99,6 @@
                 </view>
             </scroll-view>
         </view>
-
     </view>
     <view class="bottom">
         <view class="bottom_top">
@@ -105,22 +107,20 @@
             <image class="more_img" src="/images/arrow1.png"></image>
             <text class="more">更多</text>
         </view>
-
-
-        <view class='list padding_x30 '>
+        <view class='list'>
             <view class='li_warp dl liLeft li_left' id='liLeft'>
                 <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
                     <view class='li_pic'>
                         <view class='pic_warp '>
-                            <image src='{{item.pic}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
+                            <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
                         </view>
                     </view>
                     <view class="part">
-                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">别人家下午茶茶茶茶茶茶茶茶</view>
+                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
                         <view class='flex_ f24'>
                             <view>
                                 <image class="header" src="/images/header.jpg"></image>
-                                <view class="nicname">喵星小姐姐</view>
+                                <view class="nicname">{{item.author}}</view>
                             </view>
                             <view>
                                 <view class="num">447</view>
@@ -137,15 +137,15 @@
                 <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
                     <view class='li_pic'>
                         <view class='pic_warp '>
-                            <image src='{{item.pic}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
+                            <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
                         </view>
                     </view>
                     <view class="part">
-                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">别人家下午茶</view>
+                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
                         <view class='flex_ f24'>
                             <view>
                                 <image class="header" src="/images/header.jpg"></image>
-                                <view class="nicname">喵星小姐姐</view>
+                                <view class="nicname">{{item.author}}</view>
                             </view>
                             <view>
                                 <view class="num">447</view>
@@ -157,8 +157,10 @@
                 </view>
             </view>
         </view>
+
+        <view class="foot">
+            <view class="foot_line">我是有底线的哟～</view>
+        </view>
     </view>
-    <view class="foot">
-        <view class="foot_line">我是有底线的哟～</view>
-    </view>
+
 </view>

@@ -13,7 +13,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //   var date = {
+    //   }
+    //   c.request("wechatuser/index", {
+    //       openid:
+    //   }, function (res) {
+    //       that.setData({
+    //           info: res.info,
+    //       });
+    //       var list_str = JSON.stringify(res.info);
+    //       list = JSON.parse(list_str);
+    //       for (let i = 0; i < list.length; i++) {
+    //           list[i].position = "center";
+    //           list[i].height = '';
+    //       }
+    //       date.list = list;
+    //       self.setData(date);
+    //       console.log(list);
+    //   }, function () {
+    //       console.log('fail');
+    //   })
+    //   this.setData(date);
       
+
+
       if (app.globalData.userInfo) {
           this.setData({
               userInfo: app.globalData.userInfo,
@@ -40,6 +63,7 @@ Page({
               }
           })
       }
+     
   },
     getUserInfo: function (e) {
         console.log(e)

@@ -4,7 +4,7 @@ const app = getApp()
 // var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
 // var qqmapsdk;
 var c = require("../../utils/http.js");
-
+var the=this;
 Page({
 
     /**
@@ -12,31 +12,7 @@ Page({
      */
     data: {
         customItem: '全部',
-        list: [{
-            pic: '/images/show.jpg',
-            position: 'center',
-            height: ''
-        }, {
-            pic: '/images/show1.jpg',
-            position: 'center',
-            height: ''
-        }, {
-            pic: '/images/show1.jpg',
-            position: 'center',
-            height: ''
-        }, {
-            pic: '/images/show2.jpg',
-            position: 'center',
-            height: ''
-        }, {
-            pic: '/images/show2.jpg',
-            position: 'center',
-            height: ''
-        }, {
-            pic: '/images/show.jpg',
-            position: 'center',
-            height: ''
-        }],
+        list: [],
         leftHeight: 0,
         rightHeight: 0,
         picHeight: '',
@@ -77,7 +53,7 @@ Page({
 
 
     bindRegionChange: function(e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
+        // console.log('picker发送选择改变，携带值为', e.detail.value)
         this.setData({
             region: e.detail.value
         })
@@ -87,16 +63,20 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-
-        var list1 = {
+        var self = this;
+        var date = {
             address_img: "/images/address.png",
             region: ['山东省', '济南市', '全部'],
             arrow_img: "/images/arrow.png",
             notice_img: "/images/notice.png",
             logo1: "/images/task1.png",
+            background:"",
+            list:"",
         }
         var that = this;
         var background = [];
+        var list = this.data.list;
+
         c.request("index/getbanner", {
             type: "首页"
         }, function(res) {
@@ -104,29 +84,35 @@ Page({
                 info: res.info,
             });
             for (let i = 0; i < res.info.length; i++) {
-                var str = "https://api.infinitybuild.cn/api.php/"+res.info[i].img ;
+                var str = "https://api.infinitybuild.cn/"+res.info[i].img ;
                 background.push(str)
             }
-            console.log(background);
+            date.background = background;
+            self.setData(date);
         }, function() {
             console.log('fail');
         })
-        // c.request("index/getServiceDialy", {
-        //     page: "1",
-        //     size: "6",
-        // }, function (res) {
-        //     that.setData({
-        //         infos: res.infos,
-        //     });
-        //     for (let i = 0; i < res.infos.length; i++) {
-        //         list.push(res.infos[i].img)
-        //     }
-        //     console.log(list)
-        // }, function () {
-        //     console.log('fail');
-        // })
-        this.setData(background);
-        this.setData(list1);
+
+        c.request("index/getServiceDialy", {
+            page: "1",
+            size: "6",
+        }, function (res) {
+            that.setData({
+                info: res.info,
+            });
+            var list_str = JSON.stringify(res.info);
+            list = JSON.parse(list_str);
+            for (let i = 0; i < list.length; i++) {
+                list[i].position = "center";
+                list[i].height = '';
+            }
+            date.list = list;
+            self.setData(date);
+            console.log(list);
+        }, function () {
+            console.log('fail');
+        })
+        this.setData(date);
 
 
 
@@ -138,10 +124,10 @@ Page({
         wx.getSetting({
             success: (res) => {
                 if (res.authSetting['scope.userInfo']) {
-                    console.log(1) //已授权
+                    // console.log(1) //已授权
                     wx.getUserInfo({
                         success(res) {
-                            console.log(res)
+                            // console.log(res)
                             wx.setStorage({
                                 key: 'avatarUrl',
                                 data: res.userInfo.avatarUrl
@@ -155,7 +141,7 @@ Page({
                     })
 
                 } else {
-                    console.log(2) //未授权
+                    // console.log(2) //未授权
                     wx.redirectTo({
                         url: '/pages/authorized_login/authorized_login',
                     })
@@ -391,6 +377,7 @@ Page({
                         }
                         // console.log(min_)
                     }
+
                     // console.log(list[i].height, disparity_)
 
                 }
@@ -411,7 +398,7 @@ Page({
                 }
                 list[min_.index].position = 'left'
             }
-            console.log(list)
+            // console.log(list)
             this.setData({
                 list: list
             })
