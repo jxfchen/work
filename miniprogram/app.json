@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/me/me",
         "pages/index/index",
+        "pages/me/me",
         "pages/certification_first/certification_first",
         "pages/certification_second/certification_second",
         "pages/certification_third/certification_third",

@@ -4,7 +4,7 @@ const app = getApp()
 // var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
 // var qqmapsdk;
 var c = require("../../utils/http.js");
-var the=this;
+var the = this;
 Page({
 
     /**
@@ -31,6 +31,7 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         url: '',
+        pushList: [],
     },
 
 
@@ -70,13 +71,15 @@ Page({
             arrow_img: "/images/arrow.png",
             notice_img: "/images/notice.png",
             logo1: "/images/task1.png",
-            background:"",
-            list:"",
+            background: "",
+            list: "",
+            pushList:'',
         }
         var that = this;
         var background = [];
         var list = this.data.list;
-
+        var pushList = this.data.pushList;
+        //轮播图
         c.request("index/getbanner", {
             type: "首页"
         }, function(res) {
@@ -84,7 +87,7 @@ Page({
                 info: res.info,
             });
             for (let i = 0; i < res.info.length; i++) {
-                var str = "https://api.infinitybuild.cn/"+res.info[i].img ;
+                var str = "https://api.infinitybuild.cn/" + res.info[i].img;
                 background.push(str)
             }
             date.background = background;
@@ -92,11 +95,11 @@ Page({
         }, function() {
             console.log('fail');
         })
-
+        //服务日记
         c.request("index/getServiceDialy", {
             page: "1",
             size: "6",
-        }, function (res) {
+        }, function(res) {
             that.setData({
                 info: res.info,
             });
@@ -108,17 +111,23 @@ Page({
             }
             date.list = list;
             self.setData(date);
-            console.log(list);
-        }, function () {
+        }, function() {
+            console.log('fail');
+        })
+        //推一单，赚一单
+        c.request("index/getRestaurant", {}, function(res) {
+            that.setData({
+                infos: res.infos,
+            });
+            var list_str = JSON.stringify(res.infos);
+            pushList = JSON.parse(list_str);
+            date.pushList = pushList;
+            self.setData(date);
+            console.log(res.infos);
+        }, function() {
             console.log('fail');
         })
         this.setData(date);
-
-
-
-
-        
-
 
 
         wx.getSetting({
