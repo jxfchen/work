@@ -3,7 +3,8 @@
 const app = getApp()
 var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
 var qqmapsdk;
-
+// 引入接口
+var c = require("../../utils/http.js");
 Page({
 
   /**
@@ -96,34 +97,44 @@ Page({
     qqmapsdk = new QQMapWX({
       key: 'XXXX-XXXX-XXXX-XXXX' //这里自己的key秘钥进行填充
     });
+    if (app.globalData.userInfo) {
+        this.setData({
+            userInfo: app.globalData.userInfo,
+            hasUserInfo: true
+        })
+    } else if (this.data.canIUse) {
+        // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+        // 所以此处加入 callback 以防止这种情况
+        app.userInfoReadyCallback = res => {
+            this.setData({
+                userInfo: res.userInfo,
+                hasUserInfo: true
+            })
+        }
+    } else {
+        // 在没有 open-type=getUserInfo 版本的兼容处理
+        wx.getUserInfo({
+            success: res => {
+                app.globalData.userInfo = res.userInfo
+                this.setData({
+                    userInfo: res.userInfo,
+                    hasUserInfo: true
+                })
+            }
+        })
+    }
+    var that = this
+    c.request("index/getbanner", {
+      type: '首页'
+    }, function (res) {
+      // that.setData({
+      //   aa: res.info.img
+      // })
+      console.log(res.info.img)
+    }, function () {
 
-      if (app.globalData.userInfo) {
-          this.setData({
-              userInfo: app.globalData.userInfo,
-              hasUserInfo: true
-          })
-      } else if (this.data.canIUse) {
-          // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-          // 所以此处加入 callback 以防止这种情况
-          app.userInfoReadyCallback = res => {
-              this.setData({
-                  userInfo: res.userInfo,
-                  hasUserInfo: true
-              })
-          }
-      } else {
-          // 在没有 open-type=getUserInfo 版本的兼容处理
-          wx.getUserInfo({
-              success: res => {
-                  app.globalData.userInfo = res.userInfo
-                  this.setData({
-                      userInfo: res.userInfo,
-                      hasUserInfo: true
-                  })
-              }
-          })
-      }
-
+    }
+    )
     // 授权跳转
     wx.getSetting({
       success: (res) => {

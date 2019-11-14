@@ -53,7 +53,7 @@
       <image class="logo1" src="/images/push.png"></image>
       <text class="push_text">推一单，赚一单</text>
       <navigator url="/pages/workingmeal_intr/workingmeal_intr?title=workingmeal_intr" hover-class="navigator-hover" style="float:right;">
-        <image class="more_img" src="/images/arrow1.png"></image>
+        <image class="more_img" src="/images/arrow1.png" mode="widthFix"></image>
         <text class="more">更多</text>
       </navigator>
     </view>
