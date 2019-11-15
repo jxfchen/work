@@ -11,11 +11,11 @@
   </view>
   <view style="height:340rpx;width:750rpx;">
     <view>
-      <text style="font-size:24rpx;color:rgba(100,100,100,1);margin: 62rpx 20rpx 0 30rpx;float:left;font-weight:bold;">预计收益</text>
-      <text style="font-size:60rpx;font-weight:bold;color:rgba(243,94,81,1);position:absolute;top:526rpx;"><text style="font-size:36rpx">￥</text>1599 -9999</text>
+      <text class="income" >预计收益</text>
+      <text class="mon"><text style="font-size:36rpx">￥</text>{{pushList.min_expect_profit}} -{{pushList.max_expect_profit}}</text>
     </view>
     <view>
-      <text style="font-size:40rpx;font-weight:bold;color:rgba(56,56,56,1);left:30rpx;position:absolute;top:614rpx;">企业工作用餐&会议餐&活动餐业务</text>
+      <text class="push_title">{{pushList.title}}</text>
     </view>
     <view>
       <view style="position:absolute;top:698rpx;left:30rpx;">
@@ -32,7 +32,7 @@
   </view>
   <view style="position:absolute;top:886rpx;">
     <view>
-      <view style="width:84rpx;height:40rpx;font-size:28rpx;font-weight:bold;color:rgba(50,50,50,1);line-height:40rpx;margin:0rpx 14rpx 26rpx 30rpx;float:left;">关键词</view>
+      <view class="word">关键词</view>
       <view class="label">
         <view class="label_text">关键词关键</view>
       </view>
@@ -75,7 +75,7 @@
         <view style="font-size:28rpx;color:rgba(112,112,110,1);margin-left:34rpx;margin-top:28rpx;float:left;">业务详情介绍</view>
         <view style="width:228rpx;height:2rpx;background-color:#D9D9D9;position:absolute;top:335rpx;left:492rpx;"></view>
       </view>
-      <image class="intr_img" src="/images/show1.jpg"></image>
+      <image class="intr_img" src="https://api.infinitybuild.cn/{{pushList.cover_img}}"></image>
     </view>
     
   </view>

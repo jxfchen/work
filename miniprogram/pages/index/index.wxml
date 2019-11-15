@@ -61,7 +61,7 @@
             </navigator>
         </view>
         <view class="middle_main">
-            <scroll-view scroll-x="true"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <scroll-view scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
                 <view style="display: flex; flex-direction:row;">
                     <block wx:for="{{pushList}}" wx:for-item="item" wx:key="">
                         <view class="card">
@@ -76,8 +76,8 @@
                                 <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}</text>起(通过后秒到账)</text>
                                 <text class="push_revenue">合伙收益：<text class="push_money">{{item.partner_min_profit}}-{{item.partner_max_profit}}</text>/月</text>
                             </view>
-                            <navigator  url="/pages/workingmeal_intr/workingmeal_intr?title=workingmeal_intr" hover-class="navigator-hover" >
-                            <button class="card_btn">推单</button>
+                            <navigator url="/pages/workingmeal_intr/workingmeal_intr?title={{item.id}}" hover-class="navigator-hover"  >
+                                <button class="card_btn">推单</button>
                             </navigator>
                         </view>
                     </block>

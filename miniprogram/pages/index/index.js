@@ -4,7 +4,6 @@ const app = getApp()
 // var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
 // var qqmapsdk;
 var c = require("../../utils/http.js");
-var the = this;
 Page({
 
     /**
@@ -123,7 +122,7 @@ Page({
             pushList = JSON.parse(list_str);
             date.pushList = pushList;
             self.setData(date);
-            console.log(res.infos);
+            console.log(pushList);
         }, function() {
             console.log('fail');
         })
