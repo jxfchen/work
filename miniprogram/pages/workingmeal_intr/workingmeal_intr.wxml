@@ -28,7 +28,7 @@
         </view>
       </view>
     </view>
-    <view class="divider" style="position:absolute;top:840rpx;"></view>
+    <view class="divider"></view>
   </view>
   <view style="position:absolute;top:886rpx;">
     <view>
@@ -45,10 +45,10 @@
       <view class="label3">
         <view class="label_text">关键词关键关键</view>
       </view>
-      <image src="/images/ellipsis.png" style="width:32rpx;height:9rpx;position:absolute;top:20rpx;left:680rpx;"></image>
+      <image src="/images/ellipsis.png" class="ellipsis_logo"></image>
     </view>
   </view>
-  <view style="width:750rpx;height:20rpx;background:rgba(244,244,244,1);position:absolute;top:952rpx;"></view>
+  <view class="separate" ></view>
 
   <view class="profit" style="position:absolute;top:1008rpx">
     <view>
@@ -81,8 +81,9 @@
   </view>
   <view style="width:100%;height:80rpx;"></view>
   <view class="bottom">
-      <image src="/images/homepage.png" style="width:56rpx;height:52rpx;float:left;margin:30rpx 54rpx 30rpx 60rpx;"></image>
-      <image src="/images/service.png" style="width:54rpx;height:54rpx;float:left;margin:30rpx 60rpx 28rpx 0rpx;"></image>
+      <image src="/images/homepage.png" class="homepage_img"></image>
+      <image src="/images/service.png" class="service_img"
+      ></image>
       <navigator url="/pages/push_sheet/push_sheet?title=push_sheet" hover-class="navigator-hover">
         <view class="btn2">
           推一单，赚一笔

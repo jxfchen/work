@@ -59,6 +59,8 @@
 }
 
 .divider {
+    position: absolute;
+    top: 840rpx;
     width: 750rpx;
     height: 20rpx;
     background: rgba(246, 246, 246, 1);
@@ -175,4 +177,34 @@
     line-height: 40rpx;
     margin: 0rpx 14rpx 26rpx 30rpx;
     float: left;
+}
+
+.ellipsis_logo {
+    width: 32rpx;
+    height: 9rpx;
+    position: absolute;
+    top: 20rpx;
+    left: 680rpx;
+}
+
+.separate {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(244, 244, 244, 1);
+    position: absolute;
+    top: 952rpx;
+}
+
+.homepage_img {
+    width: 56rpx;
+    height: 52rpx;
+    float: left;
+    margin: 30rpx 54rpx 30rpx 60rpx;
+}
+
+.service_img {
+    width: 54rpx;
+    height: 54rpx;
+    float: left;
+    margin: 30rpx 60rpx 28rpx 0rpx;
 }

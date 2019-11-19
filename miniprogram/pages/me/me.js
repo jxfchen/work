@@ -10,6 +10,26 @@ Page({
         hasUserInfo: false,
     },
 
+    copyTBL: function (e) {
+        var self = this;
+        wx.setClipboardData({
+            data: self.data.list.user_info.invite_code,
+            success: function (res) {
+                // self.setData({copyTip:true}),
+                wx.showModal({
+                    title: '提示',
+                    content: '复制成功',
+                    success: function (res) {
+                        if (res.confirm) {
+                            console.log('确定')
+                        } else if (res.cancel) {
+                            console.log('取消')
+                        }
+                    }
+                })
+            }
+        });
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -44,8 +64,9 @@ Page({
                     });
                     var list_str = JSON.stringify(res.info);
                     list = JSON.parse(list_str);
-                   
-                    console.log(res.info);
+                    date.list = list;
+                    self.setData(date);
+                    console.log(list);
                 }, function() {
                     console.log('fail');
                 })
