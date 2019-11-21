@@ -1,4 +1,5 @@
 // pages/task/task.js
+var c = require("../../utils/http.js");
 Page({
 
   /**
@@ -12,7 +13,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      var self = this;
+      var date = {
+          list: '',
+      }
+      var openid = "";
+      var that = this;
+      var list = [];
+      c.request("activity/index", {
+      }, function (res) {
+          that.setData({
+              info: res.info,
+          });
+          var list_str = JSON.stringify(res.info);
+          list = JSON.parse(list_str);
+          date.list = list;
+          self.setData(date);
+          console.log(list);
+      }, function () {
+          console.log('fail');
+      })
+      this.setData(date);
   },
 
   /**

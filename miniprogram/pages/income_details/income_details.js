@@ -12,7 +12,51 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      var self = this;
+      var date = {
+          list: '',
+      }
+      var openid = "";
+      var that = this;
+      var list = [];
+      wx.getStorage({
+          key: 'openid',
+          success: function (res) {
+              that.setData({
+                  openid: res.data,
+              })
+              if (that.data.openid.length == 0) {
+                  that.setData({
+                      status: false
+                  });
+              } else {
+                  that.setData({
+                      status: true
+                  })
+              }
+              c.request("wechatuser/getAccountLog", {
+                  openid: that.data.openid,
+                  page:'1',
+                  size:'9',
+              }, function (res) {
+                  that.setData({
+                      info: res.info,
+                  });
+                  var list_str = JSON.stringify(res.info);
+                  list = JSON.parse(list_str);
+                  date.list = list;
+                  self.setData(date);
+                  console.log(list);
+              }, function () {
+                  console.log('fail');
+              })
+          },
+          fail: function (res) {
+              console.log(res + "fail")
+          }
 
+      });
+      this.setData(date);
   },
 
   /**

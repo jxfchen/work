@@ -60,92 +60,88 @@
                 <text class="more">更多</text>
             </view>
         </view>
-        <view class="middle_main">
-            <scroll-view scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-                <view style="display: flex; flex-direction:row;">
-                    <block wx:for="{{pushList}}" wx:for-item="item" wx:key="">
-                        <view class="card">
-                            <image class="card_img" src="https://api.infinitybuild.cn/{{item.thumb_img}}">
-                                <view class="card_ad">
-                                    <image class="ad_img" src="/images/logo.png"></image>
-                                    <text class="ad_text">{{item.commend_times}}人推单成功</text>
-                                </view>
-                            </image>
-                            <view class="card_text">
-                                <text class="text_title">{{item.title}}</text>
-                                <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}</text>起(通过后秒到账)</text>
-                                <text class="push_revenue">合伙收益：<text class="push_money">{{item.partner_min_profit}}-{{item.partner_max_profit}}</text>/月</text>
-                            </view>
-                            <navigator url="/pages/workingmeal_intr/workingmeal_intr?title={{item.id}}" hover-class="navigator-hover"  >
-                                <button class="card_btn">推单</button>
-                            </navigator>
-                        </view>
-                    </block>
+      <view class="middle_main">
+        <scroll-view scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view style="display: flex; flex-direction:row;">
+            <block wx:for="{{pushList}}" wx:for-item="item" wx:key="">
+              <view class="card">
+                <image class="card_img" src="https://api.infinitybuild.cn/{{item.thumb_img}}">
+                  <view class="card_ad">
+                    <!-- <image class="ad_img" src="/images/logo.png"></image> -->
+                    <text class="ad_text">{{item.commend_times}}人推单成功</text>
+                  </view>
+                </image>
+                <view class="card_text">
+                  <text class="text_title">{{item.title}}</text>
+                  <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}<text wx:if="{{item.is_pusher_rate == 1}}">%</text></text> 起(通过后秒到账)</text>
+                  <text class="push_revenue">合伙收益：<text class="push_money">{{item.partner_min_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text> - {{item.partner_max_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text></text> /月</text>
                 </view>
-            </scroll-view>
-        </view>
+                <navigator url="/pages/workingmeal_intr/workingmeal_intr?title={{item.id}}" hover-class="navigator-hover"  >
+                  <button class="card_btn">推单</button>
+                </navigator>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
     </view>
     <view class="bottom">
-        <view class="bottom_top">
-            <image class="logo1" src="/images/server.png"></image>
-            <text class="push_text">服务日记</text>
-            <image class="more_img" src="/images/arrow1.png"></image>
-            <text class="more">更多</text>
-        </view>
-        <view class='list'>
-            <view class='li_warp dl liLeft li_left' id='liLeft'>
-                <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
-                    <view class='li_pic'>
-                        <view class='pic_warp '>
-                            <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
-                        </view>
-                    </view>
-                    <view class="part">
-                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
-                        <view class='flex_ f24'>
-                            <view>
-                                <image class="header" src="/images/header.jpg"></image>
-                                <view class="nicname">{{item.author}}</view>
-                            </view>
-                            <view>
-                                <view class="num">447</view>
-                                <image src="/images/like.png" class="fabulous"></image>
-                            </view>
-                        </view>
-
-                    </view>
-
-                </view>
+      <view class="bottom_top">
+        <image class="logo1" src="/images/server.png"></image>
+        <text class="push_text">服务日记</text>
+        <image class="more_img" src="/images/arrow1.png"></image>
+        <text class="more">更多</text>
+      </view>
+      <view class='list'>
+        <view class='li_warp dl liLeft li_left' id='liLeft'>
+          <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
+            <view class='li_pic'>
+              <view class='pic_warp '>
+                <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
+              </view>
             </view>
-
-            <view class='li_warp dl liRight li_right' id='liRight'>
-                <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
-                    <view class='li_pic'>
-                        <view class='pic_warp '>
-                            <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
-                        </view>
-                    </view>
-                    <view class="part">
-                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
-                        <view class='flex_ f24'>
-                            <view>
-                                <image class="header" src="/images/header.jpg"></image>
-                                <view class="nicname">{{item.author}}</view>
-                            </view>
-                            <view>
-                                <view class="num">447</view>
-                                <image src="/images/like1.png" class="fabulous1"></image>
-                            </view>
-                        </view>
-                    </view>
-
+            <view class="part">
+              <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
+              <view class='flex_ f24'>
+                <view>
+                  <image class="header" src="/images/header.jpg"></image>
+                  <view class="nicname">{{item.author}}</view>
                 </view>
+                <view>
+                  <view class="num">447</view>
+                  <image src="/images/like.png" class="fabulous"></image>
+                </view>
+              </view>
             </view>
+          </view>
         </view>
+          <view class='li_warp dl liRight li_right' id='liRight'>
+            <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
+              <view class='li_pic'>
+                <view class='pic_warp '>
+                  <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
+                </view>
+              </view>
+              <view class="part">
+                <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
+                <view class='flex_ f24'>
+                  <view>
+                    <image class="header" src="/images/header.jpg"></image>
+                    <view class="nicname">{{item.author}}</view>
+                  </view>
+                  <view>
+                    <view class="num">447</view>
+                    <image src="/images/like1.png" class="fabulous1"></image>
+                  </view>
+                </view>
+              </view>
 
-        <view class="foot">
-            <view class="foot_line">我是有底线的哟～</view>
+            </view>
+          </view>
         </view>
+      <view class="foot">
+          <view class="foot_line">我是有底线的哟～</view>
+      </view>
     </view>
 
 </view>

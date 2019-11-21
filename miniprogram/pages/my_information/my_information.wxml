@@ -1,13 +1,15 @@
 <view class="contain">
     <view class="header">
-        <image src="/images/me/header.png" class="header_img"></image>
+        <image src="{{list.user_info.avatarurl}}" class="header_img"></image>
+        <view bindtap='changeAvatar'>
         <view class="header_text">修改头像</view>
         <image class="header_arrow" src="/images/me/arrow.png"></image>
+        </view>
     </view>
     <view class="information">
         <view class="account">
             <view class="account_title">账户管理</view>
-            <view class="account_btn">未认证</view>
+            <view class="account_btn">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
             <navigator url="/pages/identity_authentication/identity_authentication?title=identity_authentication">
                 <view class="account_text">去认证</view>
                 <image class="arrow" src="/images/me/arrow.png"></image>
@@ -25,7 +27,7 @@
         <view class="phone">
             <view class="phone_title">电话</view>
             <image class="phone_arrow" src="/images/me/arrow.png"></image>
-            <view class="phone_text">15001238888</view>
+            <view class="phone_text">{{list.user_info.phoneNumber}}</view>
             <view class="phone_line"></view>
         </view>
         <view class="weixin">
@@ -37,7 +39,7 @@
         <view class="sex">
             <view class="phone_title">性别</view>
             <image class="phone_arrow" src="/images/me/arrow.png"></image>
-            <view class="phone_text">男</view>
+            <view class="phone_text">{{list.user_info.card_status==1?"男":"女"}}</view>
             <view class="phone_line"></view>
         </view>
         <view class="birth">
@@ -63,7 +65,7 @@
     </view>
     <view class="code">
         <view class="code_title">填写邀请人编码</view>
-        <view class="code_num">8772347</view>
+        <view class="code_num">{{list.user_info.invite_code}}</view>
         <view class="code_text">系统未自动识别的，只能填写一次，填写后不可修改</view>
     </view>
     <view class="QR">

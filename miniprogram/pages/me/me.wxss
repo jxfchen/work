@@ -127,7 +127,7 @@
     color: rgba(255, 86, 75, 1);
     position: absolute;
     top: 200rpx;
-    left: 122rpx;
+    left: 130rpx;
 }
 
 .money_num2 {
@@ -136,7 +136,7 @@
     color: rgba(255, 86, 75, 1);
     position: absolute;
     top: 200rpx;
-    left: 486rpx;
+    left: 492rpx;
 }
 
 .know_img {

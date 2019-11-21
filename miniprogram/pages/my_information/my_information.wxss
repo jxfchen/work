@@ -18,6 +18,7 @@
     margin-top: 22rpx;
     margin-left: 32rpx;
     float: left;
+    border-radius: 50%;
 }
 
 .header_text {

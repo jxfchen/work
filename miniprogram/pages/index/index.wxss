@@ -125,6 +125,7 @@
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
+  text-align: center;
 }
 
 .card_img {
@@ -142,11 +143,7 @@
 }
 
 .ad_text {
-  width: 203rpx;
-  height: 37rpx;
   font-size: 26rpx;
-  font-family: PingFangSC-Medium, PingFangSC;
-  font-weight: 500;
   color: rgba(255, 255, 255, 1);
 }
 
