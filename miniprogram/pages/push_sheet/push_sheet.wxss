@@ -1,9 +1,15 @@
 /* pages/push_sheet/push_sheet.wxss */
-
+.banner{
+  width: 100%;
+  height: 402rpx;
+  background: linear-gradient(180deg,rgba(244,92,82,1) 0%,rgba(254,226,222,1) 100%);
+}
 .rotation_chart {
-  margin: 0 8rpx;
-  position: absolute;
   top: 26rpx;
+  width: 734rpx;
+  margin: 0 8rpx;
+  height: 360rpx;
+  position: absolute;
   border-radius: 12px;
 }
 
@@ -50,44 +56,31 @@
 }
 
 /* 单选框 */
-
-.radio-group {
+button.radio{
+  display: inline;
+  padding: 0 35rpx;
+  background: #fff;
 }
-
-.radio-group label {
-}
-
-radio {
-  margin: 0rpx 10rpx 40rpx 18rpx;
-  width: 200rpx;
-  height: 82rpx;
-  border-radius: 41rpx;
-  border: 1rpx solid rgba(250, 96, 87, 1);
-  font-size: 28rpx;
-  font-family: PingFangSC-Medium, PingFang SC;
-  font-weight: 500;
-  color: rgba(244, 92, 82, 1);
-  line-height: 70rpx;
-  text-align: center;
-}
-
-radio ::before {
-  width: 200rpx;
-  height: 82rpx;
-  background: rgba(244, 92, 82, 1);
-  border-radius: 41rpx;
-}
-
-/* 单选框未选中 */
-
-radio .wx-radio-input {
-  display: none;
-}
-
-.item {
-  width: 200rpx;
-  height: 82rpx;
+.radio {
   float: left;
+  width: auto;
+  font-size: 28rpx;
+  font-weight: 500;
+  text-align: center;
+  padding: 10rpx 35rpx;
+  border-radius: 100rpx;
+  margin: 0rpx 18rpx 30rpx 0;
+  color: rgba(244, 92, 82, 1);
+  border: 1rpx solid rgba(250, 96, 87, 1);
+}
+.rad,button.rad{
+  color: #fff;
+  background: rgba(244, 92, 82, 1);
+}
+.item {
+  float: left;
+  width: 200rpx;
+  height: 82rpx;
 }
 
 .service_selection label {
@@ -188,4 +181,79 @@ radio .wx-radio-input {
 .dinner-hover {
   background: rgba(244, 92, 82, 1) ;
   color: rgba(255, 255, 255, 1);
+}
+.banner_box{
+  width: 734rpx;
+  height: 360rpx;
+  border-radius: 12rpx;
+}
+.slide-image{
+  width: 734rpx;
+  height: 360rpx;
+  border-radius: 12rpx;
+}
+.nav{
+  height: auto;
+  width: 690rpx;
+  overflow: hidden;
+  border-radius: 16rpx;
+  padding-bottom: 40rpx;
+  margin: 50rpx 30rpx 40rpx 30rpx;
+  background: rgba(255,255,255,1);
+}
+.cen{
+  padding: 0 18rpx;
+  overflow: hidden;
+  display: table;
+  margin: 0 auto;
+}
+.nav_a{
+  float: left;
+  font-size: 32rpx;
+  font-weight: bold;
+  padding-top: 40rpx;
+  line-height: 44rpx;
+  margin-right: 32rpx;
+  color: rgba(56,56,56,1);
+}
+.left-nav{
+  float: left;
+  font-size:28rpx;
+  margin-left:20rpx;
+  margin-right:50rpx;
+  color:rgba(112,112,110,1);
+}
+.box{
+  width: 690rpx;
+  overflow: hidden;
+  position: relative;
+  border-radius: 16rpx;
+  padding-bottom: 30rpx;
+  margin: 50rpx 30rpx 40rpx 30rpx;
+  background: rgba(255,255,255,1);
+}
+.inp{
+  width:575rpx;
+  height:80rpx;
+  font-size:28rpx;
+  margin-left:20rpx;
+  border-radius:8rpx;
+  padding-left:75rpx;
+  background:rgb(244,244,244);
+}
+.inp-box{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.inp-img{
+  width:42rpx;
+  position:absolute;
+  top:20rpx;
+  left:30rpx
+}
+.section slider{
+  height: 50rpx;
+  margin-bottom: 10rpx;
 }

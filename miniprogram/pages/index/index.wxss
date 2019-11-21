@@ -1,5 +1,6 @@
 /**index.wxss**/
-
+.container{
+}
 .address {
   background-color: #ff6d64;
   height: 180rpx;
@@ -30,7 +31,8 @@
   height: 24rpx;
   margin-top: 18rpx;
 }
-
+.rotation{
+}
 .rotation_chart {
   width: 690rpx;
   height: 320rpx;
@@ -52,10 +54,10 @@
   opacity: 60%;
   width: 495rpx;
   height: 43rpx;
-  border-radius: 12px;
+  border-radius: 30rpx;
   position: relative;
-  top: -85px;
-  margin-left: 129rpx;
+  top: -160rpx;
+  margin: 0 auto;
 }
 
 .notice_img {
@@ -70,10 +72,9 @@
   color: white;
   font-size: 22rpx;
 }
-
 .middle {
-  position: relative;
-  top: -35px;
+    position: relative;
+    top:-70rpx;
 }
 
 .logo1 {
@@ -110,11 +111,11 @@
 .card {
   display: inline-block;
   width: 374rpx;
-  height: 509rpx;
+  height: 519rpx;
   background: rgba(255, 246, 245, 1);
-  box-shadow: 0px 10px 12px 0px rgba(253, 224, 222, 1);
+  box-shadow: 0px 10px 7px 0px rgba(253, 224, 222, 1);
   border-radius: 12px;
-  margin: 23rpx 30rpx 53rpx 30rpx;
+  margin: 23rpx 30rpx 30rpx 30rpx;
 }
 
 .card_ad {
@@ -124,6 +125,7 @@
   background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
+  text-align: center;
 }
 
 .card_img {
@@ -141,11 +143,7 @@
 }
 
 .ad_text {
-  width: 203rpx;
-  height: 37rpx;
   font-size: 26rpx;
-  font-family: PingFangSC-Medium, PingFangSC;
-  font-weight: 500;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -195,10 +193,8 @@
 
 .bottom {
   width: 750rpx;
-  height: 1717rpx;
   background: #f6f6f6;
-  position: relative;
-  top: -75rpx;
+  position: absolute;
 }
 
 .bottom_top {
@@ -207,21 +203,16 @@
 }
 
 .list {
-  position: relative;
+  
 }
 
 .liLeft {
-  position: absolute;
-  top: 0;
-  left: 30rpx;
-  width: 100%;
+    margin-left: 30rpx;
+    float: left;
 }
 
 .liRight {
-  position: absolute;
-  top: 0;
-  right: 30rpx;
-  width: 100%;
+    margin-left: 390rpx;
 }
 
 .li_warp {
@@ -230,13 +221,11 @@
 
 .li {
   width: 100%;
-  margin-bottom: 40rpx;
   background-color: white;
   border-radius: 12rpx;
 }
 
 .li_pic {
-  position: relative;
   color: #fff;
   border-radius: 12rpx;
   overflow: hidden;
@@ -247,7 +236,7 @@
 }
 
 .li_pic .pic_warp.picHeight_ {
-  height: 250rpx;
+  
 }
 
 .li_pic .pic_warp image {
@@ -256,7 +245,6 @@
 }
 
 .li_pic .pic_text {
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -308,6 +296,7 @@
   position: relative;
   top: -35rpx;
   left: 90rpx;
+  height: 70%;
 }
 
 .rotation_chart {
@@ -370,8 +359,7 @@
 }
 
 .foot {
-  position: relative;
-  top: -75rpx;
+    clear: left;
 }
 
 .foot_line {
@@ -383,8 +371,7 @@
   text-align: center;
   background-color: #f6f6f6;
   height: 80rpx;
-  padding-top: 20rpx;
-  position: absolute;
+  padding-top: 50rpx;
 }
 
 .num {

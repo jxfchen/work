@@ -1,28 +1,18 @@
 // pages/push_sheet/push_sheet.js
+var c = require("../../utils/http.js");
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    rad: '0',
     istarget:true,
     showModal: false,
     swiperCurrent: 0,
     background: ["/images/push_banner.png", "/images/push_banner.png", "/images/push_banner.png"],
-    items: [
-      { name: '日常工作餐', value: '日常工作餐', checked: 'true' },
-      { name: '会议用餐', value: '会议用餐' },
-      { name: '剧组餐', value: '剧组餐' },
-      { name: '食堂承包', value: '食堂承包' },
-    ],
-    allGoodsFilte: [
-      { name: '早餐', value: '0', checked: true },
-      { name: '午餐', value: '1', checked: false },
-      { name: '晚餐', value: '2', checked: false },
-    ],  
   },
+
   breakfastTap: function (e) {
-    console.log(1111);
     if (e.detail.istarget === false) {
       this.setData({
         istarget: true,
@@ -33,7 +23,6 @@ Page({
         istarget: false,
       })
     }
-    
   },
   serviceValChange: function (e) {
     var allGoodsFilte = this.data.allGoodsFilte;
@@ -58,7 +47,30 @@ Page({
       swiperCurrent: e.detail.current
     })
   },
-
+  // 项目类型
+  clas:function(e){
+    var that = this
+    var a = e.currentTarget.dataset.index
+    that.setData({
+      rad: a,
+      restaurant_id: e.currentTarget.dataset.id, // 服务id
+    })
+    console.log(this.data.restaurant_id)
+  },
+  //餐次
+  checkboxChange(e) {
+    var that = this
+    let string = "mealist[" + e.target.dataset.index + "].selected"
+    this.setData({
+      [string]: !this.data.mealist[e.target.dataset.index].selected
+    })
+    let nickname = e.currentTarget.dataset.nickname
+    let detailValue = this.data.mealist.filter(it => it.selected).map(it => it.nickname + '_id' +':'+ it.id)
+    that.setData({
+      project_type_id: detailValue, // 项目类型id
+    })
+    console.log(that.data.project_type_id)
+  },
   /**
    * 图片手动滑动时，获取当前的轮播id
    */
@@ -68,11 +80,41 @@ Page({
       swiperCurrent: e.currentTarget.id
     })
   },
+  slider: function (e) {
+    this.setData({
+      a: e.detail.value
+    })
+    console.log(e.detail.value)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    var openid = wx.getStorageSync('openid')
+    var code = options.title
+    // console.log(openid, code)
+    c.request("pushersheet/getProjectType", {
+    }, function (res) {
+      console.log(res)
+      var arr = res.meal_list
+      let newArr = arr.map(obj => {
+        return {
+          id: obj.id,
+          pid: obj.pid,
+          type: obj.type,
+          name: obj.name,
+          nickname: obj.nickname,
+          selected: false
+        }
+      })
+      console.log(newArr)
+      that.setData({
+        prolist: res.project_list,//类型
+        mealist: res.meal_list,//餐次
+      })
+    }, function () {
+    })
   },
   wqd: function (e) {
     this.setData(

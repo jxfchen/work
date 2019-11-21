@@ -1,6 +1,6 @@
 <view class="contain">
     <view class="separate"></view>
-    <block wx:for="{{list}}" wx:for-item="item">
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="">
     <view class="list">
         <view class="tit_logo"></view>
         <view class="title">{{item.title}}</view>

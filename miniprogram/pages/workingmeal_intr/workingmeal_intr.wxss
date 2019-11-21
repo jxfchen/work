@@ -1,141 +1,201 @@
 .intr_img {
-  width: 646rpx;
-  height: 334rpx;
-  border-radius: 6rpx;
-  margin: 40rpx 52rpx 36rpx 52rpx;
+    width: 646rpx;
+    height: 334rpx;
+    border-radius: 6rpx;
+    margin: 40rpx 52rpx 36rpx 52rpx;
 }
 
 .circular {
-  width: 8rpx;
-  height: 20rpx;
-  background: linear-gradient(180deg, rgba(253, 140, 116, 1) 0%, rgba(246, 103, 89, 1) 100%);
-  margin-top: 8rpx;
-  float: left;
+    width: 8rpx;
+    height: 20rpx;
+    background: linear-gradient(180deg, rgba(253, 140, 116, 1) 0%, rgba(246, 103, 89, 1) 100%);
+    margin-top: 8rpx;
+    float: left;
 }
 
 .cir_text {
-  width: 648rpx;
-  height: 68rpx;
-  font-size: 24rpx;
-  font-family: PingFangSC-Medium, PingFang SC;
-  color: rgba(100, 100, 100, 1);
-  line-height: 34rpx;
-  margin-left: 20rpx;
+    width: 648rpx;
+    height: auto;
+    font-size: 24rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    color: rgba(100, 100, 100, 1);
+    line-height: 34rpx;
+    margin-left: 20rpx;
 }
 
 .label_text {
-  font-size: 20rpx;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: rgba(243, 94, 81, 1);
-  line-height: 45rpx;
-  text-align: center;
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(243, 94, 81, 1);
+    line-height: 39rpx;
+    text-align: center;
 }
 
 .label {
-  float: left;
-  width: 144rpx;
-  height: 40rpx;
-  border-radius: 20rpx;
-  border: 1px solid rgba(250, 96, 87, 1);
-}
-
-.label2 {
-  float: left;
-  width: 84rpx;
-  height: 40rpx;
-  border-radius: 20rpx;
-  border: 1rpx solid rgba(250, 96, 87, 1);
-  margin-left: 10rpx;
-}
-
-.label3 {
-  float: left;
-  width: 180rpx;
-  height: 40rpx;
-  border-radius: 20rpx;
-  border: 1rpx solid rgba(250, 96, 87, 1);
-  margin-left: 10rpx;
+    float: left;
+    width: auto;
+    height: 40rpx;
+    padding: 0 20rpx;
+    margin-left: 10rpx;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    border: 1px solid rgba(250, 96, 87, 1);
 }
 
 .divider {
-  width: 750rpx;
-  height: 20rpx;
-  background: rgba(246, 246, 246, 1);
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(246, 246, 246, 1);
 }
 
 .profit_tit {
-  font-size: 32rpx;
-  font-family: PingFang SC;
-  font-weight: bold;
-  color: rgba(46, 52, 55, 1);
-  line-height: 32rpx;
+    font-size: 32rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(46, 52, 55, 1);
+    line-height: 32rpx;
 }
 
 .arrow {
-  float: right;
-  width: 14rpx;
-  height: 28rpx;
-  opacity: 0.4;
-  margin: 38rpx 31rpx 0 0;
+    float: right;
+    width: 14rpx;
+    height: 28rpx;
+    opacity: 0.4;
+    margin: 38rpx 31rpx 0 0;
 }
 
 .profit_p1 {
-  font-size: 24rpx;
-  color: rgba(243, 105, 99, 1);
-  line-height: 34rpx;
-  float: left;
-  margin-left: 26rpx;
-  margin-top: 8rpx;
-  margin-right: 20rpx;
+    font-size: 24rpx;
+    color: rgba(243, 105, 99, 1);
+    line-height: 34rpx;
+    float: left;
+    margin-left: 26rpx;
+    margin-top: 8rpx;
+    margin-right: 20rpx;
 }
 
 .arrow1 {
-  width: 14rpx;
-  height: 22rpx;
-  position: absolute;
-  top:96rpx;
-  left: 684rpx;
+    width: 14rpx;
+    height: 22rpx;
+    position: absolute;
+    top: 80rpx;
+    left: 684rpx;
 }
+
 .arrow2 {
-  width: 14rpx;
-  height: 22rpx;
-  position: absolute;
-  top:195rpx;
-  left: 684rpx;
+    width: 14rpx;
+    height: 22rpx;
+    position: absolute;
+    top: 160rpx;
+    left: 684rpx;
 }
 
 .bottom {
-  width: 750rpx;
-  height: 112rpx;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0px 0px 16px 0px rgba(255, 87, 76, 0.26);
-  position: fixed;
-  bottom: 0;
+    width: 750rpx;
+    height: 112rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 16px 0px rgba(255, 87, 76, 0.26);
+    position: fixed;
+    bottom: 0;
 }
 
 .btn1 {
-  width: 183rpx;
-  height: 50rpx;
-  border: 3rpx solid #ff706b;
-  background-color: white;
-  border-radius: 25rpx;
-  float: left;
-  margin: 28rpx 24rpx 20rpx 0;
-  font-size: 24rpx;
-  color: rgba(255, 86, 75, 1);
-  font-weight: bold;
+    width: 183rpx;
+    height: 50rpx;
+    border: 3rpx solid #ff706b;
+    background-color: white;
+    border-radius: 25rpx;
+    float: left;
+    margin: 28rpx 24rpx 20rpx 0;
+    font-size: 24rpx;
+    color: rgba(255, 86, 75, 1);
+    font-weight: bold;
 }
 
 .btn2 {
-  width: 444rpx;
-  height: 80rpx;
-  background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
-  border-radius: 200rpx;
+    width: 444rpx;
+    height: 80rpx;
+    background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
+    border-radius: 200rpx;
+    float: left;
+    font-size: 34rpx;
+    color: rgba(255, 255, 255, 1);
+    line-height: 78rpx;
+    text-align: center;
+    margin-top: 16rpx;
+}
+
+.income {
+    font-size: 24rpx;
+    color: rgba(100, 100, 100, 1);
+    margin: 62rpx 20rpx 0 30rpx;
+    float: left;
+    font-weight: Medium;
+}
+
+.mon {
+    font-size: 60rpx;
+    font-weight: Medium;
+    color: rgba(243, 94, 81, 1);
+    position: absolute;
+    top: 535rpx;
+}
+
+.push_title {
+    font-size: 40rpx;
+    font-weight: Semibold;
+    color: rgba(56, 56, 56, 1);
+    padding-left: 30rpx;
+    margin-top: 16rpx;
+    margin-bottom: 10rpx;
+}
+
+.word {
+    width: 84rpx;
+    height: 40rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    color: rgba(50, 50, 50, 1);
+    line-height: 40rpx;
+    margin: 0rpx 14rpx 0 30rpx;
+    float: left;
+}
+.des_box{
+  overflow: hidden;
+  padding-bottom: 15rpx;
+}
+.des{
+  width: 100%;
   float: left;
-  font-size: 34rpx;
-  color: rgba(255, 255, 255, 1);
-  line-height: 78rpx;
+  height: auto;
+  margin: 0 0 5rpx 0;
+  line-height: 34rpx;
+  padding-left: 30rpx;
+}
+.word_box{
+  overflow: hidden;
+  padding: 20rpx 0;
+}
+.nav{
+  height: 100rpx;
+  overflow:hidden;
+  font-size:28rpx;
+  padding-top:28rpx;
+  position: relative;
   text-align: center;
-  margin-top: 16rpx;
+  color:rgba(112,112,110,1);
+}
+.nav::after,.nav::before{
+  top: 48rpx;
+  content: "";
+  height:2rpx;
+  left: 30rpx;
+  width:228rpx;
+  position: absolute;
+  background-color:#D9D9D9;
+}
+.nav::after{
+  left: auto;
+  right: 30rpx;
 }

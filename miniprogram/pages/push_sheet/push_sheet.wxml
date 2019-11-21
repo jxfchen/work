@@ -1,18 +1,11 @@
 <view>
-  <view style="width:750rpx;height:402rpx;background:linear-gradient(180deg,rgba(244,92,82,1) 0%,rgba(254,226,222,1) 100%);">
+  <view class="banner">
     <!-- 轮播图 -->
-    <view class="rotation_chart" style="width:734rpx;height:360rpx;">
-      <!-- <swiper  autoplay="true" interval="10000" style="width:690rpx;height:320rpx;">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <image src="{{item}}" class="swiper_img"></image>
-          </swiper-item>
-        </block>
-      </swiper> -->
-      <swiper style="width:734rpx;height:360rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000'>
+    <view class="rotation_chart">
+      <swiper class="banner_box" autoplay='true' bindchange='swiperChange' interval='5000'>
         <block wx:key='*this' wx:for='{{background}}'>
-          <swiper-item style="border-radius: 12rpx;">
-            <image bindchange='imageChange' style="border-radius: 12rpx;width: 734rpx;height: 360rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+          <swiper-item>
+            <image bindchange='imageChange' id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
           </swiper-item>
         </block>
       </swiper>
@@ -28,111 +21,83 @@
     <view class="title">
       *尽可能详细填写信息，系统自动计算出大致收益范围。 最终收益情况，以客服经理和您沟通后确定。
     </view>
-    <view style="width:690rpx;height:368rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 204rpx">
-      </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">项目类型
-      </view>
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx">
-      </image>
+    <view class="nav">
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 204rpx"></image>
+      <view class="nav_a">项目类型</view>
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
       <view class="page__bd">
-        <view class="section section_gap">
-          <radio-group class="radio-group" bindchange="radioChange">
-            <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" hover-class="dinner-hover">
-              <text>{{item.value}}</text>
-            </radio>
-          </radio-group>
+        <view class="section section_gap cen">
+          <view class="radio {{rad == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{prolist}}" wx:key="prolist" bindtap="clas" data-id="{{item.id}}">{{item.name}}</view>
         </view>
       </view>
     </view>
-    <view style="width:690rpx;height:498rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx">
-      </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">餐次需求（可多选）
+    <view class="box">
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx"></image>
+      <view class="nav_a">餐次需求（可多选）</view>
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
+      <!-- <button class='{{istarget===true?"breakfast_after":"breakfast"}}' bindtap="breakfastTap">早餐</button> -->
+      <view class="cen">
+        <button
+          wx:for="{{mealist}}"
+          wx:for-item="item"
+          wx:key="item"
+          bindtap="checkboxChange"
+          data-index="{{index}}"
+          data-nickname="{{item.nickname}}"
+          checked="false"
+          class="radio {{item.selected ? 'rad' : ''}}" >
+            {{item.name}}
+        </button>
       </view>
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx">
-      </image>
-      <!-- <checkbox-group bindchange="serviceValChange">
-        <view class="service_selection flex">
-          <block wx:for="{{allGoodsFilte}}">
-            <view class="item">
 
-              <label class="checkbox {{item.checked?'is_checked':''}}" >
-                <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.name}}
-              </label>
-            </view>
-          </block>
-        </view>
-      </checkbox-group> -->
-      <!-- <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:18rpx;margin-right:28rpx;float:left;">
-        早餐
-      </view> -->
-      <button class='{{istarget===true?"breakfast_after":"breakfast"}}' bindtap="breakfastTap">早餐</button>
-      <button class="breakfast" hover-class="dinner-hover">午餐</button>
-      <button class="dinner" hover-class="dinner-hover">晚餐</button>
-      <!-- <view style="width:200rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:28rpx;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-right:28rpx;float:left;">
-        午餐
-      </view>  
-      <view style="width:200rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);float:right;font-size:28rpx;color:rgba(244,92,82,1);line-height:80rpx;margin-right:15rpx;text-align:center;">晚餐
-      </view> -->
-      <view style="margin-top:40rpx;">
-        <view style="font-size:28rpx;color:rgba(112,112,110,1);line-height:40px;margin-left:20rpx;margin-right:50rpx;float:left;margin-top:40rpx;">早餐</view>
-        <view class="section section_gap" style="padding-top:80rpx;width:674rpx;">
-          <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" max="50"></slider>
-        </view>
-      </view>
-      <view style="margin-top:40rpx;">
-        <view style="font-size:28rpx;color:rgba(112,112,110,1);line-height:40px;margin-left:20rpx;margin-right:50rpx;float:left;">午餐</view>
-        <view class="section section_gap" style="padding-top:8rpx;width:674rpx;">
-          <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" max="50"></slider>
+      <view>
+        <view wx:for="{{mealist}}" wx:key="{{mealist}}" wx:if="{{item.selected}}">
+          <view class="left-nav">{{item.name}}</view>
+          <view class="section section_gap" style="width:674rpx;">
+            <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" data-name="{{item.nickname}}_price" block-size="24" min='0' max="200" bindchange="slider"></slider>
+          </view>
         </view>
       </view>
     </view>
-    <view style="width:690rpx;height:244rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
+    <view class="box">
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 204rpx"></image>
+      <view class="nav_a">就餐人数</view>
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
+      <view class="inp-box">
+        <input class="weui-input" type="number" placeholder="如无法确定精确人数，填写大致人数即可" class="inp"></input>
+        <image src="/images/num.png" mode="widthFix" class="inp-img"></image>
+      </view>
+    </view>
+
+    <view class="box">
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 204rpx">
       </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">就餐人数
+      <view class="nav_a">联系方式
       </view>
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx">
-      </image>
-      <input class="weui-input" type="number" placeholder="如无法确定精确人数，填写大致人数即可" style="font-size:28rpx;width:43rpx;width:575rpx;height:80rpx;background:rgba(244,244,244,1);border-radius:8rpx;margin-left:20rpx;padding-left:75rpx;">
-      </input>
-      <image src="/images/num.png" style="width:42rpx;height:42rpx;position:absolute;top:1664rpx;left:70rpx;"></image>
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
+      <view class="inp-box">
+        <input class="weui-input" type="number" placeholder="您的联系方式，手机号/或者微信" class="inp"></input>
+        <image src="/images/phone.png" mode="widthFix" class="inp-img"></image>
+      </view>
+      <view class="inp-box">
+        <input class="weui-input" type="number" placeholder="客户联系方式，手机号/或者微信" class="inp"></input>
+        <image src="/images/phone.png" mode="widthFix" class="inp-img"></image>
+      </view>
     </view>
 
-
-    <view style="width:690rpx;height:346rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 204rpx">
-      </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">联系方式
-      </view>
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx">
-      </image>
-      <input class="weui-input" type="number" placeholder="您的联系方式，手机号/或者微信" style="font-size:28rpx;width:43rpx;width:575rpx;height:80rpx;background:rgba(244,244,244,1);border-radius:8rpx;margin-left:20rpx;padding-left:75rpx;">
-      </input>
-      <image src="/images/phone.png" style="width:42rpx;height:42rpx;position:absolute;top:1960rpx;left:70rpx;"></image>
-      <input class="weui-input" type="number" placeholder="客户联系方式，手机号/或者微信" style="font-size:28rpx;width:43rpx;width:575rpx;height:80rpx;background:rgba(244,244,244,1);border-radius:8rpx;margin-left:20rpx;padding-left:75rpx;margin-top:20rpx;">
-      </input>
-      <image src="/images/phone.png" style="width:42rpx;height:42rpx;position:absolute;top:2060rpx;left:70rpx;"></image>
-    </view>
-
-    <view style="width:690rpx;height:282rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 10rpx 122rpx">
-      </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">您希望我们优先联系？
-      </view>
-      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 10rpx 0rpx">
-      </image>
+    <view  class="box">
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 10rpx 122rpx"></image>
+      <view class="nav_a">您希望我们优先联系？</view>
+      <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 10rpx 0rpx"></image>
       <view style="font-size:24rpx;color:rgba(133,99,92,1);margin-left:70rpx;">放心推荐，我们只会联系有获得您授权的推荐信息。</view>
       <view style="width:258rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:24rpx;font-weight:500;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:34rpx;margin-top:40rpx;float:left;">联系我</view>
       <view style="width:258rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);font-size:24rpx;font-weight:500;color:rgba(244,92,82,1);line-height:80rpx;float:right;margin-right:34rpx;margin-top:40rpx;text-align:center;">直接联系客户</view>
     </view>
 
-
-    <view style="width:690rpx;height:568rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
+    <view class="box">
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 10rpx 122rpx">
       </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">本项目中您的角色是？
+      <view class="nav_a">本项目中您的角色是？
       </view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 10rpx 0rpx">
       </image>
@@ -143,11 +108,10 @@
       <view style="width:264rpx;height:204rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-right:40rpx;margin-top:20rpx;float:right;text-align:justify">推荐人指：您从任何渠道获得了有需求的客户信息，将信息推送给我们，我们核实客户信息真实性，有效性后获得一次性收益的个人。</view>
     </view>
 
-    <view style="width:690rpx;height:620rpx;background:rgba(255,255,255,1);border-radius:16rpx;margin:50rpx 30rpx 40rpx 30rpx">
+    <view class="box">
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 10rpx 250rpx">
       </image>
-      <view style="font-size:32rpx;font-weight:bold;color:rgba(56,56,56,1);padding-top:40rpx;margin-right:32rpx;line-height:44rpx;float:left;">说明
-      </view>
+      <view class="nav_a">说明</view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 10rpx 0rpx">
       </image>
       <view style="font-size:28rpx;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:rgba(244,98,84,1);line-height:40rpx;margin-left:28rpx">1、信息授权原则</view>
