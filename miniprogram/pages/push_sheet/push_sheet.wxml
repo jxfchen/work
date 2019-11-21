@@ -1,4 +1,3 @@
-<view>
   <view class="banner">
     <!-- 轮播图 -->
     <view class="rotation_chart">
@@ -16,8 +15,6 @@
       </view>
     </view>
   </view>
-
-  <view style="height:3592rpx;width:750rpx;background:rgba(254,226,222,1);">
     <view class="title">
       *尽可能详细填写信息，系统自动计算出大致收益范围。 最终收益情况，以客服经理和您沟通后确定。
     </view>
@@ -29,7 +26,6 @@
         <view class="section section_gap cen">
           <view class="radio {{rad == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{prolist}}" wx:key="prolist" bindtap="clas" data-id="{{item.id}}">{{item.name}}</view>
         </view>
-      </view>
     </view>
     <view class="box">
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx"></image>
@@ -120,39 +116,38 @@
       <view style="font-size:24rpx;font-family:PingFang-SC-Regular,PingFang-SC;font-weight:400;color:rgba(136,136,136,1);line-height:36rpx;margin-left:28rpx;margin-top:10rpx;">我们联系客户前的强制流程是获得您的授权，没有获得您的授权之前我们绝不会联系客户。我们联系客户前的强制流程是获得您的授权，没有获得您的！</view>
       <view style="font-size:28rpx;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:rgba(244,98,84,1);line-height:40rpx;margin-left:28rpx;margin-top:20rpx;">3、关于提交虚假信息的声明</view>
       <view style="font-size:24rpx;font-family:PingFang-SC-Regular,PingFang-SC;font-weight:400;color:rgba(136,136,136,1);line-height:36rpx;margin-left:28rpx;margin-top:10rpx;">我们联系客户前的强制流程是获得您的授权，没有获得您的授权之前我们绝不会联系客户。我们联系客户前的强制流程是获得您的授权，没有获得您的！</view>
-    </view>
-    <view style="width:574rpx;height:96rpx;background:linear-gradient(90deg,rgba(253,140,116,1) 0%,rgba(243,94,81,1) 100%);box-shadow:0rpx 4rpx 14rpx 0rpx rgba(244,99,85,1);border-radius:48rpx;margin-left:88rpx;margin-top:46rpx;font-size:34rpx;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:rgba(255,255,255,1);line-height:48px;text-align:center;">提交合伙人推单</view>
-  </view>
 
-  <!-- 遮罩层 -->
-  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
-  <!-- 弹出层 -->
-  <view class="modalDlg" wx:if="{{showModal}}">
-    <!-- 二维码或其他图片 -->
-    <image style="width:402rpx;height:146rpx;" src="/images/pop_background.png"></image>
-    <text style='font-size:44rpx;font-weight:bold;color:rgba(255,255,255,1);position:absolute;top:20rpx;'>推荐人预计收益
+    </view>
+
+    <!-- 遮罩层 -->
+    <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+    <!-- 弹出层 -->
+    <view class="modalDlg" wx:if="{{showModal}}">
+        <!-- 二维码或其他图片 -->
+        <image class="pop_background" src="/images/pop_background.png"></image>
+        <text class="recommend_subject">推荐人预计收益
     </text>
-    <text style="font-size:24rpx;color:rgba(158,158,158,1);">最终收益情况以客服和您沟通后确定</text>
-    <image bindtap="ok" class="ok" style="width:30rpx;height:32rpx;position:absolute;top:20rpx;left:644rpx;" src="/images/close.png"></image>
-    <view style="margin-top:38rpx">
-      <image src="/images/check.png" style="width:60rpx;height:60rpx;float:left"></image>
-      <view style="width:220rpx;height:2rpx;background-color:#FEC400;margin-top:32rpx;margin-left:26rpx;float:left;margin-right:26rpx;"></view>
-      <image src="/images/check.png" style="width:60rpx;height:60rpx;"></image>
+        <text class="recommend_remarks">最终收益情况以客服和您沟通后确定</text>
+        <image bindtap="ok" class="ok" src="/images/close.png"></image>
+        <view class="part1">
+            <image src="/images/check.png" class="check_left"></image>
+            <view class="check_line"></view>
+            <image src="/images/check.png" class="check_right"></image>
+        </view>
+        <view>
+            <view class="recommend_title1">信心真实性 有效性验证</view>
+            <view class="recommend_title2">订单成功</view>
+        </view>
+        <view class="part3">
+            <view class="recommend_btn1">￥50</view>
+            <view class="recommend_btn2" style="">￥2000</view>
+        </view>
+        <view class="part4">
+            <view class="recommend_textLeft">
+                <view class="textLeft1">真实性：客户信息完整，能够联系上，且初步确定有需求.</view>
+                <view class="textLeft2">有效性：客户需求符合定义的服务范围。（见服务介绍页面）</view>
+            </view>
+            <view class="recommend_textRight">接到您的需求后并获得您的授权后，我们会派出销售经理和客户洽谈合作。并及时在订单状态中更新项目推进情况。</view>
+        </view>
     </view>
-    <view style="display:block">
-      <view style="width:160rpx;height:80rpx;font-size:28rpx;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:rgba(50,50,50,1);line-height:40rpx;float:left;margin-right:194rpx;">信心真实性 有效性验证</view>
-      <view style="width:160rpx;height:80rpx;font-size:28rpx;font-family:PingFangSC-Medium,PingFang SC;font-weight:500;color:rgba(50,50,50,1);line-height:40rpx;float:right;">订单成功</view>
-    </view>
-    <view style="display:block;margin-top:10rpx">
-      <view style="width:256rpx;height:76rpx;background:rgba(254,226,222,1);border-radius:38rpx;color:rgba(243,94,81,1);font-weight:500;font-size:60rpx;line-height:84rpx;text-align:center;float:left;margin-right:74rpx;">￥50</view>
-      <view style="width:256rpx;height:76rpx;background:rgba(254,226,222,1);border-radius:38rpx;color:rgba(243,94,81,1);font-weight:500;font-size:60rpx;line-height:84rpx;text-align:center;float:right;">￥2000</view>
-    </view>
-    <view style="display:block;margin-top:50rpx">
-      <view style="float:left;margin-right:66rpx">
-        <view style="width:264rpx;height:102rpx;font-size:24rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;">真实性：客户信息完整，能够联系上，且初步确定有需求.</view>
-        <view style="width:264rpx;height:102rpx;font-size:24rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;">有效性：客户需求符合定义的服务范围。（见服务介绍页面）</view>
-      </view>
-      <view style="width:264rpx;height:170rpx;font-size:24rpx;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;float:right;">接到您的需求后并获得您的授权后，我们会派出销售经理和客户洽谈合作。并及时在订单状态中更新项目推进情况。</view>
-    </view>  
-  </view>
 </view>

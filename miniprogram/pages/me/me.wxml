@@ -3,21 +3,23 @@
     </view>
     <view class="card">
         <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
-            <image class="header" src="{{userInfo.avatarUrl}}"></image>
+            <image class="header" src="{{list.user_info.avatarurl}}"></image>
         </navigator>
         <view class="message">
-            <view class="nikname">{{userInfo.nickName}}</view>
-            <view class="attestation">已认证</view>
-            <view class="text">126742102</view>
-            <view class="copy">复制邀请码</view>
+            <view class="message_part">
+                <view class="nikname">{{list.user_info.nickname}}</view>
+                <view class="attestation">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+            </view>
+            <view class="text">{{list.user_info.invite_code}}</view>
+            <view class="copy" bindtap="copyTBL">复制邀请码</view>
             <view class="get">去领钱</view>
             <image src="/images/me/v.png" class="v_img"></image>
         </view>
         <view class="money">
             <view class="RMB">￥</view>
-            <view class="money_num">800</view>
+            <view class="money_num">{{list.money_info.single_invest}}</view>
             <view class="RMB2">￥</view>
-            <view class="money_num2">6808</view>
+            <view class="money_num2">{{list.money_info.team_invest}}</view>
             <image src="/images/me/know.png" class="know_img"></image>
         </view>
         <view class="personal_text">个人推单总收益</view>
