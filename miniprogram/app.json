@@ -1,10 +1,11 @@
 {
     "pages": [
+        "pages/index/index",
+        "pages/sheetlist/sheetlist",
         "pages/me/me",
         "pages/push_team/push_team",
         "pages/push_sheet/push_sheet",
         "pages/authorized_login/authorized_login",
-        "pages/index/index",
         "pages/workingmeal_intr/workingmeal_intr",
         "pages/certification_first/certification_first",
         "pages/certification_second/certification_second",

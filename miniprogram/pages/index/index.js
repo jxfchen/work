@@ -50,7 +50,11 @@ Page({
       swiperCurrent: e.currentTarget.id
     })
   },
-
+  sheetlist:function(e){
+    wx.navigateTo({
+      url: '../sheetlist/sheetlist',
+    })
+  },
 
   bindRegionChange: function (e) {
     // console.log('picker发送选择改变，携带值为', e.detail.value)
