@@ -31,10 +31,10 @@
         <view class="teamlist_text">团队成员列表</view>
         <view class="teamlist_details">详情</view>
         <image src="/images/arrow1.png" class="teamlist_arrow"></image>
-        <block wx:key='{{list.user_list}}' wx:for='{{list.user_list}}'>
-        <image class="teamlist_header1" src="{{list.user_list.avatarurl}}"></image>
+        <block wx:for-item="item" wx:key="" wx:for='{{list.user_list}}'>
+            <image class="teamlist_header1" src="{{item.avatarurl}}"></image>
         </block>
-        <view class="header_num">+49</view>
+        <view class="header_num">+{{list.user_list.length}}</view>
     </view>
     <view class="divide1"></view>
     <view class="team_ranking">
@@ -42,52 +42,27 @@
         <view class="ranking_title">团队贡献排行榜</view>
         <view class="ranking_details">成员匿名说明</view>
         <image src="/images/question_mark1.png" class="question_mark1"></image>
-        <view class="ranking_btn">
-            <view class="manager_btn">经理推客</view>
-            <view class="staff_btn">员工推客
+        <view class="ranking_btn" style='{{flag=="1"?"display:block":"display:none"}}'>
+            <view class="manager_btn" bindtap="bindManager">经理推客</view>
+            <view class="staff_btn" bindtap="bindstaff">员工推客
+            </view>
+        </view>
+        <view class="ranking_btn" style='{{flag=="2"?"display:block":"display:none"}}'>
+            <view class="manager_btn1" bindtap="bindManager">经理推客</view>
+            <view class="staff_btn1" bindtap="bindstaff">员工推客
             </view>
         </view>
         <view>
-            <view>
-                <view class="ranking_num">1</view>
-                <image class="ranking_header" src="/images/me/header.png"></image>
-                <view class="ranking_nicname">都磊素</view>
-                <view class="ranking_money">累计贡献 680元
+            <block wx:for-item="item" wx:key="index" wx:for='{{list.pusher_award_list}}'>
+                <view>
+                    <view class="ranking_num">{{index+1}}</view>
+                    <image class="ranking_header" src="{{item.avatarurl}}"></image>
+                    <view class="ranking_nicname">{{item.nickname}}</view>
+                    <view class="ranking_money">累计贡献 {{item.total}}元
+                    </view>
+                    <view class="ranking_line"></view>
                 </view>
-                <view class="ranking_line"></view>
-            </view>
-            <view>
-                <view class="ranking_num">2</view>
-                <image src="/images/me/header.png" class="ranking_header"></image>
-                <view class="ranking_nicname">都磊素</view>
-                <view class="ranking_money">累计贡献 680元
-                </view>
-                <view class="ranking_line"></view>
-            </view>
-            <view>
-                <view class="ranking_num">3</view>
-                <image src="/images/me/header.png" class="ranking_header"></image>
-                <view class="ranking_nicname">都磊素</view>
-                <view class="ranking_money">累计贡献 680元
-                </view>
-                <view class="ranking_line"></view>
-            </view>
-            <view>
-                <view class="ranking_num">4</view>
-                <image src="/images/me/header.png" class="ranking_header"></image>
-                <view class="ranking_nicname">都磊素</view>
-                <view class="ranking_money">累计贡献 680元
-                </view>
-                <view class="ranking_line"></view>
-            </view>
-            <view>
-                <view class="ranking_num">5</view>
-                <image src="/images/me/header.png" class="ranking_header"></image>
-                <view class="ranking_nicname">都磊素</view>
-                <view class="ranking_money">累计贡献 680元
-                </view>
-                <view class="ranking_line"></view>
-            </view>
+            </block>
         </view>
     </view>
 </view>

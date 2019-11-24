@@ -8,7 +8,9 @@
         <view class="message">
             <view class="message_part">
                 <view class="nikname">{{list.user_info.nickname}}</view>
-                <view class="attestation">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+                <navigator  url="/pages/identity_authentication/identity_authentication?title=identity_authentication" hover-class="navigator-hover">
+                    <view class="attestation">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+                </navigator>
             </view>
             <view class="text">{{list.user_info.invite_code}}</view>
             <view class="copy" bindtap="copyTBL">复制邀请码</view>

@@ -200,6 +200,7 @@ Page({
         }
         let flag = true;
         //判断餐次需求是否为空
+        console.log(footList);
         if(footList.length==0){
             flag = false;
         }

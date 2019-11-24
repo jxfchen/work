@@ -34,13 +34,14 @@
   height: 286rpx;
   margin-top: 20rpx;
   margin-left: 30rpx;
+  border-radius: 15rpx;
 }
 
 .card_tit {
   font-size: 30rpx;
   color: white;
   font-weight: 500;
-  margin-left: 256rpx;
+  text-align: center;
   padding-top: 30rpx;
   line-height: 42rpx;
 }
@@ -63,11 +64,8 @@
 
 .money {
   font-size: 36rpx;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 1);
-  margin-left: 216rpx;
-  float: left;
   line-height: 100rpx;
+  float: left;
 }
 
 .card_num {
@@ -75,6 +73,7 @@
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
   line-height: 84rpx;
+  text-align: center;
 }
 
 .myincome {
@@ -156,6 +155,7 @@
   width: 750rpx;
   height: 206rpx;
   background: rgba(255, 255, 255, 1);
+  margin-bottom: 20rpx;
 }
 
 .list_logo {
@@ -203,13 +203,13 @@
 }
 
 .list_time {
-  width: 124rpx;
+  width: 150rpx;
   height: 34rpx;
   font-size: 24rpx;
   font-weight: 400;
   color: rgba(136, 136, 136, 1);
-  float: left;
-  margin-left: 194rpx;
+  float: right;
+  margin-right: 30rpx;
   margin-top: 44rpx;
 }
 
@@ -246,7 +246,7 @@
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: rgba(244, 92, 82, 1);
-  float: left;
+  float: right;
   margin-top: 22rpx;
 }
 
@@ -254,8 +254,9 @@
   font-size: 48rpx;
   font-weight: 600;
   color: rgba(244, 92, 82, 1);
-  float: left;
+  float: right;
   margin-top: 10rpx;
+  margin-right: 28rpx;
 }
 
 .details {
@@ -279,4 +280,8 @@
   width: 750rpx;
   height: 166rpx;
   background-color: #f4f4f4;
+}
+.part{
+    background-color: #f4f4f4;
+    min-height: 1000rpx;
 }

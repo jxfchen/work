@@ -1,13 +1,21 @@
 // pages/income_details/income_details.js
+var c = require("../../utils/http.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      flag:'true',
   },
-
+    closetap(e){
+        const that = this;
+        var flag=this.data.flag;
+        var flag='false';
+        that.setData({
+            flag: flag,
+        })
+    },
   /**
    * 生命周期函数--监听页面加载
    */

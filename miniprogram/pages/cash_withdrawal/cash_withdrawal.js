@@ -1,34 +1,67 @@
 // pages/cash_withdrawal/cash_withdrawal.js
+var c = require("../../utils/http.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      status: false,
+      prolist: [
+          {
+              name: "100元",
+              id: 100,
+          }, {
+              name: "200元",
+              id: 200,
+          }, {
+              name: "500元",
+              id: 500,
+          }, {
+              name: "1000元",
+              id: 1000,
+          }, {
+              name: "2000元",
+              id: 2000,
+          }
+      ],
+      money:'',
   },
-    clicktap: function (e) {
-        var status=this.data.status;
-        if (status == false) {
-            this.setData({
-                status: true
-            })
-        } else {
-            this.setData({
-                status: false
-            })
-        }
-        console.log(status);
+    clas: function (e) {
+        let that = this;
+        let a = e.currentTarget.dataset.index;
+        let money = e.currentTarget.dataset.id;
+        that.setData({
+            rad: a,
+            money: money, // 服务id
+        })
+        console.log(money);
     },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
       
   },
-
+    bindClick(e) {
+        var that = this;
+        var money = that.data.money;
+        var openid = wx.getStorageSync('openid');
+        c.request("wechatuser/getWithdraw", {
+            openid: openid,
+            money: money,
+        }, function (res) {
+            wx.showToast({
+                title: '提现成功',
+            })
+        }, function () {
+            console.log('fail');
+        })
+    },
   /**
+   * 
+   * 
+   * 
+   * 
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

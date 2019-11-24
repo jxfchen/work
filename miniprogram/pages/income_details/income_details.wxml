@@ -1,97 +1,57 @@
 <!--pages/income_details/income_details.wxml-->
 <view>
-  <view class="remind">
-    <image class="bell_img" src="/images/task_news.png"></image>
-    <view class="bell_text">收益明细说明：全部收益情况均展示在此。
-    <image src="/images/close1.png" class="close_btn" bindtap="closetap"></image>
-    </view>
-  </view>  
-  <view style="width:750rpx;height:326rpx;background:rgba(255,255,255,1);">
-    <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 302rpx;">
-      <view>
-        <view class="card_tit">余额（元）</view>
-        <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
-            <view class="gocash">去提现</view>
-        </navigator>
-        <view class="money">￥</view>
-        <view class="card_num">9876.87</view>
-      </view>
-      <view style="margin-top:16rpx;">
-        <view style="float:left;">
-          <view class="myincome">我的累计收益(元)</view>
-          <view class="myincome_num">24</view>
+    <view class="remind" style='{{flag=="false"?"display:none":"display:block"}}'>
+        <image class="bell_img" src="/images/task_news.png"></image>
+        <view class="bell_text">收益明细说明：全部收益情况均展示在此。
+            <image src="/images/close1.png" class="close_btn" bindtap="closetap" ></image>
         </view>
-        <view class="vertical_line"></view>
-        <view style="float:left;">
-          <view  class="teamincome">团队累计收益(元)</view>
-          <view class="teamincome_num">32</view>
+    </view>
+    <view style="width:750rpx;height:326rpx;background:rgba(255,255,255,1);">
+        <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 302rpx;">
+            <view>
+                <view class="card_tit">余额（元）</view>
+                <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
+                    <view class="gocash">去提现</view>
+                </navigator>
+
+                <view class="card_num">￥{{list.money_info.use_money}}</view>
+            </view>
+            <view style="margin-top:16rpx;">
+                <view style="float:left;">
+                    <view class="myincome">我的累计收益(元)</view>
+                    <view class="myincome_num">{{list.money_info.single_invest}}</view>
+                </view>
+                <view class="vertical_line"></view>
+                <view style="float:left;">
+                    <view class="teamincome">团队累计收益(元)</view>
+                    <view class="teamincome_num">{{list.money_info.team_invest}}</view>
+                </view>
+                <view class="vertical_line"></view>
+                <view style="float:left;">
+                    <view class="taskincome">任务累计收益(元)</view>
+                    <view class="taskincome_num">{{list.money_info.total}}</view>
+                </view>
+            </view>
         </view>
-        <view  class="vertical_line"></view>
-        <view style="float:left;">
-          <view class="taskincome">任务累计收益(元)</view>
-          <view class="taskincome_num">88</view>
+    </view>
+    <view class="separate"></view>
+    <view class="part">
+    <block wx:for="{{list.account_log}}" wx:for-item="item" wx:key="">
+        <view class="list" style='{{item.is_show==0?"display:none":"display:block"}}'>
+            <view class="list_logo"></view>
+            <view class="list_title">{{item.type_name}}</view>
+            <!-- <view class="pass">
+                <image src="/images/task_finish.png" class="pass_img"></image>
+                <view class="pass_text">审核通过</view>
+            </view> -->
+            <view class="list_time">{{item.createtime}}</view>
+            <view class="line"></view>
+            <view class="push_number">推单编号</view>
+            <view class="push_num">{{item.id}}</view>
+            <view class="num">{{item.money}}</view>
+            <view class="add">{{item.sign==1?"+":"-"}}</view>
         </view>
-      </view>
+    </block>
     </view>
-  </view>
-  <view class="separate"></view>
-  <view  class="list">
-    <view class="list_logo"></view>
-    <view class="list_title">推客推单收益</view>
-    <view class="pass">
-      <image src="/images/task_finish.png" class="pass_img"></image>
-      <view class="pass_text">审核通过</view>
-    </view>
-    <view class="list_time">2019.09.09</view>
-    <view class="line"></view>
-    <view class="push_number">推单编号</view>
-    <view class="push_num">2839499</view>
-    <view class="add">+</view>
-    <view class="num">9860.05</view>
-  </view>
 
-  <view class="separate"></view>
-  <view  class="list">
-    <view class="list_logo"></view>
-    <view class="list_title">团队推单收益</view>
-    <view class="details">
-      详情
-    </view>
-    <view class="list_time">2019.09.09</view>
-    <view class="line"></view>
-    <view class="push_number">推单编号</view>
-    <view class="push_num">2839499</view>
-    <view class="add">+</view>
-    <view class="num">9860.05</view>
-  </view>
-
-  <view class="separate"></view>
-  <view  class="list">
-    <view class="list_logo"></view>
-    <view class="list_title">推客推单收益</view>
-    <view class="details">
-      详情
-    </view>
-    <view class="list_time">2019.09.09</view>
-    <view class="line"></view>
-    <view class="push_number">推单编号</view>
-    <view class="push_num">2839499</view>
-    <view class="add">+</view>
-    <view class="num">9860.05</view>
-  </view>
-
-  <view class="separate"></view>
-  <view  class="list">
-    <view class="list_logo"></view>
-    <view class="list_title" style="margin-right:80rpx;">完成收益  完成*任务</view>
-    <view class="list_time">2019.09.09</view>
-    <view class="line"></view>
-    <view class="push_number">推单编号</view>
-    <view class="push_num">2839499</view>
-    <view class="add">+</view>
-    <view class="num">9860.05</view>
-  </view>
-  <view class="bottom"></view>
-
-  
 </view>

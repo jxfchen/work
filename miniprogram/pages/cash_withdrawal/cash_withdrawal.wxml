@@ -11,17 +11,20 @@
     </view>
     <view class="cash_num">
         <view class="cash_title">选择支付金额</view>
-        <view class='{{status==false?"yuan100":"selection"}}' bindtap="clicktap">100元</view>
+        <view class="page__bd">
+          <view class="radio {{rad == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{prolist}}" wx:key="prolist" bindtap="clas" data-id="{{item.id}}">{{item.name}}</view>
+    </view>
+        <!-- <view class='{{status==false?"yuan100":"selection"}}' bindtap="clicktap">100元</view>
         <view class="yuan100">200元</view>
         <view class="yuan100">500元</view>
         <view class="yuan100">1000元</view>
-        <view class="yuan100">2000元</view>
+        <view class="yuan100">2000元</view> -->
     </view>
     <view class="cash_way">
         <view class="cash_title">选择支付方式</view>
         <image src="/images/weixin.png" class="weixin"></image>
         <view class="weixin_text">微信支付</view>
         <image src="/images/choice.png" class="choice"></image>
-        <view class="btn">立即提现</view>
+        <view class="btn" bindtap="bindClick">立即提现</view>
     </view>
 </view>

@@ -89,14 +89,14 @@
     float: left;
 }
 
-.selection{
+.selection {
     width: 216rpx;
     height: 70rpx;
-    background:rgba(244,92,82,1);
+    background: rgba(244, 92, 82, 1);
     border-radius: 40rpx;
     font-size: 30rpx;
     font-weight: 400;
-    color:rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
     line-height: 72rpx;
     text-align: center;
     margin-top: 40rpx;
@@ -149,4 +149,36 @@
     text-align: center;
     margin-top: 60rpx;
     margin-left: 88rpx;
+}
+
+.page__bd {
+    margin-left: 30rpx;
+}
+
+/* 单选框 */
+
+button.radio {
+    display: inline;
+    padding: 0 35rpx;
+    background: #fff;
+}
+
+.radio {
+    float: left;
+    width: 216rpx;
+    height: 70rpx;
+    background: rgba(245, 245, 245, 1);
+    border-radius: 40rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+    line-height: 70rpx;
+    text-align: center;
+    margin-right: 20rpx;
+    margin-top: 40rpx;
+}
+
+.rad, button.rad {
+    color: #fff;
+    background: rgba(244, 92, 82, 1);
 }
