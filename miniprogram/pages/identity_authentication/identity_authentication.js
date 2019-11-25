@@ -1,4 +1,5 @@
 // pages/security-code/security-code.js
+var c = require("../../utils/http.js");
 
 Page({
 
@@ -11,8 +12,6 @@ Page({
         isFocus: true, //聚焦
         isLight: false,  //btn 是否高亮
         hideTip: true, // 错误提示
-        idCard: '350105199506138487', //身份证
-        title: '标题标题标题标题标题标题', //名称
     },
 
     // input 输入变化
@@ -24,6 +23,7 @@ Page({
             isLight: result,
             inputValue: val,
         });
+
     },
     // input 点击  聚焦
     handleInputTap() {
@@ -34,30 +34,46 @@ Page({
 
 
     //身份证验证
-    // handleValidata() {
-    //     let userIn = this.data.inputValue;
-    //     let real = this.data.idCard.slice(-6);
-    //     this.setData({
-    //         hideTip: true
-    //     });
-    //     //输入是否正确
-    //     if (userIn === real) {
-    //         wx.showToast({
-    //             title: '验证成功',
-    //         })
-    //     } else {
-    //         this.setData({
-    //             hideTip: false
-    //         });
-    //     }
-    // },
+    handleValidata() {
+        let invest_code = this.data.inputValue;
+        let userIn = this.data.inputValue.length;
+        let real = this.data.inputLength;
+        this.setData({
+            hideTip: true
+        });
+        //输入是否正确
+        if (userIn === real || userIn=== 0) {
+            // wx.showToast({
+            //     title: '验证成功',
+            // })
+            var openid = wx.getStorageSync('openid');
+            c.request("wechatuser/getAttestation", {
+                openid: openid,
+                invest_code: invest_code,
+            }, function (res) {
+                console.log("success")
+            }, function () {
+            })
+            wx.navigateTo({
+                url: '/pages/certification_first/certification_first',
+                success: function(res) {},
+                fail: function(res) {},
+                complete: function(res) {},
+            })
+
+        } else {
+            wx.showToast({
+                title: '邀请人编码输入不正确',
+                icon:'none',
+            })
+        }
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        //禁止转发
-        wx.hideShareMenu()
+        
     },
 
     /**

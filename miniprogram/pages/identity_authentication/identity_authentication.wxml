@@ -33,12 +33,8 @@
             </block>
             <input class="hidden-input" type="number" focus="{{isFocus}}" maxlength="{{inputLength}}" bindinput="handleInputChange"></input>
         </view>
-        <view hidden="{{hideTip}}" class="tip animated shake">您输入的信息有误</view>
-        <navigator url="/pages/certification_first/certification_first?title=certification_first">
-            <view class="btn" type="default" size="{{defaultSize}}" loading="{{loading}}" 
-                  plain="{{plain}}" disabled="{{disabled}}" bindtap="{{isLight? 'handleValidata': null}}" 
-                  hover-class="other-button-hover">开始认证</view>
-        </navigator>
+        <!-- <view hidden="{{hideTip}}" class="tip animated shake">您输入的信息有误</view> -->
+        <view class="btn" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="handleValidata" hover-class="other-button-hover">开始认证</view>
         <view class="inviter_title">认证成功有机会获得 5.21元的开工红包！</view>
     </view>
 </view>
