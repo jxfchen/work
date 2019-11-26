@@ -44,8 +44,6 @@
 }
 
 .divider {
-    position: absolute;
-    top: 840rpx;
     width: 750rpx;
     height: 20rpx;
     background: rgba(246, 246, 246, 1);
@@ -205,7 +203,7 @@
     width: 32rpx;
     height: 9rpx;
     position: absolute;
-    top: 20rpx;
+    top: 895rpx;
     left: 680rpx;
 }
 
@@ -213,8 +211,6 @@
     width: 750rpx;
     height: 20rpx;
     background: rgba(244, 244, 244, 1);
-    position: absolute;
-    top: 952rpx;
 }
 
 .homepage_img {

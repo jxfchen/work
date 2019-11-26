@@ -3,7 +3,6 @@ var c = require("../../utils/http.js");
 Page({
   data: {
     // 左侧点击类样式
-    curNav: 'A',
     scrollTop: 0,
     listHeight: '',
     inputShowed: false,
@@ -13,27 +12,32 @@ Page({
     subclass: [],
   },
   onLoad: function (options) {
-    wx.showToast({
-      icon: 'none',
-      title: "成功",
-    })
+    // wx.showToast({
+    //   icon: 'none',
+    //   title: "成功",
+    // })
     var that = this
     c.request("restaurant/getRestaurantType", {
 
     }, function (res) {
       console.log(res.info)
-      console.log(res.info[0].id)
       that.setData({
-        list: res.info
+        list: res.info,
+        lid: res.info[0].id
       })
-      c.request("restaurant/getRestaurantList", {
-        page: 1,
-        size: 1,
-        type: '',
-      }, function (res) {
-        
-      }, function () {
-
+      wx.request({
+        url: 'https://api.infinitybuild.cn/api.php/restaurant/getRestaurantList',
+        data:{
+          type: that.data.lid,
+          page: 1,
+          size: 20,
+        },
+        success: function (res) {
+          console.log(res.data.infos)
+          that.setData({
+            lt: res.data.infos
+          })
+        }
       })
     }, function () {
       

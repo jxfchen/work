@@ -258,7 +258,7 @@
 }
 
 .staff_btn {
-    width: 536rpx;
+    width: 200rpx;
     height: 72rpx;
     background: rgba(248, 248, 248, 1);
     border-radius: 36rpx;

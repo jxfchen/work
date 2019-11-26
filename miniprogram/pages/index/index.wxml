@@ -13,24 +13,17 @@
         </view>
         <view class="rotation">
             <view class="rotation_chart">
-                <!-- <swiper  autoplay="true" interval="10000" style="width:690rpx;height:320rpx;">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <image src="{{item}}" class="swiper_img"></image>
-          </swiper-item>
-        </block>
-      </swiper> -->
                 <swiper style="width:690rpx;height:320rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000'>
-                    <block wx:key='*this' wx:for='{{background}}'>
-                        <swiper-item style="border-radius: 12rpx;">
-                            <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
-                        </swiper-item>
-                    </block>
+                  <block wx:key='*this' wx:for='{{background}}'>
+                    <swiper-item style="border-radius: 12rpx;">
+                      <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+                    </swiper-item>
+                  </block>
                 </swiper>
                 <view class="dots">
-                    <block wx:for="{{background}}" wx:key="*this">
-                        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
-                    </block>
+                  <block wx:for="{{background}}" wx:key="*this">
+                    <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+                  </block>
                 </view>
             </view>
 

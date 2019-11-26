@@ -30,15 +30,6 @@
       <view class="label" wx:for="{{key}}" wx:key="{{key}}">
         <view class="label_text">{{item}}</view>
       </view>
-      <view class="label2">
-        <view class="label_text">关键</view>
-      </view>
-      <view class="label2">
-        <view class="label_text">关键</view>
-      </view>
-      <view class="label3">
-        <view class="label_text">关键词关键关键</view>
-      </view>
       <image src="/images/ellipsis.png" class="ellipsis_logo"></image>
     </view>
   </view>
@@ -82,7 +73,7 @@
       <image src="/images/homepage.png" class="homepage_img"></image>
       <image src="/images/service.png" class="service_img"
       ></image>
-      <navigator url="/pages/push_sheet/push_sheet?title=push_sheet" hover-class="navigator-hover">
+      <navigator url="/pages/push_sheet/push_sheet?title={{id}}" hover-class="navigator-hover">
         <view class="btn2">
           推一单，赚一笔
         </view>

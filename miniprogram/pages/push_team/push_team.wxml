@@ -10,17 +10,17 @@
             <view class="card_main">
                 <view class="transaction_orders">
                     <view class="order_text">成交推单(笔)</view>
-                    <view class="order_num">24</view>
+                    <view class="order_num">{{list.total_pusher_sheet}}</view>
                 </view>
                 <view class="card_line1"></view>
                 <view class="transaction_orders">
                     <view class="team_text">推客团队人数(人)</view>
-                    <view class="team_num">32</view>
+                    <view class="team_num">{{list.total_pusher}}</view>
                 </view>
                 <view class="card_line2"></view>
                 <view class="transaction_orders">
                     <view class="invite_text">累计邀请(人)</view>
-                    <view class="invite_num">88</view>
+                    <view class="invite_num">{{list.total_recommend}}</view>
                 </view>
             </view>
         </view>
@@ -31,10 +31,9 @@
         <view class="teamlist_text">团队成员列表</view>
         <view class="teamlist_details">详情</view>
         <image src="/images/arrow1.png" class="teamlist_arrow"></image>
-        <image class="teamlist_header1" src="/images/me/header.png"></image>
-        <image class="teamlist_header2" src="/images/me/header.png"></image>
-        <image class="teamlist_header2" src="/images/me/header.png"></image>
-        <image class="teamlist_header2" src="/images/me/header.png"></image>
+        <block wx:key='{{list.user_list}}' wx:for='{{list.user_list}}'>
+        <image class="teamlist_header1" src="{{list.user_list.avatarurl}}"></image>
+        </block>
         <view class="header_num">+49</view>
     </view>
     <view class="divide1"></view>

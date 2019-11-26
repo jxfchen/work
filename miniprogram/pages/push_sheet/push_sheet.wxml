@@ -1,7 +1,7 @@
-  <view class="banner">
+<view class="banner">
     <!-- 轮播图 -->
     <view class="rotation_chart">
-      <swiper class="banner_box" autoplay='true' bindchange='swiperChange' interval='5000'>
+      <swiper class="banner_box" autoplay='true' interval='5000'>
         <block wx:key='*this' wx:for='{{background}}'>
           <swiper-item>
             <image bindchange='imageChange' id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
@@ -31,7 +31,6 @@
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx"></image>
       <view class="nav_a">餐次需求（可多选）</view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
-      <!-- <button class='{{istarget===true?"breakfast_after":"breakfast"}}' bindtap="breakfastTap">早餐</button> -->
       <view class="cen">
         <button
           wx:for="{{mealist}}"
@@ -39,7 +38,8 @@
           wx:key="item"
           bindtap="checkboxChange"
           data-index="{{index}}"
-          data-nickname="{{item.nickname}}"
+          data-id="{{item.id}}"
+          data-price="{{item.price}}"
           checked="false"
           class="radio {{item.selected ? 'rad' : ''}}" >
             {{item.name}}
@@ -50,7 +50,7 @@
         <view wx:for="{{mealist}}" wx:key="{{mealist}}" wx:if="{{item.selected}}">
           <view class="left-nav">{{item.name}}</view>
           <view class="section section_gap" style="width:674rpx;">
-            <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" data-name="{{item.nickname}}_price" block-size="24" min='0' max="200" bindchange="slider"></slider>
+            <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" value="{{item.price}}" min='0' max="200" bindchange="slider" data-id="{{item.id}}" data-index="{{index}}"></slider>
           </view>
         </view>
       </view>
@@ -60,7 +60,7 @@
       <view class="nav_a">就餐人数</view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
       <view class="inp-box">
-        <input class="weui-input" type="number" placeholder="如无法确定精确人数，填写大致人数即可" class="inp"></input>
+        <input class="weui-input" type="number" placeholder="如无法确定精确人数，填写大致人数即可" class="inp" bindinput="numberInput"></input>
         <image src="/images/num.png" mode="widthFix" class="inp-img"></image>
       </view>
     </view>
@@ -72,11 +72,11 @@
       </view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>
       <view class="inp-box">
-        <input class="weui-input" type="number" placeholder="您的联系方式，手机号/或者微信" class="inp"></input>
+        <input class="weui-input" type="number" placeholder="您的联系方式，手机号/或者微信" class="inp"  bindinput="mePhoneInput"></input>
         <image src="/images/phone.png" mode="widthFix" class="inp-img"></image>
       </view>
       <view class="inp-box">
-        <input class="weui-input" type="number" placeholder="客户联系方式，手机号/或者微信" class="inp"></input>
+        <input class="weui-input" type="number" placeholder="客户联系方式，手机号/或者微信" class="inp" bindinput="customerPhoneInput"></input>
         <image src="/images/phone.png" mode="widthFix" class="inp-img"></image>
       </view>
     </view>
@@ -86,8 +86,9 @@
       <view class="nav_a">您希望我们优先联系？</view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 10rpx 0rpx"></image>
       <view style="font-size:24rpx;color:rgba(133,99,92,1);margin-left:70rpx;">放心推荐，我们只会联系有获得您授权的推荐信息。</view>
-      <view style="width:258rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:24rpx;font-weight:500;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:34rpx;margin-top:40rpx;float:left;">联系我</view>
-      <view style="width:258rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);font-size:24rpx;font-weight:500;color:rgba(244,92,82,1);line-height:80rpx;float:right;margin-right:34rpx;margin-top:40rpx;text-align:center;">直接联系客户</view>
+      <view class="content {{cont == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{contentList}}" wx:key="contentList" bindtap="content" data-id="{{item.id}}">{{item.name}}</view>
+      <!-- <view style="width:258rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:24rpx;font-weight:500;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:34rpx;margin-top:40rpx;float:left;">联系我</view>
+      <view style="width:258rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);font-size:24rpx;font-weight:500;color:rgba(244,92,82,1);line-height:80rpx;float:right;margin-right:34rpx;margin-top:40rpx;text-align:center;">直接联系客户</view> -->
     </view>
 
     <view class="box">
@@ -98,8 +99,7 @@
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 10rpx 0rpx">
       </image>
       <view style="font-size:24rpx;color:rgba(133,99,92,1);margin-left:70rpx;width:520rpx;height:68rpx;text-align:center;">推荐人获得一次性推荐奖励。项目合伙人成单后可按月获得收益。</view>
-      <view style="width:258rpx;height:82rpx;background:rgba(244,92,82,1);border-radius:41rpx;font-size:24rpx;font-weight:500;color:rgba(255,255,255,1);line-height:80rpx;text-align:center;margin-left:34rpx;margin-top:40rpx;float:left;" class='tk' bindtap="wqd">我是推荐人</view>
-      <view style="width:258rpx;height:82rpx;border-radius:41rpx;border:1rpx solid rgba(250,96,87,1);font-size:24rpx;font-weight:500;color:rgba(244,92,82,1);line-height:80rpx;float:right;margin-right:34rpx;margin-top:40rpx;text-align:center;" class='tk' bindtap="wqd">我申请为项目合伙人</view>
+      <view class="content {{rol == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{roleList}}" wx:key="roleList" data-id="{{item.id}}" bindtap="wqd">{{item.name}}</view>
       <view style="width:264rpx;height:204rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-left:44rpx;float:left;margin-top:20rpx;text-align:justify">推荐人指：您从任何渠道获得了有需求的客户信息，将信息推送给我们，我们核实客户信息真实性，有效性后获得一次性收益的个人。</view>
       <view style="width:264rpx;height:204rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-right:40rpx;margin-top:20rpx;float:right;text-align:justify">推荐人指：您从任何渠道获得了有需求的客户信息，将信息推送给我们，我们核实客户信息真实性，有效性后获得一次性收益的个人。</view>
     </view>
@@ -150,4 +150,5 @@
             <view class="recommend_textRight">接到您的需求后并获得您的授权后，我们会派出销售经理和客户洽谈合作。并及时在订单状态中更新项目推进情况。</view>
         </view>
     </view>
+    <view class="btn" bindtap="bindClick">提交合伙人推单</view>
 </view>

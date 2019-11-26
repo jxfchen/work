@@ -1,49 +1,47 @@
 .weui-navbar {
-    border-bottom: none !important;
-    padding-bottom: 28rpx;
+  border-bottom: none !important;
+  padding-bottom: 28rpx;
 }
 
-.weui-navbar a {
-    text-decoration: none;
-    font-size: 30rpx;
-    font-family: PingFangSC;
-    font-weight: 400;
-    color: rgba(196, 196, 196, 1);
-    width: 749rpx;
-    padding: 0 !important;
-    margin-top: 31rpx;
+.weui-navbar text {
+  text-decoration: none;
+  font-size: 30rpx;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: rgba(196, 196, 196, 1);
+  padding: 0 !important;
 }
 
 .weui-navbar__item.weui-bar__item_on {
-    background-color: white;
-    color: rgba(50, 50, 50, 1);
-    font-size: 30rpx;
-    font-weight: bold;
-    opacity: 1;
+  background-color: white;
+  color: rgba(50, 50, 50, 1);
+  font-size: 30rpx;
+  font-weight: bold;
+  opacity: 1;
 }
 
 .weui_tab_bd_item {
-    display: none;
-    height: 100%;
-    overflow: auto;
+  display: none;
+  height: 100%;
+  overflow: auto;
 }
 
 .weui_tab_bd_item.weui_tab_bd_item_active {
-    display: block;
+  display: block;
 }
 
 .weui-tab__panel {
-    background-color: #f6f6f6;
-    height: 1048rpx;
-    width: 749rpx;
+  background-color: #f6f6f6;
+  height: 1048rpx;
+  width: 749rpx;
 }
 
 .card {
-    width: 750rpx;
-    height: 348rpx;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 10rpx;
-    margin-top: 20rpx;
+  width: 750rpx;
+  height: 348rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  margin-top: 20rpx;
 }
 
 .top {
