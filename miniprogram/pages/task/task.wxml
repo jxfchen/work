@@ -35,7 +35,7 @@
     <view class="task_tit">任务基础</view>
   </view>
 
-  <view wx:for="{{taskList}}">
+  <view wx:for="{{taskList}}" wx:key="index">
     <view class="part">
       <view>
         <image src="/images/task_invite.png" class="part_img"></image>
