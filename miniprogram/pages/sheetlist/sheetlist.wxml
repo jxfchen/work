@@ -13,15 +13,15 @@
       <image class="card_img" src="https://api.infinitybuild.cn/{{item.thumb_img}}" mode="widthFix">
         <view class="card_ad">
           <!-- <image class="ad_img" src="/images/logo.png"></image> -->
-          <text class="ad_text">{{item.commend_times}}人推单成功</text>
+          {{item.commend_times}}人推单成功
         </view>
       </image>
       <view class="card_text">
         <text class="text_title">{{item.title}}</text>
-        <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}<text wx:if="{{item.is_pusher_rate == 1}}">%</text></text> 起(通过后秒到账)</text>
+        <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}<text wx:if="{{item.is_pusher_rate == 1}}">%</text></text></text>
         <text class="push_revenue">合伙收益：<text class="push_money">{{item.partner_min_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text> - {{item.partner_max_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text></text> /月</text>
       </view>
-      <navigator url="/pages/workingmeal_intr/workingmeal_intr?title={{item.id}}" hover-class="navigator-hover"  >
+      <navigator url="/pages/workingmeal_intr/workingmeal_intr?title={{item.id}}">
         <button class="card_btn">推单</button>
       </navigator>
     </view>

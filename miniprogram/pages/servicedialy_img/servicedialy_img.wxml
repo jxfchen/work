@@ -1,0 +1,7 @@
+<view class="nav">测试标题名称</view>
+<view>
+  <view>
+    <image src="../../images/task_cash.png" mode="widthFix"></image>
+    <text>joey</text>
+  </view>
+</view>
