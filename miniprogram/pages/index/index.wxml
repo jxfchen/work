@@ -130,7 +130,8 @@
                     <view class="nicname">{{item.author}}</view>
                   </view>
                   <view>
-                    <view class="num">447</view>
+                    <view class="num">
+                    </view>
                     <image src="/images/like1.png" class="fabulous1"></image>
                   </view>
                 </view>

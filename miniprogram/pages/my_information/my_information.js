@@ -26,14 +26,12 @@ Page({
     changeAvatar: function () {
         var that = this;
         var avatar = this.data.list.user_info.avatarurl;
-        // var childId = wx.getStorageSync("child_id");
-        // var token = wx.getStorageSync('token');
         wx.chooseImage({
             count: 1, // 最多可以选择的图片张数，默认9
             sizeType: ['compressed'], // original 原图，compressed 压缩图，默认二者都有
             sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
             success: function (res) {
-                console.log(res.tempFilePaths)
+                // console.log(res.tempFilePaths)
                 var avatar = res.tempFilePaths;
                 that.setData({
                     avatar: avatar,
@@ -49,16 +47,6 @@ Page({
             }
         })
     },
-    // 上传头像
-    // app.uploadimg({
-    //     url: 'URL地址',
-    //     path: avatar,
-    //     header: {
-    //         'Content-Type': 'multipart/form-data',
-    //         "Authorization": "Bearer " + token
-    //     },
-    //     isShow: false
-    // }),
     
 /**
  * 生命周期函数--监听页面加载
@@ -91,6 +79,7 @@ onLoad: function(options) {
             }, function(res) {
                 that.setData({
                     info: res.info,
+                    avatar: res.info.user_info.avatarurl
                 });
                 var list_str = JSON.stringify(res.info);
                 list = JSON.parse(list_str);
@@ -107,7 +96,7 @@ onLoad: function(options) {
 
     });
     this.setData(date);
-
+    
     
 },
     // 切换头像

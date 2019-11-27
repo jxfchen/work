@@ -1,6 +1,6 @@
 <view class="contain">
     <view class="header">
-        <image src="{{list.user_info.avatarurl}}" class="header_img"></image>
+        <image src="{{avatar}}" class="header_img"></image>
         <view bindtap='changeAvatar'>
         <view class="header_text">修改头像</view>
         <image class="header_arrow" src="/images/me/arrow.png"></image>

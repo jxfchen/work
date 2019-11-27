@@ -61,14 +61,15 @@ Page({
                 card_id:number,
             }, function (res) {
                 console.log("success")
+                wx.navigateTo({
+                    url: '/pages/certification_second/certification_second',
+                    success: function (res) { },
+                    fail: function (res) { },
+                    complete: function (res) { },
+                })
             }, function () {
             })
-            wx.navigateTo({
-                url: '/pages/certification_second/certification_second',
-                success: function (res) { },
-                fail: function (res) { },
-                complete: function (res) { },
-            })
+            
         }
     },
     /**

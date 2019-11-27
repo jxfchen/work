@@ -1,4 +1,4 @@
-// pages/cash_withdrawal/cash_withdrawal.js
+ // pages/cash_withdrawal/cash_withdrawal.js
 var c = require("../../utils/http.js");
 Page({
 
