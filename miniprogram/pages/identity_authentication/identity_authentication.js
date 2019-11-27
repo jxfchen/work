@@ -1,18 +1,79 @@
-// pages/identity_authentication/identity_authentication.js
+// pages/security-code/security-code.js
+var c = require("../../utils/http.js");
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        inputLength: 6, //验证码长度
+        inputValue: '', //输入的验证码
+        isFocus: true, //聚焦
+        isLight: false,  //btn 是否高亮
+        hideTip: true, // 错误提示
+    },
 
+    // input 输入变化
+    handleInputChange(ev) {
+        let val = ev.detail.value;
+        //判断用户是否已经输入
+        let result = Boolean(val.length);
+        this.setData({
+            isLight: result,
+            inputValue: val,
+        });
+
+    },
+    // input 点击  聚焦
+    handleInputTap() {
+        this.setData({
+            isFocus: true
+        });
+    },
+
+
+    //身份证验证
+    handleValidata() {
+        let invest_code = this.data.inputValue;
+        let userIn = this.data.inputValue.length;
+        let real = this.data.inputLength;
+        this.setData({
+            hideTip: true
+        });
+        //输入是否正确
+        if (userIn === real || userIn=== 0) {
+            // wx.showToast({
+            //     title: '验证成功',
+            // })
+            var openid = wx.getStorageSync('openid');
+            c.request("wechatuser/getAttestation", {
+                openid: openid,
+                invest_code: invest_code,
+            }, function (res) {
+                console.log("success")
+            }, function () {
+            })
+            wx.navigateTo({
+                url: '/pages/certification_first/certification_first',
+                success: function(res) {},
+                fail: function(res) {},
+                complete: function(res) {},
+            })
+
+        } else {
+            wx.showToast({
+                title: '邀请人编码输入不正确',
+                icon:'none',
+            })
+        }
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        
     },
 
     /**
@@ -47,7 +108,8 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        //加载数据
+        this.getCustomerInfo();
     },
 
     /**

@@ -27,17 +27,14 @@
         <image src="/images/inviter_num.png" class="process_img"></image>
         <view class="process_title">邀请人编码</view>
         <view class="process_text">（没有可跳过）</view>
-        <view class="line">
-            <view class="line1"></view>
-            <view class="line2"></view>
-            <view class="line2"></view>
-            <view class="line2"></view>
-            <view class="line2"></view>
-            <view class="line2"></view>
+        <view class="nums">
+            <block wx:for="{{inputLength}}" wx:key="">
+                <input wx:key="{{index}}" value="{{inputValue.length - 1 >= index ? inputValue[index]: ''}}" type="number" disabled catchtap="handleInputTap" />
+            </block>
+            <input class="hidden-input" type="number" focus="{{isFocus}}" maxlength="{{inputLength}}" bindinput="handleInputChange"></input>
         </view>
-        <navigator url="/pages/certification_first/certification_first?title=certification_first">
-            <view class="btn">开始认证</view>
-        </navigator>
+        <!-- <view hidden="{{hideTip}}" class="tip animated shake">您输入的信息有误</view> -->
+        <view class="btn" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="handleValidata" hover-class="other-button-hover">开始认证</view>
         <view class="inviter_title">认证成功有机会获得 5.21元的开工红包！</view>
     </view>
 </view>

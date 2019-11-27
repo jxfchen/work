@@ -168,3 +168,53 @@
     margin-left: 156rpx;
     margin-top: 40rpx;
 }
+.nums {
+  display: flex;
+  justify-content: center;
+  height: 94rpx;
+  margin-top: 10rpx;
+  font-size: 60rpx;
+    color: #17233d;
+}
+
+.nums>input {
+  width: 60rpx;
+  height: 84rpx;
+  margin-right: 20rpx;
+  border-bottom: 1rpx solid #f45c52;
+  text-align: center;
+  line-height: 84rpx;
+}
+
+.nums>input:nth-last-of-type(2) {
+  margin-right: 0;
+}
+
+.nums>input.hidden-input {
+  width: 0;
+  height: 0;
+  border: none;
+  margin: 0;
+}
+.btn-wrap .validata-btn {
+  width: 710rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #2792ff;
+  font-size: 28rpx;
+    color: #ffffff;
+}
+/*  */
+.btn-wrap .validata-btn {
+  width: 710rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #e8eaec;
+  font-size: 28rpx;
+    color: #ffffff;
+  border-radius: 12rpx;
+}
+
+.btn-wrap .validata-btn.light-btn {
+  background: #2792ff;
+}

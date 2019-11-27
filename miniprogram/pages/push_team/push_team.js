@@ -6,9 +6,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      flag: '1',
   },
-
+    bindManager(e){
+        const that = this;
+        var flag = this.data.flag;
+        var flag = '1';
+        that.setData({
+            flag: flag,
+        })
+        console.log(flag)
+    },
+    bindstaff(e) {
+        const that = this;
+        var flag = this.data.flag;
+        var flag = '2';
+        that.setData({
+            flag: flag,
+        })
+        console.log(flag)
+    },
   /**
    * 生命周期函数--监听页面加载
    */
