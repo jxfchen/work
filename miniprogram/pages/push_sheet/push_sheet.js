@@ -48,7 +48,7 @@ Page({
     this.setData({
       [string]: !this.data.mealist[e.target.dataset.index].selected
     })
-    let detailValue = this.data.mealist.filter(it => it.selected).map(it => it.id+ ':' + it.price)
+    let detailValue = this.data.mealist.filter(it => it.selected).map(it => it.id + ':' + it.price)
     var k
     var i
     var myhash = []
@@ -268,17 +268,23 @@ Page({
       first_contact: that.data.content_id,//优先联系人
       role: that.data.role_id,//您的角色
     }, function (res) {
-      wx.showModal({
-        title: '提示',
-        showCancel: false,
-        content: res.msg || '提交成功',
-        success(res) {
-          if (res.confirm) {
-            wx.navigateBack();
+      if (2000 == res.code) {
+        wx.showModal({
+          title: '提示',
+          showCancel: false,
+          content: res.msg || '提交成功',
+          success(res) {
+            if (res.confirm) {
+              wx.navigateBack();
+            }
           }
-        }
-      })
-      console.log(res)
+        })
+      }else{
+        wx.showToast({
+          title: res.msg || '提交失败',
+          icon: 'none'
+        })
+      }
     }, function () {
     })
   },

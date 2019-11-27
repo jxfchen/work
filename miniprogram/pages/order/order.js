@@ -31,9 +31,12 @@ Page({
       }
     });
   },
-  changeStatus: function (status) {
+  changeStatus: function (e) {
     let _this = this;
-    _this.data.status = status;
+    // _this.data.status = e.target.dataset.status;
+    _this.setData({
+      status: e.target.dataset.status
+    });
     _this.getList();
   },
   getList: function (isPage = false) {
@@ -50,6 +53,9 @@ Page({
           list: res.info
         });
       }else{
+        _this.setData({
+          list: []
+        });
         wx.showToast({
           title: res.msg || "获取失败",
           icon: "none"
@@ -71,7 +77,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
