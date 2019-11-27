@@ -142,6 +142,7 @@
 }
 
 .input_title {
+    height: 20rpx;
     font-size: 30rpx;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;

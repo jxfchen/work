@@ -17,14 +17,17 @@
         <view class="part_title">身份证明资料</view>
         <view class="input">
             <view class="input_title">名片</view>
-            <view class="input_text">请拍照上传证件</view>
-            <image class="arrow" src="/images/arrow_down.png"></image>
+            <!-- <view class="input_text">请拍照上传证件</view> -->
+            <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+            <!-- <image class="arrow" src="/images/arrow_down.png"></image> -->
         </view>
-        <image class="certificates1" src="/images/certificates1.png"></image>
-        <image class="certificates2" src="/images/certificates2.png"></image>
-        <view class="img_text">点击拍照</view>
+        <image class="certificates1" src="{{avatar}}"></image>
+        <view bindtap="pictureBind">
+            <image class="certificates2" src="/images/certificates2.png"></image>
+            <view class="img_text">点击拍照</view>
+        </view>
         <view class="part_text">请在光线充足的条件下，在纯色背景上放置您的名片，正上方拍摄。</view>
-        <view class="part_btn">提交认证</view>
+        <view class="part_btn" bindtap="clickBind">提交认证</view>
     </view>
     <view class="part2">
         <image class="remind" src="/images/remind.png"></image>
@@ -32,4 +35,5 @@
         <view class="remind_text">您提交的身份信息，我们仅用于合适您的身份，以便给予您在本平台相关的推单权限。不会透露 给任何机构和个人。
         </view>
     </view>
+
 </view>
