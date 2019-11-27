@@ -33,7 +33,7 @@ Page({
     },
 
 
-    //身份证验证
+    //邀请码验证
     handleValidata() {
         let invest_code = this.data.inputValue;
         let userIn = this.data.inputValue.length;
@@ -42,7 +42,7 @@ Page({
             hideTip: true
         });
         //输入是否正确
-        if (userIn === real || userIn=== 0) {
+        if (userIn === 6 || userIn=== 0) {
             // wx.showToast({
             //     title: '验证成功',
             // })
@@ -51,7 +51,6 @@ Page({
                 openid: openid,
                 invest_code: invest_code,
             }, function (res) {
-                console.log("success")
                 wx.navigateTo({
                     url: '/pages/certification_first/certification_first',
                     success: function (res) { },
@@ -59,6 +58,7 @@ Page({
                     complete: function (res) { },
                 })
             }, function () {
+                
             })
 
         } else {

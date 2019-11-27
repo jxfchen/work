@@ -16,17 +16,17 @@ Page({
             data: self.data.list.user_info.invite_code,
             success: function (res) {
                 // self.setData({copyTip:true}),
-                wx.showModal({
-                    title: '提示',
-                    content: '复制成功',
-                    success: function (res) {
-                        if (res.confirm) {
-                            console.log('确定')
-                        } else if (res.cancel) {
-                            console.log('取消')
-                        }
-                    }
-                })
+                // wx.showModal({
+                //     title: '提示',
+                //     content: '复制成功',
+                //     success: function (res) {
+                //         if (res.confirm) {
+                //             console.log('确定')
+                //         } else if (res.cancel) {
+                //             console.log('取消')
+                //         }
+                //     }
+                // })
             }
         });
     },
@@ -38,9 +38,9 @@ Page({
         var date = {
             list:'',
         }
-        var openid = "";
         var that = this;
-        var list=[];
+        var list = [];
+        var openid = "";
         wx.getStorage({
             key: 'openid',
             success: function(res) {
