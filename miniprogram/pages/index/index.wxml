@@ -86,7 +86,10 @@
         <text class="more">更多</text>
       </view>
       <view class='list'>
+
+      <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;">
         <view class='li_warp dl liLeft li_left' id='liLeft'>
+
           <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
             <view class='li_pic'>
               <view class='pic_warp '>
@@ -101,40 +104,44 @@
                   <view class="nicname">{{item.author}}</view>
                 </view>
                 <view>
-                  <view class="num">447</view>
+                  <view class="num">{{item.like_times}}</view>
                   <image src="/images/like.png" class="fabulous"></image>
                 </view>
               </view>
             </view>
           </view>
-        </view>
-          <view class='li_warp dl liRight li_right' id='liRight'>
-            <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
-              <view class='li_pic'>
-                <view class='pic_warp '>
-                  <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
-                </view>
-              </view>
-              <view class="part">
-                <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
-                <view class='flex_ f24'>
-                  <view>
-                    <image class="header" src="/images/header.jpg"></image>
-                    <view class="nicname">{{item.author}}</view>
-                  </view>
-                  <view>
-                    <view class="num">
-                    </view>
-                    <image src="/images/like1.png" class="fabulous1"></image>
-                  </view>
-                </view>
-              </view>
 
+        </view>
+
+        <view class='li_warp dl liRight li_right' id='liRight'>
+
+          <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
+            <view class='li_pic'>
+              <view class='pic_warp '>
+                <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
+              </view>
+            </view>
+            <view class="part">
+              <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
+              <view class='flex_ f24'>
+                <view>
+                  <image class="header" src="/images/header.jpg"></image>
+                  <view class="nicname">{{item.author}}</view>
+                </view>
+                <view>
+                  <view class="num">{{item.like_times}}</view>
+                  <!-- <image src="/images/like1.png" class="fabulous1"></image> -->
+                  <image src="/images/like.png" class="fabulous"></image>
+                </view>
+              </view>
             </view>
           </view>
+
         </view>
-      <view class="foot">
+        <view class="foot" wx:if="{{!hasMore}}">
           <view class="foot_line">我是有底线的哟～</view>
+        </view>
+      </scroll-view>
       </view>
     </view>
 

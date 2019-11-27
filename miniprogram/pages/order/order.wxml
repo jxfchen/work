@@ -2,55 +2,64 @@
   <view>
     <view class="weui-tab">
       <view class="weui-navbar">
-        <text class="weui-navbar__item weui-bar__item_on" href="#tab1">
+        <text class="weui-navbar__item weui-bar__item_on" bindtap="changeStatus(100)">
           全部状态
         </text>
-        <text class="weui-navbar__item" href="#tab2">
+        <text class="weui-navbar__item" bindtap="changeStatus(0)">
           审核中
         </text>
-        <text class="weui-navbar__item" href="#tab3">
+        <text class="weui-navbar__item" bindtap="changeStatus(-1)">
           审核未通过
         </text>
-        <text class="weui-navbar__item" href="#tab4">
+        <text class="weui-navbar__item" bindtap="changeStatus(1)">
           审核通过
         </text>
-        <text class="weui-navbar__item" href="#tab5">
+        <text class="weui-navbar__item" bindtap="changeStatus(100)">
           谈单成功
         </text>
       </view>
       <view class="weui-tab__panel">
-        <view id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
-          <view class="card">
-            <view>
-              <view class="card_logo"></view>
-              <view class="card_title">工作餐推单002</view>
-              <view class="card_btn">
-                <image src="/images/task_finish.png" class="btn_img"></image>
-                <view class="btn_text">审核通过</view>
+        <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;">
+
+          <view id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+
+            <view class="card" wx:for='{{list}}' wx:key="index">
+              <view>
+                <view class="card_logo"></view>
+                <view class="card_title">工作餐推单002</view>
+                <view class="card_btn">
+                  <image src="/images/task_finish.png" class="btn_img"></image>
+                  <view class="btn_text">审核通过</view>
+                </view>
+                <view class="card_time">2019.09.06 09:25</view>
               </view>
-              <view class="card_time">2019.09.06 09:25</view>
+              <view class="card_line"></view>
+              <view>
+                <view class="card_push">推单编号</view>
+                <view class="push_num">238563</view>
+              </view>
+              <view class="card_foot">早餐+午餐</view>
+              <view class="foot_money">早15元、午25元</view>
+              <view class="foot_number">用餐人数</view>
+              <view class="num">180人</view>
+              <view class="name_btn">备注推单名称</view>
+              <navigator url="/pages/push_details/push_details?title=push_details">
+                <view class="look_btn">查看订单</view>
+              </navigator>
             </view>
-            <view class="card_line"></view>
-            <view>
-              <view class="card_push">推单编号</view>
-              <view class="push_num">238563</view>
-            </view>
-            <view class="card_foot">早餐+午餐</view>
-            <view class="foot_money">早15元、午25元</view>
-            <view class="foot_number">用餐人数</view>
-            <view class="num">180人</view>
-            <view class="name_btn">备注推单名称</view>
-            <navigator url="/pages/push_details/push_details?title=push_details">
-              <view class="look_btn">查看订单</view>
-            </navigator>
+            
           </view>
-        </view>
-        <view id="tab2" class="weui_tab_bd_item">
+        </scroll-view>
+
+
+
+
+        <!-- <view id="tab2" class="weui_tab_bd_item">
           内容二
         </view>
         <view id="tab3" class="weui_tab_bd_item">
           内容三
-        </view>
+        </view> -->
       </view>
     </view>
   </view>
