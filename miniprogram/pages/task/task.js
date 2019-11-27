@@ -6,36 +6,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    taskList: null,
+    moneyInfo: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      var self = this;
-      var date = {
-          list: '',
-      }
-      var openid = "";
-      var that = this;
-      var list = [];
-      c.request("activity/index", {
-      }, function (res) {
-          that.setData({
-              info: res.info,
-          });
-          var list_str = JSON.stringify(res.info);
-          list = JSON.parse(list_str);
-          date.list = list;
-          self.setData(date);
-          console.log(list);
-      }, function () {
-          console.log('fail');
-      })
-      this.setData(date);
+    this.getOpenid();
+    this.getTaskList();
   },
-
+  getOpenid: function () {
+    var self = this;
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        self.getMyMoney(res.data);
+      }
+    });
+  },
+  getTaskList: function () {
+    var self = this;
+    c.request("activity/index", {
+    }, function (res) {
+      if (2000 == res.code) {
+        self.setData({
+          taskList: res.info
+        })
+      }
+    }, function () {
+      console.log('fail');
+    })
+  },
+  getMyMoney: function (openid = null) {
+    var self = this;
+    if (openid != null) {
+      c.request("wechatuser/getAccount", {
+        openid: openid
+      }, function (res) {
+        if (2000 == res.code) {
+          self.setData({
+            moneyInfo: res.info
+          })
+        }
+      }, function () {
+        console.log('fail');
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
