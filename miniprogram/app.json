@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/index/index",
+        "pages/a/a",
         "pages/servicedialy_list/servicedialy_list",
+        "pages/index/index",
         "pages/servicedialy_img/servicedialy_img",
         "pages/servicedialy_void/servicedialy_void",
         "pages/me/me",

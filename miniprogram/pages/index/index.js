@@ -221,7 +221,9 @@ Page({
 
   },
   darmore:function(e){
-    
+    wx.navigateTo({
+      url: '../servicedialy_list/servicedialy_list',
+    })
   },
   //右边的图片高度之和
   imageLoadRight: function (e) {
@@ -322,7 +324,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let _this = this;
+    if (_this.data.hasMore) {
+      _this.setData({
+        pageNo: _this.data.pageNo + 1
+      });
+      _this.getServiceDaily(true);
+    }
   },
 
   /**

@@ -8,7 +8,7 @@
     <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content">
       <view class="task_revenue">任务收益余额</view>
       <view class="money_logo">￥</view>
-      <view class="task_num">{{moneyInfo.money_info.use_money}}</view>
+      <view class="task_num">{{info.total_invest}}</view>
       <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
         <image src="/images/task_arrow.png" class="arrow_img">
         </image>
@@ -17,13 +17,13 @@
         今日任务收益
       </view>
       <view class="RMB">￥</view>
-      <view class="today_num">{{moneyInfo.money_info.single_invest}}</view>
+      <view class="today_num">{{info.today_invest}}</view>
       <view class="card_separate"></view>
       <view class="all_revenve">
         累计任务收益
       </view>
       <view class="all_RMB">￥</view>
-      <view class="all_num">{{moneyInfo.money_info.total}}</view>
+      <view class="all_num">{{info.total_invest}}</view>
       <image src="/images/task_banner.png" class="task_banner"></image>
     </view>
   </view>
@@ -35,7 +35,7 @@
     <view class="task_tit">任务基础</view>
   </view>
 
-  <view wx:for="{{taskList}}" wx:key="index">
+  <view wx:for="{{info.info}}" wx:key="index">
     <view class="part">
       <view>
         <image src="/images/task_invite.png" class="part_img"></image>
