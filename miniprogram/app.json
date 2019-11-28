@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/my_information/my_information",
         "pages/certification_third/certification_third",
         "Componet/select/select",
         "pages/me/me",
@@ -17,7 +18,6 @@
         "pages/identity_authentication/identity_authentication",
         "pages/push_details/push_details",
         "pages/order/order",
-        "pages/my_information/my_information",
         "pages/cash_withdrawal/cash_withdrawal",
         "pages/withdrawals_record/withdrawals_record",
         "pages/income_details/income_details",
