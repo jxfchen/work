@@ -98,34 +98,7 @@ Page({
     this.setData({
       page: page
     })
-    api.getRecommendList({
-      data: {
-        page: page,
-        rows: 5,
-        type: 'video'
-      },
-      success: function (res) {
-        var list = res.content;
-        if (list) {
-          var listData = [];
-          for (var i = 0; i < that.data.subjectList.length; i++) {
-            listData.push(that.data.subjectList[i])
-          }
-          for (var i = 0; i < list.length; i++) {
-            listData.push(list[i])
-          }
-          that.setData({
-            count: res.count,
-            page: page,
-            pages: res.pages,
-            subjectList: listData
-          })
-          if (success) {
-            success();
-          }
-        }
-      }
-    })
+
   },
 
   /**

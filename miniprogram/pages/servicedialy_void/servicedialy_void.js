@@ -10,7 +10,8 @@ Page({
     prevId: 0,
     hasMore: true,
     flag: 0,
-    openid: ''
+    openid: '',
+    direction: 0
   },
 
   /**
@@ -55,7 +56,7 @@ Page({
         });
         setTimeout(function(){
           _this.videoContext.play();
-        },1300);
+        },700);
       }else{
         wx.showToast({
           title: _this.data.flag == 4 ? '已经到顶啦' : '已经到底啦',
@@ -129,20 +130,34 @@ Page({
     let tx = currentX - this.data.lastX;
     let ty = currentY - this.data.lastY;
     let text = "";
+
+    let _this = this;
     //左右方向滑动
     if (Math.abs(tx) <= Math.abs(ty)) {
       //上下方向滑动
       if (ty < 0) {
-        console.log(3)
+        // bounceInDown
         // 上拉
-        this.geDetailInfo(this.data.nextId);
-        this.data.flag = 3
+        this.setData({
+          direction: 3,
+          infos: []
+        })
+        this.data.flag = 3;
+        setTimeout(function(){
+          _this.geDetailInfo(_this.data.nextId);
+        },300)
       }
       else if (ty > 0) {
-        console.log(4)
+        // bounceInUp
         // 下拉
-        this.geDetailInfo(this.data.prevId);
-        this.data.flag = 4
+        this.setData({
+          direction: 4,
+          infos: []
+        })
+        this.data.flag = 4;
+        setTimeout(function () {
+          _this.geDetailInfo(_this.data.prevId);
+        }, 300)
       }
     }
     //将当前坐标进行保存以进行下一次计算

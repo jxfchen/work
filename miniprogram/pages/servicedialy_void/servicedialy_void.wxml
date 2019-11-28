@@ -1,5 +1,5 @@
-<view class="box" bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
-  <video id="myVideo" style="height: 100vh" show-center-play-btn="{{false}}" src="{{infos.info.video}}" class="bgd" controls="{{false}}" loop="{{true}}" object-fit="fill"></video>
+<view class="box {{direction == 4 ? 'bounceInDown' : 'bounceInUp'}} animated" bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
+  <video id="myVideo" style="height: 100vh" show-center-play-btn="{{false}}" src="https://api.infinitybuild.cn{{infos.info.video}}" class="bgd" controls="{{false}}" loop="{{true}}" object-fit="fill"></video>
   <view class="right ava">
     <image src="{{infos.info.avatarurl}}" mode="widthFix"></image><!-- 头像 -->
   </view>

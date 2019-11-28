@@ -1,5 +1,5 @@
 <view class="page-body" animation="{{animationData}}">
-  <video id='myVideo' src='{{subject.coverUrl}}' controls="{{show}}" show-center-play-btn='{{show}}' show-play-btn='{{show}}' class='canvas' show-progress='{{show}}' loop='{{true}}' objectFit='cover' autoplay='{{autoplay}}' enable-progress-gesture='{{show}}' bindtouchstart='touchstart'
+  <video id='myVideo' src='https://www.w3school.com.cn/i/movie.mp4' controls="{{show}}" show-center-play-btn='{{show}}' show-play-btn='{{show}}' class='canvas' show-progress='{{show}}' loop='{{true}}' objectFit='cover' autoplay='{{autoplay}}' enable-progress-gesture='{{show}}' bindtouchstart='touchstart'
     bindtouchmove='touchmove' bindtouchend='touchend' bindtouchcancel='touchcancel' bindtap='play' bindtimeupdate='timeupdate' bindplay='bindPlay' bindpause='bindPause' bindended='bindEnded'>
 
     <!-- 右侧区域  -->
