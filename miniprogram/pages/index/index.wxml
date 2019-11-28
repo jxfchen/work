@@ -90,12 +90,12 @@
         <view class='li_warp dl liLeft li_left' id='liLeft'>
 
           <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
-            <view class='li_pic'>
+            <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
               <view class='pic_warp '>
                 <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
               </view>
             </view>
-            <view class="part">
+            <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
               <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
               <view class='flex_ f24'>
                 <view>
@@ -115,12 +115,12 @@
         <view class='li_warp dl liRight li_right' id='liRight'>
 
           <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
-            <view class='li_pic'>
-              <view class='pic_warp '>
+            <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
+              <view class='pic_warp'>
                 <image src='https://api.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
               </view>
             </view>
-            <view class="part">
+            <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
               <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
               <view class='flex_ f24'>
                 <view>

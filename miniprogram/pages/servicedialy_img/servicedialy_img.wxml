@@ -1,35 +1,35 @@
-<view class="nav">测试标题名称</view>
+<view class="nav">{{infos.info.title}}</view>
 <view class="nav-but">
   <view class="nav-cle">
     <view>
-      <image src="../../images/task_cash.png" mode="widthFix"></image><!-- 头像 -->
-      <text>joey</text><!-- 昵称 -->
+      <image src="{{infos.info.avatarurl}}" mode="widthFix"></image><!-- 头像 -->
+      <text>{{infos.info.author}}</text><!-- 昵称 -->
     </view>
   </view>
   <view class="nav-cle">
     <view>
       <image src="../../images/comment.png" mode="widthFix"></image>
-      <text>100</text><!-- 阅读数 -->
+      <text>{{infos.info.read_times}}</text><!-- 阅读数 -->
     </view>
   </view>
   <view class="nav-cle">
     <view>
       <image src="../../images/ico-4a.png" mode="widthFix"></image>
-      <text>100</text><!-- 点赞数 -->
+      <text>{{infos.info.like_times}}</text><!-- 点赞数 -->
   </view>
   </view>
   <view class="nav-cle">
     <view>
       <image src="../../images/time.png" mode="widthFix"></image>
-      <text>100</text><!-- 时间 -->
+      <text>{{infos.info.like_times}}</text><!-- 时间 -->
   </view>
   </view>
 </view>
 <view class="center">
-  123123123富文本编辑器内容123123123富文本编辑器内容
+  {{infos.info.article}}
 </view>
 <view class="right next">
-  <image src="../../images/next.png" mode="widthFix"></image>
+  <image src="../../images/next.png" mode="widthFix" bindtap="getDetail" data-nextid="{{infos.next_id}}"></image>
 </view>
 <view class="right zan">
   <image src="../../images/sc.png" mode="widthFix"></image>
