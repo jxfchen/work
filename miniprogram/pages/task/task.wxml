@@ -8,7 +8,7 @@
     <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content">
       <view class="task_revenue">任务收益余额</view>
       <view class="money_logo">￥</view>
-      <view class="task_num">1599</view>
+      <view class="task_num">{{moneyInfo.money_info.use_money}}</view>
       <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
         <image src="/images/task_arrow.png" class="arrow_img">
         </image>
@@ -17,13 +17,13 @@
         今日任务收益
       </view>
       <view class="RMB">￥</view>
-      <view class="today_num">15</view>
+      <view class="today_num">{{moneyInfo.money_info.single_invest}}</view>
       <view class="card_separate"></view>
       <view class="all_revenve">
         累计任务收益
       </view>
       <view class="all_RMB">￥</view>
-      <view class="all_num">3849</view>
+      <view class="all_num">{{moneyInfo.money_info.total}}</view>
       <image src="/images/task_banner.png" class="task_banner"></image>
     </view>
   </view>
@@ -34,29 +34,33 @@
     <view class="task_logo"></view>
     <view class="task_tit">任务基础</view>
   </view>
-  <view class="part">
-    <view>
-      <image src="/images/task_invite.png" class="part_img"></image>
-      <view class="part_middle">
-        <view class="part_tit1">
-          邀请好友
+
+  <view wx:for="{{taskList}}" wx:key="index">
+    <view class="part">
+      <view>
+        <image src="/images/task_invite.png" class="part_img"></image>
+        <view class="part_middle">
+          <view class="part_tit1">
+            {{item.cn_name}}
+          </view>
+          <view class="part_tit2">
+            {{item.remark}}
+          </view>
         </view>
-        <view class="part_tit2">
-          邀请好友,每个赚取<text style="color:#F35F52">2</text>元
+        <view class="button">
+          <image src="/images/task_money.png" class="button_image">
+          </image>
+          <view class="add_money">+{{item.roles_relations[0].award}}元</view>
         </view>
-      </view>
-      <view class="button">
-        <image src="/images/task_money.png" class="button_image">
-        </image>
-        <view class="add_money">+2元</view>
       </view>
     </view>
+    <view class="line"></view>
   </view>
-  <view class="line"></view>
+  
 
 
 
-  <view class="part">
+  <!-- <view class="part">
     <view>
       <image src="/images/task_push.png" class="part_img"></image>
       <view class="part_middle">
@@ -114,7 +118,7 @@
       </view>
     </view>
   </view>
-  <view class="line"></view>
+  <view class="line"></view> -->
 </view>
 <view class="foot"></view>
 <image src="/images/task_server.png" class="server">

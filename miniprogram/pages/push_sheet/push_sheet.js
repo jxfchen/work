@@ -1,5 +1,6 @@
 // pages/push_sheet/push_sheet.js
 var c = require("../../utils/http.js");
+var u = require("../../utils/util.js");
 Page({
   /**
    * 页面的初始数据
@@ -47,7 +48,7 @@ Page({
     this.setData({
       [string]: !this.data.mealist[e.target.dataset.index].selected
     })
-    let detailValue = this.data.mealist.filter(it => it.selected).map(it => it.id+ ':' + it.price)
+    let detailValue = this.data.mealist.filter(it => it.selected).map(it => it.id + ':' + it.price)
     var k
     var i
     var myhash = []
@@ -59,7 +60,8 @@ Page({
     }
     that.setData({
       project_type_id: detailValue, // 项目类型id
-      myhash: myhash
+      myhash: myhash,
+      fwid: detailValue
     })
     console.log(that.data.fwid)
   },
@@ -162,10 +164,94 @@ Page({
   },
   bindClick: function (e) {
     let that = this;
+    if (!that.data.openid) {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!that.data.code) {
+      wx.showToast({
+        title: '非法请求',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!that.data.restaurant_id) {
+      wx.showToast({
+        title: '请选择项目类型',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (that.data.fwid == null || that.data.fwid.length == 0) {
+      wx.showToast({
+        title: '请选择餐次需求',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!that.data.peopleNumber) {
+      wx.showToast({
+        title: '请填写就餐人数',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!that.data.mePhone) {
+      wx.showToast({
+        title: '请填写您的联系方式',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!u.isMobile(that.data.mePhone) || that.data.mePhone.length > 11) {
+      wx.showToast({
+        title: '您的联系手机号格式不正确',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!that.data.customerPhone) {
+      wx.showToast({
+        title: '请填写客户联系方式',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (!u.isMobile(that.data.customerPhone) || that.data.customerPhone.length > 11) {
+      wx.showToast({
+        title: '客户联系手机号格式不正确',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (that.data.mePhone == that.data.customerPhone) {
+      wx.showToast({
+        title: '两个联系号码不能一样',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (that.data.content_id == null) {
+      wx.showToast({
+        title: '请选择优先联系人',
+        icon: 'none'
+      })
+      return false;
+    }
+    if (that.data.role_id == null) {
+      wx.showToast({
+        title: '请选择您的角色',
+        icon: 'none'
+      })
+      return false;
+    }
     // console.log(that.data.openid)
     // console.log(that.data.code)//服务id
     // console.log(that.data.restaurant_id)//项目类型id
-    console.log(that.data.fwid)//餐次，价格
+    // console.log(that.data.fwid)//餐次，价格
     // console.log(that.data.peopleNumber)//就餐人数
     // console.log(that.data.mePhone)//联系方式
     // console.log(that.data.customerPhone)//客户联系方式
@@ -182,7 +268,23 @@ Page({
       first_contact: that.data.content_id,//优先联系人
       role: that.data.role_id,//您的角色
     }, function (res) {
-      console.log(res)
+      if (2000 == res.code) {
+        wx.showModal({
+          title: '提示',
+          showCancel: false,
+          content: res.msg || '提交成功',
+          success(res) {
+            if (res.confirm) {
+              wx.navigateBack();
+            }
+          }
+        })
+      }else{
+        wx.showToast({
+          title: res.msg || '提交失败',
+          icon: 'none'
+        })
+      }
     }, function () {
     })
   },

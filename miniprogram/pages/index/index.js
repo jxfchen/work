@@ -31,6 +31,8 @@ Page({
     hasUserInfo: false,
     url: '',
     pushList: [],
+    pageNo: 1,
+    hasMore: true
   },
 
   sheetlist:function(e){
@@ -76,7 +78,6 @@ Page({
       notice_img: "/images/notice.png",
       logo1: "/images/task1.png",
       background: "",
-      list: "",
       pushList: '',
     }
     var that = this;
@@ -101,25 +102,7 @@ Page({
       console.log('fail');
     })
     //服务日记
-    c.request("index/getServiceDialy", {
-      page: "1",
-      size: "6",
-    }, function (res) {
-      console.log(res.info)
-      that.setData({
-        info: res.info,
-      });
-      var list_str = JSON.stringify(res.info);
-      list = JSON.parse(list_str);
-      for (let i = 0; i < list.length; i++) {
-        list[i].position = "center";
-        list[i].height = '';
-      }
-      date.list = list;
-      self.setData(date);
-    }, function () {
-      console.log('fail');
-    })
+    that.getServiceDaily();
     //推一单，赚一单
     c.request("index/getRestaurant", {}, function (res) {
       console.log(res)
@@ -130,13 +113,10 @@ Page({
       pushList = JSON.parse(list_str);
       date.pushList = pushList;
       self.setData(date);
-      console.log(pushList);
     }, function () {
       console.log('fail');
     })
     this.setData(date);
-
-
     wx.getSetting({
       success: (res) => {
         if (res.authSetting['scope.userInfo']) {
@@ -155,7 +135,6 @@ Page({
 
             }
           })
-
         } else {
           // console.log(2) //未授权
           wx.redirectTo({
@@ -165,7 +144,53 @@ Page({
       }
     })
   },
-
+  getServiceDaily: function (isPage = false) {
+    let _this = this;
+    c.request("index/getServiceDialy", {
+      page: _this.data.pageNo,
+      size: "6",
+    }, function (res) {
+      if (res.info == null || res.info.length == 0) {
+        _this.setData({
+          hasMore: false,
+        });
+        return false;
+      }
+      _this.setData({
+        info: res.info,
+      });
+      var list_str = JSON.stringify(res.info);
+      var list = JSON.parse(list_str);
+      for (let i = 0; i < list.length; i++) {
+        list[i].position = "center";
+        list[i].height = '';
+      }
+      if (isPage) {
+        //下一页的数据拼接在原有数据后面
+        list = _this.data.list.concat(list);
+        _this.setData({
+          list: list
+        });
+      } else {
+        //第一页数据直接赋值
+        _this.setData({
+          list: list
+        });
+      }
+    }, function () {
+      console.log('fail');
+    })
+  },
+  //到达底部
+  scrollToLower: function (e) {
+    let _this = this;
+    if (_this.data.hasMore) {
+      _this.setData({
+        pageNo: _this.data.pageNo + 1
+      })
+      _this.getServiceDaily(true);
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
