@@ -220,7 +220,9 @@ Page({
     this.data.leftHeight += picHeight
 
   },
-
+  darmore:function(e){
+    
+  },
   //右边的图片高度之和
   imageLoadRight: function (e) {
 

@@ -83,7 +83,7 @@
         <image class="logo1" src="/images/server.png"></image>
         <text class="push_text">服务日记</text>
         <image class="more_img" src="/images/arrow1.png"></image>
-        <text class="more">更多</text>
+        <text class="more" bindtap="darmore">更多</text>
       </view>
       <view class='list'>
 
