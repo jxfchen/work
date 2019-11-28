@@ -1,20 +1,63 @@
-// pages/servicedialy_img/servicedialy_img.js
+var c = require("../../utils/http.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    infos: null,
+    openid: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getOpenid(options.id)
   },
-
+  getOpenid: function (id) {
+    var _this = this;
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        console.log(res)
+        _this.setData({
+          openid: res.data
+        },function(){
+          _this.geDetailInfo(id);
+        })
+      }
+    });
+  },
+  getDetail: function(e) {
+    this.geDetailInfo(e.currentTarget.dataset.nextid == "" ? 0 : e.currentTarget.dataset.nextid);
+  },
+  geDetailInfo: function (id) {
+    let _this = this;
+    c.request("servicedialy/getDetailById", {
+      id: id,
+      openid: _this.data.openid
+    }, function (res) {
+      if (2000 == res.code) {
+        res.info.article = _this.delHtmlTag(res.info.article);
+        _this.setData({
+          infos: res,
+        });
+      } else {
+        wx.showToast({
+          title: res.msg || '未找到信息',
+          icon: "none"
+        })
+      }
+    }, function () {
+      console.log('fail');
+    })
+  },
+  delHtmlTag: function (str) {
+    var reg = new RegExp("<[^>]+>", "g");
+    var result = str.replace(reg, '');
+    return result;
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

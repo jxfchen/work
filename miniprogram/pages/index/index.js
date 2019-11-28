@@ -181,15 +181,21 @@ Page({
       console.log('fail');
     })
   },
-  //到达底部
-  scrollToLower: function (e) {
-    let _this = this;
-    if (_this.data.hasMore) {
-      _this.setData({
-        pageNo: _this.data.pageNo + 1
-      })
-      _this.getServiceDaily(true);
+  goDetail: function (e) {
+    let _this = this, imgUrl = '/pages/servicedialy_img/servicedialy_img?id=', videoUrl = '/pages/servicedialy_void/servicedialy_void?id=';
+    switch (e.currentTarget.dataset.stype){
+      case 0:
+        wx.navigateTo({
+          url: imgUrl + e.currentTarget.dataset.sid
+        })
+        break;
+      case 1:
+        wx.navigateTo({
+          url: videoUrl + e.currentTarget.dataset.sid
+        })
+        break;
     }
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
