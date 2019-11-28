@@ -324,7 +324,7 @@ Page({
     if (_this.data.hasMore) {
       _this.setData({
         pageNo: _this.data.pageNo + 1
-      })
+      });
       _this.getServiceDaily(true);
     }
   },
