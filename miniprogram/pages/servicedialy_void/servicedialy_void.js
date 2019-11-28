@@ -11,7 +11,8 @@ Page({
     hasMore: true,
     flag: 0,
     openid: '',
-    direction: 0
+    direction: 0,
+    oldInfos: null
   },
 
   /**
@@ -43,26 +44,32 @@ Page({
   },
   geDetailInfo: function (id) {
     let _this = this;
+    wx.showLoading({
+      title: '加载中',
+    })
     c.request("servicedialy/getDetailById", {
       id: id,
       openid: _this.data.openid
     }, function (res) {
+      wx.hideLoading();
       if(2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);
         _this.setData({
           infos: res,
+          oldInfos: res,
           nextId: res.next_id != "" ? res.next_id : 0,
           prevId: res.prev_id != "" ? res.prev_id : 0
         });
-        setTimeout(function(){
-          _this.videoContext.play();
-        },700);
       }else{
+        _this.setData({
+          infos: _this.data.oldInfos
+        });
         wx.showToast({
           title: _this.data.flag == 4 ? '已经到顶啦' : '已经到底啦',
           icon: "none"
         })
       }
+      _this.videoContext.play();
     }, function () {
       console.log('fail');
     })
@@ -139,11 +146,13 @@ Page({
         // bounceInDown
         // 上拉
         this.setData({
-          direction: 3,
-          infos: []
+          direction: 3
         })
         this.data.flag = 3;
         setTimeout(function(){
+          _this.setData({
+            infos: []
+          })
           _this.geDetailInfo(_this.data.nextId);
         },300)
       }
@@ -151,11 +160,13 @@ Page({
         // bounceInUp
         // 下拉
         this.setData({
-          direction: 4,
-          infos: []
+          direction: 4
         })
         this.data.flag = 4;
         setTimeout(function () {
+          _this.setData({
+            infos: []
+          })
           _this.geDetailInfo(_this.data.prevId);
         }, 300)
       }
