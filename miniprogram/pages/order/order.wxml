@@ -19,7 +19,6 @@
         </text>
       </view>
       <view class="weui-tab__panel">
-        <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;">
 
           <view id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
 
@@ -53,8 +52,6 @@
             </view>
 
           </view>
-        </scroll-view>
-
 
 
 

@@ -7,7 +7,8 @@ Page({
    */
   data: {
     taskList: null,
-    moneyInfo: null
+    moneyInfo: null,
+    info: null
   },
 
   /**
@@ -15,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     this.getOpenid();
-    this.getTaskList();
+    // this.getTaskList();
   },
   getOpenid: function () {
     var self = this;
@@ -26,28 +27,28 @@ Page({
       }
     });
   },
-  getTaskList: function () {
-    var self = this;
-    c.request("activity/index", {
-    }, function (res) {
-      if (2000 == res.code) {
-        self.setData({
-          taskList: res.info
-        })
-      }
-    }, function () {
-      console.log('fail');
-    })
-  },
+  // getTaskList: function () {
+  //   var self = this;
+  //   c.request("activity/index", {
+  //   }, function (res) {
+  //     if (2000 == res.code) {
+  //       self.setData({
+  //         taskList: res.info
+  //       })
+  //     }
+  //   }, function () {
+  //     console.log('fail');
+  //   })
+  // },
   getMyMoney: function (openid = null) {
     var self = this;
     if (openid != null) {
-      c.request("wechatuser/getAccount", {
+      c.request("activity/index", {
         openid: openid
       }, function (res) {
         if (2000 == res.code) {
           self.setData({
-            moneyInfo: res.info
+            info: res
           })
         }
       }, function () {

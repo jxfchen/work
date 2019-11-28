@@ -10,7 +10,8 @@ Page({
     size: 10,
     list: [],
     role: 1,
-    openid: ''
+    openid: '',
+    hasMore: true
   },
   /**
    * 生命周期函数--监听页面加载
@@ -35,11 +36,12 @@ Page({
     let _this = this;
     // _this.data.status = e.target.dataset.status;
     _this.setData({
-      status: e.target.dataset.status
+      status: e.target.dataset.status,
+      pageNo: 1
     });
-    _this.getList();
+    _this.getList(false);
   },
-  getList: function (isPage = false) {
+  getList: function (isPage = false, isChangeTab = true) {
     let _this = this;
     c.request("pushersheet/getPusherSheetList", {
       openid: _this.data.openid,
@@ -49,13 +51,21 @@ Page({
       size: _this.data.size
     }, function (res) {
       if (2000 == res.code) {
+        if (res.info == null || res.info.length == 0) {
+          _this.setData({
+            hasMore: false,
+          });
+          return false;
+        }
         _this.setData({
           list: res.info
         });
       }else{
-        _this.setData({
-          list: []
-        });
+        if (isChangeTab) {
+          _this.setData({
+            list: []
+          });
+        }
         wx.showToast({
           title: res.msg || "获取失败",
           icon: "none"
@@ -112,7 +122,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    let _this = this;
+    if (_this.data.hasMore) {
+      _this.setData({
+        pageNo: _this.data.pageNo + 1
+      })
+      _this.getList(true, false);
+    }
   },
 
   /**
