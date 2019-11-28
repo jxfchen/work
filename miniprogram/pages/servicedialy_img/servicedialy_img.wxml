@@ -32,6 +32,6 @@
   <image src="../../images/next.png" mode="widthFix" bindtap="getDetail" data-nextid="{{infos.next_id}}"></image>
 </view>
 <view class="right zan">
-  <image src="../../images/sc.png" mode="widthFix"></image>
-  <!-- <image src="../../images/sca.png" mode="widthFix"></image> -->
+  <image src="../../images/sc.png" mode="widthFix" wx:if="{{!infos.is_commend}}"></image>
+  <image src="../../images/sca.png" mode="widthFix" wx:if="{{infos.is_commend}}"></image>
 </view>

@@ -5,9 +5,9 @@
   </view>
   <view class="right zan">
     <!-- 赞之前 -->
-    <image src="../../images/scb.png" mode="widthFix"></image>
+    <image src="../../images/scb.png" mode="widthFix" wx:if="{{!infos.is_commend}}"></image>
     <!-- 赞之后 -->
-    <!-- <image src="../../images/sca.png" mode="widthFix"></image> -->
+    <image src="../../images/sca.png" mode="widthFix" wx:if="{{infos.is_commend}}"></image>
     <text>{{infos.info.like_times}}</text><!-- 赞数 -->
   </view>
   <view class="con">
