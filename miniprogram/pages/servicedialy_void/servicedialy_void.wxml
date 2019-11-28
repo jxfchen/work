@@ -1,0 +1,15 @@
+<view class="box">
+  <video src="https://media.w3.org/2010/05/sintel/trailer.mp4" class="bgd"></video>
+  <view class="right ava">
+    <image src="../../images/task_invite.png" mode="widthFix"></image><!-- 头像 -->
+  </view>
+  <view class="right zan">
+    <!-- <image src="../../images/scb.png" mode="widthFix"></image> --><!-- 赞之前 -->
+    <image src="../../images/sca.png" mode="widthFix"></image><!-- 赞之后 -->
+    <text>100</text><!-- 赞数 -->
+  </view>
+  <view class="con">
+    <view class="title">测试内容title</view>
+    <view class="content">测试内容title，测试内容title。测试内容title，测试内容title。测试内容title，测试内容title。测试内容title，测试内容title。测试内容title，测试内容title。</view>
+  </view>
+</view>

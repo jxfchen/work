@@ -14,6 +14,13 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-module.exports = {
-  formatTime: formatTime
+const isMobile = m => {
+  const p = /^1([358][0-9]|4[1579]|66|7[0135678]|9[89])[0-9]{8}/;
+  return p.test(m);
 }
+
+module.exports = {
+  formatTime: formatTime,
+  isMobile: isMobile
+}
+

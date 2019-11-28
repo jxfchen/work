@@ -23,7 +23,7 @@ Page({
             isLight: result,
             inputValue: val,
         });
-
+      console.log(this.data.inputValue)
     },
     // input 点击  聚焦
     handleInputTap() {

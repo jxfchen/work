@@ -1,9 +1,11 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/certification_third/certification_third",
         "Componet/select/select",
+        "pages/servicedialy_img/servicedialy_img",
+        "pages/servicedialy_void/servicedialy_void",
         "pages/me/me",
-        "pages/index/index",
         "pages/sheetlist/sheetlist",
         "pages/authorized_login/authorized_login",
         "pages/task/task",

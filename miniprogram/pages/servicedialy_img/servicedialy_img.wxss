@@ -1,0 +1,72 @@
+.nav{
+  width: 100%;
+  color: #333;
+  height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.nav-but{
+  height: 70rpx;
+  margin: 0 30rpx;
+  line-height: 70rpx;
+  border-bottom: 1px solid #ddd;
+}
+.nav-cle{
+  width: 25%;
+  float: left;
+  height: 70rpx;
+  color: #666;
+  font-size: 22rpx;
+  line-height: 70rpx;
+}
+.nav-cle image{
+  float: left;
+  width: 30rpx;
+  margin: 20rpx 10rpx 0 0;
+}
+.nav-cle text{
+  float: left;
+}
+.nav-cle view{
+  width: auto;
+  margin: 0 auto;
+  display: table;
+}
+.center{
+  width: 690rpx;
+  margin: 30rpx;
+}
+.footer{
+  bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  position: fixed;
+  border-top: 1px solid #eee;
+}
+.right{
+  right: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  background: #fff;
+  border-radius: 40rpx;
+  border: 1px solid #eee;
+  box-shadow: 3rpx 2rpx 8rpx #eee;
+}
+.right image{
+  top: 50%;
+  left: 50%;
+  width: 30rpx;
+  margin-top: -15rpx;
+  position: absolute;
+  margin-left: -15rpx;
+}
+.next{
+  bottom: 200rpx;
+}
+.zan{
+  bottom: 320rpx;
+}
