@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import 'animate.wxss';
 @import "weui.wxss";
 @import "/wxParse/wxParse.wxss";
 .container {

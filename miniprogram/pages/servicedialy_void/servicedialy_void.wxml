@@ -1,15 +1,17 @@
-<view class="box">
-  <video src="https://media.w3.org/2010/05/sintel/trailer.mp4" class="bgd"></video>
+<view class="box {{direction == 4 ? 'bounceInDown' : 'bounceInUp'}} animated" bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
+  <video id="myVideo" style="height: 100vh" src="https://api.infinitybuild.cn{{infos.info.video}}" class="bgd" poster="https://api.infinitybuild.cn{{infos.info.cover_img}}" enable-progress-gesture="{{false}}" show-play-btn="{{false}}" show-fullscreen-btn="{{false}}" play-btn-position="{{false}}" controls="{{false}}" loop="{{true}}" object-fit="fill"></video>
   <view class="right ava">
-    <image src="../../images/task_invite.png" mode="widthFix"></image><!-- 头像 -->
+    <image src="{{infos.info.avatarurl}}" mode="widthFix"></image><!-- 头像 -->
   </view>
   <view class="right zan">
-    <!-- <image src="../../images/scb.png" mode="widthFix"></image> --><!-- 赞之前 -->
-    <image src="../../images/sca.png" mode="widthFix"></image><!-- 赞之后 -->
-    <text>100</text><!-- 赞数 -->
+    <!-- 赞之前 -->
+    <image src="../../images/scb.png" mode="widthFix" wx:if="{{!infos.is_commend}}"></image>
+    <!-- 赞之后 -->
+    <image src="../../images/sca.png" mode="widthFix" wx:if="{{infos.is_commend}}"></image>
+    <text>{{infos.info.like_times}}</text><!-- 赞数 -->
   </view>
   <view class="con">
-    <view class="title">测试内容title</view>
-    <view class="content">测试内容title，测试内容title。测试内容title，测试内容title。测试内容title，测试内容title。测试内容title，测试内容title。测试内容title，测试内容title。</view>
+    <view class="title">{{infos.info.title}}</view>
+    <view class="content">{{infos.info.article}}</view>
   </view>
 </view>
