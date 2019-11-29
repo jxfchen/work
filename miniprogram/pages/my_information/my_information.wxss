@@ -1,6 +1,6 @@
 .contain {
     width: 750rpx;
-    height: 1626rpx;
+    height: 1526rpx;
     background-color: #f4f4f4;
 }
 
@@ -41,7 +41,7 @@
 
 .information {
     width: 750rpx;
-    height: 826rpx;
+    height: 726rpx;
     background: rgba(255, 255, 255, 1);
     position: absolute;
     top: 172rpx;
@@ -100,6 +100,8 @@
 }
 
 .nicname_title {
+    width: 300rpx;
+    height: 60rpx;
     font-size: 30rpx;
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
@@ -111,28 +113,27 @@
 
 .nicname_text {
     font-size: 24rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: rgba(244, 92, 82, 1);
     margin-top: 20rpx;
-    margin-left: 452rpx;
-    float: left;
+    margin-right: 20rpx;
+    float: right;
 }
 
 .nicname_arrow {
     width: 12rpx;
     height: 22rpx;
     margin-top: 28rpx;
-    margin-left: 20rpx;
+    margin-right: 30rpx;
+    float: right;
 }
 
 .nicname_text2 {
+    width: 300rpx;
     font-size: 24rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     color: rgba(136, 136, 136, 1);
     margin-left: 30rpx;
-    margin-top: 10rpx;
 }
 
 .nicname_line {
@@ -186,7 +187,7 @@
     height: 166rpx;
     background: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 1018rpx;
+    top: 918rpx;
 }
 
 .code_title {
@@ -222,7 +223,7 @@
     height: 400rpx;
     background: rgba(255, 255, 255, 1);
     position: absolute;
-    top: 1204rpx;
+    top: 1104rpx;
 }
 
 .QR_img {

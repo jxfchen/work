@@ -54,7 +54,23 @@ Page({
             })
         }
         else{
-            var openid = wx.getStorageSync('openid');
+            var openid = "";
+            var that = this;
+            wx.getStorage({
+                key: 'openid',
+                success: function (res) {
+                    that.setData({
+                        openid: res.data,
+                    })
+                    if (that.data.openid.length == 0) {
+                        that.setData({
+                            status: false
+                        });
+                    } else {
+                        that.setData({
+                            status: true
+                        })
+                    }
             c.request("wechatuser/getAttestation2", {
                 openid: openid,
                 truename:name,
@@ -68,6 +84,10 @@ Page({
                     complete: function (res) { },
                 })
             }, function () {
+            })
+                },
+                fail: function (res) { }
+
             })
             
         }

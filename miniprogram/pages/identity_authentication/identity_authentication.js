@@ -9,8 +9,8 @@ Page({
     data: {
         inputLength: 6, //验证码长度
         inputValue: '', //输入的验证码
-        isFocus: true, //聚焦
-        isLight: false,  //btn 是否高亮
+        isFocus: false, //聚焦
+        isLight: false, //btn 是否高亮
         hideTip: true, // 错误提示
     },
 
@@ -42,29 +42,49 @@ Page({
             hideTip: true
         });
         //输入是否正确
-        if (userIn === 6 || userIn=== 0) {
+        if (userIn === 6 || userIn === 0) {
             // wx.showToast({
             //     title: '验证成功',
             // })
-            var openid = wx.getStorageSync('openid');
-            c.request("wechatuser/getAttestation", {
-                openid: openid,
-                invest_code: invest_code,
-            }, function (res) {
-                wx.navigateTo({
-                    url: '/pages/certification_first/certification_first',
-                    success: function (res) { },
-                    fail: function (res) { },
-                    complete: function (res) { },
-                })
-            }, function () {
-                
-            })
+            var openid = "";
+            var that = this;
+            wx.getStorage({
+                key: 'openid',
+                success: function(res) {
+                    that.setData({
+                        openid: res.data,
+                    })
+                    if (that.data.openid.length == 0) {
+                        that.setData({
+                            status: false
+                        });
+                    } else {
+                        that.setData({
+                            status: true
+                        })
+                    }
 
+                    c.request("wechatuser/getAttestation", {
+                        openid: openid,
+                        invest_code: invest_code,
+                    }, function(res) {
+                        wx.navigateTo({
+                            url: '/pages/certification_first/certification_first',
+                            success: function(res) {},
+                            fail: function(res) {},
+                            complete: function(res) {},
+                        })
+                    }, function() {
+
+                    })
+                },
+                fail: function(res) {}
+
+            })
         } else {
             wx.showToast({
                 title: '邀请人编码输入不正确',
-                icon:'none',
+                icon: 'none',
             })
         }
     },
@@ -72,42 +92,42 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-        
+    onLoad: function(options) {
+
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {
+    onReady: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
+    onShow: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function () {
+    onHide: function() {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {
+    onUnload: function() {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
+    onPullDownRefresh: function() {
         //加载数据
         this.getCustomerInfo();
     },
@@ -115,14 +135,14 @@ Page({
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function () {
+    onReachBottom: function() {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function () {
+    onShareAppMessage: function() {
 
     }
 })

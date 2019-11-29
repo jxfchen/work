@@ -71,4 +71,5 @@ page{
   width: 100%;
   height: calc(100%);
   position: relative;
+  overflow: hidden;
 }

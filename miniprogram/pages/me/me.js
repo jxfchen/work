@@ -8,6 +8,8 @@ Page({
     data: {
         userInfo: {},
         hasUserInfo: false,
+        nicname:'',
+        avatar:'',
     },
 
     copyTBL: function (e) {
@@ -15,18 +17,6 @@ Page({
         wx.setClipboardData({
             data: self.data.list.user_info.invite_code,
             success: function (res) {
-                // self.setData({copyTip:true}),
-                // wx.showModal({
-                //     title: '提示',
-                //     content: '复制成功',
-                //     success: function (res) {
-                //         if (res.confirm) {
-                //             console.log('确定')
-                //         } else if (res.cancel) {
-                //             console.log('取消')
-                //         }
-                //     }
-                // })
             }
         });
     },
@@ -76,11 +66,7 @@ Page({
             
         });
         this.setData(date);
-
-        //   var str= JSON.stringify(that.data) ;
-        //   var openid = JSON.parse(str);
-        //   console.log(that.data);
-
+        
 
 
 
@@ -119,6 +105,7 @@ Page({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
+        
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -131,6 +118,14 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
+        var avatar = this.data.avatar;
+        var nicname = this.data.nicname;
+        avatar = wx.getStorageSync('avatar');
+        nicname = wx.getStorageSync('nicname');
+        this.setData({
+            avatar: avatar,
+            nicname: nicname
+        })
 
     },
 
