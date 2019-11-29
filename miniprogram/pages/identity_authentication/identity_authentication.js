@@ -9,7 +9,7 @@ Page({
     data: {
         inputLength: 6, //验证码长度
         inputValue: '', //输入的验证码
-        isFocus: true, //聚焦
+        isFocus: false, //聚焦
         isLight: false, //btn 是否高亮
         hideTip: true, // 错误提示
     },

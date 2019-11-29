@@ -8,8 +8,8 @@ Page({
      */
     data: {
         list: [],
-        date: '2016-09-01',
-        region: ['广东省', '广州市', '海珠区'],
+        date: '',
+        region: ['', '', ''],
         avatar: '',
         nicname: '',
         phone: '',
@@ -41,9 +41,10 @@ Page({
                 icon: 'none',
             })
         } else {
-            c.request("wechatuser/updateAvatar", {
+            console.log(nicname, openid)
+            c.request("wechatuser/updateUserNicheng", {
                 openid: openid,
-                nicheng: nicname
+                nicheng: nicname,
             }, function(res) {
                 console.log("nicname_success");
             }, function() {
@@ -85,15 +86,16 @@ Page({
                 title: '手机号码不能为空',
                 icon: 'none',
             })
-        } else if (!phone.match(reg)){
+        } else if (!phone.match(reg)) {
             wx.showToast({
                 title: '手机号码格式错误',
                 icon: 'none',
             })
-        }else {
+        } else {
+            console.log(phone);
             c.request("wechatuser/updateUserPhone", {
                 openid: openid,
-                phone: phone
+                phone: phone,
             }, function(res) {
                 console.log("phone_success");
             }, function() {
@@ -111,13 +113,13 @@ Page({
     },
 
     bindDateChange: function(e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
+        var date = this.data.date;
         this.setData({
             date: e.detail.value
         })
     },
     bindRegionChange: function(e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
+        var region = this.data.region;
         this.setData({
             region: e.detail.value
         })
@@ -147,7 +149,12 @@ Page({
             }
         })
     },
-
+    sexBind: function() {
+        wx.showToast({
+            title: '性别不可更改',
+            icon: 'none',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -180,6 +187,7 @@ Page({
                     that.setData({
                         info: res.info,
                         avatar: res.info.user_info.avatarurl,
+                        nicname: res.info.user_info.nicheng,
                     });
                     var list_str = JSON.stringify(res.info);
                     list = JSON.parse(list_str);
@@ -191,12 +199,12 @@ Page({
                 })
             },
             fail: function(res) {
-                console.log(res + "fail")
+                console.log("fail")
             }
 
         });
         this.setData(date);
-
+        
 
     },
     // 切换头像
@@ -228,13 +236,43 @@ Page({
     onUnload: function() {
         var openid = wx.getStorageSync('openid');
         var avatar = this.data.avatar;
+        var region = this.data.region;
+        var date = this.data.date;
+        var nicname = this.data.nicname;
+        console.log(avatar, nicname);
+        wx.setStorage({
+            key: 'avatar',
+            data: avatar,
+        })
+        wx.setStorage({
+            key: 'nicname',
+            data: nicname,
+        })
         c.request("wechatuser/updateAvatar", {
             openid: openid,
-            avatarurl: avatar
+            avatarurl: avatar,
         }, function(res) {
             console.log("avatar_success");
         }, function() {
             console.log("avatar_fail");
+        })
+        c.request("wechatuser/updateBirthday", {
+            openid: openid,
+            birthday: date,
+        }, function(res) {
+            console.log("date_success");
+        }, function() {
+            console.log("date_fail");
+        })
+        c.request("wechatuser/updateArea", {
+            openid: openid,
+            province: region[0],
+            city: region[1],
+            xian: region[2],
+        }, function(res) {
+            console.log("region_success");
+        }, function() {
+            console.log("region_fail");
         })
     },
 

@@ -34,7 +34,7 @@
             <view class="phone_title">电话</view>
             <view bindtap="modalinputphone">
                 <image class="phone_arrow" src="/images/me/arrow.png"></image>
-                <view class="phone_text">{{phone==''?list.user_info.phoneNumber:phone}}</view>
+                <view class="phone_text">{{phone==''?list.user_info.purePhoneNumber:phone}}</view>
             </view>
             <view class="phone_line"></view>
         </view>
@@ -49,16 +49,18 @@
         </view> -->
         <view class="sex">
             <view class="phone_title">性别</view>
-            <!-- <image class="phone_arrow" src="/images/me/arrow.png"></image> -->
-            <view class="phone_text">{{list.user_info.card_status==1?"男":"女"}}</view>
+            <view bindtap="sexBind">
+                <image class="phone_arrow" src="/images/me/arrow.png"></image>
+                <view class="phone_text">{{list.user_info.card_status==1?"男":"女"}}</view>
+            </view>
             <view class="phone_line"></view>
         </view>
         <view class="birth">
             <view class="phone_title">生日</view>
             <image class="phone_arrow" src="/images/me/arrow.png"></image>
-            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <picker mode="date" value="{{date}}" start="1900-09-01" end="2019-09-01" bindchange="bindDateChange">
                 <view class="picker">
-                    <view class="phone_text">{{date}}</view>
+                    <view class="phone_text">{{date==''?list.user_info.birthday:date}}</view>
                 </view>
             </picker>
             <view class="phone_line"></view>
@@ -68,7 +70,7 @@
             <image class="phone_arrow" src="/images/me/arrow.png"></image>
             <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
                 <view class="picker">
-                    <view class="phone_text">{{region[1]}}{{region[2]}}</view>
+                    <view class="phone_text">{{region[0]==''?list.user_info.province1: region[0]}}{{region[1]==''?list.user_info.city1: region[1]}}{{region[2]==''?list.user_info.xian: region[2]}}</view>
                 </view>
             </picker>
             <view class="phone_line"></view>
