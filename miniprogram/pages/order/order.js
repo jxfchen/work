@@ -50,6 +50,7 @@ Page({
       page: _this.data.pageNo,
       size: _this.data.size
     }, function (res) {
+      console.log(res)
       if (2000 == res.code) {
         if (res.info == null || res.info.length == 0) {
           _this.setData({
