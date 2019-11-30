@@ -26,7 +26,7 @@ Page({
         lid: res.info[0].id
       })
       wx.request({
-        url: 'https://api.infinitybuild.cn/api.php/restaurant/getRestaurantList',
+        url: 'https://www.infinitybuild.cn/api.php/restaurant/getRestaurantList',
         data:{
           type: that.data.lid,
           page: 1,
@@ -67,7 +67,7 @@ Page({
     })
     console.log(that.data.vid)
     wx.request({
-      url: 'https://api.teckwrap.cn/api.php/index/getCateByPid',
+      url: 'https://www.teckwrap.cn/api.php/index/getCateByPid',
       data: {
         pid: that.data.vid
       },

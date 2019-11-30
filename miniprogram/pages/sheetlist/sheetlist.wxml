@@ -10,7 +10,7 @@
   <!--右侧栏-->
   <scroll-view scroll-y="true" class="scroll_right" scroll-into-view="{{toView}}">
     <view class="card" wx:for="{{lt}}" wx:key="{{lt}}">
-      <image class="card_img" src="https://api.infinitybuild.cn/{{item.thumb_img}}" mode="widthFix">
+      <image class="card_img" src="https://www.infinitybuild.cn/{{item.thumb_img}}" mode="widthFix">
         <view class="card_ad">
           <!-- <image class="ad_img" src="/images/logo.png"></image> -->
           {{item.commend_times}}人推单成功

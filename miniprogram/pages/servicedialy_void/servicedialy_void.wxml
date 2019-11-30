@@ -1,5 +1,5 @@
 <view class="box {{direction == 4 ? 'bounceInDown' : 'bounceInUp'}} animated" bindtouchmove="handletouchmove" bindtouchstart="handletouchstart" bindtouchend="handletouchend">
-  <video id="myVideo" style="height: 100vh" src="https://api.infinitybuild.cn{{infos.info.video}}" class="bgd" poster="https://api.infinitybuild.cn{{infos.info.cover_img}}" enable-progress-gesture="{{false}}" show-play-btn="{{false}}" show-fullscreen-btn="{{false}}" play-btn-position="{{false}}" controls="{{false}}" loop="{{true}}" object-fit="fill"></video>
+  <video id="myVideo" style="height: 100vh" src="https://www.infinitybuild.cn{{infos.info.video}}" class="bgd" poster="https://www.infinitybuild.cn{{infos.info.cover_img}}" enable-progress-gesture="{{false}}" show-play-btn="{{false}}" show-fullscreen-btn="{{false}}" play-btn-position="{{false}}" controls="{{false}}" loop="{{true}}" object-fit="fill"></video>
   <view class="right ava">
     <image src="{{infos.info.avatarurl}}" mode="widthFix"></image><!-- 头像 -->
   </view>

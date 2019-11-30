@@ -141,7 +141,7 @@ Page({
               console.log(openid)
               console.log(avatar)
               wx.uploadFile({
-                url: 'http://api.infinitybuild.cn/api.php/wechatuser/updateAvatar',
+                url: 'https://www.infinitybuild.cn/api.php/wechatuser/updateAvatar',
                 filePath: avatar,
                 name: 'avatarurl',
                 openid: openid,

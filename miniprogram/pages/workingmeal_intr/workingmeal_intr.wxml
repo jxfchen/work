@@ -6,7 +6,7 @@
       <!-- <block wx:for="{{background}}" wx:key="*this"> -->
         <!-- <swiper-item> -->
           <!-- <image bindchange='imageChange' id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' style="width:750rpx;height:500rpx;" /> -->
-          <image src='https://api.infinitybuild.cn/{{infos.cover_img}}' style="width:750rpx;height:500rpx;" />
+          <image src='https://www.infinitybuild.cn/{{infos.cover_img}}' style="width:750rpx;height:500rpx;" />
         <!-- </swiper-item> -->
       <!-- </block> -->
     <!-- </swiper> -->

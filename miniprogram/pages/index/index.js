@@ -98,7 +98,7 @@ Page({
         info: res.info,
       });
       for (let i = 0; i < res.info.length; i++) {
-        var str = "https://api.infinitybuild.cn/" + res.info[i].img;
+        var str = "https://www.infinitybuild.cn/" + res.info[i].img;
         background.push(str)
       }
       date.background = background;
