@@ -9,7 +9,6 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         nicname:'',
-        avatar:'',
     },
 
     copyTBL: function (e) {
@@ -118,10 +117,11 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-        var avatar = this.data.avatar;
         var nicname = this.data.nicname;
-        avatar = wx.getStorageSync('avatar');
-        nicname = wx.getStorageSync('nicname');
+        var avatar = wx.getStorageSync('avatarurl');
+        var nicname = wx.getStorageSync('nickname');
+        console.log(avatar)
+        console.log(nicname)
         this.setData({
             avatar: avatar,
             nicname: nicname

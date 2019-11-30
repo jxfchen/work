@@ -129,20 +129,27 @@ Page({
         var avatar = this.data.avatar;
         avatar = this.data.list.user_info.avatarurl;
         wx.chooseImage({
-            count: 1, // 最多可以选择的图片张数，默认9
-            sizeType: ['compressed'], // original 原图，compressed 压缩图，默认二者都有
-            sourceType: ['album', 'camera'], // album 从相册选图，camera 使用相机，默认二者都有
+            count: 1,
+            sizeType: ['compressed'],
+            sourceType: ['album', 'camera'],
             success: function(res) {
-                // console.log(res.tempFilePaths)
-                var avatar = res.tempFilePaths;
-                that.setData({
-                    avatar: avatar,
-                    upAvatar: true
-                })
-
-            },
-            fail: function() {
-                console.log("fail");
+              var avatar = res.tempFilePaths[0];
+              that.setData({
+                upAvatar: true
+              })
+              var openid = wx.getStorageSync('openid')
+              console.log(openid)
+              console.log(avatar)
+              wx.uploadFile({
+                url: 'http://api.infinitybuild.cn/api.php/wechatuser/updateAvatar',
+                filePath: avatar,
+                name: 'avatarurl',
+                openid: openid,
+                success: function (res) {
+                  console.log(res)
+                  console.log(123123123)
+                }
+              })
             },
             complete: function() {
                 // complete
@@ -184,6 +191,7 @@ Page({
                 c.request("wechatuser/getWechatInfo", {
                     openid: that.data.openid
                 }, function(res) {
+                  console.log(res)
                     that.setData({
                         info: res.info,
                         avatar: res.info.user_info.avatarurl,
@@ -241,20 +249,8 @@ Page({
         var nicname = this.data.nicname;
         console.log(avatar, nicname);
         wx.setStorage({
-            key: 'avatar',
-            data: avatar,
-        })
-        wx.setStorage({
             key: 'nicname',
             data: nicname,
-        })
-        c.request("wechatuser/updateAvatar", {
-            openid: openid,
-            avatarurl: avatar,
-        }, function(res) {
-            console.log("avatar_success");
-        }, function() {
-            console.log("avatar_fail");
         })
         c.request("wechatuser/updateBirthday", {
             openid: openid,

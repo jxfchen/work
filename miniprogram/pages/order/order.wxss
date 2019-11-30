@@ -18,8 +18,19 @@
   font-size: 30rpx;
   font-weight: bold;
   opacity: 1;
+  border-right: none;
 }
-
+.weui-bar__item_on::after{
+  width: 80%;
+  height: 3px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: -28rpx;
+  right: auto;
+  top: auto;
+  background:linear-gradient(180deg,#fd8c74,#f66759);
+}
 .weui_tab_bd_item {
   display: none;
   height: 100%;
@@ -151,7 +162,7 @@
     color: rgba(136, 136, 136, 1);
     float: left;
     margin-top: 24rpx;
-    margin-left: 56rpx;
+    margin-left: 40rpx;
 }
 
 .push_num {
@@ -170,7 +181,7 @@
     color: rgba(136, 136, 136, 1);
     float: left;
     margin-top: 10rpx;
-    margin-left: 56rpx;
+    margin-left: 40rpx;
 }
 
 .foot_money {
@@ -187,8 +198,6 @@
     font-weight: 400;
     color: rgba(136, 136, 136, 1);
     float: left;
-    margin-left: 178rpx;
-    margin-top: 10rpx;
 }
 
 .num {
@@ -197,10 +206,17 @@
     font-weight: 500;
     color: rgba(50, 50, 50, 1);
     float: left;
-    margin-top: 10rpx;
-    margin-left: 20rpx;
 }
-
+.rt{
+  float: right;
+  margin-top: 10rpx;
+  margin-right: 40rpx;
+}
+.cen{
+  overflow: hidden;
+  float: left;
+  width: 100%;
+}
 .look_btn {
     width: 188rpx;
     height: 54rpx;

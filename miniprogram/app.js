@@ -30,11 +30,11 @@ App({
                         success(res) {
                             console.log(res.userInfo)
                             wx.setStorage({
-                                key: 'avatarUrl',
+                              key: 'avatarurl',
                                 data: res.userInfo.avatarUrl
                             })
                             wx.setStorage({
-                                key: 'name',
+                              key: 'nickname',
                                 data: res.userInfo.nickName
                             })
                         }

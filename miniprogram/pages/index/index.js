@@ -60,10 +60,15 @@ Page({
 
 
   bindRegionChange: function (e) {
-    // console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      region: e.detail.value
-    })
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    var a = e.detail.value
+    if(a[0] != '北京市'){
+      return
+    }else{
+      this.setData({
+        region: e.detail.value
+      })
+    }
   },
 
   /**
@@ -73,7 +78,7 @@ Page({
     var self = this;
     var date = {
       address_img: "/images/address.png",
-      region: ['山东省', '济南市', '济南市'],
+      region: ['北京市', '北京市', '济南'],
       arrow_img: "/images/arrow.png",
       notice_img: "/images/notice.png",
       logo1: "/images/task1.png",
@@ -121,20 +126,6 @@ Page({
       success: (res) => {
         if (res.authSetting['scope.userInfo']) {
           // console.log(1) //已授权
-          wx.getUserInfo({
-            success(res) {
-              // console.log(res)
-              wx.setStorage({
-                key: 'avatarUrl',
-                data: res.userInfo.avatarUrl
-              })
-              wx.setStorage({
-                key: 'name',
-                data: res.userInfo.nickName
-              })
-
-            }
-          })
         } else {
           // console.log(2) //未授权
           wx.redirectTo({

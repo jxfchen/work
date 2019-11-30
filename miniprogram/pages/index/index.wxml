@@ -2,14 +2,14 @@
 <view class="container">
     <view class="top">
         <view class="address">
-            <image class="address_img" src="{{address_img}}"></image>
-            <view class="section">
-                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-                    <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{region[1]}}' disabled>
-                    </input>
-                    <image class="arrow_img" src="{{arrow_img}}"></image>
-                </picker>
-            </view>
+          <image class="address_img" src="{{address_img}}"></image>
+          <view class="section">
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+              <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{region[1]}}' disabled>
+              </input>
+              <image class="arrow_img" src="{{arrow_img}}"></image>
+            </picker>
+          </view>
         </view>
         <view class="rotation">
             <view class="rotation_chart">
@@ -45,14 +45,14 @@
     <!-- 轮播图 -->
 
     <view class="middle">
-        <view class="middle_top">
-            <image class="logo1" src="/images/push.png"></image>
-            <text class="push_text">推一单，赚一单</text>
-            <view style="float:right;">
-                <image class="more_img" src="/images/arrow1.png"></image>
-                <text class="more" bindtap="sheetlist">更多</text>
-            </view>
+      <view class="middle_top">
+        <image class="logo1" src="/images/push.png"></image>
+        <text class="push_text">推一单，赚一笔</text>
+        <view style="float:right;">
+          <image class="more_img" src="/images/arrow1.png"></image>
+          <text class="more" bindtap="sheetlist">更多</text>
         </view>
+      </view>
       <view class="middle_main">
         <scroll-view scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
           <view style="display: flex; flex-direction:row;">

@@ -14,9 +14,9 @@
         <text class="weui-navbar__item {{status == '1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="1">
           审核通过
         </text>
-        <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">
+        <!-- <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">
           谈单成功
-        </text>
+        </text> -->
       </view>
       <view class="weui-tab__panel">
 
@@ -37,30 +37,24 @@
                 <view class="card_push">推单编号</view>
                 <view class="push_num">{{item.pusher_id}}</view>
               </view>
-              <view class="card_foot">
-              {{item.relation[0] ? item.relation[0].name : ''}}{{item.relation[1] ? '+' + item.relation[1].name : ''}}{{item.relation[2] ? '+' + item.relation[2].name : ''}}
+              <view class="cen">
+                <view class="card_foot">{{item.relation[0] ? item.relation[0].name : ''}}{{item.relation[1] ? '+' + item.relation[1].name : ''}}{{item.relation[2] ? '+' + item.relation[2].name : ''}}
+                </view>
+                <view class="foot_money">
+                {{item.relation[0] ? item.relation[0].price_name : ''}}{{item.relation[1] ? ',' + item.relation[1].price_name : ''}}{{item.relation[2] ? ',' + item.relation[2].price_name : ''}}
+                </view>
+
+                <view class="rt">
+                  <view class="foot_number">用餐人数</view>
+                  <view class="num">{{item.eating_num}} 人</view>
+                </view>
               </view>
-              <view class="foot_money">
-              {{item.relation[0] ? item.relation[0].price_name : ''}}{{item.relation[1] ? ',' + item.relation[1].price_name : ''}}{{item.relation[2] ? ',' + item.relation[2].price_name : ''}}
-              </view>
-              <view class="foot_number">用餐人数</view>
-              <view class="num">{{item.eating_num}} 人</view>
               <view class="name_btn">备注推单名称</view>
               <navigator url="/pages/push_details/push_details?title=push_details&id=">
                 <view class="look_btn">查看订单</view>
               </navigator>
             </view>
-
           </view>
-
-
-
-        <!-- <view id="tab2" class="weui_tab_bd_item">
-          内容二
-        </view>
-        <view id="tab3" class="weui_tab_bd_item">
-          内容三
-        </view> -->
       </view>
     </view>
   </view>
