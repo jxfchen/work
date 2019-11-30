@@ -1,4 +1,5 @@
 var c = require("../../utils/http.js");
+var baseUrl = require("../../utils/config.js");
 Page({
 
   /**
@@ -40,6 +41,7 @@ Page({
     }, function (res) {
       if (2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);
+        res.info.avatarurl = res.info.avatarurl.indexOf('http') >= 0 ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
         _this.setData({
           infos: res,
         });
