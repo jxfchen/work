@@ -128,13 +128,6 @@ Page({
       })
     },
     bindRegionChange: function(e) {
-<<<<<<< HEAD
-        var region = this.data.region;
-        console.log(132)
-        this.setData({
-            region: e.detail.value
-        })
-=======
       var region = this.data.region, _this = this, openid = wx.getStorageSync('openid');
       console.log(e.detail.value)
       this.setData({
@@ -150,7 +143,6 @@ Page({
       }, function () {
         console.log('fail');
       })
->>>>>>> 1571235fbffdb8b76ed62add27c4fbd4da458ed3
     },
     changeAvatar: function() {
         var that = this;

@@ -1,6 +1,4 @@
 /**index.wxss**/
-.container{
-}
 .address {
   background-color: #ff6d64;
   height: 180rpx;
@@ -14,7 +12,19 @@
   margin-right: 30rpx;
   margin-top: 3.5px;
 }
-
+.cen{
+  overflow: hidden;
+}
+.cen .l{
+  display: table;
+  float: left;
+}
+.cen .r{
+  display: table;
+  float: right;
+  margin-top: 20rpx;
+  margin-right: 11rpx;
+}
 .section {
   float: left;
 }
@@ -415,6 +425,7 @@
   font-size: 24rpx;
   color: rgba(102, 102, 102, 1);
   padding-top: 18rpx;
+  float: left;
 }
 
 .header {

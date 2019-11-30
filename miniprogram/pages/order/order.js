@@ -78,11 +78,7 @@ Page({
   },
   //到达底部
   scrollToLower: function (e) {
-    let _this = this;
-    _this.setData({
-      pageNo: _this.data.pageNo + 1
-    })
-    _this.getList(true);
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

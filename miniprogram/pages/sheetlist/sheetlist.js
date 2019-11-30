@@ -55,26 +55,27 @@ Page({
   switchRightTab: function (e) {
     var that = this
     var index = e.currentTarget.dataset.index
-    var pid = e.currentTarget.dataset.id
-    console.log(pid)
-    app.pid = pid
+    var id = e.currentTarget.dataset.id
+    console.log(id)
     this.setData({
       scrollTopId: index,
       // 左侧点击类样式
       curNav: index,
       toView: index,
-      vid: pid
+      vid: id
     })
     console.log(that.data.vid)
     wx.request({
-      url: 'https://www.teckwrap.cn/api.php/index/getCateByPid',
+      url: 'https://www.infinitybuild.cn/api.php/restaurant/getRestaurantList',
       data: {
-        pid: that.data.vid
+        type: that.data.lid,
+        page: 1,
+        size: 20,
       },
       success: function (res) {
-        console.log(res.data.info)
+        console.log(res.data.infos)
         that.setData({
-          subclass: res.data.info
+          lt: res.data.infos
         })
       }
     })

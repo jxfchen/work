@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/msg/msg",
         "pages/index/index",
+        "pages/msgcen/msgcen",
+        "pages/msg/msg",
         "pages/me/me",
         "pages/my_information/my_information",
         "pages/certification_third/certification_third",
