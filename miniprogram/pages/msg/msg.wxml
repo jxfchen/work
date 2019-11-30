@@ -1,0 +1,15 @@
+<view class="top">
+  <view class="clk">站内公告</view>
+  <view class="">我的消息</view>
+</view>
+<view class="list-box">
+  <view>测试内容-1<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+  <view>测试内容-2<text>2019-11-10</text></view>
+</view>

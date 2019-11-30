@@ -39,7 +39,7 @@
                     </block>
                 </swiper>
 
-                <!-- <text class="notice_text">恭喜02000号推客成功提现12800元！</text> -->
+                <view class="notice_text">更多>></view>
             </view>
         </view>
     </view>
