@@ -3,13 +3,5 @@
   <view class="">我的消息</view>
 </view>
 <view class="list-box">
-  <view>测试内容-1<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
-  <view>测试内容-2<text>2019-11-10</text></view>
+  <view wx:for="{{lists}}" wx:key="index">{{item.name}}<text>{{item.add_time}}</text></view>
 </view>

@@ -41,6 +41,11 @@ Page({
       url: '../sheetlist/sheetlist',
     })
   },
+  msgList: function (e) {
+    wx.navigateTo({
+      url: '../msg/msg',
+    })
+  },
   swiperChange(e) {
     const that = this;
     that.setData({
