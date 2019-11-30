@@ -68,7 +68,6 @@
 }
 
 .notice_text {
-  margin: 0rpx 24rpx 7rpx 16rpx;
   color: white;
   font-size: 22rpx;
 }
@@ -299,7 +298,12 @@
   left: 90rpx;
   height: 70%;
 }
-
+.swiper_container .swiper_item{
+  width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .rotation_chart {
   position: relative;
 }
@@ -308,7 +312,16 @@
   height: 480rpx;
   width: 100%;
 }
-
+.notice_text{
+  top: 0;
+  right: 0;
+  width: 80rpx;
+  color: #fff;
+  height: 43rpx;
+  font-size: 20rpx;
+  line-height: 43rpx;
+  position: absolute;
+}
 .swiper-item {
   border-radius: 12rpx;
   display: flex;

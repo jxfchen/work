@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/msg/msg",
         "pages/index/index",
         "pages/me/me",
         "pages/my_information/my_information",

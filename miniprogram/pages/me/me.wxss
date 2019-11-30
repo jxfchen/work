@@ -7,7 +7,12 @@
     width: 750rpx;
     height: 188rpx;
 }
-
+.msg{
+  top: 20rpx;
+  width: 30rpx;
+  right: 20rpx;
+  position: absolute;
+}
 .card {
     width: 690rpx;
     height: 342rpx;

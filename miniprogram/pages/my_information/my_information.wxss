@@ -20,7 +20,17 @@
     float: left;
     border-radius: 50%;
 }
-
+.birth,.area{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.birth picker,.area picker{
+  position: absolute;
+  width: 100rpx;
+  height: 100%;
+  right: 0;
+}
 .header_text {
     font-size: 24rpx;
     font-family: PingFangSC-Regular, PingFang SC;

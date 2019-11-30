@@ -120,6 +120,7 @@ Page({
     },
     bindRegionChange: function(e) {
         var region = this.data.region;
+        console.log(132)
         this.setData({
             region: e.detail.value
         })
