@@ -1,5 +1,6 @@
 // pages/my_information/my_information.js
 var c = require("../../utils/http.js");
+var baseUrl = require("../../utils/config.js");
 const app = getApp()
 Page({
 
@@ -18,9 +19,9 @@ Page({
     },
     //昵称
     modalinput: function() {
-        this.setData({
-            hiddenmodalput: !this.data.hiddenmodalput
-        })
+      this.setData({
+        hiddenmodalput: !this.data.hiddenmodalput
+      });
     },
     //取消按钮
     cancel: function() {
@@ -113,16 +114,35 @@ Page({
     },
 
     bindDateChange: function(e) {
-        var date = this.data.date;
-        this.setData({
-            date: e.detail.value
-        })
+      var date = this.data.date, _this = this, openid = wx.getStorageSync('openid');
+      _this.setData({
+          date: e.detail.value
+      })
+      c.request("wechatuser/updateBirthday", {
+        openid: openid,
+        birthday: e.detail.value,
+      }, function (res) {
+        console.log(res)
+      }, function () {
+        console.log('fail');
+      })
     },
     bindRegionChange: function(e) {
-        var region = this.data.region;
-        this.setData({
-            region: e.detail.value
-        })
+      var region = this.data.region, _this = this, openid = wx.getStorageSync('openid');
+      console.log(e.detail.value)
+      this.setData({
+          region: e.detail.value
+      })
+      c.request("wechatuser/updateArea", {
+        openid: openid,
+        province: e.detail.value[0],
+        city: e.detail.value[1],
+        xian: e.detail.value[2]
+      }, function (res) {
+        console.log(res)
+      }, function () {
+        console.log('fail');
+      })
     },
     changeAvatar: function() {
         var that = this;
@@ -138,16 +158,23 @@ Page({
                 upAvatar: true
               })
               var openid = wx.getStorageSync('openid')
-              console.log(openid)
-              console.log(avatar)
               wx.uploadFile({
-                url: 'https://www.infinitybuild.cn/api.php/wechatuser/updateAvatar',
+                url: baseUrl.config.api_base_url + '/wechatuser/updateAvatar',
                 filePath: avatar,
                 name: 'avatarurl',
-                openid: openid,
+                header: {
+                  "Content-Type": "multipart/form-data;charset=UTF-8",
+                },
+                formData: {
+                  "openid": openid,
+                },
                 success: function (res) {
-                  console.log(res)
-                  console.log(123123123)
+                  let data = JSON.parse(res.data);
+                  console.log(baseUrl.config.image_base_url + data.avatarurl)
+                  that.setData({
+                    avatar: baseUrl.config.image_base_url + data.avatarurl
+                  })
+                  wx.setStorageSync("avatarurl", baseUrl.config.image_base_url + data.avatarurl);
                 }
               })
             },
@@ -194,7 +221,7 @@ Page({
                   console.log(res)
                     that.setData({
                         info: res.info,
-                        avatar: res.info.user_info.avatarurl,
+                        avatar: baseUrl.config.image_base_url + res.info.user_info.avatarurl,
                         nicname: res.info.user_info.nicheng,
                     });
                     var list_str = JSON.stringify(res.info);

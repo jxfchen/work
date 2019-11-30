@@ -1,4 +1,5 @@
 var c = require("../../utils/http.js");
+var baseUrl = require("../../utils/config.js");
 Page({
 
   /**
@@ -12,7 +13,10 @@ Page({
     flag: 0,
     openid: '',
     direction: 0,
-    oldInfos: null
+    oldInfos: null,
+    id: 0,
+    isCommend: false,
+    commendTimes: 0
   },
 
   /**
@@ -20,10 +24,12 @@ Page({
    */
   onLoad: function (options) {
     this.getOpenid(options.id)
+    this.data.id = options.id;
     this.videoContext = wx.createVideoContext('myVideo')
   },
   getOpenid: function (id) {
     var _this = this;
+
     wx.getStorage({
       key: 'openid',
       success: function (res) {
@@ -54,9 +60,12 @@ Page({
       wx.hideLoading();
       if(2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);
+        res.info.avatarurl = res.info.avatarurl.substr(0, 7).toLowerCase() == 'http://' ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
         _this.setData({
           infos: res,
           oldInfos: res,
+          isCommend: res.is_commend ? true : false,
+          commendTimes: res.info.commend_times,
           nextId: res.next_id != "" ? res.next_id : 0,
           prevId: res.prev_id != "" ? res.prev_id : 0
         });
@@ -85,7 +94,21 @@ Page({
   onShow: function () {
 
   },
-
+  clickLike: function () {
+    let _this = this;
+    if (_this.data.openid != '') {
+      c.request("servicedialy/updateCommendTimes", {
+        id: _this.data.id,
+        openid: _this.data.openid,
+        commend_type: _this.data.isCommend ? 2 : 1
+      }, function (res) {
+        _this.setData({
+          isCommend: !_this.data.isCommend,
+          commendTimes: !_this.data.isCommend ? _this.data.commendTimes + 1 : _this.data.commendTimes - 1
+        })
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

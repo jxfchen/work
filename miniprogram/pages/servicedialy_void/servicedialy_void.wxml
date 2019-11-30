@@ -3,12 +3,12 @@
   <view class="right ava">
     <image src="{{infos.info.avatarurl}}" mode="widthFix"></image><!-- 头像 -->
   </view>
-  <view class="right zan">
+  <view class="right zan" bindtap="clickLike">
     <!-- 赞之前 -->
-    <image src="../../images/scb.png" mode="widthFix" wx:if="{{!infos.is_commend}}"></image>
+    <image src="../../images/scb.png" mode="widthFix" wx:if="{{!isCommend}}"></image>
     <!-- 赞之后 -->
-    <image src="../../images/sca.png" mode="widthFix" wx:if="{{infos.is_commend}}"></image>
-    <text>{{infos.info.like_times}}</text><!-- 赞数 -->
+    <image src="../../images/sca.png" mode="widthFix" wx:if="{{isCommend}}"></image>
+    <text>{{commendTimes}}</text><!-- 赞数 -->
   </view>
   <view class="con">
     <view class="title">{{infos.info.title}}</view>
