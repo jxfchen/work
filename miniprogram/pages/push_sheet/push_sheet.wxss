@@ -875,9 +875,27 @@ radio .wx-radio-input {
   top:20rpx;
   left:30rpx
 }
+.boc{
+  width: 100%;
+  overflow: hidden;
+}
 .section slider{
+  margin: 0;
+  width: 90%;
+  float: left;
   height: 50rpx;
-  margin-bottom: 10rpx;
+}
+.section text{
+  float: left;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  color:rgba(112,112,110,1);
+}
+.slid{
+  float: left;
+  margin: 0;
+  width: 80%;
 }
 .content {
   float: left;

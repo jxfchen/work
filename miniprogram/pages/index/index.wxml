@@ -39,7 +39,7 @@
                     </block>
                 </swiper>
 
-                <view class="notice_text">更多>></view>
+                <view class="notice_text" bindtap="msgList">更多>></view>
             </view>
         </view>
     </view>

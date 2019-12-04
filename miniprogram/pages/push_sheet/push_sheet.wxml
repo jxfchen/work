@@ -47,10 +47,10 @@
       </view>
 
       <view>
-        <view wx:for="{{mealist}}" wx:key="{{mealist}}" wx:if="{{item.selected}}">
+        <view class="box" wx:for="{{mealist}}" wx:key="{{mealist}}" wx:if="{{item.selected}}">
           <view class="left-nav">{{item.name}}</view>
-          <view class="section section_gap" style="width:674rpx;">
-            <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" value="{{item.price}}" min='0' max="200" bindchange="slider" data-id="{{item.id}}" data-index="{{index}}"></slider>
+          <view class="section section_gap slid">
+            <slider name="slider" show-value selected-color="rgba(244, 92, 82, 1)" block-size="24" value="{{item.price}}" min='0' max="200" bindchange="slider" data-id="{{item.id}}" data-index="{{index}}"></slider><text>元</text>
           </view>
         </view>
       </view>

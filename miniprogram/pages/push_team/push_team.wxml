@@ -47,11 +47,6 @@
             <view class="staff_btn" bindtap="bindstaff">员工推客
             </view>
         </view>
-        <view class="ranking_btn" style='{{flag=="2"?"display:block":"display:none"}}'>
-            <view class="manager_btn1" bindtap="bindManager">经理推客</view>
-            <view class="staff_btn1" bindtap="bindstaff">员工推客
-            </view>
-        </view>
         <view>
             <block wx:for-item="item" wx:key="index" wx:for='{{list.pusher_award_list}}'>
                 <view>

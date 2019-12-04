@@ -74,7 +74,7 @@ Page({
           infos: _this.data.oldInfos
         });
         wx.showToast({
-          title: _this.data.flag == 4 ? '已经到顶啦' : '已经到底啦',
+          title: _this.data.direction == 4 ? '已经到顶啦' : '已经到底啦',
           icon: "none"
         })
       }
@@ -169,9 +169,9 @@ Page({
         // bounceInDown
         // 上拉
         this.setData({
-          direction: 3
+          direction: 3,
+          flag: 3
         })
-        this.data.flag = 3;
         setTimeout(function(){
           _this.setData({
             infos: []
@@ -183,9 +183,9 @@ Page({
         // bounceInUp
         // 下拉
         this.setData({
-          direction: 4
+          direction: 4,
+          flag: 4
         })
-        this.data.flag = 4;
         setTimeout(function () {
           _this.setData({
             infos: []
