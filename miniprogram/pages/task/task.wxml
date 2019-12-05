@@ -5,7 +5,8 @@
   </view>
   <view class="separate"></view>
   <view class="card">
-    <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content">
+    <!-- <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content"> -->
+    <image src="/images/task_background.png" class="background_img"></image>
       <view class="task_revenue">任务收益余额</view>
       <view class="money_logo">￥</view>
       <view class="task_num">{{info.total_invest}}</view>
@@ -25,7 +26,7 @@
       <view class="all_RMB">￥</view>
       <view class="all_num">{{info.total_invest}}</view>
       <image src="/images/task_banner.png" class="task_banner"></image>
-    </view>
+    <!-- </view> -->
   </view>
 </view>
 <view class="divide"></view>

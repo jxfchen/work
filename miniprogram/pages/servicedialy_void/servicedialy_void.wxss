@@ -46,7 +46,7 @@ page{
   width: 70rpx;
   margin: 0;
   position: static;
-  border-radius: 100%;
+  border-radius: 40rpx;
 }
 .con{
   bottom: 0;

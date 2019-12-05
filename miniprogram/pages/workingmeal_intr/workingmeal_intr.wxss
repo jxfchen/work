@@ -152,8 +152,6 @@
 }
 
 .word {
-    width: 84rpx;
-    height: 40rpx;
     font-size: 28rpx;
     font-weight: bold;
     color: rgba(50, 50, 50, 1);

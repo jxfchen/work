@@ -77,11 +77,13 @@
   background-color: white;
 }
 
-.card_content {
-  width: 706rpx;
-  height: 302rpx;
-  margin: 0 auto;
+.background_img{
+    width:706rpx;
+    height: 302rpx;
+    position: absolute;
+    left: 20rpx;
 }
+
 
 .task_revenue {
   font-size: 30rpx;
@@ -89,29 +91,33 @@
   color: white;
   padding-top: 34rpx;
   margin-left: 264rpx;
+  position: absolute;
 }
 
 .money_logo {
   font-size: 36rpx;
   color: white;
-  margin-left: 264rpx;
-  float: left;
+  margin-left: 256rpx;
+  position: absolute;
   line-height: 50rpx;
-  padding-top: 18rpx;
+  padding-top: 85rpx;
 }
 
 .task_num {
   font-size: 60rpx;
   color: white;
-  float: left;
+  position: absolute;
+  padding-left: 290rpx;
+  padding-top: 70rpx;
   line-height: 70rpx;
 }
 
 .arrow_img {
   width: 40rpx;
   height: 36rpx;
-  margin-top: 17rpx;
-  margin-left: 28rpx;
+  position: absolute;
+  margin-top: 84rpx;
+  margin-left: 500rpx;
 }
 
 .today_revenue {
@@ -182,7 +188,7 @@
 .task_banner {
   width: 690rpx;
   height: 128rpx;
-  padding-top: 188rpx;
+  padding-top: 340rpx;
   padding-left: 10rpx;
 }
 

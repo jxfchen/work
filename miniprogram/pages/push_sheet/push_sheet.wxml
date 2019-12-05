@@ -139,8 +139,14 @@
             <view class="recommend_title2">订单成功</view>
         </view>
         <view class="part3">
-            <view class="recommend_btn1">￥50</view>
-            <view class="recommend_btn2" style="">￥2000</view>
+            <view class="recommend_btn1">
+            <text class="RMB">￥</text>
+            <text class="RMB_num">{{min_profit}}</text>
+            </view>
+            <view class="recommend_btn2">
+            <text class="RMB">￥</text>
+            <text class="RMB_num">{{max_profit}}</text>
+            </view>
         </view>
         <view class="part4">
             <view class="recommend_textLeft">

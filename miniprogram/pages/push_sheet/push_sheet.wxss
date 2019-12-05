@@ -744,12 +744,21 @@ radio .wx-radio-input {
     background: rgba(254, 226, 222, 1);
     border-radius: 38rpx;
     color: rgba(243, 94, 81, 1);
+    float: left; 
+    margin-right: 74rpx;
     font-weight: 500;
     font-size: 60rpx;
     line-height: 84rpx;
     text-align: center;
-    float: left;
-    margin-right: 74rpx;
+}
+
+.RMB{
+    width:22rpx;
+    font-size:36rpx;
+    font-weight:500;
+    color:rgba(243,94,81,1);
+    line-height:100rpx;
+    
 }
 
 .recommend_btn2 {
@@ -764,6 +773,7 @@ radio .wx-radio-input {
     text-align: center;
     float: right;
 }
+
 
 .part4 {
     margin-top: 50rpx;
