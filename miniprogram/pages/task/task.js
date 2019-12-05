@@ -46,6 +46,7 @@ Page({
       c.request("activity/index", {
         openid: openid
       }, function (res) {
+        console.log(res)
         if (2000 == res.code) {
           self.setData({
             info: res
