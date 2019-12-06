@@ -256,13 +256,16 @@
 }
 
 .button {
+  width: auto;
   float: right;
-  width: 118rpx;
   height: 54rpx;
-  border-radius: 27px;
-  background: #fd8c74;
-  margin-right: 30rpx;
   margin-top: 50rpx;
+  position: relative;
+  margin-right: 30rpx;
+  padding-left: 50rpx;
+  border-radius: 27px;
+  padding-right: 20rpx;
+  background: #fd8c74;
   box-shadow: 0px 4px 14px 0px rgba(255, 171, 163, 1);
 }
 
@@ -285,10 +288,9 @@
 .button_image {
   width: 26rpx;
   height: 26rpx;
-  margin-left: 14rpx;
-  margin-top: 14rpx;
-  float: left;
-  margin-right: 4rpx;
+  left: 14rpx;
+  top: 14rpx;
+  position: absolute;
 }
 
 .add_money {
