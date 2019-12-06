@@ -22,6 +22,7 @@ Page({
     this.setData({
       imgurl: baseUrl.config.image_base_url
     })
+    
   },
   getOpenid: function () {
     var self = this;
