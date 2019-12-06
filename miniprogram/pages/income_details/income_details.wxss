@@ -37,6 +37,13 @@
   border-radius: 15rpx;
 }
 
+.bgimg{
+    width: 706rpx;
+    height: 302rpx;
+    position: absolute;
+    left: 20rpx;
+}
+
 .card_tit {
   font-size: 30rpx;
   color: white;
@@ -44,6 +51,7 @@
   text-align: center;
   padding-top: 30rpx;
   line-height: 42rpx;
+  opacity: 0.9;
 }
 
 .gocash {
@@ -52,7 +60,6 @@
   background: rgba(254, 226, 222, 1);
   border-radius: 200rpx 0rpx 0rpx 200rpx;
   font-size: 24rpx;
-  font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: rgba(244, 92, 82, 1);
   line-height: 50rpx;
@@ -60,6 +67,7 @@
   position: absolute;
   top: 162rpx;
   left: 612rpx;
+  z-index: 3;
 }
 
 .money {
@@ -74,13 +82,14 @@
   color: rgba(255, 255, 255, 1);
   line-height: 84rpx;
   text-align: center;
+  opacity: 0.9;
 }
 
 .myincome {
   font-size: 24rpx;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
-  margin-left: 18rpx;
+  margin-left: 40rpx;
   opacity: 0.8;
 }
 
@@ -99,6 +108,7 @@
   color: rgba(255, 255, 255, 1);
   margin-left: 74rpx;
   line-height: 58rpx;
+  opacity: 0.9;
 }
 
 .teamincome {
@@ -115,6 +125,7 @@
   color: rgba(255, 255, 255, 1);
   margin-left: 90rpx;
   line-height: 58rpx;
+  opacity: 0.9;
 }
 
 .taskincome {
@@ -131,6 +142,7 @@
   color: rgba(255, 255, 255, 1);
   margin-left: 68rpx;
   line-height: 58rpx;
+  opacity: 0.9;
 }
 
 .separate {

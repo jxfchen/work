@@ -7,7 +7,8 @@
         </view>
     </view>
     <view style="width:750rpx;height:326rpx;background:rgba(255,255,255,1);">
-        <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 302rpx;">
+        <!-- <view class="card" style="background: url(/images/task_background.png);background-size:706rpx 302rpx;"> -->
+        <image src="/images/task_background.png" class="bgimg"></image>
             <view>
                 <view class="card_tit">余额（元）</view>
                 <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
@@ -32,7 +33,6 @@
                     <view class="taskincome_num">{{list.money_info.total}}</view>
                 </view>
             </view>
-        </view>
     </view>
     <view class="separate"></view>
     <view class="part">
