@@ -1,6 +1,7 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/a/a",
         "pages/msgcen/msgcen",
         "pages/msg/msg",
         "pages/me/me",
@@ -8,7 +9,6 @@
         "pages/certification_third/certification_third",
         "Componet/select/select",
         "pages/servicedialy_list/servicedialy_list",
-        "pages/a/a",
         "pages/servicedialy_img/servicedialy_img",
         "pages/servicedialy_void/servicedialy_void",
         "pages/sheetlist/sheetlist",

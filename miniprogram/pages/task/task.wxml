@@ -5,27 +5,23 @@
   </view>
   <view class="separate"></view>
   <view class="card">
-    <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content">
+    <!-- <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content"> -->
+    <image src="/images/task_background.png" class="background_img"></image>
       <view class="task_revenue">任务收益余额</view>
       <view class="money_logo">￥</view>
       <view class="task_num">{{info.total_invest}}</view>
       <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
-        <image src="/images/task_arrow.png" class="arrow_img">
-        </image>
+        <image src="/images/task_arrow.png" class="arrow_img"></image>
       </navigator>
-      <view class="today_revenue">
-        今日任务收益
-      </view>
+      <view class="today_revenue">今日任务收益</view>
       <view class="RMB">￥</view>
       <view class="today_num">{{info.today_invest}}</view>
       <view class="card_separate"></view>
-      <view class="all_revenve">
-        累计任务收益
-      </view>
+      <view class="all_revenve">累计任务收益</view>
       <view class="all_RMB">￥</view>
       <view class="all_num">{{info.total_invest}}</view>
       <image src="/images/task_banner.png" class="task_banner"></image>
-    </view>
+    <!-- </view> -->
   </view>
 </view>
 <view class="divide"></view>
@@ -38,7 +34,7 @@
   <view wx:for="{{info.info}}" wx:key="index">
     <view class="part">
       <view>
-        <image src="/images/task_invite.png" class="part_img"></image>
+        <image src="{{imgurl}}/{{item.pic}}" class="part_img"></image>
         <view class="part_middle">
           <view class="part_tit1">
             {{item.cn_name}}
@@ -47,79 +43,20 @@
             {{item.remark}}
           </view>
         </view>
-        <view class="button">
-          <image src="/images/task_money.png" class="button_image">
-          </image>
+        <view class="button {{item.status == '1' ? 'button2' : ''}}" bindtap="link" data-id="{{item.url}}">
+          <image src="/images/{{item.status == '1' ? 'task_finish' : 'task_money'}}.png" class="button_image"></image>
           <view class="add_money">+{{item.roles_relations[0].award}}元</view>
         </view>
       </view>
     </view>
     <view class="line"></view>
   </view>
-  
-
-
-
-  <!-- <view class="part">
-    <view>
-      <image src="/images/task_push.png" class="part_img"></image>
-      <view class="part_middle">
-        <view class="part_tit1">
-          完成第一个推单
-        </view>
-        <view  class="part_tit2">
-          邀请好友,每个赚取2元
-        </view>
-      </view>
-      <view class="button">
-        <image src="/images/task_money.png" class="button_image">
-        </image>
-        <view class="add_money">+2元</view>
-      </view>
-    </view>
-  </view>
-  <view class="line"></view>
-
-  <view class="part">
-    <view>
-      <image src="/images/task_cash.png" class="part_img"></image>
-      <view class="part_middle">
-        <view class="part_tit1">
-          设置提现账号
-        </view>
-        <view class="part_tit2">
-          邀请好友,每个赚取2元
-        </view>
-      </view>
-      <view class="button2">
-        <image src="/images/task_finish.png" class="button_image">
-        </image>
-        <view class="complete">完成</view>
-      </view>
-    </view>
-  </view>
-  <view class="line"></view>
-
-  <view class="part">
-    <view>
-      <image src="/images/task_identity.png" class="part_img"></image>
-      <view class="part_middle">
-        <view class="part_tit1">
-          完成身份认证
-        </view>
-        <view class="part_tit2">
-          通过身份认证，可以享受更多收益权限！
-        </view>
-      </view>
-      <view class="button3">
-        <image src="/images/task_money.png" class="button_image">
-        </image>
-        <view class="add_money">+2元</view>
-      </view>
-    </view>
-  </view>
-  <view class="line"></view> -->
 </view>
 <view class="foot"></view>
-<image src="/images/task_server.png" class="server">
-</image>
+<image src="/images/task_server.png" class="server"></image>
+<view class="ewm" wx:if="{{hide == true}}">
+  <view class="ewm-box">
+    <image src="{{ewm}}" mode="widthFix" class="ewm_img"></image>
+    <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
+  </view>
+</view>

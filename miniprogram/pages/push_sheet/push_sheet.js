@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+      list:[],
     rad: '-1',
     istarget: true,
     showModal: false,
@@ -63,7 +64,7 @@ Page({
       myhash: myhash,
       fwid: detailValue
     })
-    console.log(that.data.fwid)
+    console.log("fwid"+that.data.fwid)
   },
   // 价格
   slider: function (e){
@@ -132,6 +133,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      var self = this;
+      var date = {
+          list: '',
+      }
+      var list = this.data.list;
     var that = this;
     var openid = wx.getStorageSync('openid');
     var code = options.title;
@@ -139,6 +145,7 @@ Page({
       openid: openid,//类型
       code: code,//餐次
     })
+
     c.request("pushersheet/getProjectType", {
     }, function (res) {
       console.log(res)
@@ -154,13 +161,26 @@ Page({
           price: 0,
         }
       })
-      console.log(newArr)
       that.setData({
         prolist: res.project_list,//类型
         mealist: newArr,//餐次
       })
     }, function () {
     })
+    var list=[];
+      c.request("restaurant/getDetailById", {
+          id: code,
+      }, function (res) {
+          that.setData({
+              info: res.info,
+          })
+          list=res.info;
+          date.list = list;
+          self.setData(date);
+          console.log(list);
+      }, function () {
+      })
+      this.setData(date);
   },
   bindClick: function (e) {
     let that = this;
@@ -248,15 +268,6 @@ Page({
       })
       return false;
     }
-    // console.log(that.data.openid)
-    // console.log(that.data.code)//服务id
-    // console.log(that.data.restaurant_id)//项目类型id
-    // console.log(that.data.fwid)//餐次，价格
-    // console.log(that.data.peopleNumber)//就餐人数
-    // console.log(that.data.mePhone)//联系方式
-    // console.log(that.data.customerPhone)//客户联系方式
-    // console.log(that.data.content_id)//优先联系人
-    // console.log(that.data.role_id)//您的角色
     c.request("pushersheet/postPusherSheet", {
       openid: that.data.openid,
       restaurant_id: that.data.code,//服务id
@@ -298,9 +309,38 @@ Page({
     console.log(this.data.role_id)
     this.setData(
       {
-        showModal: true
+        showModal: true,
+        
       }
     )
+      var min_profit= '';
+      var max_profit = '';
+      var list=this.data.list;
+      if (this.data.role_id==1){
+          if (list.is_pusher_rate==1){
+            that.setData({
+                min_profit: list.pusher_profit / 100,
+                max_profit: list.pusher_profit / 100+0.1,
+            })
+          }else{
+              that.setData({
+                  min_profit: list.pusher_profit,
+                  max_profit: list.pusher_profit+10,
+              })
+          }
+      }else{
+          if (list.is_partner_rate == 1) {
+              that.setData({
+                  min_profit: list.partner_min_profit / 100,
+                  max_profit: list.partner_max_profit / 100,
+              })
+          } else {
+              that.setData({
+                  min_profit: list.partner_min_profit,
+                  max_profit: list.partner_max_profit,
+              })
+          }
+      }
   },
   ok: function () {
     this.setData({
