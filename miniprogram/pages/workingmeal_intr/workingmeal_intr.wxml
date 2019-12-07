@@ -31,12 +31,6 @@
             <view class="label" wx:for="{{key}}" wx:key="{{key}}">
                 <view class="label_text">{{item}}</view>
             </view>
-            <view class="label" wx:for="{{key}}" wx:key="{{key}}">
-                <view class="label_text">{{item}}</view>
-            </view>
-            <view class="label" wx:for="{{key}}" wx:key="{{key}}">
-                <view class="label_text">{{item}}</view>
-            </view>
         </view>
         <image src="/images/ellipsis.png" class="ellipsis_logo" bindtap="ellipsisbtn"></image>
     </view>
