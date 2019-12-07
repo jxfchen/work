@@ -43,7 +43,7 @@ Page({
   },
   msgList: function (e) {
     wx.navigateTo({
-      url: '../msg/msg',
+        url: '../msg_content/msg_content',
     })
   },
   swiperChange(e) {

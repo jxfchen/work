@@ -8,8 +8,23 @@ Page({
     background: ["/images/banner.png", "/images/banner.png", "/images/banner.png", "/images/banner.png", "/images/banner.png"],
     pushList: [],
     id: undefined,
+    status:"true",
   },
-
+    ellipsisbtn: function () {
+        var status=this.data.status;
+        var that=this;
+        if (status =="false")
+        {
+            that.setData({
+                status:"true"
+            })
+        }else{
+            that.setData({
+                status:"false"
+            }) 
+        }
+        console.log(status);
+    },
   /**
    * 生命周期函数--监听页面加载
    */

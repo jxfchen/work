@@ -42,6 +42,10 @@
     background: #f45c52;
 }
 
+.part{
+    background:rgba(254,226,222,1);
+}
+
 .title {
     width: 590rpx;
     height: 68rpx;
@@ -212,7 +216,8 @@ radio .wx-radio-input {
 }
 
 .part {
-    height: 3592rpx;
+    /* height: 3745rpx; */
+    height: auto;
     width: 750rpx;
     background: rgba(254, 226, 222, 1);
 }
@@ -830,8 +835,11 @@ radio .wx-radio-input {
   overflow: hidden;
   border-radius: 16rpx;
   padding-bottom: 40rpx;
-  margin: 50rpx 30rpx 40rpx 30rpx;
-  background: rgba(255,255,255,1);
+  margin: 50rpx 30rpx 0rpx 30rpx;
+  background:rgba(254,226,222,1);
+}
+.pro_part{
+    background-color: #fff;
 }
 .cen{
   padding: 0 18rpx;

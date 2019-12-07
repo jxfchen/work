@@ -11,7 +11,11 @@ Page({
       nicname:'',
       hide: false,
     },
-
+    msgList: function (e) {
+        wx.navigateTo({
+            url: '../msg/msg',
+        })
+    },
     copyTBL: function (e) {
       var self = this;
       wx.setClipboardData({

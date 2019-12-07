@@ -23,30 +23,14 @@
     margin-left: 20rpx;
 }
 
-.label_text {
-    font-size: 20rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
-    color: rgba(243, 94, 81, 1);
-    line-height: 39rpx;
-    text-align: center;
-}
-
-.label {
-    float: left;
-    width: auto;
-    height: 40rpx;
-    padding: 0 20rpx;
-    margin-left: 10rpx;
-    line-height: 40rpx;
-    border-radius: 20rpx;
-    border: 1px solid rgba(250, 96, 87, 1);
-}
 
 .divider {
     width: 750rpx;
     height: 20rpx;
     background: rgba(246, 246, 246, 1);
+}
+.profit{
+    margin-top: 30rpx;
 }
 
 .profit_tit {
@@ -150,6 +134,10 @@
     margin-top: 16rpx;
     margin-bottom: 10rpx;
 }
+.word_box{
+  overflow: hidden;
+  padding: 20rpx 0;
+}
 
 .word {
     font-size: 28rpx;
@@ -158,6 +146,30 @@
     line-height: 40rpx;
     margin: 0rpx 14rpx 0 30rpx;
     float: left;
+}
+
+.label_list{
+    overflow:hidden;
+}
+.label_text {
+    font-size: 20rpx;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(243, 94, 81, 1);
+    line-height: 39rpx;
+    text-align: center;
+}
+
+.label {
+    float: left;
+    width: auto;
+    height: 40rpx;
+    padding: 0 20rpx;
+    margin-left: 10rpx;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    border: 1px solid rgba(250, 96, 87, 1);
+    margin-bottom: 10rpx;
 }
 .des_box{
   overflow: hidden;
@@ -171,10 +183,7 @@
   line-height: 34rpx;
   padding-left: 30rpx;
 }
-.word_box{
-  overflow: hidden;
-  padding: 20rpx 0;
-}
+
 .nav{
   height: 100rpx;
   overflow:hidden;

@@ -32,6 +32,24 @@ Page({
       }
     ],
   },
+
+    swiperChange(e) {
+        const that = this;
+        that.setData({
+            swiperCurrent: e.detail.current
+        })
+    },
+
+    /**
+     * 图片手动滑动时，获取当前的轮播id
+     */
+    imageChange(e) {
+        const that = this;
+        that.setData({
+            swiperCurrent: e.currentTarget.id
+        })
+    },
+
   // 项目类型
   clas: function (e) {
     var that = this

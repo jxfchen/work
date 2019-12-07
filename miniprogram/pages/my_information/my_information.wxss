@@ -26,9 +26,6 @@
   position: relative;
 }
 .birth picker,.area picker{
-  position: absolute;
-  width: 100rpx;
-  height: 100%;
   right: 0;
 }
 .header_text {

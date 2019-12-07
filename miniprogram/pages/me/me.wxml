@@ -2,14 +2,14 @@
     <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
     </view>
     <view class="card">
-      <image src="../../images/msg.png" mode="widthFix" class="msg"></image>
+        <image src="../../images/msg.png" mode="widthFix" class="msg" bindtap="msgList"></image>
         <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
             <image class="header" src="{{avatar}}"></image>
         </navigator>
         <view class="message">
             <view class="message_part">
                 <view class="nikname">{{nicname==''?list.user_info.nickname:nicname}}</view>
-                <navigator  url="/pages/identity_authentication/identity_authentication?title=identity_authentication" hover-class="navigator-hover">
+                <navigator url="/pages/identity_authentication/identity_authentication?title=identity_authentication" hover-class="navigator-hover">
                     <view class="attestation">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
                 </navigator>
             </view>
@@ -57,18 +57,18 @@
     </view>
 
     <view class="push_team">
-      <image src="/images/me/system.png" class="push_img"></image>
-      <view class="push_text">推客团队系统</view>
-      <view class="push_text2">（团队推单帮我赚钱）</view>
-      <view style="margin-top:50rpx;overflow:hidden">
-        <image class="team_img" src="/images/me/team.png"></image>
-        <navigator url="/pages/push_team/push_team?title=push_team" hover-class="navigator-hover">
-          <view class="list_text">我的推客团队</view>
-          <image src="/images/me/arrow.png" class="arrow_image"></image>
-        </navigator>
-        <!-- <view class="line"></view> -->
-      </view>
-      <!-- <view>
+        <image src="/images/me/system.png" class="push_img"></image>
+        <view class="push_text">推客团队系统</view>
+        <view class="push_text2">（团队推单帮我赚钱）</view>
+        <view style="margin-top:50rpx;overflow:hidden">
+            <image class="team_img" src="/images/me/team.png"></image>
+            <navigator url="/pages/push_team/push_team?title=push_team" hover-class="navigator-hover">
+                <view class="list_text">我的推客团队</view>
+                <image src="/images/me/arrow.png" class="arrow_image"></image>
+            </navigator>
+            <!-- <view class="line"></view> -->
+        </view>
+        <!-- <view>
           <image class="team_img" src="/images/me/invitepush.png"></image>
           <view class="list_text">邀请推客经理</view>
           <image src="/images/me/arrow.png" class="arrow_image"></image>
@@ -80,41 +80,42 @@
         <image src="/images/me/system.png" class="push_img"></image>
         <view class="push_text">我的工具</view>
         <view class="pushbox">
-          <view class="boxcen">
-            <image class="guide_img" src="/images/me/guide.png"></image>
-            <view class="guide_text">新手指导</view>
-            <view class="guide_text2" style="">快速上手</view>
-          </view>
+            <view class="boxcen">
+                <image class="guide_img" src="/images/me/guide.png"></image>
+                <view class="guide_text">新手指导</view>
+                <view class="guide_text2" style="">快速上手</view>
+            </view>
 
-          <view class="boxcen">
-            <image class="guide_img" src="/images/me/rule.png"></image>
-            <view class="guide_text">推客规则</view>
-            <view class="guide_text2">玩转规则</view>
-          </view>
+            <view class="boxcen">
+                <image class="guide_img" src="/images/me/rule.png"></image>
+                <view class="guide_text">推客规则</view>
+                <view class="guide_text2">玩转规则</view>
+            </view>
 
-          <view class="boxcen">
-            <image class="guide_img" src="/images/me/activity.png"></image>
-            <view class="guide_text">社群活动</view>
-            <view class="guide_text2">线上线下一起来</view>
-          </view>
+            <view class="boxcen">
+                <image class="guide_img" src="/images/me/activity.png"></image>
+                <view class="guide_text">社群活动</view>
+                <view class="guide_text2">线上线下一起来</view>
+            </view>
 
-          <view class="boxcen">
-            <image class="guide_img" src="/images/me/school.png"></image>
-            <view class="guide_text">商学院</view>
-            <view class="guide_text2">赚钱秘籍</view>
-          </view>
+            <view class="boxcen">
+                <image class="guide_img" src="/images/me/school.png"></image>
+                <view class="guide_text">商学院</view>
+                <view class="guide_text2">赚钱秘籍</view>
+            </view>
 
-          <view class="boxcen">
-            <image class="guide_img" src="/images/me/service.png"></image>
-            <view class="guide_text">专属客服</view>
-            <view class="guide_text2">来，交个朋友</view>
-          </view>
-
-          <view class="boxcen">
-            <image class="guide_img" src="/images/me/setup.png"></image>
-            <view class="guide_text">设置</view>
-            <view class="guide_text2">基础设置</view>
-          </view>
+            <view class="boxcen">
+                <image class="guide_img" src="/images/me/service.png"></image>
+                <view class="guide_text">专属客服</view>
+                <view class="guide_text2">来，交个朋友</view>
+            </view>
+            <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
+                <view class="boxcen">
+                    <image class="guide_img" src="/images/me/setup.png"></image>
+                    <view class="guide_text">设置</view>
+                    <view class="guide_text2">基础设置</view>
+                </view>
+            </navigator>
         </view>
     </view>
 

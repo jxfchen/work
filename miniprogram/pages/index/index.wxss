@@ -41,8 +41,6 @@
   height: 24rpx;
   margin-top: 18rpx;
 }
-.rotation{
-}
 .rotation_chart {
   width: 690rpx;
   height: 320rpx;
@@ -211,9 +209,6 @@
   padding-bottom: 29rpx;
 }
 
-.list {
-  
-}
 
 .liLeft {
     margin-left: 30rpx;
@@ -245,9 +240,6 @@
   width: 100%;
 }
 
-.li_pic .pic_warp.picHeight_ {
-  
-}
 
 .li_pic .pic_warp image {
   width: 100%;

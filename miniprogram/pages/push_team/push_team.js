@@ -33,10 +33,12 @@ Page({
       var self = this;
       var date = {
           list: '',
+          melist:'',
       }
       var openid = "";
       var that = this;
       var list = [];
+      var melist = [];
       wx.getStorage({
           key: 'openid',
           success: function (res) {
@@ -63,6 +65,20 @@ Page({
                   date.list = list;
                   self.setData(date);
                   console.log(list);
+              }, function () {
+                  console.log('fail');
+              })
+              c.request("wechatuser/getWechatInfo", {
+                  openid: that.data.openid
+              }, function (res) {
+                  that.setData({
+                      info: res.info,
+                  });
+                  var melist_str = JSON.stringify(res.info);
+                  melist = JSON.parse(melist_str);
+                  date.melist = melist;
+                  self.setData(date);
+                  console.log(melist);
               }, function () {
                   console.log('fail');
               })

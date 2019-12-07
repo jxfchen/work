@@ -125,15 +125,18 @@
 }
 
 .divide1 {
+    float: left;
     width: 750rpx;
     height: 20rpx;
     background-color: #f4f4f4;
+    margin-top: 40rpx;
 }
 
 .part2 {
     width: 750rpx;
-    height: 266rpx;
+    height: auto;
     background: rgba(255, 255, 255, 1);
+    float: left;
 }
 
 .teamlist {
@@ -168,12 +171,22 @@
     margin-top: 50rpx;
 }
 
+.header_me{
+    width: 104rpx;
+    height: 104rpx;
+    float: left;
+    border-radius: 50%;
+    margin-left: 28rpx;
+    margin-top: 40rpx;
+}
+
 .teamlist_header1 {
     width: 104rpx;
     height: 104rpx;
     margin-left: 28rpx;
     margin-top: 40rpx;
     float: left;
+    border-radius: 50%;
 }
 
 .teamlist_header2 {

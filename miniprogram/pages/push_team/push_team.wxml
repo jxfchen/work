@@ -31,10 +31,11 @@
         <view class="teamlist_text">团队成员列表</view>
         <view class="teamlist_details">详情</view>
         <image src="/images/arrow1.png" class="teamlist_arrow"></image>
+        <image class="header_me" src="{{melist.user_info.avatarurl}}"></image>
         <block wx:for-item="item" wx:key="" wx:for='{{list.user_list}}'>
-            <image class="teamlist_header1" src="{{item.avatarurl}}"></image>
+            <image class="teamlist_header1" src='{{"https://www.infinitybuild.cn/"+item.avatarurl}}'></image>
         </block>
-        <view class="header_num">+{{list.user_list.length}}</view>
+        <view class="header_num">+{{list.user_list.length+1}}</view>
     </view>
     <view class="divide1"></view>
     <view class="team_ranking">
@@ -42,11 +43,11 @@
         <view class="ranking_title">团队贡献排行榜</view>
         <view class="ranking_details">成员匿名说明</view>
         <image src="/images/question_mark1.png" class="question_mark1"></image>
-        <view class="ranking_btn" style='{{flag=="1"?"display:block":"display:none"}}'>
+        <!-- <view class="ranking_btn" style='{{flag=="1"?"display:block":"display:none"}}'>
             <view class="manager_btn" bindtap="bindManager">经理推客</view>
             <view class="staff_btn" bindtap="bindstaff">员工推客
             </view>
-        </view>
+        </view> -->
         <view>
             <block wx:for-item="item" wx:key="index" wx:for='{{list.pusher_award_list}}'>
                 <view>
