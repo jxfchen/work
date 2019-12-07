@@ -17,10 +17,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
     this.getOpenid();
     // this.getTaskList();
     this.setData({
       imgurl: baseUrl.config.image_base_url
+    })
+    wx.getSystemInfo({
+      success: function (res) {
+        var Y = res.windowHeight * 80 / 100;
+        that.setData({
+          topValue: Y
+        })
+      }
     })
   },
   getOpenid: function () {

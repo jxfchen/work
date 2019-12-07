@@ -1,209 +1,7 @@
 /**index.wxss**/
-.container{
-}
-.address {
-  background-color: #ff6d64;
-  height: 180rpx;
-}
-
-.address_img {
-  width: 28rpx;
-  height: 32rpx;
-  float: left;
-  margin-left: 31rpx;
-  margin-right: 30rpx;
-  margin-top: 3.5px;
-}
-
-.section {
-  float: left;
-}
-
-.picker {
-  color: white;
-  width: 96rpx;
-  float: left;
-}
-
-.arrow_img {
-  margin-left: 15rpx;
-  width: 22rpx;
-  height: 24rpx;
-  margin-top: 18rpx;
-}
-.rotation{
-}
-.rotation_chart {
-  width: 690rpx;
-  height: 320rpx;
-  position: relative;
-  margin: 0 30rpx;
-  top: -60px;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
-}
-
-/* .swiper_img {
-  border-radius: 12rpx;
-  width: 690rpx;
-  height: 320rpx;
-} */
-
-.notice {
-  background-color: #000;
-  opacity: 60%;
-  width: 495rpx;
-  height: 43rpx;
-  border-radius: 30rpx;
-  position: relative;
-  top: -160rpx;
-  margin: 0 auto;
-}
-
-.notice_img {
-  float: left;
-  margin: 10rpx 0 11rpx 43rpx;
-  width: 26rpx;
-  height: 23rpx;
-}
-
-.notice_text {
-  margin: 0rpx 24rpx 7rpx 16rpx;
-  color: white;
-  font-size: 22rpx;
-}
-.middle {
-    position: relative;
-    top:-70rpx;
-}
-
-.logo1 {
-  margin-left: 30rpx;
-  width: 44rpx;
-  height: 35rpx;
-  float: left;
-  margin-top: 6rpx;
-}
-
-.push_text {
-  margin-left: 17rpx;
-  color: #333;
-  font-size: 34rpx;
-  line-height: 48rpx;
-  font-weight: bold;
-}
-
-.more {
-  float: right;
-  font-size: 28rpx;
-  color: #666;
-}
-
-.more_img {
-  float: right;
-  width: 17rpx;
-  height: 27rpx;
-  margin-right: 30rpx;
-  margin-top: 8rpx;
-  margin-left: 10rpx;
-}
-
-.card {
-  display: inline-block;
-  width: 374rpx;
-  height: 519rpx;
-  background: rgba(255, 246, 245, 1);
-  box-shadow: 0px 10px 7px 0px rgba(253, 224, 222, 1);
-  border-radius: 12px;
-  margin: 23rpx 30rpx 30rpx 30rpx;
-}
-
-.card_ad {
-  width: 374rpx;
-  height: 44rpx;
-  background-color: #000;
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-}
-
-.card_img {
-  width: 374rpx;
-  height: 287rpx;
-  position:relative;
-  border-radius:12px 12px 0 0;
-}
-
-.ad_img {
-  width: 90rpx;
-  height: 28rpx;
-  margin: 8rpx 11rpx 8rpx 11rpx;
-  float: left;
-}
-
-.ad_text {
-  font-size: 26rpx;
-  color: rgba(255, 255, 255, 1);
-}
-
-.card_text {
-  position: relative;
-  top: -30rpx;
-}
-
-.text_title {
-  width: 244rpx;
-  height: 37rpx;
-  font-size: 26rpx;
-  font-weight: 600;
-  color: rgba(51, 51, 51, 1);
-  float: left;
-  margin: 0rpx 106rpx 6rpx 24rpx;
-  padding-top: 35rpx;
-}
-
-.push_revenue {
-  font-size: 20rpx;
-  color: rgba(102, 102, 102, 1);
-  display: block;
-  margin-left: 24rpx;
-}
-
-.push_money {
-  font-size: 23rpx;
-  color: #fc6359;
-  font-weight: bold;
-}
-
-.card_btn {
-  width: 303rpx;
-  height: 55rpx;
-  background: linear-gradient(270deg, rgba(251, 92, 81, 1) 0%, rgba(255, 127, 119, 1) 100%);
-  border-radius: 28rpx;
-  margin: 16rpx 39rpx 27rpx 32rpx;
-  color: rgba(255, 255, 255, 1);
-  position: relative;
-  top: -30rpx;
-  font-size: 28rpx;
-  font-weight: 500;
-  line-height: 55rpx;
-  text-align: center;
-}
-
-.bottom {
-  width: 750rpx;
-  background: #f6f6f6;
-  position: absolute;
-}
-
-.bottom_top {
-  padding-top: 16rpx;
-  padding-bottom: 29rpx;
-}
 
 .list {
-  
+  background-color: #F4F4F4;
 }
 
 .liLeft {
@@ -223,6 +21,7 @@
   width: 100%;
   background-color: white;
   border-radius: 12rpx;
+  margin-bottom: 20rpx;
 }
 
 .li_pic {
@@ -235,9 +34,6 @@
   width: 100%;
 }
 
-.li_pic .pic_warp.picHeight_ {
-  
-}
 
 .li_pic .pic_warp image {
   width: 100%;
@@ -298,7 +94,12 @@
   left: 90rpx;
   height: 70%;
 }
-
+.swiper_container .swiper_item{
+  width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .rotation_chart {
   position: relative;
 }
@@ -307,7 +108,16 @@
   height: 480rpx;
   width: 100%;
 }
-
+.notice_text{
+  top: 0;
+  right: 0;
+  width: 80rpx;
+  color: #fff;
+  height: 43rpx;
+  font-size: 20rpx;
+  line-height: 43rpx;
+  position: absolute;
+}
 .swiper-item {
   border-radius: 12rpx;
   display: flex;
@@ -401,6 +211,7 @@
   font-size: 24rpx;
   color: rgba(102, 102, 102, 1);
   padding-top: 18rpx;
+  float: left;
 }
 
 .header {

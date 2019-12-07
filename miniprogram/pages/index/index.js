@@ -83,7 +83,7 @@ Page({
     var self = this;
     var date = {
       address_img: "/images/address.png",
-      region: ['北京市', '北京市', '济南'],
+      region: ['北京市', '北京市', '海淀区'],
       arrow_img: "/images/arrow.png",
       notice_img: "/images/notice.png",
       logo1: "/images/task1.png",
@@ -139,6 +139,23 @@ Page({
         }
       }
     })
+    var code = options.invest_code
+    if (code == undefined){
+      console.log('不请求邀请人接口')
+      return
+    }else{
+      var openid = wx.getStorageSync('openid')
+      var code = code
+      c.request("index/setRecommend", {
+        openid: openid,
+        invest_code: code,
+      },
+      function (res) {
+        console.log(res)
+      }, function () {
+        console.log('fail');
+      })
+    }
   },
   getServiceDaily: function (isPage = false) {
     let _this = this;

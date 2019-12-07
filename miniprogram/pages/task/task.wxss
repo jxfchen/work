@@ -90,43 +90,52 @@
   font-weight: 500;
   color: white;
   padding-top: 34rpx;
-  margin-left: 264rpx;
-  position: absolute;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.task_mon {
+    margin-left: 300rpx;
 }
 
 .money_logo {
   font-size: 36rpx;
   color: white;
-  margin-left: 256rpx;
-  position: absolute;
+  /* margin-left: 256rpx; */
   line-height: 50rpx;
-  padding-top: 85rpx;
+  padding-top: 16rpx;
+  opacity: 0.9;
+  float: left;
 }
 
 .task_num {
   font-size: 60rpx;
   color: white;
-  position: absolute;
-  padding-left: 290rpx;
-  padding-top: 70rpx;
   line-height: 70rpx;
+  opacity: 0.9;
+    float: left;
 }
 
 .arrow_img {
   width: 40rpx;
   height: 36rpx;
-  position: absolute;
-  margin-top: 84rpx;
-  margin-left: 500rpx;
+  margin-top: 22rpx;
+  margin-left: 28rpx;
+  opacity: 0.9;
+}
+
+.today_part{
+    float: left;
+    width: 50%;
 }
 
 .today_revenue {
   font-size: 24rpx;
   color: rgba(255, 255, 255, 1);
   line-height: 34rpx;
-  position: absolute;
-  top: 292rpx;
-  left: 160rpx;
+  opacity: 0.9;
+  padding-top: 20rpx;
+  text-align: center;
   font-weight: 300;
 }
 
@@ -134,18 +143,21 @@
   font-size: 25rpx;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
-  position: absolute;
-  top: 345rpx;
-  left: 202rpx;
+  opacity: 0.9;
+  padding-top: 20rpx;
+  padding-left: 190rpx;
+  float: left;
+}
+
+.today{
+    text-align: center;
 }
 
 .today_num {
   font-size: 42rpx;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
-  position: absolute;
-  top: 326rpx;
-  left: 220rpx;
+  opacity: 0.9;
 }
 
 .card_separate {
@@ -157,32 +169,36 @@
   left: 374rpx;
 }
 
+.all_part{
+    width: 50%;
+    float: left;
+}
+
 .all_revenve {
   font-size: 24rpx;
   color: rgba(255, 255, 255, 1);
   line-height: 34rpx;
-  position: absolute;
-  top: 292rpx;
-  left: 448rpx;
   font-weight: 300;
+  opacity: 0.9;
+  padding-top: 20rpx;
+  text-align: center;
 }
 
-.all_RMB {
+/* .all_RMB {
   font-size: 25rpx;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 345rpx;
   left: 460rpx;
-}
+} */
 
 .all_num {
   font-size: 42rpx;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
-  position: absolute;
-  top: 326rpx;
-  left: 480rpx;
+  opacity: 0.9;
+  text-align: center;
 }
 
 .task_banner {
@@ -190,7 +206,7 @@
   height: 128rpx;
   display: block;
   margin: 0 auto;
-  padding-top: 340rpx;
+  padding-top: 80rpx;
 }
 
 .divide {
@@ -232,7 +248,6 @@
 
 .server {
   position: fixed;
-  top: 330rpx;
   width: 152rpx;
   height: 152rpx;
   right: 0;
@@ -276,7 +291,8 @@
 
 .button3 {
   float: left;
-  width: 118rpx;
+  min-width: 118rpx;
+  width:auto; 
   height: 54rpx;
   border-radius: 27px;
   background: #fd8c74;
@@ -298,6 +314,7 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   line-height: 54rpx;
+  white-space:nowrap;
 }
 
 .line {
@@ -319,29 +336,4 @@
   width: 750rpx;
   height: 38rpx;
   background-color: #f4f4f4;
-}
-.ewm{
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.3);
-}
-.ewm .ewm_img{
-  width: 300rpx;
-}
-.close{
-  top: -20rpx;
-  width: 40rpx;
-  right: -20rpx;
-  position: absolute;
-}
-.ewm-box{
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  margin: -200rpx 0 0 -150rpx;
-  width: 300rpx;
-  height: auto;
 }

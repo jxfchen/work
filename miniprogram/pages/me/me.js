@@ -1,29 +1,56 @@
 var c = require("../../utils/http.js");
+var baseUrl = require("../../utils/config.js");
 const app = getApp()
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {},
-        hasUserInfo: false,
-        nicname:'',
+      userInfo: {},
+      hasUserInfo: false,
+      nicname:'',
+      hide: false,
     },
 
     copyTBL: function (e) {
-        var self = this;
-        wx.setClipboardData({
-            data: self.data.list.user_info.invite_code,
-            success: function (res) {
-            }
-        });
+      var self = this;
+      wx.setClipboardData({
+        data: self.data.list.user_info.invite_code,
+          success: function (res) {
+        }
+      });
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
       this.init();
+      this.setData({
+        imgurl: baseUrl.config.image_base_url
+      })
+    },
+    ewm:function(e){
+      var openid = wx.getStorageSync('openid')
+      var that = this
+      c.request("activity/qrcode", {
+        openid: openid
+      }, function (res) {
+        console.log(res)
+        var img = that.data.imgurl
+        // console.log(img + res.qrcode)
+        that.setData({
+          ewm: img + res.qrcode,
+          hide: true
+        })
+      }, function () {
+        console.log('fail');
+      })
+    },
+    close: function (e) {
+      var that = this
+      that.setData({
+        hide: false
+      })
     },
     init: function(){
       var self = this;

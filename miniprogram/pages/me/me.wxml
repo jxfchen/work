@@ -46,7 +46,7 @@
             </view>
         </view>
     </navigator>
-    <view>
+    <view bindtap="ewm">
         <image src="/images/me/invite.png" class="invite_img"></image>
         <view class="invite_text">
             邀请经理
@@ -150,5 +150,11 @@
             </view>
             <image src="/images/me/arrow.png" class="bottom_arrow2"></image>
         </view>
+    </view>
+</view>
+<view class="ewm" wx:if="{{hide == true}}">
+    <view class="ewm-box">
+        <image src="{{ewm}}" mode="widthFix" class="ewm_img"></image>
+        <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
     </view>
 </view>
