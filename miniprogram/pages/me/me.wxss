@@ -396,12 +396,13 @@ button.guide_text::after {
 .bottom_title {
     font-size: 30rpx;
     font-weight: 500;
-    color: rgba(50, 50, 50, 1);
     padding-top: 40rpx;
+    margin-bottom: 43rpx;
+    color: rgba(50, 50, 50, 1);
 }
 
 .list1 {
-    margin-top: 68rpx;
+    overflow: hidden;
 }
 
 .list_img {

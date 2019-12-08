@@ -24,9 +24,36 @@ Page({
         }
       });
     },
+    // 认证判断
+    rz:function(e){
+      var that = this
+      var openid = wx.getStorageSync('openid')
+      c.request("wechatuser/getAttestation1", {
+        openid: openid
+      }, function (res) {
+        var yq = res.is_recommend//0:false,1:true
+        var rz = that.data.rz//0:false,1:true
+        if(yq == 0){
+          wx.navigateTo({
+            url: '../identity_authentication/identity_authentication',
+          })
+        } else if (yq == 1 && rz == 0){
+          wx.navigateTo({
+            url: '../certification_first/certification_first',
+          })
+        } else if (yq == 1 || rz == 0){
+          return
+        }
+        console.log('yq:', yq,'rz:',rz)
+      }, function () {
+        console.log('fail');
+      })
+    },
     guide:function(e){
+      var code = e.currentTarget.dataset.id
+      // console.log(code)
       wx.navigateTo({
-        url: '../guide/guide',
+        url: '../guide/guide?code=' + code,
       })
     },
     /**
@@ -89,12 +116,13 @@ Page({
           }, function (res) {
             that.setData({
               info: res.info,
+              rz: res.info.user_info.card_status
             });
             var list_str = JSON.stringify(res.info);
             list = JSON.parse(list_str);
             date.list = list;
             self.setData(date);
-            console.log(list);
+            console.log(res);
           }, function () {
             console.log('fail');
           })

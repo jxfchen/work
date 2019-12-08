@@ -63,17 +63,23 @@ Page({
                             status: true
                         })
                     }
-
                     c.request("wechatuser/getAttestation", {
                         openid: openid,
                         invest_code: invest_code,
                     }, function(res) {
+                      console.log(res)
+                      if (that.data.card == 0){
                         wx.navigateTo({
                             url: '/pages/certification_first/certification_first',
                             success: function(res) {},
                             fail: function(res) {},
                             complete: function(res) {},
                         })
+                      }else{
+                        wx.switchTab({
+                          url: '../me/me',
+                        })
+                      }
                     }, function() {
 
                     })
@@ -93,7 +99,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-
+      var openid = wx.getStorageSync('openid')
+      var that = this
+      c.request("wechatuser/index", {
+        openid: openid
+      }, function (res) {
+        console.log(res.info.user_info.card_status)
+        that.setData({
+          card: res.info.user_info.card_status
+        })
+      },function(){
+        console.log('fail')
+      })
     },
 
     /**

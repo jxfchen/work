@@ -1,1 +1,14 @@
-/* pages/guide/guide.wxss */
+.nav{
+  width: 100%;
+  color: #333;
+  height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-top: 20rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.center{
+  width: 690rpx;
+  margin: 30rpx;
+}

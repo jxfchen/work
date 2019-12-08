@@ -1,18 +1,38 @@
-// pages/guide/guide.js
+// pages/msg_content/msg_content.js
+var wxParse = require('../../wxParse/wxParse.js');
+var c = require("../../utils/http.js");
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
 
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    that.setData({
+      code: options.code
+    })
+    console.log(that.data.code)
+    this.getMsgList();
+  },
+  getMsgList: function (isNext = false) {
+    var that = this
+    var openid = wx.getStorageSync('openid');
+    var code = 'article/' + that.data.code
+    console.log(this.data.code)
+    c.request(code, {}, function (res) {
+      console.log(res)
+      that.setData({
+        info: res.info
+      })
+      var temp = wxParse.wxParse('article', 'html', res.info.article, that, 5);
+    }, function () {
+      console.log('fail');
+    })
   },
 
   /**

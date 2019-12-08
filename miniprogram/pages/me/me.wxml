@@ -9,7 +9,7 @@
         <view class="message">
             <view class="message_part">
                 <view class="nikname">{{nicname==''?list.user_info.nickname:nicname}}</view>
-                <view class="attestation">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+                <view class="attestation" bindtap="rz">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
             </view>
             <view class="text">{{list.user_info.invite_code}}</view>
             <view class="copy" bindtap="copyTBL">复制邀请码</view>
@@ -74,13 +74,13 @@
         <image src="/images/me/system.png" class="push_img"></image>
         <view class="push_text">我的工具</view>
         <view class="pushbox">
-            <view class="boxcen">
+            <view class="boxcen" data-id="getGuide" bindtap="guide">
                 <image class="guide_img" src="/images/me/guide.png"></image>
-                <view class="guide_text" bindtap="guide">新手指导</view>
+                <view class="guide_text">新手指导</view>
                 <view class="guide_text2" style="">快速上手</view>
             </view>
 
-            <view class="boxcen">
+            <view class="boxcen" data-id="getPusherrule" bindtap="guide">
                 <image class="guide_img" src="/images/me/rule.png"></image>
                 <view class="guide_text">推客规则</view>
                 <view class="guide_text2">玩转规则</view>
@@ -92,7 +92,7 @@
                 <view class="guide_text2">线上线下一起来</view>
             </view>
 
-            <view class="boxcen">
+            <view class="boxcen" data-id="getBusinessCollege" bindtap="guide">
                 <image class="guide_img" src="/images/me/school.png"></image>
                 <view class="guide_text">商学院</view>
                 <view class="guide_text2">赚钱秘籍</view>
@@ -128,7 +128,7 @@
         </view>
 
 
-        <view>
+        <view class="list1">
             <image style="margin-top:64rpx;" class="list_img" src="/images/me/team.png"></image>
             <view style="float:left;">
                 <view style="margin-top:32rpx;" class="bottom_tit">操作手册</view>
@@ -138,7 +138,7 @@
             <view class="bottom_line"></view>
         </view>
 
-        <view style="margin-top:68rpx;">
+        <view class="list1" bindtap="guide" data-id="getDiffPushSafeguard">
             <image class="list_img" style="margin-top:64rpx;" src="/images/me/team.png"></image>
             <view style="float:left;">
                 <view style="margin-top:32rpx;" class="bottom_tit">推单收益和维护收益的区别？</view>
