@@ -15,7 +15,9 @@
             </view>
             <view class="text">{{list.user_info.invite_code}}</view>
             <view class="copy" bindtap="copyTBL">复制邀请码</view>
-            <view class="get">去领钱</view>
+            <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
+                <view class="get">去领钱</view>
+            </navigator>
             <image src="/images/me/v.png" class="v_img"></image>
         </view>
         <view class="money">
@@ -31,7 +33,7 @@
     </view>
 
     <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
-        <view>
+        <view class="details">
             <image src="/images/me/details.png" class="details_img"></image>
             <view class="details_text">
                 收益明细
@@ -39,14 +41,14 @@
         </view>
     </navigator>
     <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
-        <view>
+        <view class="record">
             <image class="record_img" src="/images/me/record.png"></image>
             <view class="record_text">
                 提现记录
             </view>
         </view>
     </navigator>
-    <view bindtap="ewm">
+    <view bindtap="ewm" class="invite">
         <image src="/images/me/invite.png" class="invite_img"></image>
         <view class="invite_text">
             邀请经理

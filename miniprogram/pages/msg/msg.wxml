@@ -1,6 +1,6 @@
 <view class="top">
-  <view class="clk">站内公告</view>
-  <view class="">我的消息</view>
+  <view class="clk" bindtap="click1tap">站内公告</view>
+  <view class="" bindtap="click2tap">我的消息</view>
 </view>
 <view class="list-box">
   <view wx:for="{{lists}}" wx:key="index">{{item.name}}<text>{{item.add_time}}</text></view>

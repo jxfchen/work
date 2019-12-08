@@ -179,30 +179,39 @@
     font-weight: 500;
 }
 
-.details_img {
+.details{
     width: 112rpx;
-    height: 112rpx;
+    height: 150rpx;
     position: absolute;
     top: 396rpx;
     left: 106rpx;
 }
 
+.details_img {
+    width: 112rpx;
+    height: 112rpx;
+}
+
 .details_text {
+    text-align: center;
+    line-height:15rpx;
     font-size: 26rpx;
     font-weight: bold;
     color: rgba(46, 52, 55, 1);
     opacity: 0.9;
+}
+
+.record{
+     width: 112rpx;
+    height: 150rpx;
     position: absolute;
-    top: 512rpx;
-    left: 110rpx;
+    top: 396rpx;
+    left: 320rpx;
 }
 
 .record_img {
     width: 112rpx;
     height: 112rpx;
-    position: absolute;
-    top: 396rpx;
-    left: 320rpx;
 }
 
 .record_text {
@@ -210,27 +219,30 @@
     font-weight: bold;
     color: rgba(46, 52, 55, 1);
     opacity: 0.9;
-    position: absolute;
-    top: 512rpx;
-    left: 324rpx;
+    text-align: center;
+    line-height:15rpx;
 }
 
-.invite_img {
+.invite{ 
     width: 112rpx;
-    height: 112rpx;
+    height: 150rpx;
     position: absolute;
     top: 396rpx;
     left: 532rpx;
 }
 
+.invite_img {
+    width: 112rpx;
+    height: 112rpx;
+}
+
 .invite_text {
     font-size: 26rpx;
-    font-weight: bold;
+    font-weight: bold; 
     color: rgba(46, 52, 55, 1);
     opacity: 0.9;
-    position: absolute;
-    top: 512rpx;
-    left: 536rpx;
+    text-align: center;
+    line-height:15rpx;
 }
 
 .treasure_chest {

@@ -3,28 +3,28 @@
 <view class="container">
     <view class="top">
         <view class="address">
-          <image class="address_img" src="{{address_img}}"></image>
-          <view class="section">
-            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-              <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{region[1]}}' disabled>
-              </input>
-              <image class="arrow_img" src="{{arrow_img}}"></image>
-            </picker>
-          </view>
+            <image class="address_img" src="{{address_img}}"></image>
+            <view class="section">
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{region[1]}}' disabled>
+                    </input>
+                    <image class="arrow_img" src="{{arrow_img}}"></image>
+                </picker>
+            </view>
         </view>
         <view class="rotation">
             <view class="rotation_chart">
                 <swiper style="width:690rpx;height:320rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000'>
-                  <block wx:key='*this' wx:for='{{background}}'>
-                    <swiper-item style="border-radius: 12rpx;">
-                      <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
-                    </swiper-item>
-                  </block>
+                    <block wx:key='*this' wx:for='{{background}}'>
+                        <swiper-item style="border-radius: 12rpx;">
+                            <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+                        </swiper-item>
+                    </block>
                 </swiper>
                 <view class="dots">
-                  <block wx:for="{{background}}" wx:key="*this">
-                    <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
-                  </block>
+                    <block wx:for="{{background}}" wx:key="*this">
+                        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+                    </block>
                 </view>
             </view>
 
@@ -33,8 +33,11 @@
                 <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="5000">
                     <block wx:for="{{noticeList}}" wx:key=''>
                         <swiper-item>
-                            <view class="swiper_item">{{item.content0}}</view>
-                            <view class="swiper_item">{{item.content1}}</view>
+
+                            <navigator url="/pages/msg_content/msg_content?title=msg_content" hover-class="navigator-hover">
+                                <view class="swiper_item">{{item.article}}</view>
+
+                            </navigator>
                         </swiper-item>
                     </block>
                 </swiper>
@@ -46,102 +49,102 @@
     <!-- 轮播图 -->
 
     <view class="middle">
-      <view class="middle_top">
-        <image class="logo1" src="/images/push.png"></image>
-        <text class="push_text">推一单，赚一笔</text>
-        <view style="float:right;">
-          <image class="more_img" src="/images/arrow1.png"></image>
-          <text class="more" bindtap="sheetlist">更多</text>
+        <view class="middle_top">
+            <image class="logo1" src="/images/push.png"></image>
+            <text class="push_text">推一单，赚一笔</text>
+            <view style="float:right;">
+                <image class="more_img" src="/images/arrow1.png"></image>
+                <text class="more" bindtap="sheetlist">更多</text>
+            </view>
         </view>
-      </view>
-      <view class="middle_main">
-        <scroll-view scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
-          <view style="display: flex; flex-direction:row;">
-            <block wx:for="{{pushList}}" wx:for-item="item" wx:key="">
-              <view class="card">
-                <image class="card_img" src="https://www.infinitybuild.cn/{{item.thumb_img}}">
-                  <view class="card_ad">
-                    <!-- <image class="ad_img" src="/images/logo.png"></image> -->
-                    <text class="ad_text">{{item.commend_times}}人推单成功</text>
-                  </view>
-                </image>
-                <view class="card_text">
-                  <text class="text_title">{{item.title}}</text>
-                  <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}<text wx:if="{{item.is_pusher_rate == 1}}">%</text></text> 起(通过后秒到账)</text>
-                  <text class="push_revenue">合伙收益：<text class="push_money">{{item.partner_min_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text> - {{item.partner_max_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text></text> /月</text>
+        <view class="middle_main">
+            <scroll-view scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+                <view style="display: flex; flex-direction:row;">
+                    <block wx:for="{{pushList}}" wx:for-item="item" wx:key="">
+                        <view class="card">
+                            <image class="card_img" src="https://www.infinitybuild.cn/{{item.thumb_img}}">
+                                <view class="card_ad">
+                                    <!-- <image class="ad_img" src="/images/logo.png"></image> -->
+                                    <text class="ad_text">{{item.commend_times}}人推单成功</text>
+                                </view>
+                            </image>
+                            <view class="card_text">
+                                <text class="text_title">{{item.title}}</text>
+                                <text class="push_revenue">推客收益：<text  class="push_money">{{item.pusher_profit}}<text wx:if="{{item.is_pusher_rate == 1}}">%</text></text> 起(通过后秒到账)</text>
+                                <text class="push_revenue">合伙收益：<text class="push_money">{{item.partner_min_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text> - {{item.partner_max_profit}}<text wx:if="{{item.is_partner_rate == 1}}">%</text></text> /月</text>
+                            </view>
+                            <navigator url="../workingmeal_intr/workingmeal_intr?title={{item.id}}">
+                                <button class="card_btn">推单</button>
+                            </navigator>
+                        </view>
+                    </block>
                 </view>
-                <navigator url="../workingmeal_intr/workingmeal_intr?title={{item.id}}">
-                  <button class="card_btn">推单</button>
-                </navigator>
-              </view>
-            </block>
-          </view>
-        </scroll-view>
-      </view>
+            </scroll-view>
+        </view>
     </view>
     <view class="bottom">
-      <view class="bottom_top">
-        <image class="logo1" src="/images/server.png"></image>
-        <text class="push_text">服务日记</text>
-        <image class="more_img" src="/images/arrow1.png"></image>
-        <text class="more" bindtap="darmore">更多</text>
-      </view>
-      <view class='list'>
-
-        <view class='li_warp dl liLeft li_left' id='liLeft'>
-
-          <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
-            <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
-              <view class='pic_warp '>
-                <image src='https://www.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
-              </view>
-            </view>
-            <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
-              <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
-              <view class='flex_ f24 cen'>
-                <view class="l">
-                  <image class="header" src="{{util.isUrl(item.avatarurl) ? item.avatarurl : 'https://www.infinitybuild.cn' + item.avatarurl}}"></image>
-                  <view class="nicname">{{item.author}}</view>
-                </view>
-                <view class="r">
-                  <view class="num">{{item.like_times}}</view>
-                  <image src="/images/like.png" class="fabulous"></image>
-                </view>
-              </view>
-            </view>
-          </view>
-
+        <view class="bottom_top">
+            <image class="logo1" src="/images/server.png"></image>
+            <text class="push_text">服务日记</text>
+            <image class="more_img" src="/images/arrow1.png"></image>
+            <text class="more" bindtap="darmore">更多</text>
         </view>
+        <view class='list'>
 
-        <view class='li_warp dl liRight li_right' id='liRight'>
+            <view class='li_warp dl liLeft li_left' id='liLeft'>
 
-          <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
-            <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
-              <view class='pic_warp'>
-                <image src='https://www.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
-              </view>
-            </view>
-            <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
-              <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
-              <view class='flex_ f24 cen'>
-                <view class="l">
-                  <image class="header" src="{{util.isUrl(item.avatarurl) ? item.avatarurl : 'https://www.infinitybuild.cn' + item.avatarurl}}"></image>
-                  <view class="nicname">{{item.author}}</view>
+                <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
+                    <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
+                        <view class='pic_warp '>
+                            <image src='https://www.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
+                        </view>
+                    </view>
+                    <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
+                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
+                        <view class='flex_ f24 cen'>
+                            <view class="l">
+                                <image class="header" src="{{util.isUrl(item.avatarurl) ? item.avatarurl : 'https://www.infinitybuild.cn' + item.avatarurl}}"></image>
+                                <view class="nicname">{{item.author}}</view>
+                            </view>
+                            <view class="r">
+                                <view class="num">{{item.like_times}}</view>
+                                <image src="/images/like.png" class="fabulous"></image>
+                            </view>
+                        </view>
+                    </view>
                 </view>
-                <view class="r">
-                  <view class="num">{{item.like_times}}</view>
-                  <!-- <image src="/images/like1.png" class="fabulous1"></image> -->
-                  <image src="/images/like.png" class="fabulous"></image>
-                </view>
-              </view>
-            </view>
-          </view>
 
+            </view>
+
+            <view class='li_warp dl liRight li_right' id='liRight'>
+
+                <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
+                    <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
+                        <view class='pic_warp'>
+                            <image src='https://www.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
+                        </view>
+                    </view>
+                    <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
+                        <view class='tlt bold tlt_height' style="font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx">{{item.title}}</view>
+                        <view class='flex_ f24 cen'>
+                            <view class="l">
+                                <image class="header" src="{{util.isUrl(item.avatarurl) ? item.avatarurl : 'https://www.infinitybuild.cn' + item.avatarurl}}"></image>
+                                <view class="nicname">{{item.author}}</view>
+                            </view>
+                            <view class="r">
+                                <view class="num">{{item.like_times}}</view>
+                                <!-- <image src="/images/like1.png" class="fabulous1"></image> -->
+                                <image src="/images/like.png" class="fabulous"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+
+            </view>
+            <view class="foot" wx:if="{{!hasMore}}">
+                <view class="foot_line">我是有底线的哟～</view>
+            </view>
         </view>
-        <view class="foot" wx:if="{{!hasMore}}">
-          <view class="foot_line">我是有底线的哟～</view>
-        </view>
-      </view>
     </view>
 
 </view>
