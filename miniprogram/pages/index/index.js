@@ -26,7 +26,8 @@ Page({
         url: '',
         pushList: [],
         pageNo: 1,
-        hasMore: true
+        hasMore: true,
+        knowList:[],
     },
 
     sheetlist: function(e) {
@@ -84,24 +85,25 @@ Page({
             background: "",
             pushList: '',
             noticeList: [],
+            knowList:'',
         }
         var that = this;
         var background = [];
         var list = this.data.list;
         var noticeList = this.data.noticeList;
         var pushList = this.data.pushList;
+        var knowList = this.data.knowList;
         // 公告
         c.request("index/getNotice", {
         }, function (res) {
-            console.log(res)
             that.setData({
                 info: res.info,
             });
-            var pushList_str = JSON.stringify(res.info);
-            pushList = JSON.parse(pushList_str);
-            date.pushList = pushList;
+            var knowList_str = JSON.stringify(res.info);
+            knowList = JSON.parse(knowList_str);
+            date.knowList = knowList;
             self.setData(date);
-            console.log("公告"+pushList);
+            console.log(knowList);
         }, function () {
             console.log('fail');
         })

@@ -73,6 +73,8 @@
     margin-top: 48rpx;
     margin-left: 40rpx;
     float: left;
+    position: relative;
+    z-index: 99;
 }
 
 .submission {
@@ -101,6 +103,8 @@
     margin-top: 38rpx;
     margin-left: 40rpx;
     float: left;
+    position: relative;
+    z-index: 99;
 }
 
 .examine {
@@ -119,14 +123,16 @@
     border-radius: 20rpx;
     margin-top: 24rpx;
     margin-left: 30rpx;
+    position: relative;
+    z-index: 99;
 }
 
 .examine_img {
-    width: 28rpx;
-    height: 28rpx;
+    width: 22rpx;
+    height: 22rpx;
     float: left;
-    margin-top: 6rpx;
-    margin-left: 4rpx;
+    margin-top: 8rpx;
+    margin-left: 8rpx;
 }
 
 .examine_txt {

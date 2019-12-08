@@ -279,6 +279,10 @@ Page({
             key: 'nicname',
             data: nicname,
         })
+        wx.setStorage({
+            key: 'avatar',
+            data: avatar,
+        })
         c.request("wechatuser/updateBirthday", {
             openid: openid,
             birthday: date,

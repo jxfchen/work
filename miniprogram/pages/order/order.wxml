@@ -50,7 +50,7 @@
                 </view>
               </view>
               <view class="name_btn" bindtap="modalinputname" data-id="{{item.pusher_id}}">备注推单名称</view>
-              <navigator url="/pages/push_details/push_details?title=push_details&id=">
+              <navigator url="/pages/push_details/push_details?title=push_details&id={{item.pusher_id}}">
                 <view class="look_btn">查看订单</view>
               </navigator>
             </view>

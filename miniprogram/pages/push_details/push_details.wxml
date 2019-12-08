@@ -4,11 +4,11 @@
         <view class="information_title">基本信息</view>
         <view>
             <view class="list_text1" style="margin-top:40rpx;">推 单 备 注</view>
-            <view class="list_text2" style="padding-top:40rpx;">望京科技园食堂项目</view>
+            <view class="list_text2" style="padding-top:40rpx;">{{list.title}}</view>
         </view>
         <view>
             <view class="list_text1">推 单 编 号</view>
-            <view class="list_text2">282835</view>
+            <view class="list_text2">{{list.pusher_id}}</view>
         </view>
         <view>
             <view class="list_text1">项 目 类 型</view>
@@ -16,32 +16,33 @@
         </view>
         <view>
             <view class="list_text1">餐 次 需 求</view>
-            <view class="list_text2">早餐 + 午餐</view>
+            <view class="list_text2">{{foot}}</view>
         </view>
         <view>
             <view class="list_text1">你的联系方式</view>
-            <view class="list_text2">15001238888</view>
+            <view class="list_text2">{{list.contact}}</view>
         </view>
         <view>
             <view class="list_text1">客户联系方式</view>
-            <view class="list_text2">17021001923</view>
+            <view class="list_text2">{{list.contact_customer}}</view>
         </view>
         <view>
             <view class="list_text1">优 先 联 系</view>
-            <view class="list_text2">联系客户</view>
+            <view class="list_text2">联系{{list.first_contact}}</view>
         </view>
         <view>
             <view class="list_text1">本推单角色</view>
-            <view class="list_text2">推客</view>
+            <view class="list_text2">{{list.role}}</view>
         </view>
     </view>
     <view class="push_status">
         <image src="/images/push_status.png" class="information_img"></image>
         <view class="information_title">推客推单状态</view>
-        <view class="ash_circle"></view>
+        <view class="status_line"></view>
+        <view class="ash_circle" style='{{list.status==0?"background: #fa7a67;":""}}'></view>
         <view class="submission">成功提交</view>
         <view class="submission_text">成功提交，等待审核通过···</view>
-        <view class="red_circle"></view>
+        <view class="red_circle" style='{{list.status==0?"background: rgba(227, 227, 227, 1);":""}}'></view>
         <view class="examine">审核通过</view>
         <view class="examine_text">
             <image src="/images/service1.png" class="examine_img"></image>
@@ -50,7 +51,6 @@
         <view class="ash_circle"></view>
         <view class="submission">成功推单</view>
         <view class="submission_text">已经与客户达成合作，本推单成功推单</view>
-        <view class="status_line"></view>
     </view>
     <view class="remarks">
         <view class="explain">【推单状态说明】</view>

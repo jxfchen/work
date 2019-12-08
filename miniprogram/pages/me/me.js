@@ -9,6 +9,7 @@ Page({
       userInfo: {},
       hasUserInfo: false,
       nicname:'',
+      avatar:'',
       hide: false,
     },
     msgList: function (e) {
@@ -147,7 +148,8 @@ Page({
      */
     onShow: function() {
         var nicname = this.data.nicname;
-        var avatar = wx.getStorageSync('avatarurl');
+        var avatar=this.data.avatar;
+        var avatar = wx.getStorageSync('avatar');
         var nicname = wx.getStorageSync('nickname');
         console.log(avatar)
         console.log(nicname)
