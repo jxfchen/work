@@ -60,9 +60,10 @@
 </view>
 <view class="foot"></view>
 <!-- <image src="/images/task_server.png" class="server" ></image> -->
-<movable-area style="height: 80%;bottom:15%;right:20rpx;width: 1px;position:fixed">
+<movable-area class="kf">
     <movable-view direction="vertical" y="{{topValue}}">
         <image src="/images/task_server.png" class="server"></image>
+        <button open-type="contact"></button>
     </movable-view>
 </movable-area>
 <view class="ewm" wx:if="{{hide == true}}">

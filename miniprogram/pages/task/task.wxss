@@ -337,3 +337,18 @@
   height: 38rpx;
   background-color: #f4f4f4;
 }
+.kf{
+  height: 80%;
+  bottom:15%;
+  right:20rpx;
+  width: 1px;
+  position:fixed;
+}
+.kf button{
+  right: 0;
+  opacity: 0;
+  border: none;
+  width: 152rpx;
+  height: 152rpx;
+  position: fixed;
+}
