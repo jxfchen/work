@@ -39,6 +39,7 @@ Page({
       id: id,
       openid: _this.data.openid
     }, function(res) {
+      console.log(res)
       if (2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);
         res.info.avatarurl = res.info.avatarurl.indexOf('http') >= 0 ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;

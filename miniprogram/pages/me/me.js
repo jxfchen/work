@@ -61,6 +61,12 @@ Page({
       url: '../guide/guide?code=' + code,
     })
   },
+  cjsc:function(e){
+    var code = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../cjsc/cjsc?code='+code,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

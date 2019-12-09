@@ -6,6 +6,7 @@ App({
     wx.login({
       success: res => {
         if (res.code) {
+          console.log(res.code)
           e.request("wechat/login", {
             code: res.code,
           }, function(res) {
@@ -14,8 +15,11 @@ App({
               key: 'openid',
               data: res.info.openid,
             })
+          },function(){
+            console.log('接口报错')
           })
-
+        }else{
+          console.log('获取不到code')
         }
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }

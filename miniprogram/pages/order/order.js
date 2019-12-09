@@ -96,13 +96,11 @@ Page({
   getList: function(isPage = false, isChangeTab = true) {
     let _this = this;
     console.log(_this.data.openid)
-    console.log(_this.data.role)
     console.log(_this.data.status)
     console.log(_this.data.pageNo)
     console.log(_this.data.size)
     c.request("pushersheet/getPusherSheetList", {
       openid: _this.data.openid,
-      role: _this.data.role,
       status: _this.data.status,
       page: _this.data.pageNo,
       size: _this.data.size

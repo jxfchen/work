@@ -1,0 +1,23 @@
+page{
+  background: #f0f0f0;
+}
+.box{
+  padding: 20rpx;
+  margin: 30rpx;
+  background: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.nav{
+  font-size: 28rpx;
+}
+.nav text{
+  float: right;
+  color: #999;
+  font-size: 22rpx;
+}
+.text{
+  width: 90%;
+  color: #999;
+  font-size: 22rpx;
+}

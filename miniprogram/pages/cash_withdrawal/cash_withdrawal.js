@@ -7,6 +7,9 @@
     */
    data: {
      prolist: [{
+       name: "1元",
+       id: 1,
+     }, {
        name: "100元",
        id: 100,
      }, {
@@ -49,7 +52,7 @@
        money: money,
      }, function(res) {
        wx.showToast({
-         title: '提现成功',
+         title: '发起提现成功，请等待审核',
        })
      }, function() {
        console.log('fail');
