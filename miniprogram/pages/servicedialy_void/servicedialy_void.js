@@ -170,12 +170,10 @@ Page({
         // 上拉
         this.setData({
           direction: 3,
-          flag: 3
+          flag: 3,
+          infos: []
         })
         setTimeout(function() {
-          _this.setData({
-            infos: []
-          })
           _this.geDetailInfo(_this.data.nextId);
         }, 300)
       } else if (ty > 0) {
@@ -183,12 +181,10 @@ Page({
         // 下拉
         this.setData({
           direction: 4,
-          flag: 4
+          flag: 4,
+          infos: []
         })
         setTimeout(function() {
-          _this.setData({
-            infos: []
-          })
           _this.geDetailInfo(_this.data.prevId);
         }, 300)
       }
