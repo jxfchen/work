@@ -50,6 +50,9 @@ Page({
   },
   geDetailInfo: function(id) {
     let _this = this;
+    _this.setData({
+      infos: []
+    });
     // wx.showLoading({
     //   title: '加载中',
     // })
@@ -161,12 +164,15 @@ Page({
     if (this.data.flag !== 0) {
       return
     }
+    this.setData({
+      infos: []
+    })
     let currentX = event.touches[0].pageX;
     let currentY = event.touches[0].pageY;
     let tx = currentX - this.data.lastX;
     let ty = currentY - this.data.lastY;
     let text = "";
-
+    this.videoContext.pause();
     let _this = this;
     //左右方向滑动
     if (Math.abs(tx) <= Math.abs(ty)) {
