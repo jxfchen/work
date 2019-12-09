@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-// var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
-// var qqmapsdk;
+var QQMapWX = require('../../utils/qqmap-wx-jssdk.js');
+var qqmapsdk;
 var c = require("../../utils/http.js");
 Page({
 
@@ -28,15 +28,20 @@ Page({
     pageNo: 1,
     hasMore: true,
     knowList: [],
+    addressList: [],
+    nowdistrict: '',
+    nowprovince: '',
+    nowcity: '',
   },
 
-  sheetlist: function(e) {
+
+  sheetlist: function (e) {
     // console.log(123)
     wx.navigateTo({
       url: '../sheetlist/sheetlist',
     })
   },
-  msgList: function(e) {
+  msgList: function (e) {
     wx.navigateTo({
       url: '../msg/msg',
     })
@@ -59,10 +64,11 @@ Page({
   },
 
 
-  bindRegionChange: function(e) {
+  bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     var a = e.detail.value
-    if (a[0] != '北京市') {
+    var addressList = this.setData.addressList;
+    if (addressList.indexOf(a[1]) == -1) {
       return
     } else {
       this.setData({
@@ -74,7 +80,40 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
+    // 实例化腾讯地图API核心类
+    qqmapsdk = new QQMapWX({
+      key: 'M6FBZ-VQQKX-D6Y43-TYKVN-VCP3K-Z5FY4'  // 必填
+    });
+    //获取当前经纬度
+    var nowprovince = this.data.nowprovince;
+    var nowcity = this.data.nowcity;
+    var nowdistrict = this.data.nowdistrict;
+    var that = this;
+    wx.getLocation({
+      type: 'wgs84',
+      success(res) {
+        //使用腾讯地图的reverseGeocoder方法获取地址信息
+        qqmapsdk.reverseGeocoder({
+          location: {
+            latitude: res.latitude, //纬度
+            longitude: res.longitude //经度
+          },
+          success: function (addressRes) {
+            console.log(addressRes)
+            nowprovince = addressRes.result.address_component.province; //当前位置信息
+            nowcity = addressRes.result.address_component.city;
+            nowdistrict = addressRes.result.address_component.district;
+            that.setData({
+              nowprovince: nowprovince,
+              nowcity: nowcity,
+              nowdistrict: nowdistrict,
+            })
+            console.log(nowprovince, nowcity, nowdistrict);
+          }
+        });
+      }
+    })
     var self = this;
     var date = {
       address_img: "/images/address.png",
@@ -86,6 +125,7 @@ Page({
       pushList: '',
       noticeList: [],
       knowList: '',
+      addressList: '',
     }
     var that = this;
     var background = [];
@@ -93,8 +133,22 @@ Page({
     var noticeList = this.data.noticeList;
     var pushList = this.data.pushList;
     var knowList = this.data.knowList;
+    var addressList = this.data.addressList;
+    //地址
+    c.request("index/getOpenCity", {}, function (res) {
+      that.setData({
+        open_city: res.open_city,
+      });
+      var addressList_str = JSON.stringify(res.open_city);
+      addressList = JSON.parse(addressList_str);
+      date.addressList = addressList;
+      self.setData(date);
+      console.log(addressList);
+    }, function () {
+      console.log('fail');
+    })
     // 公告
-    c.request("index/getNotice", {}, function(res) {
+    c.request("index/getNotice", {}, function (res) {
       that.setData({
         info: res.info,
       });
@@ -102,14 +156,13 @@ Page({
       knowList = JSON.parse(knowList_str);
       date.knowList = knowList;
       self.setData(date);
-      console.log(knowList);
-    }, function() {
+    }, function () {
       console.log('fail');
     })
     //轮播图
     c.request("index/getbanner", {
       type: "首页"
-    }, function(res) {
+    }, function (res) {
       console.log(res)
       that.setData({
         info: res.info,
@@ -120,13 +173,13 @@ Page({
       }
       date.background = background;
       self.setData(date);
-    }, function() {
+    }, function () {
       console.log('fail');
     })
     //服务日记
     that.getServiceDaily();
     //推一单，赚一单
-    c.request("index/getRestaurant", {}, function(res) {
+    c.request("index/getRestaurant", {}, function (res) {
       console.log(res)
       that.setData({
         infos: res.infos,
@@ -135,7 +188,7 @@ Page({
       pushList = JSON.parse(list_str);
       date.pushList = pushList;
       self.setData(date);
-    }, function() {
+    }, function () {
       console.log('fail');
     })
     this.setData(date);
@@ -159,24 +212,24 @@ Page({
       var openid = wx.getStorageSync('openid')
       var code = code
       c.request("index/setRecommend", {
-          openid: openid,
-          invest_code: code,
-        },
-        function(res) {
+        openid: openid,
+        invest_code: code,
+      },
+        function (res) {
           console.log(res)
         },
-        function() {
+        function () {
           console.log('fail');
         })
     }
+
   },
-  getServiceDaily: function(isPage = false) {
+  getServiceDaily: function (isPage = false) {
     let _this = this;
     c.request("index/getServiceDialy", {
       page: _this.data.pageNo,
       size: "6",
-    }, function(res) {
-      console.log(res)
+    }, function (res) {
       if (res.info == null || res.info.length == 0) {
         _this.setData({
           hasMore: false,
@@ -204,11 +257,11 @@ Page({
           list: list
         });
       }
-    }, function() {
+    }, function () {
       console.log('fail');
     })
   },
-  goDetail: function(e) {
+  goDetail: function (e) {
     let _this = this,
       imgUrl = '/pages/servicedialy_img/servicedialy_img?id=',
       videoUrl = '/pages/servicedialy_void/servicedialy_void?id=';
@@ -229,11 +282,11 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
-  imageLoadLeft: function(e) {
+  imageLoadLeft: function (e) {
 
     //获取图片的原始宽度和高度
 
@@ -255,13 +308,13 @@ Page({
     this.data.leftHeight += picHeight
 
   },
-  darmore: function(e) {
+  darmore: function (e) {
     wx.navigateTo({
       url: '../servicedialy_list/servicedialy_list',
     })
   },
   //右边的图片高度之和
-  imageLoadRight: function(e) {
+  imageLoadRight: function (e) {
 
     //获取图片的原始宽度和高度
 
@@ -283,7 +336,7 @@ Page({
     this.data.rightHeight += picHeight
 
   },
-  height_: function() {
+  height_: function () {
     var that = this
     var list = that.data.list
     setTimeout(() => {
@@ -337,28 +390,28 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
     let _this = this;
     if (_this.data.hasMore) {
       _this.setData({
@@ -371,7 +424,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })
