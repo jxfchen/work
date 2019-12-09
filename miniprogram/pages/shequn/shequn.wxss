@@ -1,0 +1,145 @@
+
+.mo-list{
+  padding: 0 24rpx;
+  overflow: hidden;
+  margin-top: 24rpx;
+  box-sizing: border-box;
+}
+.tab{
+  align-items: center;
+  padding: 40rpx 0 20rpx;
+  background: #fff;
+  padding-left: 24rpx;
+  position: relative;
+  box-sizing: border-box;
+  width:100%;
+}
+
+.tab text{
+  font-size: 32rpx;
+  color: #2A3243;
+  line-height: 48rpx;
+  margin-right: 28rpx;
+  padding-bottom: 21rpx;
+  position: relative;
+}
+
+.tab text.active{
+  font-weight:600;
+  color:rgba(78,71,146,1);
+}
+
+.scroll-view_H{white-space:nowrap;width: 100%;box-sizing: border-box;overflow: hidden}
+
+.tab text.active::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -13.5rpx;
+  width:27rpx;
+  height:5rpx;
+  background:rgba(78,71,146,1);
+  border-radius:3rpx;
+}
+.mo-item{
+  margin-bottom: 32rpx;
+  background:rgba(255,255,255,1);
+  border:8rpx solid rgba(255, 255, 255, 1);
+  box-shadow:0px 1px 18rpx 0px rgba(228,228,228,0.75);
+}
+
+.title{
+  font-size: 28rpx;
+  font-weight:600;
+}
+
+.tx{
+  font-size: 24rpx;
+  color:rgba(42,50,67,1);
+  opacity:0.6;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+.imgShow{
+  height:auto;
+}
+.imgShow image{
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.nav-type-list{
+  padding: 28rpx 80rpx;
+}
+
+.nav-type-list view{
+  font-size: 32rpx;
+  color: #4E4792;
+}
+
+.nav-type-list text{
+  width:2px;
+  height:26rpx;
+  background:rgba(0,0,0,1);
+  opacity:0.05;
+  border-radius:1px;
+  display: block;
+}
+
+.news-goods-info{
+  padding: 0 24rpx 31rpx 24rpx;
+}
+.tab{
+  align-items: center;
+  padding: 40rpx 0 20rpx;
+  background: #fff;
+  padding-left: 24rpx;
+  position: relative;
+  width: 89%;
+}
+
+.tab text{
+  font-size: 32rpx;
+  color: #2A3243;
+  line-height: 48rpx;
+  margin-right: 28rpx;
+  padding-bottom: 21rpx;
+  position: relative;
+}
+
+.tab text.active{
+  font-size: 36rpx;
+  font-weight:600;
+  color:rgba(78,71,146,1);
+}
+
+.scroll-view_H{white-space:nowrap;width: 100%;box-sizing: border-box;}
+
+.tab text.active::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -13.5rpx;
+  width:27rpx;
+  height:5rpx;
+  background:rgba(78,71,146,1);
+  border-radius:3rpx;
+}
+.iconfont_close{
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom:55rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu-icon{
+  width: 34rpx;
+  height: 27rpx;
+  position: absolute;
+  right: -42rpx;
+  top: 54rpx;
+}

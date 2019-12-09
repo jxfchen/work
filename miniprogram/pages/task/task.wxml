@@ -1,74 +1,75 @@
 <view>
-    <view class="remind">
-        <image class="bell_img" src="/images/task_news.png"></image>
-        <view class="bell_text">新手必看！为什么很多推客能做到月入8000元！</view>
+  <view class="remind">
+    <image class="bell_img" src="/images/task_news.png"></image>
+    <view class="bell_text">新手必看！为什么很多推客能做到月入8000元！</view>
+  </view>
+  <view class="separate"></view>
+  <view class="card">
+    <!-- <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content"> -->
+    <image src="/images/task_background.png" class="background_img"></image>
+    <view class="task_revenue">任务收益余额</view>
+    <view class="task_mon">
+      <text class="money_logo">￥</text>
+      <text class="task_num">{{info.total_invest}}</text>
+      <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
+        <image src="/images/task_arrow.png" class="arrow_img"></image>
+      </navigator>
     </view>
-    <view class="separate"></view>
-    <view class="card">
-        <!-- <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content"> -->
-        <image src="/images/task_background.png" class="background_img"></image>
-        <view class="task_revenue">任务收益余额</view>
-        <view class="task_mon">
-            <text class="money_logo">￥</text>
-            <text class="task_num">{{info.total_invest}}</text>
-            <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
-                <image src="/images/task_arrow.png" class="arrow_img"></image>
-            </navigator>
-        </view>
-        <view class="today_part">
-            <view class="today_revenue">今日任务收益</view>
-            <view class="today">
-                <text class="today_num"><text style="font-size:25rpx;">￥</text>{{info.today_invest}}</text>
-            </view>
-        </view>
-        <view class="card_separate"></view>
-        <view class="all_part">
-            <view class="all_revenve">累计任务收益</view>
-            <view class="all_num"><text style="font-size:25rpx;">￥</text>{{info.total_invest}}</view>
-        </view>
-        <image src="/images/task_banner.png" class="task_banner"></image>
-        <!-- </view> -->
+    <view class="today_part">
+      <view class="today_revenue">今日任务收益</view>
+      <view class="today">
+        <text class="today_num"><text style="font-size:25rpx;">￥</text>{{info.today_invest}}</text>
+      </view>
     </view>
+    <view class="card_separate"></view>
+    <view class="all_part">
+      <view class="all_revenve">累计任务收益</view>
+      <view class="all_num">
+        <text style="font-size:25rpx;">￥</text>{{info.total_invest}}</view>
+    </view>
+    <image src="/images/task_banner.png" class="task_banner"></image>
+    <!-- </view> -->
+  </view>
 </view>
 <view class="divide"></view>
 <view class="bottom">
-    <view>
-        <view class="task_logo"></view>
-        <view class="task_tit">任务基础</view>
-    </view>
+  <view>
+    <view class="task_logo"></view>
+    <view class="task_tit">任务基础</view>
+  </view>
 
-    <view wx:for="{{info.info}}" wx:key="index">
-        <view class="part">
-            <view>
-                <image src="{{imgurl}}/{{item.pic}}" class="part_img"></image>
-                <view class="part_middle">
-                    <view class="part_tit1">
-                        {{item.cn_name}}
-                    </view>
-                    <view class="part_tit2">
-                        {{item.remark}}
-                    </view>
-                </view>
-                <view class="button {{item.status == '1' ? 'button2' : ''}}" bindtap="link" data-id="{{item.url}}">
-                    <image src="/images/{{item.status == '1' ? 'task_finish' : 'task_money'}}.png" class="button_image"></image>
-                    <view class="add_money">{{"+"+item.roles_relations[0].award+"元"}}</view>
-                </view>
-            </view>
+  <view wx:for="{{info.info}}" wx:key="index">
+    <view class="part">
+      <view>
+        <image src="{{imgurl}}/{{item.pic}}" class="part_img"></image>
+        <view class="part_middle">
+          <view class="part_tit1">
+            {{item.cn_name}}
+          </view>
+          <view class="part_tit2">
+            {{item.remark}}
+          </view>
         </view>
-        <view class="line"></view>
+        <view class="button {{item.status == '1' ? 'button2' : ''}}" bindtap="link" data-id="{{item.url}}">
+          <image src="/images/{{item.status == '1' ? 'task_finish' : 'task_money'}}.png" class="button_image"></image>
+          <view class="add_money">{{"+"+item.roles_relations[0].award+"元"}}</view>
+        </view>
+      </view>
     </view>
+    <view class="line"></view>
+  </view>
 </view>
 <view class="foot"></view>
 <!-- <image src="/images/task_server.png" class="server" ></image> -->
 <movable-area class="kf">
-    <movable-view direction="vertical" y="{{topValue}}">
-        <image src="/images/task_server.png" class="server"></image>
-        <button open-type="contact"></button>
-    </movable-view>
+  <movable-view direction="vertical" y="{{topValue}}">
+    <image src="/images/task_server.png" class="server"></image>
+    <button open-type="contact"></button>
+  </movable-view>
 </movable-area>
 <view class="ewm" wx:if="{{hide == true}}">
-    <view class="ewm-box">
-        <image src="{{ewm}}" mode="widthFix" class="ewm_img"></image>
-        <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
-    </view>
+  <view class="ewm-box">
+    <image src="{{ewm}}" mode="widthFix" class="ewm_img"></image>
+    <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
+  </view>
 </view>

@@ -33,25 +33,24 @@ Page({
               province: res.userInfo.province,
               country: res.userInfo.country,
               language: res.userInfo.language,
-            }, function (res) {
+            }, function(res) {
               wx.switchTab({
                 url: '../index/index',
               })
               console.log(res)
-            }, function () {
+            }, function() {
               wx.showToast({
                 title: '加载数据失败',
               })
               console.log('shibai')
-            }
-            )
+            })
           }
         })
       }
     })
   },
-  onLoad: function () {
-    
+  onLoad: function() {
+
   },
-  
+
 })

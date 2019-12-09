@@ -1,4 +1,5 @@
 /**index.wxss**/
+
 .address {
   background-color: #ff6d64;
   height: 180rpx;
@@ -12,19 +13,23 @@
   margin-right: 30rpx;
   margin-top: 3.5px;
 }
-.cen{
+
+.cen {
   overflow: hidden;
 }
-.cen .l{
+
+.cen .l {
   display: table;
   float: left;
 }
-.cen .r{
+
+.cen .r {
   display: table;
   float: right;
   margin-top: 20rpx;
   margin-right: 11rpx;
 }
+
 .section {
   float: left;
 }
@@ -41,6 +46,7 @@
   height: 24rpx;
   margin-top: 18rpx;
 }
+
 .rotation_chart {
   width: 690rpx;
   height: 320rpx;
@@ -79,9 +85,10 @@
   color: white;
   font-size: 22rpx;
 }
+
 .middle {
-    position: relative;
-    top:-70rpx;
+  position: relative;
+  top: -70rpx;
 }
 
 .logo1 {
@@ -138,8 +145,8 @@
 .card_img {
   width: 374rpx;
   height: 287rpx;
-  position:relative;
-  border-radius:12px 12px 0 0;
+  position: relative;
+  border-radius: 12px 12px 0 0;
 }
 
 .ad_img {
@@ -209,14 +216,13 @@
   padding-bottom: 29rpx;
 }
 
-
 .liLeft {
-    margin-left: 30rpx;
-    float: left;
+  margin-left: 30rpx;
+  float: left;
 }
 
 .liRight {
-    margin-left: 390rpx;
+  margin-left: 390rpx;
 }
 
 .li_warp {
@@ -239,7 +245,6 @@
 .li_pic .pic_warp {
   width: 100%;
 }
-
 
 .li_pic .pic_warp image {
   width: 100%;
@@ -300,12 +305,14 @@
   left: 90rpx;
   height: 70%;
 }
-.swiper_container .swiper_item{
+
+.swiper_container .swiper_item {
   width: 65%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
 .rotation_chart {
   position: relative;
 }
@@ -314,7 +321,8 @@
   height: 480rpx;
   width: 100%;
 }
-.notice_text{
+
+.notice_text {
   top: 0;
   right: 0;
   width: 80rpx;
@@ -324,6 +332,7 @@
   line-height: 43rpx;
   position: absolute;
 }
+
 .swiper-item {
   border-radius: 12rpx;
   display: flex;
@@ -375,7 +384,7 @@
 }
 
 .foot {
-    clear: left;
+  clear: left;
 }
 
 .foot_line {
@@ -428,9 +437,15 @@
   margin: 7rpx 11rpx 0 22rpx;
   float: left;
 }
-.tit{
-  font-size:28rpx;font-weight:bord;margin-left:22rpx;margin-right:22rpx
+
+.tit {
+  font-size: 28rpx;
+  font-weight: bord;
+  margin-left: 22rpx;
+  margin-right: 22rpx;
 }
-.part{
-  width:334rpx;height:144rpx;
+
+.part {
+  width: 334rpx;
+  height: 144rpx;
 }

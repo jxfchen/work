@@ -1,180 +1,181 @@
 .contain {
-    background-color: #f4f4f4;
-    height: 1496rpx;
+  background-color: #f4f4f4;
+  height: 1496rpx;
 }
 
 .banner {
-    width: 750rpx;
-    height: 188rpx;
+  width: 750rpx;
+  height: 188rpx;
 }
 
 .card {
-    width: 690rpx;
-    height: 326rpx;
-    background: rgba(255, 255, 255, 1);
-    margin: 0 auto;
-    position: relative;
-    top: -156rpx;
+  width: 690rpx;
+  height: 326rpx;
+  background: rgba(255, 255, 255, 1);
+  margin: 0 auto;
+  position: relative;
+  top: -156rpx;
 }
 
 .bannner_title {
-    font-size: 40rpx;
-    font-family: PingFangSC-Semibold, PingFang SC;
-    font-weight: 600;
-    color: rgba(220, 182, 122, 1);
-    padding-top: 98rpx;
-    margin-left: 40rpx;
+  font-size: 40rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: rgba(220, 182, 122, 1);
+  padding-top: 98rpx;
+  margin-left: 40rpx;
 }
 
 .banner_text {
-    width: 416rpx;
-    height: 72rpx;
-    font-size: 26rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
-    color: rgba(230, 230, 230, 1);
-    line-height: 36rpx;
-    margin-left: 40rpx;
+  width: 416rpx;
+  height: 72rpx;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(230, 230, 230, 1);
+  line-height: 36rpx;
+  margin-left: 40rpx;
 }
 
 .process {
-    width: 750rpx;
-    height: 472rpx;
-    background: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 416rpx;
+  width: 750rpx;
+  height: 472rpx;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 416rpx;
 }
 
 .process_img {
-    width: 36rpx;
-    height: 36rpx;
-    margin-top: 45rpx;
-    margin-left: 26rpx;
-    float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 45rpx;
+  margin-left: 26rpx;
+  float: left;
 }
 
 .process_title {
-    font-size: 30rpx;
-    font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
-    color: rgba(50, 50, 50, 1);
-    margin-top: 40rpx;
-    float: left;
-    margin-left: 14rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(50, 50, 50, 1);
+  margin-top: 40rpx;
+  float: left;
+  margin-left: 14rpx;
 }
 
 .process_text {
-    font-size: 20rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
-    color: rgba(136, 136, 136, 1);
-    margin-top: 50rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(136, 136, 136, 1);
+  margin-top: 50rpx;
 }
 
 .process_frist {
-    width: 50rpx;
-    height: 50rpx;
-    background-color: rgba(244, 92, 82, 1);
-    border-radius: 50rpx;
-    font-size: 34rpx;
-    font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    line-height: 55rpx;
-    text-align: center;
-    margin-left: 78rpx;
-    float: left;
-    position: relative;
-    z-index: 999;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: rgba(244, 92, 82, 1);
+  border-radius: 50rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 55rpx;
+  text-align: center;
+  margin-left: 78rpx;
+  float: left;
+  position: relative;
+  z-index: 999;
 }
 
 .frist_text {
-    font-size: 30rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
-    color: rgba(168, 168, 168, 1);
-    margin-top: 44rpx;
-    margin-left: 168rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(168, 168, 168, 1);
+  margin-top: 44rpx;
+  margin-left: 168rpx;
 }
 
 .second {
-    margin-top: 80rpx;
+  margin-top: 80rpx;
 }
 
 .third {
-    margin-top: 80rpx;
+  margin-top: 80rpx;
 }
 
 .process_line {
-    width: 2rpx;
-    height: 262rpx;
-    border-left: 2rpx #a8a8a8 dashed;
-    position: absolute;
-    top: 146rpx;
-    left: 100rpx;
+  width: 2rpx;
+  height: 262rpx;
+  border-left: 2rpx #a8a8a8 dashed;
+  position: absolute;
+  top: 146rpx;
+  left: 100rpx;
 }
 
 .inviter {
-    width: 750rpx;
-    height: 494rpx;
-    background: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 908rpx;
+  width: 750rpx;
+  height: 494rpx;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 908rpx;
 }
 
 .line {
-    margin-top: 80rpx;
-    margin-left: 94rpx;
+  margin-top: 80rpx;
+  margin-left: 94rpx;
 }
 
 .line1 {
-    width: 60rpx;
-    height: 2rpx;
-    background-color: #f45c52;
-    float: left;
+  width: 60rpx;
+  height: 2rpx;
+  background-color: #f45c52;
+  float: left;
 }
 
 .line2 {
-    width: 60rpx;
-    height: 2rpx;
-    background-color: #a8a8a8;
-    float: left;
-    margin-left: 40rpx;
+  width: 60rpx;
+  height: 2rpx;
+  background-color: #a8a8a8;
+  float: left;
+  margin-left: 40rpx;
 }
 
 .btn {
-    width: 574rpx;
-    height: 96rpx;
-    background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
-    box-shadow: 0rpx 4rpx 14rpx 0rpx rgba(251, 189, 183, 1);
-    border-radius: 48rpx;
-    font-size: 34rpx;
-    font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    line-height: 95rpx;
-    text-align: center;
-    margin-left: 88rpx;
-    float: left;
-    margin-top: 80rpx;
+  width: 574rpx;
+  height: 96rpx;
+  background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
+  box-shadow: 0rpx 4rpx 14rpx 0rpx rgba(251, 189, 183, 1);
+  border-radius: 48rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 95rpx;
+  text-align: center;
+  margin-left: 88rpx;
+  float: left;
+  margin-top: 80rpx;
 }
 
 .inviter_title {
-    font-size: 24rpx;
-    font-family: PingFangSC-Medium, PingFang SC;
-    font-weight: 500;
-    color: rgba(244, 92, 82, 1);
-    float: left;
-    margin-left: 156rpx;
-    margin-top: 40rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(244, 92, 82, 1);
+  float: left;
+  margin-left: 156rpx;
+  margin-top: 40rpx;
 }
+
 .nums {
   display: flex;
   justify-content: center;
   height: 94rpx;
   margin-top: 10rpx;
   font-size: 60rpx;
-    color: #17233d;
+  color: #17233d;
 }
 
 .nums>input {
@@ -196,22 +197,25 @@
   border: none;
   margin: 0;
 }
+
 .btn-wrap .validata-btn {
   width: 710rpx;
   height: 80rpx;
   line-height: 80rpx;
   background: #2792ff;
   font-size: 28rpx;
-    color: #ffffff;
+  color: #fff;
 }
+
 /*  */
+
 .btn-wrap .validata-btn {
   width: 710rpx;
   height: 80rpx;
   line-height: 80rpx;
   background: #e8eaec;
   font-size: 28rpx;
-    color: #ffffff;
+  color: #fff;
   border-radius: 12rpx;
 }
 

@@ -1,12 +1,14 @@
-page{
+page {
   width: 100%;
   height: 100%;
   background: #000;
 }
-.bgd{
+
+.bgd {
   width: 100%;
 }
-.right{
+
+.right {
   right: 20rpx;
   width: 70rpx;
   height: 70rpx;
@@ -14,21 +16,25 @@ page{
   background: #fff;
   border-radius: 40rpx;
 }
-.right image{
+
+.right image {
   top: 0;
   left: 0;
   width: 70rpx;
   position: absolute;
 }
-.next{
+
+.next {
   bottom: 200rpx;
 }
-.zan{
+
+.zan {
   bottom: 320rpx;
   position: absolute;
   background: none;
 }
-.zan text{
+
+.zan text {
   position: absolute;
   width: 100rpx;
   color: #fff;
@@ -37,18 +43,21 @@ page{
   left: -15rpx;
   font-size: 24rpx;
 }
-.ava{
+
+.ava {
   bottom: 440rpx;
   border: 2px solid #eee;
 }
-.ava image{
+
+.ava image {
   height: 70rpx;
   width: 70rpx;
   margin: 0;
   position: static;
   border-radius: 40rpx;
 }
-.con{
+
+.con {
   bottom: 0;
   width: 100%;
   height: auto;
@@ -56,19 +65,22 @@ page{
   position: absolute;
   box-sizing: border-box;
   padding: 10rpx 20rpx 30rpx 20rpx;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
 }
-.con .title{
+
+.con .title {
   font-size: 28rpx;
   font-weight: bold;
   margin-bottom: 10rpx;
 }
-.con .content{
+
+.con .content {
   color: #eee;
   font-size: 24rpx;
   line-height: 35rpx;
 }
-.box{
+
+.box {
   width: 100%;
   height: calc(100%);
   position: relative;

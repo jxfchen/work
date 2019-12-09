@@ -6,7 +6,7 @@
         <view class="nav_left_items {{curNav == index ? 'active':''}}" data-id="{{item.id}}" bindtap="switchRightTab" data-index="{{index}}">{{item.name}}</view>
       </block>
     </view>
-  </scroll-view> 
+  </scroll-view>
   <!--右侧栏-->
   <scroll-view scroll-y="true" class="scroll_right" scroll-into-view="{{toView}}">
     <view class="card" wx:for="{{lt}}" wx:key="{{lt}}">

@@ -13,18 +13,18 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.getOpenid(options.id)
   },
-  getOpenid: function (id) {
+  getOpenid: function(id) {
     var _this = this;
     wx.getStorage({
       key: 'openid',
-      success: function (res) {
+      success: function(res) {
         console.log(res)
         _this.setData({
           openid: res.data
-        },function(){
+        }, function() {
           _this.geDetailInfo(id);
         })
       }
@@ -33,12 +33,12 @@ Page({
   getDetail: function(e) {
     this.geDetailInfo(e.currentTarget.dataset.nextid == "" ? 0 : e.currentTarget.dataset.nextid);
   },
-  geDetailInfo: function (id) {
+  geDetailInfo: function(id) {
     let _this = this;
     c.request("servicedialy/getDetailById", {
       id: id,
       openid: _this.data.openid
-    }, function (res) {
+    }, function(res) {
       if (2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);
         res.info.avatarurl = res.info.avatarurl.indexOf('http') >= 0 ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
@@ -51,11 +51,11 @@ Page({
           icon: "none"
         })
       }
-    }, function () {
+    }, function() {
       console.log('fail');
     })
   },
-  delHtmlTag: function (str) {
+  delHtmlTag: function(str) {
     var reg = new RegExp("<[^>]+>", "g");
     var result = str.replace(reg, '');
     return result;
@@ -63,49 +63,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

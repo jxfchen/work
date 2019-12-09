@@ -2,27 +2,32 @@
 <view class="nav-but">
   <view class="nav-cle">
     <view>
-      <image src="{{infos.info.avatarurl}}" mode="widthFix"></image><!-- 头像 -->
-      <text>{{infos.info.author}}</text><!-- 昵称 -->
+      <image src="{{infos.info.avatarurl}}" mode="widthFix"></image>
+      <!-- 头像 -->
+      <text>{{infos.info.author}}</text>
+      <!-- 昵称 -->
     </view>
   </view>
   <view class="nav-cle">
     <view>
       <image src="../../images/comment.png" mode="widthFix"></image>
-      <text>{{infos.info.read_times}}</text><!-- 阅读数 -->
+      <text>{{infos.info.read_times}}</text>
+      <!-- 阅读数 -->
     </view>
   </view>
   <view class="nav-cle">
     <view>
       <image src="../../images/ico-4a.png" mode="widthFix"></image>
-      <text>{{infos.info.like_times}}</text><!-- 点赞数 -->
-  </view>
+      <text>{{infos.info.like_times}}</text>
+      <!-- 点赞数 -->
+    </view>
   </view>
   <view class="nav-cle">
     <view>
       <image src="../../images/time.png" mode="widthFix"></image>
-      <text>{{infos.info.like_times}}</text><!-- 时间 -->
-  </view>
+      <text>{{infos.info.like_times}}</text>
+      <!-- 时间 -->
+    </view>
   </view>
 </view>
 <view class="center">

@@ -1,6 +1,6 @@
 var util = {
   // 是否url地址
-  isUrl: function (value) {
+  isUrl: function(value) {
     return value.indexOf('http') != -1
   }
 }

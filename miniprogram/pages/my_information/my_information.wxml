@@ -1,93 +1,92 @@
 <view class="contain">
-    <view class="header">
-        <image src="{{avatar}}" class="header_img"></image>
-        <view bindtap='changeAvatar'>
-            <view class="header_text">修改头像</view>
-            <image class="header_arrow" src="/images/me/arrow.png"></image>
-        </view>
+  <view class="header">
+    <image src="{{avatar==''?list.user_info.avatarurl:avatar}}" class="header_img"></image>
+    <view bindtap='changeAvatar'>
+      <view class="header_text">修改头像</view>
+      <image class="header_arrow" src="/images/me/arrow.png"></image>
     </view>
-    <view class="information">
-        <view class="account">
-            <view class="account_title">账户管理</view>
-            <view class="account_btn">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
-            <navigator url="/pages/identity_authentication/identity_authentication?title=identity_authentication">
-                <view class="account_text">去认证</view>
-                <image class="arrow" src="/images/me/arrow.png"></image>
-            </navigator>
-            <view class="line"></view>
+  </view>
+  <view class="information">
+    <view class="account">
+      <view class="account_title">账户管理</view>
+      <view class="account_btn">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+      <navigator url="/pages/identity_authentication/identity_authentication?title=identity_authentication">
+        <view class="account_text">去认证</view>
+        <image class="arrow" src="/images/me/arrow.png"></image>
+      </navigator>
+      <view class="line"></view>
+    </view>
+    <view class="nicname">
+      <view class="nicname_title">昵称</view>
+      <view bindtap="modalinput">
+        <image class="nicname_arrow" src="/images/me/arrow.png"></image>
+        <view class="nicname_text" style='{{nicname==""?"":"color: rgba(136, 136, 136, 1);"}}'>
+          {{nicname==""?"还未设置昵称":nicname}}
         </view>
-        <view class="nicname">
-            <view class="nicname_title">昵称</view>
-            <view bindtap="modalinput">
-                <image class="nicname_arrow" src="/images/me/arrow.png"></image>
-                <view class="nicname_text" style='{{nicname==""?"":"color: rgba(136, 136, 136, 1);"}}'>
-                    {{nicname==""?"还未设置昵称":nicname}}
-                </view>
-            </view>
-            <view class="nicname_text2">其他成员只能看到您的昵称</view>
-            <view class="nicname_line"></view>
-        </view>
-        <view class="phone">
-            <view class="phone_title">电话</view>
-            <view bindtap="modalinputphone">
-                <image class="phone_arrow" src="/images/me/arrow.png"></image>
-                <view class="phone_text">{{phone==''?list.user_info.purePhoneNumber:phone}}</view>
-            </view>
-            <view class="phone_line"></view>
-        </view>
-        <!-- <view class="weixin">
+      </view>
+      <view class="nicname_text2">其他成员只能看到您的昵称</view>
+      <view class="nicname_line"></view>
+    </view>
+    <view class="phone">
+      <view class="phone_title">电话</view>
+      <view bindtap="modalinputphone">
+        <image class="phone_arrow" src="/images/me/arrow.png"></image>
+        <view class="phone_text">{{phone==''?list.user_info.purePhoneNumber:phone}}</view>
+      </view>
+      <view class="phone_line"></view>
+    </view>
+    <!-- <view class="weixin">
             <view class="phone_title">微信号</view>
             <image class="phone_arrow" src="/images/me/arrow.png"></image>
             <view class="phone_text">7837shf</view>
             <view class="phone_line"></view>
         </view> -->
-        <view class="sex">
-            <view class="phone_title">性别</view>
-            <view bindtap="sexBind">
-                <image class="phone_arrow" src="/images/me/arrow.png"></image>
-                <view class="phone_text">{{list.user_info.gender==1?"男":"女"}}</view>
-            </view>
-            <view class="phone_line"></view>
-        </view>
-        <view class="birth">
-            <view class="phone_title">生日</view>
-            <image class="phone_arrow" src="/images/me/arrow.png"></image>
-            <picker mode="date" value="{{date}}" start="1900-09-01" value="list.user_info.birthday == '' ? '1940-09-01' : list.user_info.birthday" end="2019-09-01" bindchange="bindDateChange">
-                <view class="picker">
-                    <view class="phone_text">{{date == '' ? (list.user_info.birthday == '' ? '1940-09-01' : list.user_info.birthday) : date}}</view>
-                </view>
-            </picker>
-            <view class="phone_line"></view>
-        </view>
-        <view class="area">
-            <view class="phone_title">地区</view>
-            <image class="phone_arrow" src="/images/me/arrow.png"></image>
-            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-                <view class="picker">
-                  <view class="phone_text">
-                    {{region[0]==''?(list.user_info.province1 == "" ? '-' : list.user_info.province1): region[0]}}
-                    {{region[1]==''?(list.user_info.city1 == '' ? '-' : list.user_info.city1): region[1]}}
-                    {{region[2]==''?(list.user_info.xian == '' ? '-' : list.user_info.xian): region[2]}}
-                  </view>
-                </view>
-            </picker>
-            <view class="phone_line"></view>
-        </view>
+    <view class="sex">
+      <view class="phone_title">性别</view>
+      <view bindtap="sexBind">
+        <image class="phone_arrow" src="/images/me/arrow.png"></image>
+        <view class="phone_text">{{list.user_info.gender==1?"男":"女"}}</view>
+      </view>
+      <view class="phone_line"></view>
     </view>
-    <view class="code">
-        <view class="code_title">填写邀请人编码</view>
-        <view class="code_num">{{list.user_info.invite_code}}</view>
-        <view class="code_text">系统未自动识别的，只能填写一次，填写后不可修改</view>
-    </view>
-    <view class="QR">
-        <view class="QR_img"></view>
-        <view class="QR_text">添加客服微信 goupfsy，我们将会更加方便的帮助您 推单成功，分享更多赚钱秘籍。
+    <view class="birth">
+      <view class="phone_title">生日</view>
+      <image class="phone_arrow" src="/images/me/arrow.png"></image>
+      <picker mode="date" value="{{date}}" start="1900-09-01" value="list.user_info.birthday == '' ? '1940-09-01' : list.user_info.birthday" end="2019-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          <view class="phone_text">{{date == '' ? (list.user_info.birthday == '' ? '1940-09-01' : list.user_info.birthday) : date}}</view>
         </view>
+      </picker>
+      <view class="phone_line"></view>
     </view>
-    <modal hidden="{{hiddenmodalphone}}" title="请输入手机号" confirm-text="确定" cancel-text="取消" bindcancel="cancelphone" bindconfirm="confirmphone">
-      <input type='text' placeholder="请输入手机号" auto-focus bindinput="getPhone" />
-    </modal>
-    <modal hidden="{{hiddenmodalput}}" title="请输入昵称" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
-      <input type='text' placeholder="请输入昵称" auto-focus bindinput="getNicname" />
-    </modal>
+    <view class="area">
+      <view class="phone_title">地区</view>
+      <image class="phone_arrow" src="/images/me/arrow.png"></image>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+          <view class="phone_text">
+            {{region[0]==''?(list.user_info.province1 == "" ? '-' : list.user_info.province1): region[0]}} {{region[1]==''?(list.user_info.city1 == '' ? '-' : list.user_info.city1): region[1]}} {{region[2]==''?(list.user_info.xian == '' ? '-' : list.user_info.xian):
+            region[2]}}
+          </view>
+        </view>
+      </picker>
+      <view class="phone_line"></view>
+    </view>
+  </view>
+  <view class="code">
+    <view class="code_title">填写邀请人编码</view>
+    <view class="code_num">{{list.user_info.invite_code}}</view>
+    <view class="code_text">系统未自动识别的，只能填写一次，填写后不可修改</view>
+  </view>
+  <view class="QR">
+    <view class="QR_img"></view>
+    <view class="QR_text">添加客服微信 goupfsy，我们将会更加方便的帮助您 推单成功，分享更多赚钱秘籍。
+    </view>
+  </view>
+  <modal hidden="{{hiddenmodalphone}}" title="请输入手机号" confirm-text="确定" cancel-text="取消" bindcancel="cancelphone" bindconfirm="confirmphone">
+    <input type='text' placeholder="请输入手机号" auto-focus bindinput="getPhone" />
+  </modal>
+  <modal hidden="{{hiddenmodalput}}" title="请输入昵称" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text' placeholder="请输入昵称" auto-focus bindinput="getNicname" />
+  </modal>
 </view>

@@ -1,74 +1,76 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/guide/guide",
-        "pages/msg_content/msg_content",
-        "pages/msg/msg",
-        "pages/a/a",
-        "pages/msgcen/msgcen",
-        "pages/my_information/my_information",
-        "pages/me/me",
-        "pages/certification_third/certification_third",
-        "Componet/select/select",
-        "pages/servicedialy_list/servicedialy_list",
-        "pages/servicedialy_img/servicedialy_img",
-        "pages/servicedialy_void/servicedialy_void",
-        "pages/sheetlist/sheetlist",
-        "pages/authorized_login/authorized_login",
-        "pages/task/task",
-        "pages/push_team/push_team",
-        "pages/push_sheet/push_sheet",
-        "pages/workingmeal_intr/workingmeal_intr",
-        "pages/certification_first/certification_first",
-        "pages/certification_second/certification_second",
-        "pages/identity_authentication/identity_authentication",
-        "pages/push_details/push_details",
-        "pages/order/order",
-        "pages/cash_withdrawal/cash_withdrawal",
-        "pages/withdrawals_record/withdrawals_record",
-        "pages/income_details/income_details",
-        "pages/authentication/authentication"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#FF6D64",
-        "navigationBarTitleText": "团餐推客",
-        "navigationBarTextStyle": "white"
-    },
-    "permission": {
-        "scope.userLocation": {
-            "desc": "你的位置信息将用于小程序位置接口的效果展示"
-        }
-    },
-    "sitemapLocation": "sitemap.json",
-    "tabBar": {
-        "color": "#9C9C9C",
-        "selectedColor": "#FF6D64",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "images/index.png",
-                "selectedIconPath": "images/index1.png"
-            },
-            {
-                "pagePath": "pages/order/order",
-                "text": "推单",
-                "iconPath": "images/order.png",
-                "selectedIconPath": "images/order1.png"
-            },
-            {
-                "pagePath": "pages/task/task",
-                "text": "任务",
-                "iconPath": "images/task.png",
-                "selectedIconPath": "images/task1.png"
-            },
-            {
-                "pagePath": "pages/me/me",
-                "text": "我",
-                "iconPath": "images/me.png",
-                "selectedIconPath": "images/me1.png"
-            }
-        ]
+  "pages": [
+    "pages/index/index",
+    "pages/guide/guide",
+    "pages/guide/guidea",
+    "pages/shequn/shequn",
+    "pages/msg_content/msg_content",
+    "pages/msg/msg",
+    "pages/a/a",
+    "pages/msgcen/msgcen",
+    "pages/my_information/my_information",
+    "pages/me/me",
+    "pages/certification_third/certification_third",
+    "Componet/select/select",
+    "pages/servicedialy_list/servicedialy_list",
+    "pages/servicedialy_img/servicedialy_img",
+    "pages/servicedialy_void/servicedialy_void",
+    "pages/sheetlist/sheetlist",
+    "pages/authorized_login/authorized_login",
+    "pages/task/task",
+    "pages/push_team/push_team",
+    "pages/push_sheet/push_sheet",
+    "pages/workingmeal_intr/workingmeal_intr",
+    "pages/certification_first/certification_first",
+    "pages/certification_second/certification_second",
+    "pages/identity_authentication/identity_authentication",
+    "pages/push_details/push_details",
+    "pages/order/order",
+    "pages/cash_withdrawal/cash_withdrawal",
+    "pages/withdrawals_record/withdrawals_record",
+    "pages/income_details/income_details",
+    "pages/authentication/authentication"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF6D64",
+    "navigationBarTitleText": "团餐推客",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#9C9C9C",
+    "selectedColor": "#FF6D64",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index1.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "推单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order1.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "images/task.png",
+        "selectedIconPath": "images/task1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png"
+      }
+    ]
+  }
 }

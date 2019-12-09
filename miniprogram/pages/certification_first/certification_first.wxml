@@ -1,32 +1,32 @@
 <view class="contain">
-    <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
-        <view class="btn">
-            <view class="btn1">1</view>
-            <view class="btn2">2</view>
-            <view class="btn2">3</view>
-            <view class="line"></view>
-        </view>
+  <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+    <view class="btn">
+      <view class="btn1">1</view>
+      <view class="btn2">2</view>
+      <view class="btn2">3</view>
+      <view class="line"></view>
     </view>
-    <image class="arrow_top" src="/images/arrow_top.png"></image>
-    <view class="card">
-        <view class="card_title">身份信息</view>
-        <view class="card_text">请输入您的身份信息。</view>
+  </view>
+  <image class="arrow_top" src="/images/arrow_top.png"></image>
+  <view class="card">
+    <view class="card_title">身份信息</view>
+    <view class="card_text">请输入您的身份信息。</view>
+  </view>
+  <view class="progress">
+    <view class="list1">
+      <view class="list_title">姓名</view>
+      <input class="list_text" auto-focus placeholder="请输入姓名" bindinput="getName" />
+      <view class="list_line"></view>
     </view>
-    <view class="progress">
-        <view class="list1">
-            <view class="list_title">姓名</view>
-            <input class="list_text" auto-focus placeholder="请输入姓名" bindinput="getName" />
-            <view class="list_line"></view>
-        </view>
-        <view class="list2">
-            <view class="list_title">身份证号</view>
-             <input type="idcard"  class="list_text" placeholder="请输入18位身份证号" bindinput="getNumber" />
-             <!-- <image src="/images/picture.png" class="picture"></image> -->
-        </view>
+    <view class="list2">
+      <view class="list_title">身份证号</view>
+      <input type="idcard" class="list_text" placeholder="请输入18位身份证号" bindinput="getNumber" />
+      <!-- <image src="/images/picture.png" class="picture"></image> -->
     </view>
-    <view class="text">请确认身份信息，如有误请修改</view>
-    <!-- <navigator url="/pages/certification_second/certification_second?title=certification_second">
+  </view>
+  <view class="text">请确认身份信息，如有误请修改</view>
+  <!-- <navigator url="/pages/certification_second/certification_second?title=certification_second">
         <view class="next_step">下一步</view>
     </navigator> -->
-    <view class="next_step" bindtap="nextStepBind">下一步</view>
+  <view class="next_step" bindtap="nextStepBind">下一步</view>
 </view>

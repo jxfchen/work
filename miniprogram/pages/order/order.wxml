@@ -20,45 +20,45 @@
       </view>
       <view class="weui-tab__panel">
 
-          <view id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
+        <view id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
 
-            <view class="card" wx:for='{{list}}' wx:key="index">
-              <view>
-                <view class="card_logo"></view>
-                <view class="card_title">{{item.title}}</view>
-                <view class="card_btn">
-                  <image wx:if="{{item.status_name == '审核通过'}}" src="/images/task_finish.png" class="btn_img"></image>
-                  <view class="btn_text">{{item.status_name}}</view>
-                </view>
-                <view class="card_time">{{item.creat_time}}</view>
+          <view class="card" wx:for='{{list}}' wx:key="index">
+            <view>
+              <view class="card_logo"></view>
+              <view class="card_title">{{item.title}}</view>
+              <view class="card_btn">
+                <image wx:if="{{item.status_name == '审核通过'}}" src="/images/task_finish.png" class="btn_img"></image>
+                <view class="btn_text">{{item.status_name}}</view>
               </view>
-              <view class="card_line"></view>
-              <view>
-                <view class="card_push">推单编号</view>
-                <view class="push_num">{{item.pusher_id}}</view>
-              </view>
-              <view class="cen">
-                <view class="card_foot">{{item.relation[0] ? item.relation[0].name : ''}}{{item.relation[1] ? '+' + item.relation[1].name : ''}}{{item.relation[2] ? '+' + item.relation[2].name : ''}}
-                </view>
-                <view class="foot_money">
-                {{item.relation[0] ? item.relation[0].price_name : ''}}{{item.relation[1] ? ',' + item.relation[1].price_name : ''}}{{item.relation[2] ? ',' + item.relation[2].price_name : ''}}
-                </view>
-
-                <view class="rt">
-                  <view class="foot_number">用餐人数</view>
-                  <view class="num">{{item.eating_num}} 人</view>
-                </view>
-              </view>
-              <view class="name_btn" bindtap="modalinputname" data-id="{{item.pusher_id}}">备注推单名称</view>
-              <navigator url="/pages/push_details/push_details?title=push_details&id=">
-                <view class="look_btn">查看订单</view>
-              </navigator>
+              <view class="card_time">{{item.creat_time}}</view>
             </view>
+            <view class="card_line"></view>
+            <view>
+              <view class="card_push">推单编号</view>
+              <view class="push_num">{{item.pusher_id}}</view>
+            </view>
+            <view class="cen">
+              <view class="card_foot">{{item.relation[0] ? item.relation[0].name : ''}}{{item.relation[1] ? '+' + item.relation[1].name : ''}}{{item.relation[2] ? '+' + item.relation[2].name : ''}}
+              </view>
+              <view class="foot_money">
+                {{item.relation[0] ? item.relation[0].price_name : ''}}{{item.relation[1] ? ',' + item.relation[1].price_name : ''}}{{item.relation[2] ? ',' + item.relation[2].price_name : ''}}
+              </view>
+
+              <view class="rt">
+                <view class="foot_number">用餐人数</view>
+                <view class="num">{{item.eating_num}} 人</view>
+              </view>
+            </view>
+            <view class="name_btn" bindtap="modalinputname" data-id="{{item.pusher_id}}">备注推单名称</view>
+            <navigator url="/pages/push_details/push_details?title=push_details&id={{item.pusher_id}}">
+              <view class="look_btn">查看订单</view>
+            </navigator>
           </view>
+        </view>
       </view>
     </view>
   </view>
   <modal hidden="{{hiddenmodalputname}}" title="请备注推单名称" confirm-text="确定" cancel-text="取消" bindcancel="cancelname" bindconfirm="confirmname">
-      <input type='text' placeholder="请备注推单名称" auto-focus bindinput="getName" />
-</modal>
+    <input type='text' placeholder="请备注推单名称" auto-focus bindinput="getName" />
+  </modal>
 </view>

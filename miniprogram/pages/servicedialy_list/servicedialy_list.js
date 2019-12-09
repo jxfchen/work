@@ -17,11 +17,11 @@ Page({
     picHeight: '',
     swiperCurrent: 0,
     noticeList: [{
-      content0: "恭喜02000号推客成功提现12800元！",
-    },
-    {
-      content0: "恭喜02000号推客成功提现12800元！",
-    }
+        content0: "恭喜02000号推客成功提现12800元！",
+      },
+      {
+        content0: "恭喜02000号推客成功提现12800元！",
+      }
     ],
     province: '',
     city: '',
@@ -35,13 +35,13 @@ Page({
     hasMore: true
   },
 
-  sheetlist:function(e){
+  sheetlist: function(e) {
     // console.log(123)
     wx.navigateTo({
       url: '../sheetlist/sheetlist',
     })
   },
-  msgList: function (e) {
+  msgList: function(e) {
     wx.navigateTo({
       url: '../msg/msg',
     })
@@ -64,12 +64,12 @@ Page({
   },
 
 
-  bindRegionChange: function (e) {
+  bindRegionChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     var a = e.detail.value
-    if(a[0] != '北京市'){
+    if (a[0] != '北京市') {
       return
-    }else{
+    } else {
       this.setData({
         region: e.detail.value
       })
@@ -79,7 +79,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var self = this;
     var date = {
       address_img: "/images/address.png",
@@ -97,7 +97,7 @@ Page({
     //轮播图
     c.request("index/getbanner", {
       type: "首页"
-    }, function (res) {
+    }, function(res) {
       console.log(res)
       that.setData({
         info: res.info,
@@ -108,13 +108,13 @@ Page({
       }
       date.background = background;
       self.setData(date);
-    }, function () {
+    }, function() {
       console.log('fail');
     })
     //服务日记
     that.getServiceDaily();
     //推一单，赚一单
-    c.request("index/getRestaurant", {}, function (res) {
+    c.request("index/getRestaurant", {}, function(res) {
       console.log(res)
       that.setData({
         infos: res.infos,
@@ -123,7 +123,7 @@ Page({
       pushList = JSON.parse(list_str);
       date.pushList = pushList;
       self.setData(date);
-    }, function () {
+    }, function() {
       console.log('fail');
     })
     this.setData(date);
@@ -140,12 +140,12 @@ Page({
       }
     })
   },
-  getServiceDaily: function (isPage = false) {
+  getServiceDaily: function(isPage = false) {
     let _this = this;
     c.request("index/getServiceDialy", {
       page: _this.data.pageNo,
       size: "6",
-    }, function (res) {
+    }, function(res) {
       if (res.info == null || res.info.length == 0) {
         _this.setData({
           hasMore: false,
@@ -173,13 +173,15 @@ Page({
           list: list
         });
       }
-    }, function () {
+    }, function() {
       console.log('fail');
     })
   },
-  goDetail: function (e) {
-    let _this = this, imgUrl = '/pages/servicedialy_img/servicedialy_img?id=', videoUrl = '/pages/servicedialy_void/servicedialy_void?id=';
-    switch (e.currentTarget.dataset.stype){
+  goDetail: function(e) {
+    let _this = this,
+      imgUrl = '/pages/servicedialy_img/servicedialy_img?id=',
+      videoUrl = '/pages/servicedialy_void/servicedialy_void?id=';
+    switch (e.currentTarget.dataset.stype) {
       case 0:
         wx.navigateTo({
           url: imgUrl + e.currentTarget.dataset.sid
@@ -191,16 +193,16 @@ Page({
         })
         break;
     }
-    
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
-  imageLoadLeft: function (e) {
+  imageLoadLeft: function(e) {
 
     //获取图片的原始宽度和高度
 
@@ -222,13 +224,13 @@ Page({
     this.data.leftHeight += picHeight
 
   },
-  darmore:function(e){
+  darmore: function(e) {
     wx.navigateTo({
       url: '../servicedialy_list/servicedialy_list',
     })
   },
   //右边的图片高度之和
-  imageLoadRight: function (e) {
+  imageLoadRight: function(e) {
 
     //获取图片的原始宽度和高度
 
@@ -250,7 +252,7 @@ Page({
     this.data.rightHeight += picHeight
 
   },
-  height_: function () {
+  height_: function() {
     var that = this
     var list = that.data.list
     setTimeout(() => {
@@ -304,28 +306,28 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
     let _this = this;
     if (_this.data.hasMore) {
       _this.setData({
@@ -338,7 +340,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

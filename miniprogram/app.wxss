@@ -2,10 +2,12 @@
 @import 'animate.wxss';
 @import "weui.wxss";
 @import "/wxParse/wxParse.wxss";
+
 .container {
- font-size: 32rpx;
-} 
-.ewm{
+  font-size: 32rpx;
+}
+
+.ewm {
   top: 0;
   left: 0;
   width: 100%;
@@ -13,16 +15,19 @@
   position: fixed;
   background: rgba(0, 0, 0, 0.3);
 }
-.ewm .ewm_img{
+
+.ewm .ewm_img {
   width: 300rpx;
 }
-.close{
+
+.close {
   top: -20rpx;
   width: 40rpx;
   right: -20rpx;
   position: absolute;
 }
-.ewm-box{
+
+.ewm-box {
   top: 50%;
   left: 50%;
   position: absolute;

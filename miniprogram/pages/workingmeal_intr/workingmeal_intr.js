@@ -8,27 +8,26 @@ Page({
     background: ["/images/banner.png", "/images/banner.png", "/images/banner.png", "/images/banner.png", "/images/banner.png"],
     pushList: [],
     id: undefined,
-    status:"true",
+    status: "true",
   },
-    ellipsisbtn: function () {
-        var status=this.data.status;
-        var that=this;
-        if (status =="false")
-        {
-            that.setData({
-                status:"true"
-            })
-        }else{
-            that.setData({
-                status:"false"
-            }) 
-        }
-        console.log(status);
-    },
+  ellipsisbtn: function() {
+    var status = this.data.status;
+    var that = this;
+    if (status == "false") {
+      that.setData({
+        status: "true"
+      })
+    } else {
+      that.setData({
+        status: "false"
+      })
+    }
+    console.log(status);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     var id = this.data.id;
     id = options.title;
@@ -38,7 +37,7 @@ Page({
     console.log(id);
     c.request("restaurant/getDetailById", {
       id: id
-    }, function (res) {
+    }, function(res) {
       console.log(res.info);
       var description = res.info.description
       var des = res.info.description.split(',')
@@ -49,11 +48,11 @@ Page({
         key: res.info.keywords.split(',')
       });
       var temp = wxParse.wxParse('article', 'html', res.info.article, that, 5);
-    }, function () {
+    }, function() {
       console.log('fail');
     })
   },
-  home: function () {
+  home: function() {
     wx.switchTab({
       url: '../index/index',
     })
@@ -61,49 +60,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

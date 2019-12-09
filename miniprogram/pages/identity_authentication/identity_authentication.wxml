@@ -1,39 +1,39 @@
 <view class="contain">
-    <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+  <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+  </view>
+  <view class="card" style="background:url('/images/vip.png');background-size:690rpx 326rpx;">
+    <view class="bannner_title">身份认证特权</view>
+    <view class="banner_text">通过认证可以获得合伙人推单、创建自己的推客团队，以及其他特权</view>
+  </view>
+  <view class="process">
+    <image src="/images/me/system.png" class="process_img"></image>
+    <view class="process_title">认证流程</view>
+    <view class="process_text">（预计2分钟完成）</view>
+    <view class="frist">
+      <view class="process_frist">1</view>
+      <view class="frist_text">身份证</view>
     </view>
-    <view class="card" style="background:url('/images/vip.png');background-size:690rpx 326rpx;">
-        <view class="bannner_title">身份认证特权</view>
-        <view class="banner_text">通过认证可以获得合伙人推单、创建自己的推客团队，以及其他特权</view>
+    <view class="second">
+      <view class="process_frist">2</view>
+      <view class="frist_text">确认现在使用的微信号已绑定本人银行卡</view>
     </view>
-    <view class="process">
-        <image src="/images/me/system.png" class="process_img"></image>
-        <view class="process_title">认证流程</view>
-        <view class="process_text">（预计2分钟完成）</view>
-        <view class="frist">
-            <view class="process_frist">1</view>
-            <view class="frist_text">身份证</view>
-        </view>
-        <view class="second">
-            <view class="process_frist">2</view>
-            <view class="frist_text">确认现在使用的微信号已绑定本人银行卡</view>
-        </view>
-        <view class="third">
-            <view class="process_frist">3</view>
-            <view class="frist_text">身份证明资料上传，过滤恶意刷单</view>
-        </view>
-        <view class="process_line"></view>
+    <view class="third">
+      <view class="process_frist">3</view>
+      <view class="frist_text">身份证明资料上传，过滤恶意刷单</view>
     </view>
-    <view class="inviter">
-        <image src="/images/inviter_num.png" class="process_img"></image>
-        <view class="process_title">邀请人编码</view>
-        <view class="process_text">（没有可跳过）</view>
-        <view class="nums">
-            <block wx:for="{{inputLength}}" wx:key="">
-                <input wx:key="{{index}}" value="{{inputValue.length - 1 >= index ? inputValue[index]: ''}}" type="number" disabled catchtap="handleInputTap" />
-            </block>
-            <input class="hidden-input" type="number" focus="{{isFocus}}" maxlength="{{inputLength}}" bindinput="handleInputChange"></input>
-        </view>
-        <view class="btn" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="handleValidata" hover-class="other-button-hover">开始认证</view>
-        <view class="inviter_title">认证成功有机会获得 5.21元的开工红包！</view>
+    <view class="process_line"></view>
+  </view>
+  <view class="inviter">
+    <image src="/images/inviter_num.png" class="process_img"></image>
+    <view class="process_title">邀请人编码</view>
+    <view class="process_text">（没有可跳过）</view>
+    <view class="nums">
+      <block wx:for="{{inputLength}}" wx:key="">
+        <input wx:key="{{index}}" value="{{inputValue.length - 1 >= index ? inputValue[index]: ''}}" type="number" disabled catchtap="handleInputTap" />
+      </block>
+      <input class="hidden-input" type="number" focus="{{isFocus}}" maxlength="{{inputLength}}" bindinput="handleInputChange"></input>
     </view>
+    <view class="btn" type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="handleValidata" hover-class="other-button-hover">开始认证</view>
+    <view class="inviter_title">认证成功有机会获得 5.21元的开工红包！</view>
+  </view>
 </view>

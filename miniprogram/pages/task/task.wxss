@@ -77,13 +77,12 @@
   background-color: white;
 }
 
-.background_img{
-    width:706rpx;
-    height: 302rpx;
-    position: absolute;
-    left: 20rpx;
+.background_img {
+  width: 706rpx;
+  height: 302rpx;
+  position: absolute;
+  left: 20rpx;
 }
-
 
 .task_revenue {
   font-size: 30rpx;
@@ -95,7 +94,7 @@
 }
 
 .task_mon {
-    margin-left: 300rpx;
+  margin-left: 300rpx;
 }
 
 .money_logo {
@@ -113,7 +112,7 @@
   color: white;
   line-height: 70rpx;
   opacity: 0.9;
-    float: left;
+  float: left;
 }
 
 .arrow_img {
@@ -124,9 +123,9 @@
   opacity: 0.9;
 }
 
-.today_part{
-    float: left;
-    width: 50%;
+.today_part {
+  float: left;
+  width: 50%;
 }
 
 .today_revenue {
@@ -149,8 +148,8 @@
   float: left;
 }
 
-.today{
-    text-align: center;
+.today {
+  text-align: center;
 }
 
 .today_num {
@@ -169,9 +168,9 @@
   left: 374rpx;
 }
 
-.all_part{
-    width: 50%;
-    float: left;
+.all_part {
+  width: 50%;
+  float: left;
 }
 
 .all_revenve {
@@ -292,7 +291,7 @@
 .button3 {
   float: left;
   min-width: 118rpx;
-  width:auto; 
+  width: auto;
   height: 54rpx;
   border-radius: 27px;
   background: #fd8c74;
@@ -314,7 +313,7 @@
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   line-height: 54rpx;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .line {
@@ -337,14 +336,16 @@
   height: 38rpx;
   background-color: #f4f4f4;
 }
-.kf{
+
+.kf {
   height: 80%;
-  bottom:15%;
-  right:20rpx;
+  bottom: 15%;
+  right: 20rpx;
   width: 1px;
-  position:fixed;
+  position: fixed;
 }
-.kf button{
+
+.kf button {
   right: 0;
   opacity: 0;
   border: none;

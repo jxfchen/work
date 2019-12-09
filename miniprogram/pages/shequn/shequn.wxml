@@ -1,0 +1,13 @@
+<view class='mo-list'>
+  <view class='mo-item' bindtap='clk' data-id='{{item.id}}' wx:for="{{list}}" wx:key="list">
+    <view class='imgShow'>
+      <image src='{{url}}/{{item.cover_img}}' mode='widthFix'></image>
+    </view>
+    <view class='news-goods-info flex-wrap'>
+      <view>
+        <view class='title'>{{item.title}}</view>
+        <view class='tx'>{{item.description}}</view>
+      </view>
+    </view>
+  </view>
+</view>

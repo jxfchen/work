@@ -13,14 +13,14 @@ Page({
     subclass: [],
     lid: 0
   },
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.getRestaurantList();
   },
-  getRestaurantList: function () {
+  getRestaurantList: function() {
     var that = this
     c.request("restaurant/getRestaurantType", {
 
-    }, function (res) {
+    }, function(res) {
       console.log(res.info)
       that.setData({
         list: res.info,
@@ -33,27 +33,27 @@ Page({
           page: 1,
           size: 20,
         },
-        success: function (res) {
+        success: function(res) {
           console.log(res.data.infos)
           that.setData({
             lt: res.data.infos ? res.data.infos : []
           })
         }
       })
-    }, function () {
+    }, function() {
 
     })
   },
-  onShow: function () {
+  onShow: function() {
     var that = this
-    
+
   },
   // 生命周期函数--监听页面初次渲染完成
-  onReady: function () {
-    
+  onReady: function() {
+
   },
   //点击左侧 tab ，右侧列表相应位置联动 置顶
-  switchRightTab: function (e) {
+  switchRightTab: function(e) {
     var that = this
     var index = e.currentTarget.dataset.index
     var pid = e.currentTarget.dataset.id
@@ -74,7 +74,7 @@ Page({
         page: 1,
         size: 20,
       },
-      success: function (res) {
+      success: function(res) {
         that.setData({
           lt: res.data.infos
         })

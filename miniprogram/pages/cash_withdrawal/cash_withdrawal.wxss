@@ -1,195 +1,195 @@
 .contain {
-    width: 750rpx;
-    height: 1496rpx;
-    background-color: #f4f4f4;
+  width: 750rpx;
+  height: 1496rpx;
+  background-color: #f4f4f4;
 }
 
 .main {
-    width: 750rpx;
-    height: 224rpx;
-    background: rgba(255, 255, 255, 1);
+  width: 750rpx;
+  height: 224rpx;
+  background: rgba(255, 255, 255, 1);
 }
 
 .card {
-    width: 706rpx;
-    height: 190rpx;
-    background: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 36rpx;
-    left: 22rpx;
+  width: 706rpx;
+  height: 190rpx;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 36rpx;
+  left: 22rpx;
 }
 
-.bgimg{
-    width: 706rpx;
-    height: 190rpx;
-    position: absolute;
-    left: 20rpx;
+.bgimg {
+  width: 706rpx;
+  height: 190rpx;
+  position: absolute;
+  left: 20rpx;
 }
 
 .card_text {
-    font-size: 30rpx;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    margin-top: 30rpx;
-    text-align: center;
-    opacity: 0.9;
-    padding-top: 30rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 30rpx;
+  text-align: center;
+  opacity: 0.9;
+  padding-top: 30rpx;
 }
 
 .RMB {
-    font-size: 36rpx;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    line-height: 50rpx;
-    margin: 16rpx 0 0 220rpx;
-    float: left;
-    opacity: 0.9;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 50rpx;
+  margin: 16rpx 0 0 220rpx;
+  float: left;
+  opacity: 0.9;
 }
 
 .RMB_num {
-    font-size: 60rpx;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    line-height: 64rpx;
-    opacity: 0.9;
+  font-size: 60rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 64rpx;
+  opacity: 0.9;
 }
 
 .record {
-    width: 138rpx;
-    height: 50rpx;
-    background: rgba(254, 226, 222, 1);
-    border-radius: 200rpx 0rpx 0rpx 200rpx;
-    font-size: 24rpx;
-    font-family: PingFangSC-Regular, PingFang SC;
-    font-weight: 400;
-    color: rgba(244, 92, 82, 1);
-    line-height: 50rpx;
-    text-align: center;
-    position: absolute;
-    top: 84rpx;
-    left: 580rpx;
+  width: 138rpx;
+  height: 50rpx;
+  background: rgba(254, 226, 222, 1);
+  border-radius: 200rpx 0rpx 0rpx 200rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(244, 92, 82, 1);
+  line-height: 50rpx;
+  text-align: center;
+  position: absolute;
+  top: 84rpx;
+  left: 580rpx;
 }
 
 .cash_num {
-    width: 750rpx;
-    height: 342rpx;
-    background: rgba(255, 255, 255, 1);
-    margin-top: 20rpx;
+  width: 750rpx;
+  height: 342rpx;
+  background: rgba(255, 255, 255, 1);
+  margin-top: 20rpx;
 }
 
 .cash_title {
-    font-size: 30rpx;
-    font-weight: 500;
-    color: rgba(50, 50, 50, 1);
-    padding-left: 30rpx;
-    padding-top: 40rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  color: rgba(50, 50, 50, 1);
+  padding-left: 30rpx;
+  padding-top: 40rpx;
 }
 
 .yuan100 {
-    width: 216rpx;
-    height: 70rpx;
-    background: rgba(245, 245, 245, 1);
-    border-radius: 40rpx;
-    font-size: 30rpx;
-    font-weight: 400;
-    color: rgba(50, 50, 50, 1);
-    line-height: 72rpx;
-    text-align: center;
-    margin-top: 40rpx;
-    margin-left: 25rpx;
-    float: left;
+  width: 216rpx;
+  height: 70rpx;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(50, 50, 50, 1);
+  line-height: 72rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  margin-left: 25rpx;
+  float: left;
 }
 
 .selection {
-    width: 216rpx;
-    height: 70rpx;
-    background: rgba(244, 92, 82, 1);
-    border-radius: 40rpx;
-    font-size: 30rpx;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
-    line-height: 72rpx;
-    text-align: center;
-    margin-top: 40rpx;
-    margin-left: 25rpx;
-    float: left;
+  width: 216rpx;
+  height: 70rpx;
+  background: rgba(244, 92, 82, 1);
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 72rpx;
+  text-align: center;
+  margin-top: 40rpx;
+  margin-left: 25rpx;
+  float: left;
 }
 
 .cash_way {
-    width: 750rpx;
-    height: 380rpx;
-    background: rgba(255, 255, 255, 1);
-    margin-top: 20rpx;
+  width: 750rpx;
+  height: 380rpx;
+  background: rgba(255, 255, 255, 1);
+  margin-top: 20rpx;
 }
 
 .weixin {
-    width: 40rpx;
-    height: 40rpx;
-    margin-top: 42rpx;
-    margin-left: 30rpx;
-    float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 42rpx;
+  margin-left: 30rpx;
+  float: left;
 }
 
 .weixin_text {
-    font-size: 30rpx;
-    font-weight: 400;
-    color: rgba(50, 50, 50, 1);
-    line-height: 42rpx;
-    margin-top: 40rpx;
-    margin-left: 18rpx;
-    float: left;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(50, 50, 50, 1);
+  line-height: 42rpx;
+  margin-top: 40rpx;
+  margin-left: 18rpx;
+  float: left;
 }
 
 .choice {
-    width: 36rpx;
-    height: 36rpx;
-    margin-left: 442rpx;
-    margin-top: 44rpx;
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 442rpx;
+  margin-top: 44rpx;
 }
 
 .btn {
-    width: 574rpx;
-    height: 96rpx;
-    background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
-    box-shadow: 0rpx 4rpx 14rpx 0rpx rgba(244, 99, 85, 1);
-    border-radius: 48rpx;
-    font-size: 34rpx;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 1);
-    line-height: 88rpx;
-    text-align: center;
-    margin-top: 60rpx;
-    margin-left: 88rpx;
+  width: 574rpx;
+  height: 96rpx;
+  background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
+  box-shadow: 0rpx 4rpx 14rpx 0rpx rgba(244, 99, 85, 1);
+  border-radius: 48rpx;
+  font-size: 34rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  line-height: 88rpx;
+  text-align: center;
+  margin-top: 60rpx;
+  margin-left: 88rpx;
 }
 
 .page__bd {
-    margin-left: 30rpx;
+  margin-left: 30rpx;
 }
 
 /* 单选框 */
 
 button.radio {
-    display: inline;
-    padding: 0 35rpx;
-    background: #fff;
+  display: inline;
+  padding: 0 35rpx;
+  background: #fff;
 }
 
 .radio {
-    float: left;
-    width: 216rpx;
-    height: 70rpx;
-    background: rgba(245, 245, 245, 1);
-    border-radius: 40rpx;
-    font-size: 30rpx;
-    font-weight: 400;
-    color: rgba(50, 50, 50, 1);
-    line-height: 70rpx;
-    text-align: center;
-    margin-right: 20rpx;
-    margin-top: 40rpx;
+  float: left;
+  width: 216rpx;
+  height: 70rpx;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: rgba(50, 50, 50, 1);
+  line-height: 70rpx;
+  text-align: center;
+  margin-right: 20rpx;
+  margin-top: 40rpx;
 }
 
 .rad, button.rad {
-    color: #fff;
-    background: rgba(244, 92, 82, 1);
+  color: #fff;
+  background: rgba(244, 92, 82, 1);
 }

@@ -16,7 +16,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this
     this.getOpenid();
     // this.getTaskList();
@@ -24,7 +24,7 @@ Page({
       imgurl: baseUrl.config.image_base_url
     })
     wx.getSystemInfo({
-      success: function (res) {
+      success: function(res) {
         var Y = res.windowHeight * 80 / 100;
         that.setData({
           topValue: Y
@@ -32,21 +32,21 @@ Page({
       }
     })
   },
-  getOpenid: function () {
+  getOpenid: function() {
     var self = this;
     wx.getStorage({
       key: 'openid',
-      success: function (res) {
+      success: function(res) {
         self.getMyMoney(res.data);
       }
     });
   },
-  getMyMoney: function (openid = null) {
+  getMyMoney: function(openid = null) {
     var self = this;
     if (openid != null) {
       c.request("activity/index", {
         openid: openid
-      }, function (res) {
+      }, function(res) {
         if (2000 == res.code) {
           self.setData({
             info: res,
@@ -54,16 +54,16 @@ Page({
           })
           console.log(res.info)
         }
-      }, function () {
+      }, function() {
         console.log('fail');
       })
     }
   },
-  link:function(e){
+  link: function(e) {
     var id = e.currentTarget.dataset.id
     console.log(id)
     var that = this
-    if (id == 'me/me'){
+    if (id == 'me/me') {
       wx.switchTab({
         url: '../' + id,
       })
@@ -71,11 +71,11 @@ Page({
       wx.navigateTo({
         url: '../' + id,
       })
-    } else if (id == 'yaoqing'){
+    } else if (id == 'yaoqing') {
       var openid = wx.getStorageSync('openid')
       c.request("activity/qrcode", {
         openid: openid
-      }, function (res) {
+      }, function(res) {
         console.log(res)
         var img = that.data.imgurl
         // console.log(img + res.qrcode)
@@ -83,12 +83,12 @@ Page({
           ewm: img + res.qrcode,
           hide: true
         })
-      }, function () {
+      }, function() {
         console.log('fail');
       })
     }
   },
-  close:function(e){
+  close: function(e) {
     var that = this
     that.setData({
       hide: false
@@ -97,49 +97,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

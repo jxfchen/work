@@ -1,156 +1,156 @@
 <view class="contain">
-    <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
-    </view>
-    <view class="card">
-        <image src="../../images/msg.png" mode="widthFix" class="msg" bindtap="msgList"></image>
-        <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
-            <image class="header" src="{{avatar}}"></image>
-        </navigator>
-        <view class="message">
-            <view class="message_part">
-                <view class="nikname">{{nicname==''?list.user_info.nickname:nicname}}</view>
-                <view class="attestation" bindtap="rz">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
-            </view>
-            <view class="text">{{list.user_info.invite_code}}</view>
-            <view class="copy" bindtap="copyTBL">复制邀请码</view>
-            <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
-                <view class="get">去领钱</view>
-            </navigator>
-            <image src="/images/me/v.png" class="v_img"></image>
-        </view>
-        <view class="money">
-            <view class="RMB">￥</view>
-            <view class="money_num">{{list.money_info.single_invest}}</view>
-            <view class="RMB2">￥</view>
-            <view class="money_num2">{{list.money_info.team_invest}}</view>
-            <image src="/images/me/know.png" class="know_img"></image>
-        </view>
-        <view class="personal_text">个人推单总收益</view>
-        <view class="separate"></view>
-        <view class="team_text">团队贡献收益</view>
-    </view>
-
-    <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
-        <view class="details">
-            <image src="/images/me/details.png" class="details_img"></image>
-            <view class="details_text">
-                收益明细
-            </view>
-        </view>
+  <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+  </view>
+  <view class="card">
+    <image src="../../images/msg.png" mode="widthFix" class="msg" bindtap="msgList"></image>
+    <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
+      <image class="header" src='{{avatar==""?list.user_info.avatarurl:avatar}}'></image>
     </navigator>
-    <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
-        <view class="record">
-            <image class="record_img" src="/images/me/record.png"></image>
-            <view class="record_text">
-                提现记录
-            </view>
-        </view>
-    </navigator>
-    <view bindtap="ewm" class="invite">
-        <image src="/images/me/invite.png" class="invite_img"></image>
-        <view class="invite_text">
-            邀请经理
-        </view>
+    <view class="message">
+      <view class="message_part">
+        <view class="nikname">{{nicname==''?list.user_info.nickname:nicname}}</view>
+        <view class="attestation" bindtap="rz">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+      </view>
+      <view class="text">{{list.user_info.invite_code}}</view>
+      <view class="copy" bindtap="copyTBL">复制邀请码</view>
+      <navigator url="/pages/cash_withdrawal/cash_withdrawal?title=cash_withdrawal" hover-class="navigator-hover">
+        <view class="get">去领钱</view>
+      </navigator>
+      <image src="/images/me/v.png" class="v_img"></image>
     </view>
-    <view class="treasure_chest">
-        开宝箱
+    <view class="money">
+      <view class="RMB">￥</view>
+      <view class="money_num">{{list.money_info.single_invest}}</view>
+      <view class="RMB2">￥</view>
+      <view class="money_num2">{{list.money_info.team_invest}}</view>
+      <image src="/images/me/know.png" class="know_img"></image>
+    </view>
+    <view class="personal_text">个人推单总收益</view>
+    <view class="separate"></view>
+    <view class="team_text">团队贡献收益</view>
+  </view>
+
+  <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
+    <view class="details">
+      <image src="/images/me/details.png" class="details_img"></image>
+      <view class="details_text">
+        收益明细
+      </view>
+    </view>
+  </navigator>
+  <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
+    <view class="record">
+      <image class="record_img" src="/images/me/record.png"></image>
+      <view class="record_text">
+        提现记录
+      </view>
+    </view>
+  </navigator>
+  <view bindtap="ewm" class="invite">
+    <image src="/images/me/invite.png" class="invite_img"></image>
+    <view class="invite_text">
+      邀请经理
+    </view>
+  </view>
+  <view class="treasure_chest">
+    开宝箱
+  </view>
+
+  <view class="push_team">
+    <image src="/images/me/system.png" class="push_img"></image>
+    <view class="push_text">推客团队系统</view>
+    <view class="push_text2">（团队推单帮我赚钱）</view>
+    <view style="margin-top:50rpx;overflow:hidden">
+      <image class="team_img" src="/images/me/team.png"></image>
+      <navigator url="/pages/push_team/push_team?title=push_team" hover-class="navigator-hover">
+        <view class="list_text">我的推客团队</view>
+        <image src="/images/me/arrow.png" class="arrow_image"></image>
+      </navigator>
+    </view>
+  </view>
+
+
+  <view class="tool">
+    <image src="/images/me/system.png" class="push_img"></image>
+    <view class="push_text">我的工具</view>
+    <view class="pushbox">
+      <view class="boxcen" data-id="getGuide" bindtap="guide">
+        <image class="guide_img" src="/images/me/guide.png"></image>
+        <view class="guide_text">新手指导</view>
+        <view class="guide_text2" style="">快速上手</view>
+      </view>
+
+      <view class="boxcen" data-id="getPusherrule" bindtap="guide">
+        <image class="guide_img" src="/images/me/rule.png"></image>
+        <view class="guide_text">推客规则</view>
+        <view class="guide_text2">玩转规则</view>
+      </view>
+
+      <view class="boxcen" bindtap="shequn">
+        <image class="guide_img" src="/images/me/activity.png"></image>
+        <view class="guide_text">社群活动</view>
+        <view class="guide_text2">线上线下一起来</view>
+      </view>
+
+      <view class="boxcen" data-id="getBusinessCollege" bindtap="guide">
+        <image class="guide_img" src="/images/me/school.png"></image>
+        <view class="guide_text">商学院</view>
+        <view class="guide_text2">赚钱秘籍</view>
+      </view>
+
+      <view class="boxcen">
+        <image class="guide_img" src="/images/me/service.png"></image>
+        <button class="guide_text" open-type="contact">专属客服</button>
+        <!-- <view class="guide_text">专属客服</view> -->
+        <view class="guide_text2">来，交个朋友</view>
+      </view>
+      <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
+        <view class="boxcen">
+          <image class="guide_img" src="/images/me/setup.png"></image>
+          <view class="guide_text">设置</view>
+          <view class="guide_text2">基础设置</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="bottom">
+    <image src="/images/me/hotquestion.png" class="push_img"></image>
+    <view class="bottom_title">热门问题</view>
+    <view class="list1">
+      <image class="list_img" src="/images/me/team.png"></image>
+      <view style="float:left;">
+        <view class="bottom_tit">常见问题？</view>
+        <view class="bottom_tit2">"如何提现"、"维护收益是什么"，如何操作？</view>
+      </view>
+      <image src="/images/me/arrow.png" class="bottom_arrow"></image>
+      <view class="bottom_line"></view>
     </view>
 
-    <view class="push_team">
-        <image src="/images/me/system.png" class="push_img"></image>
-        <view class="push_text">推客团队系统</view>
-        <view class="push_text2">（团队推单帮我赚钱）</view>
-        <view style="margin-top:50rpx;overflow:hidden">
-            <image class="team_img" src="/images/me/team.png"></image>
-            <navigator url="/pages/push_team/push_team?title=push_team" hover-class="navigator-hover">
-                <view class="list_text">我的推客团队</view>
-                <image src="/images/me/arrow.png" class="arrow_image"></image>
-            </navigator>
-        </view>
+
+    <view class="list1">
+      <image style="margin-top:64rpx;" class="list_img" src="/images/me/team.png"></image>
+      <view style="float:left;">
+        <view style="margin-top:32rpx;" class="bottom_tit">操作手册</view>
+        <view class="bottom_tit2">如何完成第一笔推单？</view>
+      </view>
+      <image src="/images/me/arrow.png" class="bottom_arrow2"></image>
+      <view class="bottom_line"></view>
     </view>
 
-
-    <view class="tool">
-        <image src="/images/me/system.png" class="push_img"></image>
-        <view class="push_text">我的工具</view>
-        <view class="pushbox">
-            <view class="boxcen" data-id="getGuide" bindtap="guide">
-                <image class="guide_img" src="/images/me/guide.png"></image>
-                <view class="guide_text">新手指导</view>
-                <view class="guide_text2" style="">快速上手</view>
-            </view>
-
-            <view class="boxcen" data-id="getPusherrule" bindtap="guide">
-                <image class="guide_img" src="/images/me/rule.png"></image>
-                <view class="guide_text">推客规则</view>
-                <view class="guide_text2">玩转规则</view>
-            </view>
-
-            <view class="boxcen">
-                <image class="guide_img" src="/images/me/activity.png"></image>
-                <view class="guide_text">社群活动</view>
-                <view class="guide_text2">线上线下一起来</view>
-            </view>
-
-            <view class="boxcen" data-id="getBusinessCollege" bindtap="guide">
-                <image class="guide_img" src="/images/me/school.png"></image>
-                <view class="guide_text">商学院</view>
-                <view class="guide_text2">赚钱秘籍</view>
-            </view>
-
-            <view class="boxcen">
-                <image class="guide_img" src="/images/me/service.png"></image>
-                <button class="guide_text" open-type="contact">专属客服</button>
-                <!-- <view class="guide_text">专属客服</view> -->
-                <view class="guide_text2">来，交个朋友</view>
-            </view>
-            <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
-                <view class="boxcen">
-                    <image class="guide_img" src="/images/me/setup.png"></image>
-                    <view class="guide_text">设置</view>
-                    <view class="guide_text2">基础设置</view>
-                </view>
-            </navigator>
-        </view>
+    <view class="list1" bindtap="guide" data-id="getDiffPushSafeguard">
+      <image class="list_img" style="margin-top:64rpx;" src="/images/me/team.png"></image>
+      <view style="float:left;">
+        <view style="margin-top:32rpx;" class="bottom_tit">推单收益和维护收益的区别？</view>
+        <view class="bottom_tit2">点击看详情</view>
+      </view>
+      <image src="/images/me/arrow.png" class="bottom_arrow2"></image>
     </view>
-
-    <view class="bottom">
-        <image src="/images/me/hotquestion.png" class="push_img"></image>
-        <view class="bottom_title">热门问题</view>
-        <view class="list1">
-            <image class="list_img" src="/images/me/team.png"></image>
-            <view style="float:left;">
-                <view class="bottom_tit">常见问题？</view>
-                <view class="bottom_tit2">"如何提现"、"维护收益是什么"，如何操作？</view>
-            </view>
-            <image src="/images/me/arrow.png" class="bottom_arrow"></image>
-            <view class="bottom_line"></view>
-        </view>
-
-
-        <view class="list1">
-            <image style="margin-top:64rpx;" class="list_img" src="/images/me/team.png"></image>
-            <view style="float:left;">
-                <view style="margin-top:32rpx;" class="bottom_tit">操作手册</view>
-                <view class="bottom_tit2">如何完成第一笔推单？</view>
-            </view>
-            <image src="/images/me/arrow.png" class="bottom_arrow2"></image>
-            <view class="bottom_line"></view>
-        </view>
-
-        <view class="list1" bindtap="guide" data-id="getDiffPushSafeguard">
-            <image class="list_img" style="margin-top:64rpx;" src="/images/me/team.png"></image>
-            <view style="float:left;">
-                <view style="margin-top:32rpx;" class="bottom_tit">推单收益和维护收益的区别？</view>
-                <view class="bottom_tit2">点击看详情</view>
-            </view>
-            <image src="/images/me/arrow.png" class="bottom_arrow2"></image>
-        </view>
-    </view>
+  </view>
 </view>
 <view class="ewm" wx:if="{{hide == true}}">
-    <view class="ewm-box">
-        <image src="{{ewm}}" mode="widthFix" class="ewm_img"></image>
-        <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
-    </view>
+  <view class="ewm-box">
+    <image src="{{ewm}}" mode="widthFix" class="ewm_img"></image>
+    <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
+  </view>
 </view>

@@ -8,20 +8,13 @@
  * Copyright (c) 2018 Daniel Eden
  */
 
-
-
 @keyframes bounce {
-  from,
-  20%,
-  53%,
-  80%,
-  to {
+  from, 20%, 53%, 80%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transform: translate3d(0, 0, 0);
   }
 
-  40%,
-  43% {
+  40%, 43% {
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     transform: translate3d(0, -30px, 0);
   }
@@ -42,14 +35,11 @@
 }
 
 @keyframes flash {
-  from,
-  50%,
-  to {
+  from, 50%, to {
     opacity: 1;
   }
 
-  25%,
-  75% {
+  25%, 75% {
     opacity: 0;
   }
 }
@@ -57,7 +47,6 @@
 .flash {
   animation-name: flash;
 }
-
 
 @keyframes pulse {
   from {
@@ -76,7 +65,6 @@
 .pulse {
   animation-name: pulse;
 }
-
 
 @keyframes rubberBand {
   from {
@@ -112,25 +100,16 @@
   animation-name: rubberBand;
 }
 
-
 @keyframes shake {
-  from,
-  to {
+  from, to {
     transform: translate3d(0, 0, 0);
   }
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
+  10%, 30%, 50%, 70%, 90% {
     transform: translate3d(-10px, 0, 0);
   }
 
-  20%,
-  40%,
-  60%,
-  80% {
+  20%, 40%, 60%, 80% {
     transform: translate3d(10px, 0, 0);
   }
 }
@@ -138,7 +117,6 @@
 .shake {
   animation-name: shake;
 }
-
 
 @keyframes headShake {
   0% {
@@ -171,7 +149,6 @@
   animation-name: headShake;
 }
 
-
 @keyframes swing {
   20% {
     transform: rotate3d(0, 0, 1, 15deg);
@@ -199,27 +176,20 @@
   animation-name: swing;
 }
 
-
 @keyframes tada {
   from {
     transform: scale3d(1, 1, 1);
   }
 
-  10%,
-  20% {
+  10%, 20% {
     transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
 
-  30%,
-  50%,
-  70%,
-  90% {
+  30%, 50%, 70%, 90% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
 
-  40%,
-  60%,
-  80% {
+  40%, 60%, 80% {
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
 
@@ -231,8 +201,6 @@
 .tada {
   animation-name: tada;
 }
-
-
 
 @keyframes wobble {
   from {
@@ -269,9 +237,7 @@
 }
 
 @keyframes jello {
-  from,
-  11.1%,
-  to {
+  from, 11.1%, to {
     transform: translate3d(0, 0, 0);
   }
 
@@ -337,15 +303,8 @@
   animation-timing-function: ease-in-out;
 }
 
-
-
 @keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
+  from, 20%, 40%, 60%, 80%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -382,14 +341,8 @@
   animation-name: bounceIn;
 }
 
-
-
 @keyframes bounceInDown {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
+  from, 60%, 75%, 90%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -420,13 +373,8 @@
   animation-name: bounceInDown;
 }
 
-
 @keyframes bounceInLeft {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
+  from, 60%, 75%, 90%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -457,14 +405,8 @@
   animation-name: bounceInLeft;
 }
 
-
-
 @keyframes bounceInRight {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
+  from, 60%, 75%, 90%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -495,14 +437,8 @@
   animation-name: bounceInRight;
 }
 
-
-
 @keyframes bounceInUp {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
+  from, 60%, 75%, 90%, to {
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -533,15 +469,12 @@
   animation-name: bounceInUp;
 }
 
-
-
 @keyframes bounceOut {
   20% {
     transform: scale3d(0.9, 0.9, 0.9);
   }
 
-  50%,
-  55% {
+  50%, 55% {
     opacity: 1;
     transform: scale3d(1.1, 1.1, 1.1);
   }
@@ -557,15 +490,12 @@
   animation-name: bounceOut;
 }
 
-
-
 @keyframes bounceOutDown {
   20% {
     transform: translate3d(0, 10px, 0);
   }
 
-  40%,
-  45% {
+  40%, 45% {
     opacity: 1;
     transform: translate3d(0, -20px, 0);
   }
@@ -579,7 +509,6 @@
 .bounceOutDown {
   animation-name: bounceOutDown;
 }
-
 
 @keyframes bounceOutLeft {
   20% {
@@ -597,8 +526,6 @@
   animation-name: bounceOutLeft;
 }
 
-
-
 @keyframes bounceOutRight {
   20% {
     opacity: 1;
@@ -615,15 +542,12 @@
   animation-name: bounceOutRight;
 }
 
-
-
 @keyframes bounceOutUp {
   20% {
     transform: translate3d(0, -10px, 0);
   }
 
-  40%,
-  45% {
+  40%, 45% {
     opacity: 1;
     transform: translate3d(0, 20px, 0);
   }
@@ -638,8 +562,6 @@
   animation-name: bounceOutUp;
 }
 
-
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -653,8 +575,6 @@
 .fadeIn {
   animation-name: fadeIn;
 }
-
-
 
 @keyframes fadeInDown {
   from {
@@ -672,8 +592,6 @@
   animation-name: fadeInDown;
 }
 
-
-
 @keyframes fadeInDownBig {
   from {
     opacity: 0;
@@ -689,8 +607,6 @@
 .fadeInDownBig {
   animation-name: fadeInDownBig;
 }
-
-
 
 @keyframes fadeInLeft {
   from {
@@ -708,8 +624,6 @@
   animation-name: fadeInLeft;
 }
 
-
-
 @keyframes fadeInLeftBig {
   from {
     opacity: 0;
@@ -725,8 +639,6 @@
 .fadeInLeftBig {
   animation-name: fadeInLeftBig;
 }
-
-
 
 @keyframes fadeInRight {
   from {
@@ -744,8 +656,6 @@
   animation-name: fadeInRight;
 }
 
-
-
 @keyframes fadeInRightBig {
   from {
     opacity: 0;
@@ -761,8 +671,6 @@
 .fadeInRightBig {
   animation-name: fadeInRightBig;
 }
-
-
 
 @keyframes fadeInUp {
   from {
@@ -780,8 +688,6 @@
   animation-name: fadeInUp;
 }
 
-
-
 @keyframes fadeInUpBig {
   from {
     opacity: 0;
@@ -798,8 +704,6 @@
   animation-name: fadeInUpBig;
 }
 
-
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -813,8 +717,6 @@
 .fadeOut {
   animation-name: fadeOut;
 }
-
-
 
 @keyframes fadeOutDown {
   from {
@@ -831,8 +733,6 @@
   animation-name: fadeOutDown;
 }
 
-
-
 @keyframes fadeOutDownBig {
   from {
     opacity: 1;
@@ -847,8 +747,6 @@
 .fadeOutDownBig {
   animation-name: fadeOutDownBig;
 }
-
-
 
 @keyframes fadeOutLeft {
   from {
@@ -865,8 +763,6 @@
   animation-name: fadeOutLeft;
 }
 
-
-
 @keyframes fadeOutLeftBig {
   from {
     opacity: 1;
@@ -881,8 +777,6 @@
 .fadeOutLeftBig {
   animation-name: fadeOutLeftBig;
 }
-
-
 
 @keyframes fadeOutRight {
   from {
@@ -899,8 +793,6 @@
   animation-name: fadeOutRight;
 }
 
-
-
 @keyframes fadeOutRightBig {
   from {
     opacity: 1;
@@ -915,8 +807,6 @@
 .fadeOutRightBig {
   animation-name: fadeOutRightBig;
 }
-
-
 
 @keyframes fadeOutUp {
   from {
@@ -933,8 +823,6 @@
   animation-name: fadeOutUp;
 }
 
-
-
 @keyframes fadeOutUpBig {
   from {
     opacity: 1;
@@ -950,8 +838,6 @@
   animation-name: fadeOutUpBig;
 }
 
-
-
 @keyframes flip {
   from {
     transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
@@ -959,20 +845,17 @@
   }
 
   40% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
     animation-timing-function: ease-out;
   }
 
   50% {
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px)
-      rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
     animation-timing-function: ease-in;
   }
 
   80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0)
-      rotate3d(0, 1, 0, 0deg);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
     animation-timing-function: ease-in;
   }
 
@@ -986,8 +869,6 @@
   backface-visibility: visible;
   animation-name: flip;
 }
-
-
 
 @keyframes flipInX {
   from {
@@ -1020,8 +901,6 @@
   animation-name: flipInX;
 }
 
-
-
 @keyframes flipInY {
   from {
     transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
@@ -1053,8 +932,6 @@
   animation-name: flipInY;
 }
 
-
-
 @keyframes flipOutX {
   from {
     transform: perspective(400px);
@@ -1077,8 +954,6 @@
   backface-visibility: visible !important;
 }
 
-
-
 @keyframes flipOutY {
   from {
     transform: perspective(400px);
@@ -1100,8 +975,6 @@
   backface-visibility: visible !important;
   animation-name: flipOutY;
 }
-
-
 
 @keyframes lightSpeedIn {
   from {
@@ -1128,8 +1001,6 @@
   animation-timing-function: ease-out;
 }
 
-
-
 @keyframes lightSpeedOut {
   from {
     opacity: 1;
@@ -1145,8 +1016,6 @@
   animation-name: lightSpeedOut;
   animation-timing-function: ease-in;
 }
-
-
 
 @keyframes rotateIn {
   from {
@@ -1166,8 +1035,6 @@
   animation-name: rotateIn;
 }
 
-
-
 @keyframes rotateInDownLeft {
   from {
     transform-origin: left bottom;
@@ -1185,8 +1052,6 @@
 .rotateInDownLeft {
   animation-name: rotateInDownLeft;
 }
-
-
 
 @keyframes rotateInDownRight {
   from {
@@ -1206,8 +1071,6 @@
   animation-name: rotateInDownRight;
 }
 
-
-
 @keyframes rotateInUpLeft {
   from {
     transform-origin: left bottom;
@@ -1225,8 +1088,6 @@
 .rotateInUpLeft {
   animation-name: rotateInUpLeft;
 }
-
-
 
 @keyframes rotateInUpRight {
   from {
@@ -1246,8 +1107,6 @@
   animation-name: rotateInUpRight;
 }
 
-
-
 @keyframes rotateOut {
   from {
     transform-origin: center;
@@ -1264,8 +1123,6 @@
 .rotateOut {
   animation-name: rotateOut;
 }
-
-
 
 @keyframes rotateOutDownLeft {
   from {
@@ -1284,8 +1141,6 @@
   animation-name: rotateOutDownLeft;
 }
 
-
-
 @keyframes rotateOutDownRight {
   from {
     transform-origin: right bottom;
@@ -1302,8 +1157,6 @@
 .rotateOutDownRight {
   animation-name: rotateOutDownRight;
 }
-
-
 
 @keyframes rotateOutUpLeft {
   from {
@@ -1322,8 +1175,6 @@
   animation-name: rotateOutUpLeft;
 }
 
-
-
 @keyframes rotateOutUpRight {
   from {
     transform-origin: right bottom;
@@ -1341,23 +1192,19 @@
   animation-name: rotateOutUpRight;
 }
 
-
-
 @keyframes hinge {
   0% {
     transform-origin: top left;
     animation-timing-function: ease-in-out;
   }
 
-  20%,
-  60% {
+  20%, 60% {
     transform: rotate3d(0, 0, 1, 80deg);
     transform-origin: top left;
     animation-timing-function: ease-in-out;
   }
 
-  40%,
-  80% {
+  40%, 80% {
     transform: rotate3d(0, 0, 1, 60deg);
     transform-origin: top left;
     animation-timing-function: ease-in-out;
@@ -1374,8 +1221,6 @@
   animation-duration: 2s;
   animation-name: hinge;
 }
-
-
 
 @keyframes jackInTheBox {
   from {
@@ -1402,8 +1247,6 @@
   animation-name: jackInTheBox;
 }
 
-
-
 @keyframes rollIn {
   from {
     opacity: 0;
@@ -1420,8 +1263,6 @@
   animation-name: rollIn;
 }
 
-
-
 @keyframes rollOut {
   from {
     opacity: 1;
@@ -1437,7 +1278,6 @@
   animation-name: rollOut;
 }
 
-
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -1452,8 +1292,6 @@
 .zoomIn {
   animation-name: zoomIn;
 }
-
-
 
 @keyframes zoomInDown {
   from {
@@ -1473,8 +1311,6 @@
   animation-name: zoomInDown;
 }
 
-
-
 @keyframes zoomInLeft {
   from {
     opacity: 0;
@@ -1492,8 +1328,6 @@
 .zoomInLeft {
   animation-name: zoomInLeft;
 }
-
-
 
 @keyframes zoomInRight {
   from {
@@ -1513,8 +1347,6 @@
   animation-name: zoomInRight;
 }
 
-
-
 @keyframes zoomInUp {
   from {
     opacity: 0;
@@ -1532,8 +1364,6 @@
 .zoomInUp {
   animation-name: zoomInUp;
 }
-
-
 
 @keyframes zoomOut {
   from {
@@ -1554,8 +1384,6 @@
   animation-name: zoomOut;
 }
 
-
-
 @keyframes zoomOutDown {
   40% {
     opacity: 1;
@@ -1575,8 +1403,6 @@
   animation-name: zoomOutDown;
 }
 
-
-
 @keyframes zoomOutLeft {
   40% {
     opacity: 1;
@@ -1594,8 +1420,6 @@
   animation-name: zoomOutLeft;
 }
 
-
-
 @keyframes zoomOutRight {
   40% {
     opacity: 1;
@@ -1612,8 +1436,6 @@
 .zoomOutRight {
   animation-name: zoomOutRight;
 }
-
-
 
 @keyframes zoomOutUp {
   40% {
@@ -1634,8 +1456,6 @@
   animation-name: zoomOutUp;
 }
 
-
-
 @keyframes slideInDown {
   from {
     transform: translate3d(0, -100%, 0);
@@ -1650,8 +1470,6 @@
 .slideInDown {
   animation-name: slideInDown;
 }
-
-
 
 @keyframes slideInLeft {
   from {
@@ -1668,8 +1486,6 @@
   animation-name: slideInLeft;
 }
 
-
-
 @keyframes slideInRight {
   from {
     transform: translate3d(100%, 0, 0);
@@ -1684,8 +1500,6 @@
 .slideInRight {
   animation-name: slideInRight;
 }
-
-
 
 @keyframes slideInUp {
   from {
@@ -1702,8 +1516,6 @@
   animation-name: slideInUp;
 }
 
-
-
 @keyframes slideOutDown {
   from {
     transform: translate3d(0, 0, 0);
@@ -1718,8 +1530,6 @@
 .slideOutDown {
   animation-name: slideOutDown;
 }
-
-
 
 @keyframes slideOutLeft {
   from {
@@ -1736,8 +1546,6 @@
   animation-name: slideOutLeft;
 }
 
-
-
 @keyframes slideOutRight {
   from {
     transform: translate3d(0, 0, 0);
@@ -1752,8 +1560,6 @@
 .slideOutRight {
   animation-name: slideOutRight;
 }
-
-
 
 @keyframes slideOutUp {
   from {

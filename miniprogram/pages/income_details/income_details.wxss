@@ -22,9 +22,10 @@
   font-weight: 500;
   padding-top: 27rpx;
 }
-.close_btn{
+
+.close_btn {
   width: 34rpx;
-  height:34rpx;
+  height: 34rpx;
   float: right;
   margin-right: 32rpx;
 }
@@ -37,11 +38,11 @@
   border-radius: 15rpx;
 }
 
-.bgimg{
-    width: 706rpx;
-    height: 302rpx;
-    position: absolute;
-    left: 20rpx;
+.bgimg {
+  width: 706rpx;
+  height: 302rpx;
+  position: absolute;
+  left: 20rpx;
 }
 
 .card_tit {
@@ -293,7 +294,8 @@
   height: 166rpx;
   background-color: #f4f4f4;
 }
-.part{
-    background-color: #f4f4f4;
-    min-height: 1000rpx;
+
+.part {
+  background-color: #f4f4f4;
+  min-height: 1000rpx;
 }

@@ -1,7 +1,18 @@
 <view class="top">
-  <view class="clk" bindtap="click1tap">站内公告</view>
-  <view class="" bindtap="click2tap">我的消息</view>
+  <view class='{{status==1?"clk":""}}' bindtap="click1tap">站内公告</view>
+  <view class='{{status==2?"clk":""}}' bindtap="click2tap">我的消息</view>
 </view>
-<view class="list-box">
-  <view wx:for="{{lists}}" wx:key="index">{{item.name}}<text>{{item.add_time}}</text></view>
+<view class="list-box" style='{{status==1?"display:block":"display:none"}}'>
+  <view wx:for="{{list}}" wx:key="index">
+    <navigator url="/pages/msg_content/msg_content?title=msg_content1&id={{item.id}}&title={{item.title}}&page={{page1}}" hover-class="navigator-hover">{{item.title}}
+      <text>{{item.create_time}}</text>
+    </navigator>
+  </view>
+</view>
+<view class="list-box" style='{{status==2?"display:block":"display:none"}}'>
+  <view wx:for="{{lists}}" wx:key="index">
+    <navigator url="/pages/msg_content/msg_content?title=msg_content2&id={{item.message_id}}&title={{item.name}}&page={{page2}}" hover-class="navigator-hover">{{item.name}}
+      <text>{{item.add_time}}</text>
+    </navigator>
+  </view>
 </view>

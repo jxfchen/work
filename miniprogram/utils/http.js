@@ -29,7 +29,7 @@ function requestLoading(url, params, message, success, fail) {
       'content-type': 'application/x-www-form-urlencoded'
     },
     method: 'post',
-    success: function (res) {
+    success: function(res) {
       //console.log(res.data)
       wx.hideNavigationBarLoading()
       if (message != "") {
@@ -42,14 +42,14 @@ function requestLoading(url, params, message, success, fail) {
       }
 
     },
-    fail: function (res) {
+    fail: function(res) {
       wx.hideNavigationBarLoading()
       if (message != "") {
         wx.hideLoading()
       }
       fail()
     },
-    complete: function (res) {
+    complete: function(res) {
 
     },
   })

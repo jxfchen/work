@@ -23,4 +23,3 @@ module.exports = {
   formatTime: formatTime,
   isMobile: isMobile
 }
-
