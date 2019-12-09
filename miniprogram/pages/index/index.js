@@ -230,6 +230,7 @@ Page({
       page: _this.data.pageNo,
       size: "6",
     }, function (res) {
+      console.log(res)
       if (res.info == null || res.info.length == 0) {
         _this.setData({
           hasMore: false,

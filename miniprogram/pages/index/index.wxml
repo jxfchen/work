@@ -105,7 +105,7 @@
                 <view class="nicname">{{item.author}}</view>
               </view>
               <view class="r">
-                <view class="num">{{item.like_times}}</view>
+                <view class="num">{{item.commend_times}}</view>
                 <image src="/images/like.png" class="fabulous"></image>
               </view>
             </view>
@@ -130,7 +130,7 @@
                 <view class="nicname">{{item.author}}</view>
               </view>
               <view class="r">
-                <view class="num">{{item.like_times}}</view>
+                <view class="num">{{item.commend_times}}</view>
                 <!-- <image src="/images/like1.png" class="fabulous1"></image> -->
                 <image src="/images/like.png" class="fabulous"></image>
               </view>

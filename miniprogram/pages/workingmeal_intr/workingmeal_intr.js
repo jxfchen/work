@@ -9,6 +9,8 @@ Page({
     pushList: [],
     id: undefined,
     status: "true",
+      info: null,
+      hide: false,
   },
   ellipsisbtn: function() {
     var status = this.data.status;
@@ -51,12 +53,75 @@ Page({
     }, function() {
       console.log('fail');
     })
+    
   },
   home: function() {
     wx.switchTab({
       url: '../index/index',
     })
   },
+    getOpenid: function () {
+        var self = this;
+        wx.getStorage({
+            key: 'openid',
+            success: function (res) {
+                self.getMyMoney(res.data);
+            }
+        });
+    },
+    getMyMoney: function (openid = null) {
+        var self = this;
+        if (openid != null) {
+            c.request("activity/index", {
+                openid: openid
+            }, function (res) {
+                if (2000 == res.code) {
+                    self.setData({
+                        info: res,
+                        msg: res.info
+                    })
+                    console.log(res.info)
+                }
+            }, function () {
+                console.log('fail');
+            })
+        }
+    },
+    link: function (e) {
+        var id = e.currentTarget.dataset.id
+        console.log(id)
+        var that = this
+        if (id == 'me/me') {
+            wx.switchTab({
+                url: '../' + id,
+            })
+        } else if (id == 'sheetlist/sheetlist') {
+            wx.navigateTo({
+                url: '../' + id,
+            })
+        } else if (id == 'yaoqing') {
+            var openid = wx.getStorageSync('openid')
+            c.request("activity/qrcode", {
+                openid: openid
+            }, function (res) {
+                console.log(res)
+                var img = that.data.imgurl
+                // console.log(img + res.qrcode)
+                that.setData({
+                    ewm: img + res.qrcode,
+                    hide: true
+                })
+            }, function () {
+                console.log('fail');
+            })
+        }
+    },
+    close: function (e) {
+        var that = this
+        that.setData({
+            hide: false
+        })
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

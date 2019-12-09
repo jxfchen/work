@@ -50,9 +50,9 @@ Page({
   },
   geDetailInfo: function(id) {
     let _this = this;
-    wx.showLoading({
-      title: '加载中',
-    })
+    // wx.showLoading({
+    //   title: '加载中',
+    // })
     console.log(id)
     console.log(_this.data.openid)
     c.request("servicedialy/getDetailById", {
@@ -100,6 +100,9 @@ Page({
   clickLike: function() {
     let _this = this;
     if (_this.data.openid != '') {
+      console.log(_this.data.id)
+      console.log(_this.data.openid)
+      console.log(_this.data.isCommend ? 2 : 1)
       c.request("servicedialy/updateCommendTimes", {
         id: _this.data.id,
         openid: _this.data.openid,
