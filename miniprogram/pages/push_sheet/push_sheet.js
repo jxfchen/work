@@ -27,8 +27,9 @@ Page({
             name: "我申请为项目合伙人",
             id: 2,
         }],
-        pricesum:0,
-        peoplenum:0,
+        pricesum: 0,
+        peoplenum: 0,
+        status: true,
     },
 
     swiperChange(e) {
@@ -112,14 +113,14 @@ Page({
         }
         console.log(arr1)
         var pricesum = this.data.pricesum;
-        pricesum=0;
-        for(var i=0;i<arr1.length;i++){
-            pricesum+=arr1[i];
+        pricesum
+        for (var i = 0; i < arr1.length; i++) {
+            pricesum += arr1[i];
         }
         that.setData({
             pricesum: pricesum
         })
-        console.log("pricesum"+pricesum)
+        console.log("pricesum" + pricesum)
     },
     //就餐人数
     numberInput: function(e) {
@@ -349,25 +350,42 @@ Page({
         var list = this.data.list;
         var pricesum = this.data.pricesum;
         var peoplenum = this.data.peoplenum;
-        var sum = pricesum * peoplenum*30;
-        console.log(pricesum + "++++++++++" + peoplenum)
-        console.log("sum"+sum)
+        var sum = pricesum * peoplenum * 30;
+        var status = this.data.status;
         if (this.data.role_id == 1) {
+            if (list.is_start_infomation == 0) {
+                status = false;
+                that.setData({
+                    status: status,
+                })
+            } else {
+                status = true;
+                that.setData({
+                    status: status,
+                })
+                if (sum < 100000) {
+                    that.setData({
+                        min_profit: 50
+                    })
+                } else {
+                    that.setData({
+                        min_profit: 100
+                    })
+                }
+            }
             if (list.is_pusher_rate == 1) {
                 that.setData({
-                    min_profit: list.pusher_profit / 100 * sum,
-                    max_profit: list.pusher_profit / 100 + 0.1 * sum,
+                    max_profit: list.pusher_profit / 100 * sum,
                 })
             } else {
                 that.setData({
-                    min_profit: list.pusher_profit,
-                    max_profit: list.pusher_profit + 10,
+                    max_profit: list.pusher_profit,
                 })
             }
         } else {
             if (list.is_partner_rate == 1) {
                 that.setData({
-                    min_profit: list.partner_min_profit / 100* sum,
+                    min_profit: list.partner_min_profit / 100 * sum,
                     max_profit: list.partner_max_profit / 100 * sum,
                 })
             } else {

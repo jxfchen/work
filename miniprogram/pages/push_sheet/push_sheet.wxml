@@ -127,10 +127,10 @@
         <image src="/images/check.png" class="check_right"></image>
       </view>
       <view>
-        <view class="recommend_title1">信心真实性 有效性验证</view>
+        <view class="recommend_title1">信息真实性 有效性验证</view>
         <view class="recommend_title2">订单成功</view>
       </view>
-      <view class="part3">
+      <view class="part3" style='{{status==true?"display:block":"display:none"}}'>
         <view class="recommend_btn1">
           <text class="RMB">￥</text>
           <text class="RMB_num">{{min_profit}}</text>
