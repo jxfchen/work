@@ -16,6 +16,7 @@ Page({
     phone: '',
     hiddenmodalput: true,
     hiddenmodalphone: true,
+      avaurl:'',
   },
   //昵称
   modalinput: function() {
@@ -204,6 +205,8 @@ Page({
     var openid = "";
     var that = this;
     var list = this.data.list;
+      var avaurl = this.data.avaurl;
+    var  avatarurl = wx.getStorageSync('avatarurl');
     wx.getStorage({
       key: 'openid',
       success: function(res) {
@@ -225,14 +228,21 @@ Page({
           console.log(res)
           that.setData({
             info: res.info,
-            avatar: baseUrl.config.image_base_url + res.info.user_info.avatarurl,
-            nicname: res.info.user_info.nicheng,
           });
           var list_str = JSON.stringify(res.info);
           list = JSON.parse(list_str);
           date.list = list;
           self.setData(date);
           console.log(list);
+            if (avatarurl == list.user_info.avatarurl){
+                that.setData({
+                    avaurl: list.user_info.avatarurl
+                })
+            }else{
+                that.setData({
+                    avaurl: baseUrl.config.image_base_url +  list.user_info.avatarurl
+                })
+            }
         }, function() {
           console.log('fail');
         })
@@ -243,7 +253,6 @@ Page({
 
     });
     this.setData(date);
-
 
   },
   // 切换头像

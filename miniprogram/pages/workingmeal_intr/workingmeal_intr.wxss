@@ -240,3 +240,12 @@
   float: left;
   margin: 30rpx 60rpx 28rpx 0rpx;
 }
+.contact_btn{
+    bottom:30rpx;
+  opacity: 0;
+  border: none;
+  width: 54rpx;
+  height: 54rpx;
+  position: fixed;
+left: 170rpx;
+}
