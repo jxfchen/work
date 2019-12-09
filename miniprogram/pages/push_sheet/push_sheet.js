@@ -383,14 +383,32 @@ Page({
                 })
             }
         } else {
+            if (list.is_start_infomation == 0) {
+                status = false;
+                that.setData({
+                    status: status,
+                })
+            } else {
+                status = true;
+                that.setData({
+                    status: status,
+                })
+                if (sum < 100000) {
+                    that.setData({
+                        min_profit: 50
+                    })
+                } else {
+                    that.setData({
+                        min_profit: 100
+                    })
+                }
+            }
             if (list.is_partner_rate == 1) {
                 that.setData({
-                    min_profit: list.partner_min_profit / 100 * sum,
                     max_profit: list.partner_max_profit / 100 * sum,
                 })
             } else {
                 that.setData({
-                    min_profit: list.partner_min_profit,
                     max_profit: list.partner_max_profit,
                 })
             }

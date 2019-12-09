@@ -31,6 +31,8 @@
   margin-left: 256rpx;
   padding-top: 30rpx;
   line-height: 42rpx;
+  position: relative;
+
 }
 
 .question_mark {
@@ -43,16 +45,23 @@
 
 .RMB_num {
   font-size: 60rpx;
+  position: relative;
   font-weight: 500;
   color: rgba(255, 255, 255, 1);
   line-height: 54rpx;
   text-align: center;
 }
-
+.card view{
+  z-index: 100;
+}
 .card_main {
   margin-top: 26rpx;
+  position: relative;
 }
-
+.card-image{
+  position: absolute;
+  width: 690rpx;
+}
 .transaction_orders {
   float: left;
 }

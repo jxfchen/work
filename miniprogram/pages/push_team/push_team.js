@@ -79,6 +79,15 @@ Page({
           date.melist = melist;
           self.setData(date);
           console.log(melist);
+          var tx = wx.getStorageSync('avatarurl')
+          if (res.info.user_info.avatarurl == tx) {
+            wx.setStorageSync('avatar', res.info.user_info.avatarurl)
+          } else {
+            wx.getStorageSync('avatar')
+          }
+          that.setData({
+            avatar: wx.getStorageSync('avatar')
+          });
         }, function() {
           console.log('fail');
         })

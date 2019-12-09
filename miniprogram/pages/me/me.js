@@ -134,6 +134,15 @@ Page({
           date.list = list;
           self.setData(date);
           console.log(res);
+          var tx = wx.getStorageSync('avatarurl')
+          if (res.info.user_info.avatarurl == tx){
+            wx.setStorageSync('avatar', res.info.user_info.avatarurl)
+          }else{
+            wx.getStorageSync('avatar')
+          }
+          that.setData({
+            avatar: wx.getStorageSync('avatar')
+          });
         }, function() {
           console.log('fail');
         })
@@ -177,6 +186,57 @@ Page({
       hasUserInfo: true
     })
 
+  },
+  saveImg: function () {
+    let that = this
+    wx.getSetting({
+      success(res) {
+        //未授权 先授权 然后保存
+        if (!res.authSetting['scope.writePhotosAlbum']) {
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success(re) {
+              that.saveToBlum();
+            }
+          })
+        } else {
+          //已授 直接调用保存到相册方法
+          wx.showModal({
+            title: '',
+            content: '保存二维码到相册',
+            confirmText: "保存",
+            cancelText: "取消",
+            success: function (res) {
+              console.log(res);
+              if (res.confirm) {
+                that.saveToBlum();
+              } else {
+                return
+              }
+            }
+          });
+        }
+      }
+    })
+  },
+  saveToBlum: function () {
+    var that = this
+    let imgUrl = that.data.ewm;
+    wx.getImageInfo({
+      src: imgUrl,
+      success: function (ret) {
+        var path = ret.path;
+        wx.saveImageToPhotosAlbum({
+          filePath: path,
+          success(result) {
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success'
+            })
+          },
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

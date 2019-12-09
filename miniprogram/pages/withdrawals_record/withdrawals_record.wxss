@@ -13,17 +13,23 @@
 .list {
   width: 750rpx;
   height: 252rpx;
-  background: rgba(255, 255, 255, 1);
   margin-top: 20rpx;
+  background: rgba(255, 255, 255, 1);
 }
-
+.ls{
+  float: right;
+  color: #999;
+  font-size: 22rpx;
+  margin-top: 53rpx;
+  margin-right: 30rpx;
+}
 .tit_logo {
   width: 8rpx;
+  float: left;
   height: 20rpx;
-  background: linear-gradient(180deg, rgba(253, 140, 116, 1) 0%, rgba(246, 103, 89, 1) 100%);
   margin-top: 60rpx;
   margin-left: 30rpx;
-  float: left;
+  background: linear-gradient(180deg, rgba(253, 140, 116, 1) 0%, rgba(246, 103, 89, 1) 100%);
 }
 
 .title {

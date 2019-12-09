@@ -353,3 +353,8 @@
   height: 152rpx;
   position: fixed;
 }
+/* .ewm{
+  background: #FF564B;
+  width: 500rpx;
+  height: 500rpx;
+} */

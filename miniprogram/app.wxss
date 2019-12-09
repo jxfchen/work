@@ -17,7 +17,11 @@
 }
 
 .ewm .ewm_img {
-  width: 300rpx;
+  top: 30rpx;
+  left: 50%;
+  width: 280rpx;
+  position: absolute;
+  margin-left: -140rpx;
 }
 
 .close {
@@ -30,8 +34,20 @@
 .ewm-box {
   top: 50%;
   left: 50%;
+  width: 400rpx;
+  height: 400rpx;
   position: absolute;
-  margin: -200rpx 0 0 -150rpx;
-  width: 300rpx;
-  height: auto;
+  border-radius: 15rpx;
+  background: rgba(254, 88, 76, .8);
+  margin: -200rpx 0 0 -200rpx;
+}
+.ewm-box text{
+  width: 100%;
+  bottom: 25rpx;
+  color: #fff;
+  display: block;
+  font-size: 24rpx;
+  position: absolute;
+  line-height: 34rpx;
+  text-align: center;
 }

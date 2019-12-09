@@ -1,17 +1,18 @@
 <view class="contain">
   <view class="separate"></view>
   <view style='{{list.account_log==""?"display:none":"display:block"}}'>
-    <block wx:for="{{list}}" wx:for-item="item" wx:key="">
+    <block wx:for="{{info}}" wx:for-item="item" wx:key="">
       <view class="list">
         <view class="tit_logo"></view>
-        <view class="title">{{item.title}}</view>
-        <view class='{{item.state=="提现成功"?"btn1":"btn2"}}'>{{item.state}}</view>
+        <view class="title">微信提现</view>
+        <view class='{{item.state=="status_name"?"btn1":"btn2"}}'>{{item.status_name}}</view>
+        <text class="ls">流水号：{{item.orderno}}</text>
         <view class="line"></view>
         <view class="left">
           <view class="time1">申请时间</view>
-          <view class="time1_num">{{item.application_time}}</view>
-          <view class="time1">到账时间</view>
-          <view class="time1_num">{{item.payment_date}}</view>
+          <view class="time1_num">{{item.create_time}}</view>
+          <!-- <view class="time1">到账时间</view>
+          <view class="time1_num">{{item.payment_date}}</view> -->
         </view>
         <view class="money">{{item.money}}元</view>
       </view>
