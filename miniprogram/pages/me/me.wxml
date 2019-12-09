@@ -117,7 +117,8 @@
   <view class="bottom">
     <image src="/images/me/hotquestion.png" class="push_img"></image>
     <view class="bottom_title">热门问题</view>
-    <view class="list1">
+
+    <view class="list1" data-id="index/getQuestionLists" bindtap="cjsc">
       <image class="list_img" src="/images/me/team.png"></image>
       <view style="float:left;">
         <view class="bottom_tit">常见问题？</view>
@@ -127,8 +128,7 @@
       <view class="bottom_line"></view>
     </view>
 
-
-    <view class="list1">
+    <view class="list1" data-id="article/getOperationManualList" bindtap="cjsc">
       <image style="margin-top:64rpx;" class="list_img" src="/images/me/team.png"></image>
       <view style="float:left;">
         <view style="margin-top:32rpx;" class="bottom_tit">操作手册</view>

@@ -53,10 +53,13 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
+    console.log(id)
+    console.log(_this.data.openid)
     c.request("servicedialy/getDetailById", {
       id: id,
       openid: _this.data.openid
     }, function(res) {
+      console.log(res)
       wx.hideLoading();
       if (2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);

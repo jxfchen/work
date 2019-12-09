@@ -1,5 +1,4 @@
 <import src="../../wxParse/wxParse.wxml" />
-<image src="{{url}}/{{info.cover_img}}" mode="widthFix" class="top_image"></image>
 <view class="top">
   <view class="nav">{{info.title}}</view>
   <view class="time">{{info.create_time}}</view>

@@ -16,8 +16,18 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    c.request("article/getDetailById", {
-      id: options.code
+    // console.log(options.code)
+    console.log(options.id)
+    if (options.code == 'article/getOperationManualList'){
+      // console.log('操作手册')
+      var url = 'article/getDetailById'
+    } else if (options.code == 'index/getQuestionLists'){
+      // console.log('常见问题')
+      var url = 'index/getQuestionDetail'
+    }
+    console.log(url)
+    c.request(url, {
+      id: options.id
     }, function (res) {
       console.log(res)
       that.setData({

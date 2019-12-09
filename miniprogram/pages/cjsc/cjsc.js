@@ -1,7 +1,5 @@
-// pages/guide/guidea.js
 var c = require("../../utils/http.js");
-var wxParse = require('../../wxParse/wxParse.js');
-var baseUrl = require("../../utils/config.js");
+// pages/cjsc/cjsc.js
 Page({
 
   /**
@@ -15,18 +13,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var code = options.code
     var that = this
-    c.request("article/getDetailById", {
-      id: options.code
+    c.request(code, {
+      page: 1,
+      size: 30,
     }, function (res) {
       console.log(res)
       that.setData({
-        info: res.info,
-        url: baseUrl.config.image_base_url,
+        infos: res.infos,
+        code: options.code
       })
-      var temp = wxParse.wxParse('article', 'html', res.info.article, that, 5);
     }, function () {
       console.log('fail');
+    })
+  },
+  cen:function(e){
+    var that = this
+    var id = e.currentTarget.dataset.id
+    var code = that.data.code
+    wx.navigateTo({
+      url: '../guide/guideb?code=' + code+'&id='+id,
     })
   },
 
