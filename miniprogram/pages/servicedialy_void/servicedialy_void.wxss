@@ -4,6 +4,12 @@ page {
   background: #000;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
 .bgd {
   width: 100%;
 }
