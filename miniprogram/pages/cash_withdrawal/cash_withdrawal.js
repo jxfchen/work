@@ -52,7 +52,8 @@
        money: money,
      }, function(res) {
        wx.showToast({
-         title: '发起提现成功，请等待审核',
+         title: res.msg || '发起提现成功，请等待审核',
+         icon: 'none'
        })
      }, function() {
        console.log('fail');
