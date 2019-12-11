@@ -41,19 +41,66 @@
     * 生命周期函数--监听页面加载
     */
    onLoad: function(options) {
-
+     var that = this
+     wx.getStorage({
+       key: 'openid',
+       success: function (res) {
+         that.setData({
+           openid: res.data,
+         })
+         if (that.data.openid.length == 0) {
+           that.setData({
+             status: false
+           });
+         } else {
+           that.setData({
+             status: true
+           })
+         }
+         c.request("wechatuser/getAccountLog", {
+           openid: that.data.openid,
+           page: '1',
+           size: '9',
+         }, function (res) {
+           console.log(res)
+           that.setData({
+             info: res.info,
+             moneya: res.info.money_info.use_money
+           });
+         }, function () {
+           console.log('fail');
+         })
+       },
+       fail: function (res) {
+         console.log(res + "fail")
+       }
+     });
    },
    bindClick(e) {
      var that = this;
      var money = that.data.money;
      var openid = wx.getStorageSync('openid');
+     console.log(money)
      c.request("wechatuser/getWithdraw", {
        openid: openid,
        money: money,
      }, function(res) {
-       wx.showToast({
-         title: '发起提现成功，请等待审核',
-       })
+       console.log(res)
+       if (res.code == 2000){
+        wx.showToast({
+          title: res.msg,
+        })
+       }else{
+         wx.showModal({
+           content: res.msg,
+           showCancel: false,
+           success: function (res) {
+             if (res.confirm) {
+               console.log('确定')
+             }
+           }
+         });
+       }
      }, function() {
        console.log('fail');
      })

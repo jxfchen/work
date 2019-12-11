@@ -17,16 +17,9 @@
   </view>
   <view class="nav-cle">
     <view>
-      <image src="../../images/ico-4a.png" mode="widthFix"></image>
-      <text>{{infos.info.like_times}}</text>
+      <image src="../../images/sc.png" mode="widthFix"></image>
+      <text>{{commend_times}}</text>
       <!-- 点赞数 -->
-    </view>
-  </view>
-  <view class="nav-cle">
-    <view>
-      <image src="../../images/time.png" mode="widthFix"></image>
-      <text>{{infos.info.like_times}}</text>
-      <!-- 时间 -->
     </view>
   </view>
 </view>
@@ -37,6 +30,5 @@
   <image src="../../images/next.png" mode="widthFix" bindtap="getDetail" data-nextid="{{infos.next_id}}"></image>
 </view>
 <view class="right zan">
-  <image src="../../images/sc.png" mode="widthFix" wx:if="{{!infos.is_commend}}"></image>
-  <image src="../../images/sca.png" mode="widthFix" wx:if="{{infos.is_commend}}"></image>
+  <image src="{{is_commend == 1 ? '../../images/sca.png' : '../../images/sc.png'}}" mode="widthFix" bindtap="clickLike"></image>
 </view>

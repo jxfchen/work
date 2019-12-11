@@ -51,8 +51,16 @@
   position: absolute;
   background: #f45c52;
 }
-
-.list-box view text {
+.list-box view .text_nav {
+  width: 70%;
+  display: block;
+  overflow: hidden;
+  line-height: 70rpx;
+  height: 70rpx;
+  text-overflow: clip;
+}
+.list-box view .text_time {
+  top: 0;
   right: 10rpx;
   color: #aaa;
   position: absolute;

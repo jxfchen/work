@@ -115,7 +115,13 @@
   margin-top: 26rpx;
   margin-left: 74rpx;
 }
-
+.examine text{
+  float: right;
+  font-size: 24rpx;
+  color: #fa7a67;
+  font-weight: 100;
+  margin-right: 20rpx;
+}
 .examine_text {
   width: 376rpx;
   height: 40rpx;
@@ -157,7 +163,7 @@
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: rgba(250, 122, 103, 1);
-  margin-top: 40rpx;
+  margin-top: 50rpx;
   margin-left: 14rpx;
   float: left;
 }

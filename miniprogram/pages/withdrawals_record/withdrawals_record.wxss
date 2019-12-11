@@ -86,7 +86,6 @@
 
 .left {
   height: 78rpx;
-  width: 400rpx;
   padding-top: 34rpx;
   float: left;
 }

@@ -43,7 +43,7 @@
     <view class="submission">成功提交</view>
     <view class="submission_text">成功提交，等待审核通过···</view>
     <view class="red_circle" style='{{list.status==0?"background: rgba(227, 227, 227, 1);":""}}'></view>
-    <view class="examine">审核通过</view>
+    <view class="examine">审核通过 <text>预期收益:{{list.profit_award}}元</text></view>
     <view class="examine_text">
       <image src="/images/service1.png" class="examine_img"></image>
       <view class="examine_txt">客服与您确定成单后收益金额</view>
@@ -54,7 +54,7 @@
   </view>
   <view class="remarks">
     <view class="explain">【推单状态说明】</view>
-    <view class="explain_text">推单···</view>
+    <view class="explain_text">{{list.status_name}}</view>
     <view class="chat">
       <view class="chat_title">【联系客服】</view>
       <view class="chat_text">为了方便沟通推单情况，确保您的收益能够最快速度到账，请您联系我们的客服：15001238888</view>

@@ -1,0 +1,11 @@
+.nav{
+  color: #333;
+  height: 80rpx;
+  margin: 30rpx;
+  line-height: 1.5;
+  font-size: 24rpx;
+}
+.center{
+  width: 690rpx;
+  margin: 30rpx;
+}

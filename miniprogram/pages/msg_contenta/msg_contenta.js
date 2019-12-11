@@ -1,4 +1,5 @@
-// pages/income_details/income_details.js
+// pages/msg_content/msg_content.js
+var wxParse = require('../../wxParse/wxParse.js');
 var c = require("../../utils/http.js");
 Page({
 
@@ -6,64 +7,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    flag: 'true',
+    title: '',
+    page: '',
+    lists: [],
   },
-  closetap(e) {
-    const that = this;
-    var flag = this.data.flag;
-    var flag = 'false';
-    that.setData({
-      flag: flag,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var self = this;
-    var date = {
-      list: '',
-    }
-    var openid = "";
+    console.log(options);
+    var page = this.data.page;
+    page = options.page;
+    var title = this.data.title;
+    title = options.title;
+    this.setData({
+      title: title,
+      page: page,
+    });
+    var notice_id = options.id;
     var that = this;
-    var list = [];
+    var openid = "";
     wx.getStorage({
       key: 'openid',
       success: function(res) {
         that.setData({
           openid: res.data,
         })
-        if (that.data.openid.length == 0) {
-          that.setData({
-            status: false
-          });
-        } else {
-          that.setData({
-            status: true
-          })
-        }
-        c.request("wechatuser/getAccountLog", {
+        c.request("message/getDetail", {
           openid: that.data.openid,
-          page: '1',
-          size: '9',
+          message_id: notice_id,
         }, function(res) {
           that.setData({
             info: res.info,
           });
-          var list_str = JSON.stringify(res.info);
-          list = JSON.parse(list_str);
-          date.list = list;
-          self.setData(date);
-          console.log(list);
+          var temp = wxParse.wxParse('article', 'html', res.info.title, that, 5);
         }, function() {
           console.log('fail');
         })
       },
       fail: function(res) {
-        console.log(res + "fail")
+        console.log("fail")
       }
     });
-    this.setData(date);
   },
 
   /**

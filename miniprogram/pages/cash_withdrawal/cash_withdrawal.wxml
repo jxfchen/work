@@ -3,8 +3,7 @@
     <!-- <view class="card" style="background: url();background-size:706rpx 190rpx;background-repeat:no-repeat;"> -->
     <image src="/images/task_background.png" class="bgimg"></image>
     <view class="card_text">余额（元）</view>
-    <view class="RMB">￥</view>
-    <view class="RMB_num">9860.05</view>
+    <view class="RMB_num"><text class="RMB">￥</text>{{moneya}}</view>
     <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
       <view class="record">提现记录</view>
     </navigator>
