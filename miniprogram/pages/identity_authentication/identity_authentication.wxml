@@ -1,7 +1,9 @@
 <view class="contain">
-  <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
-  </view>
-  <view class="card" style="background:url('/images/vip.png');background-size:690rpx 326rpx;">
+  <!-- <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+  </view> -->
+  <image src="/images/me/banner.png" class="banner"></image>
+  <view class="card">
+    <image src="/images/vip.png" class="card_bg"></image>
     <view class="bannner_title">身份认证特权</view>
     <view class="banner_text">通过认证可以获得合伙人推单、创建自己的推客团队，以及其他特权</view>
   </view>

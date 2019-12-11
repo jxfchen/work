@@ -11,10 +11,16 @@
 .card {
   width: 690rpx;
   height: 326rpx;
-  background: rgba(255, 255, 255, 1);
+  border-right: 15rpx;
   margin: 0 auto;
   position: relative;
   top: -156rpx;
+}
+
+.card_bg{
+    width:690rpx;
+    height: 326rpx;
+    position: absolute;
 }
 
 .bannner_title {
@@ -24,6 +30,8 @@
   color: rgba(220, 182, 122, 1);
   padding-top: 98rpx;
   margin-left: 40rpx;
+  z-index: 3;
+  opacity: 0.9;
 }
 
 .banner_text {
@@ -35,6 +43,8 @@
   color: rgba(230, 230, 230, 1);
   line-height: 36rpx;
   margin-left: 40rpx;
+  z-index: 3;
+  opacity: 0.9;
 }
 
 .process {

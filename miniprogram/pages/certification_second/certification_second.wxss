@@ -22,8 +22,8 @@
   border-radius: 50rpx;
   margin-left: 202rpx;
   float: left;
-  margin-top: 56rpx;
   position: relative;
+  top: -150rpx;
   z-index: 999;
 }
 
@@ -40,8 +40,8 @@
   border-radius: 50rpx;
   margin-left: 202rpx;
   float: left;
-  margin-top: 56rpx;
   position: relative;
+  top: -150rpx;
   z-index: 999;
 }
 
@@ -58,7 +58,7 @@
   border-radius: 50rpx;
   margin-left: 116rpx;
   float: left;
-  margin-top: 56rpx;
+  top: -150rpx;
   position: relative;
   z-index: 999;
 }
