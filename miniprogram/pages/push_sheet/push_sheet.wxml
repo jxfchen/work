@@ -30,7 +30,7 @@
         </view>
       </view>
     </view>
-    <view class="box">
+    <view class="box" style='{{mealist==[]?"display:none":"display:block"}}'>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;float:left;margin:48rpx 32rpx 40rpx 156rpx"></image>
       <view class="nav_a">餐次需求（可多选）</view>
       <image src="/images/decoration.png" style="width:44rpx;height:25rpx;margin:48rpx 32rpx 40rpx 0rpx"></image>

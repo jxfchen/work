@@ -300,6 +300,10 @@
   box-shadow: 0px 4px 14px 0px rgba(255, 171, 163, 1);
 }
 
+button::after{
+    border:none;
+}
+
 .button_image {
   width: 26rpx;
   height: 26rpx;

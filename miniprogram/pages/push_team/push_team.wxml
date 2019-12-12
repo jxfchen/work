@@ -35,7 +35,7 @@
     <view style="width:100%;height:1px;float:left"></view>
     <image class="header_me" src="{{avatar}}"></image>
     <block wx:for-item="item" wx:key="" wx:for='{{list.user_list}}'>
-      <image class="teamlist_header1" src='https://www.infinitybuild.cn/{{item.avatarurl}}'></image>
+      <image class="teamlist_header1" src='{{item.avatarurl}}'></image>
     </block>
     <view class="header_num">+{{list.user_list.length+1}}</view>
   </view>
