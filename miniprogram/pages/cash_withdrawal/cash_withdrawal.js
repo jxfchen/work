@@ -85,22 +85,11 @@
        openid: openid,
        money: money,
      }, function(res) {
-       console.log(res)
-       if (res.code == 2000){
-        wx.showToast({
-          title: res.msg,
-        })
-       }else{
-         wx.showModal({
-           content: res.msg,
-           showCancel: false,
-           success: function (res) {
-             if (res.confirm) {
-               console.log('确定')
-             }
-           }
-         });
-       }
+
+       wx.showToast({
+         title: res.msg || '发起提现成功，请等待审核',
+         icon: 'none'
+       })
      }, function() {
        console.log('fail');
      })

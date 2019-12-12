@@ -93,14 +93,13 @@ Page({
     wx.getLocation({
       type: 'wgs84',
       success(res) {
-        //使用腾讯地图的reverseGeocoder方法获取地址信息
         qqmapsdk.reverseGeocoder({
           location: {
             latitude: res.latitude, //纬度
             longitude: res.longitude //经度
           },
           success: function (addressRes) {
-            console.log(addressRes)
+            console.log(addressRes.result.address_component)
             nowprovince = addressRes.result.address_component.province; //当前位置信息
             nowcity = addressRes.result.address_component.city;
             nowdistrict = addressRes.result.address_component.district;
@@ -284,8 +283,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
-  },
+      
+    },
+    onShow: function () {
+        this.onLoad()
+    },
 
   imageLoadLeft: function (e) {
 

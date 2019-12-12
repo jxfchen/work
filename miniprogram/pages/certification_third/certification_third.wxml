@@ -1,12 +1,12 @@
 <view class="contain">
-  <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner">
+  <!-- <view style="background:url('/images/me/banner.png');background-size:750rpx 188rpx;" class="banner"> -->
+  <image src="/images/me/banner.png" class="banner"></image>
     <view class="btn">
       <view class="btn3">1</view>
       <view class="btn2">2</view>
       <view class="btn1">3</view>
       <view class="line"></view>
     </view>
-  </view>
   <image class="arrow_top" src="/images/arrow_top.png"></image>
   <view class="card">
     <view class="card_title">上传身份证明信息</view>

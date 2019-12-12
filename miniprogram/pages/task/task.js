@@ -12,7 +12,13 @@ Page({
     info: null,
     hide: false,
   },
-
+    guide: function (e) {
+        var code = e.currentTarget.dataset.id
+        // console.log(code)
+        wx.navigateTo({
+            url: '../guide/guide?code=' + code,
+        })
+    },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -149,14 +155,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+      
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+      this.onLoad()
   },
 
   /**

@@ -201,6 +201,7 @@
   font-weight: bold;
   color: rgba(46, 52, 55, 1);
   opacity: 0.9;
+  white-space: nowrap;
 }
 
 .record {
@@ -223,6 +224,7 @@
   opacity: 0.9;
   text-align: center;
   line-height: 15rpx;
+  white-space: nowrap;
 }
 
 .invite {
@@ -245,6 +247,7 @@
   opacity: 0.9;
   text-align: center;
   line-height: 15rpx;
+  white-space: nowrap
 }
 
 .treasure_chest {
@@ -396,7 +399,7 @@ button.guide_text::after {
 
 .bottom {
   width: 690rpx;
-  height: 586rpx;
+  height: 535rpx;
   background: rgba(255, 255, 255, 1);
   border-radius: 20rpx;
   margin-left: 30rpx;
