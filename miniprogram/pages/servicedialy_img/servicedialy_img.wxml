@@ -1,3 +1,4 @@
+<image src="{{url}}{{infos.info.cover_img}}" mode="widthFix" class="img"></image>
 <view class="nav">{{infos.info.title}}</view>
 <view class="nav-but">
   <view class="nav-cle">

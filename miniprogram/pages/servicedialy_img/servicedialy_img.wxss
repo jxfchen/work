@@ -4,9 +4,8 @@
   height: 80rpx;
   font-size: 28rpx;
   font-weight: bold;
-  margin-top: 20rpx;
   line-height: 80rpx;
-  text-align: center;
+  padding-left: 30rpx;
 }
 
 .nav-but {
@@ -15,12 +14,15 @@
   line-height: 70rpx;
   border-bottom: 1px solid #ddd;
 }
-
+.img{
+  width: 100%;
+}
 .nav-cle {
-  width: 25%;
+  width: auto;
   float: left;
   height: 70rpx;
   color: #666;
+  padding-right: 20rpx;
   font-size: 22rpx;
   line-height: 70rpx;
 }
@@ -37,7 +39,6 @@
 
 .nav-cle view {
   width: auto;
-  margin: 0 auto;
   display: table;
 }
 

@@ -16,6 +16,7 @@ Page({
     oldInfos: null,
     id: 0,
     isCommend: false,
+    heig: '',
     commendTimes: 0
   },
 
@@ -26,6 +27,7 @@ Page({
     this.getOpenid(options.id)
     this.data.id = options.id;
     this.videoContext = wx.createVideoContext('myVideo')
+
   },
   getOpenid: function(id) {
     var _this = this;

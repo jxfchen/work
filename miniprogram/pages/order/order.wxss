@@ -1,9 +1,11 @@
 .weui-navbar {
   border-bottom: none !important;
   padding-bottom: 28rpx;
+  flex-direction: row;
 }
 
 .weui-navbar text {
+    white-space:nowrap;
   text-decoration: none;
   font-size: 30rpx;
   font-family: PingFangSC;
@@ -11,8 +13,14 @@
   color: rgba(196, 196, 196, 1);
   padding: 0 !important;
 }
-
+.weui-navbar__item{
+    margin-right: 20rpx;
+    width:150rpx;
+}
 .weui-navbar__item.weui-bar__item_on {
+    margin-right: 20rpx;
+    white-space:nowrap;
+    width:150rpx;
   background-color: white;
   color: rgba(50, 50, 50, 1);
   font-size: 30rpx;

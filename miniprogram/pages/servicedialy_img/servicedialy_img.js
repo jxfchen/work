@@ -49,7 +49,8 @@ Page({
         _this.setData({
           infos: res,
           commend_times: res.info.commend_times,
-          is_commend: res.is_commend
+          is_commend: res.is_commend,
+          url: baseUrl.config.image_base_url
         });
       } else {
         wx.showToast({

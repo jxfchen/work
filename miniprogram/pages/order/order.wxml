@@ -1,15 +1,29 @@
 <view>
   <view>
     <view class="weui-tab">
-      <view class="weui-navbar">
-        <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">全部状态</text>
-        <text class="weui-navbar__item {{status == '0' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="0">审核中</text>
-        <text class="weui-navbar__item {{status == '-1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="-1">审核未通过</text>
-        <text class="weui-navbar__item {{status == '1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="1">审核通过</text>
+      <scroll-view  scroll-x="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class="weui-navbar" >
+        <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">
+          全部状态
+        </text>
+        <text class="weui-navbar__item {{status == '0' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="0">
+          审核中
+        </text>
+        <text class="weui-navbar__item {{status == '1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="1">
+          推单成功
+        </text>
+        <text class="weui-navbar__item {{status == '2' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="2">
+          审核通过
+        </text>
+        <text class="weui-navbar__item {{status == '-1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="-1">
+          无效推单
+        </text>
         <!-- <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">
           谈单成功
         </text> -->
+
       </view>
+      </scroll-view>
       <view class="weui-tab__panel">
 
         <view id="tab1" class="weui_tab_bd_item weui_tab_bd_item_active">
