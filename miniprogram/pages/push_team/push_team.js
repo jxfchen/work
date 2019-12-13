@@ -7,6 +7,7 @@ Page({
    */
   data: {
     flag: '1',
+    avatar:'',
   },
   bindManager(e) {
     const that = this;
@@ -39,6 +40,11 @@ Page({
     var that = this;
     var list = [];
     var melist = [];
+      var avatar = this.data.avatar;
+    avatar = wx.getStorageSync('avatarurl');
+    that.setData({
+        avatar: avatar
+    })
     wx.getStorage({
       key: 'openid',
       success: function(res) {
@@ -65,29 +71,6 @@ Page({
           date.list = list;
           self.setData(date);
           console.log(list);
-        }, function() {
-          console.log('fail');
-        })
-        c.request("wechatuser/getWechatInfo", {
-          openid: that.data.openid
-        }, function(res) {
-          that.setData({
-            info: res.info,
-          });
-          var melist_str = JSON.stringify(res.info);
-          melist = JSON.parse(melist_str);
-          date.melist = melist;
-          self.setData(date);
-          console.log(melist);
-          var tx = wx.getStorageSync('avatarurl')
-          if (res.info.user_info.avatarurl == tx) {
-            wx.setStorageSync('avatar', res.info.user_info.avatarurl)
-          } else {
-            wx.getStorageSync('avatar')
-          }
-          that.setData({
-            avatar: wx.getStorageSync('avatar')
-          });
         }, function() {
           console.log('fail');
         })

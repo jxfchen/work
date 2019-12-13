@@ -82,6 +82,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        console.log(options)
         var self = this;
         var date = {
             address_img: "/images/address.png",
@@ -207,44 +208,27 @@ Page({
                 });
             }
         })
-
-        //邀请码
-        c.request("wechatuser/index", {
-            openid: openid
-        }, function(res) {
-            that.setData({
-                info: res.info,
-            });
-            var infolist_str = JSON.stringify(res.info);
-            infolist = JSON.parse(infolist_str);
-            date.infolist = infolist;
-            self.setData(date);
-            var code = infolist.user_info.invite_code;
-            if (code == undefined) {
-                console.log('不请求邀请人接口')
-                return
-            } else {
-                var openid = wx.getStorageSync('openid')
-                var code = code
-                c.request("index/setRecommend", {
-                        openid: openid,
-                        invest_code: code,
-                    },
-                    function(res) {
-                        if (res.code == 2000) {} else {
-                            wx.showToast({
-                                title: res.msg,
-                                icon: 'none'
-                            })
-                        }
-                    },
-                    function() {
-                        console.log('fail');
-                    })
-            }
-        }, function() {
-            console.log('fail');
-        })
+        if (options==undefined){
+        }else{
+            var openid = wx.getStorageSync('openid')
+            var code = options.invest_code;
+            c.request("index/setRecommend", {
+                openid: openid,
+                invest_code: code,
+            },
+                function (res) {
+                    if (res.code == 2000) { } else {
+                        wx.showToast({
+                            title: res.msg,
+                            icon: 'none'
+                        })
+                    }
+                },
+                function () {
+                    console.log('fail');
+                })
+        }
+        
 
 
 
