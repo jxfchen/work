@@ -35,6 +35,11 @@ Page({
         infolist: [],
     },
 
+    demotap:function(){
+        wx.navigateTo({
+            url: '../demo/demo',
+        })
+    },
 
     sheetlist: function(e) {
         // console.log(123)
