@@ -63,8 +63,10 @@ Page({
               status: true
             })
           }
+          // console.log(invest_code)
+          // return
           c.request("wechatuser/getAttestation", {
-            openid: openid,
+            openid: that.data.openid,
             invest_code: invest_code,
           }, function(res) {
             console.log(res)

@@ -2,18 +2,10 @@
   <view>
     <view class="weui-tab">
       <view class="weui-navbar">
-        <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">
-          全部状态
-        </text>
-        <text class="weui-navbar__item {{status == '0' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="0">
-          审核中
-        </text>
-        <text class="weui-navbar__item {{status == '-1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="-1">
-          审核未通过
-        </text>
-        <text class="weui-navbar__item {{status == '1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="1">
-          审核通过
-        </text>
+        <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">全部状态</text>
+        <text class="weui-navbar__item {{status == '0' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="0">审核中</text>
+        <text class="weui-navbar__item {{status == '-1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="-1">审核未通过</text>
+        <text class="weui-navbar__item {{status == '1' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="1">审核通过</text>
         <!-- <text class="weui-navbar__item {{status == '100' ? 'weui-bar__item_on' : ''}}" bindtap="changeStatus" data-status="100">
           谈单成功
         </text> -->

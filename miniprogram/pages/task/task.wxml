@@ -7,10 +7,10 @@
     <view class="card">
         <!-- <view style="background: url(/images/task_background.png);background-size:706rpx 302rpx;" class="card_content"> -->
         <image src="/images/task_background.png" class="background_img"></image>
-        <view class="task_revenue">任务收益余额</view>
+        <view class="task_revenue">收益余额</view>
         <view class="task_mon">
             <text class="money_logo">￥</text>
-            <text class="task_num">{{info.total_invest}}</text>
+            <text class="task_num">{{info.use_money}}</text>
             <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
                 <image src="/images/task_arrow.png" class="arrow_img"></image>
             </navigator>
@@ -50,10 +50,10 @@
                         {{item.remark}}
                     </view>
                 </view>
-                <view class="button {{item.status == '1' ? 'button2' : ''}}" bindtap="link" data-id="{{item.url}}">
+                <button class="button {{item.status == '1' ? 'button2' : ''}}" bindtap="link" data-id="{{item.url}}"  open-type='{{taskid=="yaoqing"?"share":""}}'>
                     <image src="/images/{{item.status == '1' ? 'task_finish' : 'task_money'}}.png" class="button_image"></image>
                     <view class="add_money">{{"+"+item.roles_relations[0].award+"元"}}</view>
-                </view>
+                </button>
             </view>
         </view>
         <view class="line"></view>
@@ -68,10 +68,10 @@
     </movable-view>
 </movable-area>
 <!-- 二维码 -->
-<view class="ewm" wx:if="{{hide == true}}">
+<!-- <view class="ewm" wx:if="{{hide == true}}">
     <view class="ewm-box">
         <image src="{{ewm}}" mode="widthFix" class="ewm_img" bindlongtap='saveImg'></image>
         <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
         <text>长安保存二维码，推荐给好友吧</text>
     </view>
-</view>
+</view> -->

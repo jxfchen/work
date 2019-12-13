@@ -32,6 +32,7 @@ Page({
     nowdistrict: '',
     nowprovince: '',
     nowcity: '',
+    infolist: [],
   },
 
 
@@ -81,38 +82,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 实例化腾讯地图API核心类
-    qqmapsdk = new QQMapWX({
-      key: 'M6FBZ-VQQKX-D6Y43-TYKVN-VCP3K-Z5FY4'  // 必填
-    });
-    //获取当前经纬度
-    var nowprovince = this.data.nowprovince;
-    var nowcity = this.data.nowcity;
-    var nowdistrict = this.data.nowdistrict;
-    var that = this;
-    wx.getLocation({
-      type: 'wgs84',
-      success(res) {
-        qqmapsdk.reverseGeocoder({
-          location: {
-            latitude: res.latitude, //纬度
-            longitude: res.longitude //经度
-          },
-          success: function (addressRes) {
-            console.log(addressRes.result.address_component)
-            nowprovince = addressRes.result.address_component.province; //当前位置信息
-            nowcity = addressRes.result.address_component.city;
-            nowdistrict = addressRes.result.address_component.district;
-            that.setData({
-              nowprovince: nowprovince,
-              nowcity: nowcity,
-              nowdistrict: nowdistrict,
-            })
-            console.log(nowprovince, nowcity, nowdistrict);
-          }
-        });
-      }
-    })
     var self = this;
     var date = {
       address_img: "/images/address.png",
@@ -125,6 +94,7 @@ Page({
       noticeList: [],
       knowList: '',
       addressList: '',
+      infolist: '',
     }
     var that = this;
     var background = [];
@@ -133,6 +103,9 @@ Page({
     var pushList = this.data.pushList;
     var knowList = this.data.knowList;
     var addressList = this.data.addressList;
+    var infolist = this.data.infolist;
+    var openid = wx.getStorageSync('openid')
+
     //地址
     c.request("index/getOpenCity", {}, function (res) {
       that.setData({
@@ -142,7 +115,6 @@ Page({
       addressList = JSON.parse(addressList_str);
       date.addressList = addressList;
       self.setData(date);
-      console.log(addressList);
     }, function () {
       console.log('fail');
     })
@@ -162,7 +134,6 @@ Page({
     c.request("index/getbanner", {
       type: "首页"
     }, function (res) {
-      console.log(res)
       that.setData({
         info: res.info,
       });
@@ -179,7 +150,6 @@ Page({
     that.getServiceDaily();
     //推一单，赚一单
     c.request("index/getRestaurant", {}, function (res) {
-      console.log(res)
       that.setData({
         infos: res.infos,
       });
@@ -203,24 +173,81 @@ Page({
         }
       }
     })
-    var code = options.invest_code
-    if (code == undefined) {
-      console.log('不请求邀请人接口')
-      return
-    } else {
-      var openid = wx.getStorageSync('openid')
-      var code = code
-      c.request("index/setRecommend", {
-        openid: openid,
-        invest_code: code,
-      },
-        function (res) {
-          console.log(res)
+
+
+    // 实例化腾讯地图API核心类
+    qqmapsdk = new QQMapWX({
+      key: 'M6FBZ-VQQKX-D6Y43-TYKVN-VCP3K-Z5FY4' // 必填
+    });
+    //获取当前经纬度
+    var nowprovince = this.data.nowprovince;
+    var nowcity = this.data.nowcity;
+    var nowdistrict = this.data.nowdistrict;
+    var that = this;
+    wx.getLocation({
+      type: 'wgs84',
+      success(res) {
+        //使用腾讯地图的reverseGeocoder方法获取地址信息
+        qqmapsdk.reverseGeocoder({
+          location: {
+            latitude: res.latitude, //纬度
+            longitude: res.longitude //经度
+          },
+          success: function (addressRes) {
+            console.log(addressRes)
+            nowprovince = addressRes.result.address_component.province; //当前位置信息
+            nowcity = addressRes.result.address_component.city;
+            nowdistrict = addressRes.result.address_component.district;
+            that.setData({
+              nowprovince: nowprovince,
+              nowcity: nowcity,
+              nowdistrict: nowdistrict,
+            })
+          }
+        });
+      }
+    })
+
+    //邀请码
+    c.request("wechatuser/index", {
+      openid: openid
+    }, function (res) {
+      console.log(res)
+      that.setData({
+        info: res.info,
+      });
+      var infolist_str = JSON.stringify(res.info);
+      infolist = JSON.parse(infolist_str);
+      date.infolist = infolist;
+      self.setData(date);
+      var code = infolist.user_info.invite_code;
+      if (code == undefined) {
+        console.log('不请求邀请人接口')
+        return
+      } else {
+        var openid = wx.getStorageSync('openid')
+        var code = code
+        c.request("index/setRecommend", {
+          openid: openid,
+          invest_code: code,
         },
-        function () {
-          console.log('fail');
-        })
-    }
+          function (res) {
+            if (res.code == 2000) { } else {
+              wx.showToast({
+                title: res.msg,
+                icon: 'none'
+              })
+            }
+          },
+          function () {
+            console.log('fail');
+          })
+      }
+    }, function () {
+      console.log('fail');
+    })
+
+
 
   },
   getServiceDaily: function (isPage = false) {
@@ -283,11 +310,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-      
-    },
-    onShow: function () {
-        this.onLoad()
-    },
+
+  },
+  onShow: function () {
+    this.onLoad()
+  },
 
   imageLoadLeft: function (e) {
 
