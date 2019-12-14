@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 .list-scroll.top{
-  padding-top: 90rpx;
+  
 }
 
 /* 样式控制  */
@@ -47,7 +47,7 @@
 
 .list-right-wrapper {
   position: absolute;
-  top: 120rpx;
+  top: 50rpx;
   right: 20rpx;
   padding: 20rpx 0;
   border-radius: 40rpx;

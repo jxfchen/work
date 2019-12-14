@@ -11,8 +11,8 @@
       <view class="list_text2">{{list.pusher_id}}</view>
     </view>
     <view>
-      <view class="list_text1">项 目 类 型</view>
-      <view class="list_text2">公司备餐</view>
+      <view class="list_text1">餐 次 需 求</view>
+      <view class="list_text2">{{list.project_type_name}}</view>
     </view>
     <view>
       <view class="list_text1">餐 次 需 求</view>
@@ -43,13 +43,13 @@
     <view class="submission">成功提交</view>
     <view class="submission_text">成功提交，等待审核通过···</view>
     <view class="red_circle" style='{{list.status==0?"background: rgba(227, 227, 227, 1);":""}}'></view>
-    <view class="examine">审核通过 <text>预期收益:{{list.profit_award}}元</text></view>
+    <view class="examine" style='{{list.status==0?"color:#999":""}}'>审核通过 <text>预期收益:{{list.profit_award}}元</text></view>
     <view class="examine_text">
       <image src="/images/service1.png" class="examine_img"></image>
       <view class="examine_txt">客服与您确定成单后收益金额</view>
     </view>
     <view class="ash_circle"></view>
-    <view class="submission">成功推单</view>
+    <view class="submission" style='{{list.status==0||list.status==1||list.status==2?"color:#999":""}}'>成功推单<text>实际收益:{{list.reality_award}}元</text></view>
     <view class="submission_text">已经与客户达成合作，本推单成功推单</view>
   </view>
   <view class="remarks">

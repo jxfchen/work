@@ -138,6 +138,7 @@
 .word_box {
   overflow: hidden;
   padding: 20rpx 0;
+  width: 95%;
 }
 
 .word {
@@ -151,6 +152,9 @@
 
 .label_list {
   overflow: hidden;
+  float: left;
+    width: 70%;
+
 }
 
 .label_text {
@@ -216,9 +220,8 @@
 .ellipsis_logo {
   width: 32rpx;
   height: 9rpx;
-  position: absolute;
-  top: 895rpx;
-  left: 680rpx;
+  margin-top: 20rpx;
+  float:right; 
 }
 
 .separate {

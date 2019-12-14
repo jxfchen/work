@@ -34,10 +34,45 @@ Page({
     });
   },
   getDetail: function(e) {
-    this.geDetailInfo(e.currentTarget.dataset.nextid == "" ? 0 : e.currentTarget.dataset.nextid);
+      console.log(e)
+      var nextid = e.currentTarget.dataset.nextid;
+      if(nextid==""){
+          wx.showToast({
+              title: '已是最后一页',
+              icon: 'none'
+          })
+      }else{
+          var openid = wx.getStorageSync('openid');
+          let _this = this;
+          c.request("servicedialy/getDetailById", {
+              id: nextid,
+              openid: openid
+          }, function (res) {
+              console.log(res)
+              if (2000 == res.code) {
+                  res.info.article = _this.delHtmlTag(res.info.article);
+                  res.info.avatarurl = res.info.avatarurl.indexOf('http') >= 0 ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
+                  _this.setData({
+                      infos: res,
+                      commend_times: res.info.commend_times,
+                      is_commend: res.is_commend,
+                      url: baseUrl.config.image_base_url
+                  });
+              } else {
+                  wx.showToast({
+                      title: res.msg || '未找到信息',
+                      icon: "none"
+                  })
+              }
+          }, function () {
+              console.log('fail');
+          })
+      }
+      
   },
   geDetailInfo: function(id) {
-    let _this = this;
+      let _this = this;
+      console.log(id)
     c.request("servicedialy/getDetailById", {
       id: _this.data.id,
       openid: _this.data.openid

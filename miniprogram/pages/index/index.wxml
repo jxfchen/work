@@ -6,7 +6,7 @@
       <image class="address_img" src="{{address_img}}"></image>
       <view class="section" bindtap="demotap">
         <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}"> -->
-          <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{"addressList.indexOf(nowcity)==-1"?region[1]:nowcity}}' disabled>
+          <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{address==""?region[1]:address}}' disabled>
           </input>
           <image class="arrow_img" src="{{arrow_img}}"></image>
       </view>
@@ -14,14 +14,14 @@
     <view class="rotation">
       <view class="rotation_chart">
         <swiper style="width:690rpx;height:320rpx;border-radius: 12rpx;" autoplay='true' bindchange='swiperChange' interval='5000'>
-          <block wx:key='*this' wx:for='{{background}}'>
+          <block wx:key='*this' wx:for='{{backarr}}'>
             <swiper-item style="border-radius: 12rpx;">
-              <image bindchange='imageChange' style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{item}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+              <image bindchange='imageChange' bindtap="backimgTap"  data-url="{{item.url}}" style="border-radius: 12rpx;width: 690rpx;height: 320rpx;" id='{{index}}' src='{{imgurlstart}}{{item.img}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
             </swiper-item>
           </block>
         </swiper>
         <view class="dots">
-          <block wx:for="{{background}}" wx:key="*this">
+          <block wx:for="{{backarr}}" wx:key="*this">
             <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
           </block>
         </view>

@@ -96,7 +96,7 @@
   text-align: center;
   float: left;
   position: absolute;
-  top: 66rpx;
+  top: 86rpx;
   right: 0rpx;
 }
 

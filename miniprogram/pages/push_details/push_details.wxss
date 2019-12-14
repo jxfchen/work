@@ -53,7 +53,7 @@
   height: 500rpx;
   background: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 640rpx;
+  top: 650rpx;
 }
 
 .status_line {
@@ -85,7 +85,13 @@
   margin-top: 34rpx;
   margin-left: 74rpx;
 }
-
+.submission text{
+  float: right;
+  font-size: 24rpx;
+  color: #fa7a67;
+  font-weight: 100;
+  margin-right: 20rpx;
+}
 .submission_text {
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
@@ -155,7 +161,7 @@
   height: 234rpx;
   background: rgba(255, 255, 255, 1);
   position: absolute;
-  top: 1160rpx;
+  top: 1180rpx;
 }
 
 .explain {
@@ -174,6 +180,7 @@
   font-weight: 400;
   color: rgba(136, 136, 136, 1);
   margin-top: 50rpx;
+  line-height: 54rpx;
 }
 
 .chat {

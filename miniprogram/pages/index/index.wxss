@@ -67,24 +67,20 @@
   background-color: #000;
   opacity: 60%;
   width: 495rpx;
-  height: 43rpx;
+  height: 55rpx;
   border-radius: 30rpx;
   position: relative;
-  top: -160rpx;
+  top: -95rpx;
   margin: 0 auto;
 }
 
 .notice_img {
   float: left;
-  margin: 10rpx 0 11rpx 43rpx;
+  margin: 17rpx 0 11rpx 43rpx;
   width: 26rpx;
   height: 23rpx;
 }
 
-.notice_text {
-  color: white;
-  font-size: 22rpx;
-}
 
 .middle {
   position: relative;
@@ -329,7 +325,7 @@
   color: #fff;
   height: 43rpx;
   font-size: 20rpx;
-  line-height: 43rpx;
+  line-height: 57rpx;
   position: absolute;
 }
 
@@ -360,7 +356,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -40rpx;
+  bottom: 15rpx;
   display: flex;
   justify-content: center;
 }

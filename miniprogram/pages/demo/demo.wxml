@@ -15,6 +15,16 @@
 
 
 <!-- 外部搜索 -->
+<view>
+    <view class="title1">热门城市</view>
+    <block wx:for="{{addressList}}" wx:key="*this">
+        <view class="buttom" bindtap="hottap" data-hotcity="{{item}}">{{item}}</view>
+    </block>
+</view>
+<view>
+    <view class="title1">我的城市</view>
+    <view class="buttom" bindtap="mycitytap" data-mycity="{{nowcity}}">{{nowcity}}</view>
+</view>
 <view class='wrapper'>
-    <list-html data="{{city}}" binddetail="bindtap" my-city config="{{config}}"></list-html>
+    <list-html data="{{city}}" binddetail="bindtap" config="{{config}}"></list-html>
 </view>
