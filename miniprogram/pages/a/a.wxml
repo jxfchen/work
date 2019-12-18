@@ -1,3 +1,0 @@
-<movable-area style="height: 80%;bottom:5%;right:100rpx;width: 1px;position:fixed">
-  <movable-view direction="vertical" style="height: 50px; width: 50px; background: #ccc;margin-left:-20rpx;"></movable-view>
-</movable-area>
