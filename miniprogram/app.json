@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/sc/sc",
     "pages/authorized_login/authorized_login",
     "pages/demo/demo",
     "pages/cjsc/cjsc",
@@ -12,7 +11,6 @@
     "pages/msg_contenta/msg_contenta",
     "pages/msg_content/msg_content",
     "pages/msg/msg",
-    "pages/a/a",
     "pages/msgcen/msgcen",
     "pages/my_information/my_information",
     "pages/me/me",
