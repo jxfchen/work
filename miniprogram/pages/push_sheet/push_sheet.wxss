@@ -16,7 +16,18 @@
 }
 
 /* dot定位位置 */
-
+.cimg{
+  top: 12rpx;
+  width: 44rpx;
+  height: 25rpx;
+  position: absolute;
+}
+.r{
+  right: -60rpx;
+}
+.l{
+  left: -60rpx;
+}
 .rotation_chart .dots {
   position: absolute;
   left: 0;
@@ -848,6 +859,7 @@ radio .wx-radio-input {
 }
 
 .pro_part {
+  overflow: hidden;
   background-color: #fff;
 }
 
@@ -859,13 +871,14 @@ radio .wx-radio-input {
 }
 
 .nav_a {
-  float: left;
+  width: auto;
+  display: table;
   font-size: 32rpx;
   font-weight: bold;
-  padding-top: 40rpx;
   line-height: 44rpx;
-  margin-right: 32rpx;
+  position: relative;
   color: rgba(56, 56, 56, 1);
+  margin: 40rpx auto 30rpx auto;
 }
 
 .left-nav {

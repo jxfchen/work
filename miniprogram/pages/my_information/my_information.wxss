@@ -107,8 +107,11 @@
   background-color: #f1f1f1;
   margin-top: 36rpx;
   margin-left: 30rpx;
+  float: left;
 }
-
+.account{
+  overflow: hidden;
+}
 .nicname_title {
   width: 300rpx;
   height: 60rpx;

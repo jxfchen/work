@@ -42,7 +42,7 @@
         <image src="/images/money.png" style="width:30rpx;height:32rpx;float:left;margin:0rpx 18rpx 32rpx 30rpx"></image>
         <view class="profit_tit">收益方式</view>
     </view>
-    <view style="width:690rpx;height:50rpx;background:rgba(244,244,244,1);border-radius:44rpx;margin-left:30rpx;margin-top:32rpx;margin-bottom:20rpx;">
+    <view style="width:690rpx;height:50rpx;background:rgba(244,244,244,1);border-radius:44rpx;margin-left:30rpx;margin-top:32rpx;margin-bottom:20rpx;position:relative">
         <view class="profit_p1">推客推单收益</view>
         <view style="font-size:24rpx;color:rgba(102,102,102,1);padding-top:8rpx;">完成一笔推单即可获得：{{infos.pusher_profit}}
             <text wx:if="{{infos.is_pusher_rate == 1}}">%</text>
@@ -50,7 +50,7 @@
         </view>
         <image class="arrow1" src="/images/arrow2.png"></image>
     </view>
-    <view style="width:690rpx;height:50rpx;background:rgba(244,244,244,1);border-radius:25rpx;margin-left:30rpx;margin-top:32rpx;margin-bottom:30rpx;">
+    <view style="width:690rpx;height:50rpx;background:rgba(244,244,244,1);border-radius:25rpx;margin-left:30rpx;margin-top:32rpx;margin-bottom:30rpx;position:relative">
         <view style="font-size:24rpx;color:rgba(243,105,99,1);float: left;margin-left:26rpx;margin-top:8rpx;margin-right:20rpx;">合伙人推单收益</view>
         <view style="font-size:24rpx;color:rgba(102,102,102,1);padding-top:8rpx;">
             完成一笔推单即可获得：{{infos.partner_min_profit}}

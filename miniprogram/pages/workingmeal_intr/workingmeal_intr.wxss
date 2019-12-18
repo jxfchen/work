@@ -63,16 +63,16 @@
   width: 14rpx;
   height: 22rpx;
   position: absolute;
-  top: 80rpx;
-  left: 684rpx;
+  top: 15rpx;
+  right: 15rpx;
 }
 
 .arrow2 {
   width: 14rpx;
   height: 22rpx;
   position: absolute;
-  top: 160rpx;
-  left: 684rpx;
+  top: 15rpx;
+  right: 15rpx;
 }
 
 .bottom {

@@ -11,3 +11,12 @@
     授权
   </button>
 </view>
+<view class="bga" wx:if="{{hide}}">
+  <view class="hq">
+    <view class="hq-nav">获取手机号码后体验更佳哦</view>
+    <view class="but">
+      <button class='pop_btna' bindtap="ret">取消</button>
+      <button class='pop_btn' plain="true" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取手机号</button>
+    </view>
+  </view>
+</view>

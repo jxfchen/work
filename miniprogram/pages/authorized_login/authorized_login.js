@@ -7,7 +7,45 @@ var c = require("../../utils/http.js");
 
 Page({
   data: {
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    hide: true
+  },
+  getPhoneNumber: function (e) {//点击获取手机号码按钮
+    var that = this;
+    wx.checkSession({
+      success: function () {
+        console.log(e)
+        console.log(e.detail.iv)
+        console.log(e.detail.encryptedData)
+        var openid = wx.getStorageSync('openid')
+        var sessionKey = wx.getStorageSync('session_key')
+        var encryptedData = e.detail.encryptedData
+        var iv = e.detail.iv
+        c.request("wechat/getUserPhone", {
+          openid: openid,
+          sessionKey: sessionKey,
+          encryptedData: encryptedData,
+          iv: iv
+        }, function (res) {
+          console.log(res)
+          that.setData({
+            hide: false,
+          })
+          wx.setStorage({
+            key: 'phone',
+            data: res.phoneNumber,
+          })
+        }, function () {
+          console.log('fail');
+        })
+      },
+    });
+  },
+  ret:function(e){
+    var that = this
+    that.setData({
+      hide: false,
+    })
   },
   bindGetUserInfo(e) {
     //查看是否授权

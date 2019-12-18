@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/sc/sc",
+    "pages/authorized_login/authorized_login",
     "pages/demo/demo",
     "pages/cjsc/cjsc",
     "pages/guide/guide",
@@ -20,7 +22,6 @@
     "pages/servicedialy_img/servicedialy_img",
     "pages/servicedialy_void/servicedialy_void",
     "pages/sheetlist/sheetlist",
-    "pages/authorized_login/authorized_login",
     "pages/task/task",
     "pages/push_team/push_team",
     "pages/push_sheet/push_sheet",

@@ -12,6 +12,7 @@ Page({
     info: null,
     hide: false,
     taskid: '',
+    value: '点击「添加小程序」，下次访问更便捷 >'
   },
   guide: function(e) {
     var code = e.currentTarget.dataset.id
@@ -38,6 +39,17 @@ Page({
         })
       }
     })
+  },
+  rad: function () {
+    this.setData({
+      SHOW_TOP: true
+    });
+    // 关闭时间
+    setTimeout(() => {
+      this.setData({
+        SHOW_TOP: false
+      })
+    }, 3000);
   },
   getOpenid: function() {
     var self = this;

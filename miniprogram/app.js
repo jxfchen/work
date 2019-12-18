@@ -15,6 +15,10 @@ App({
               key: 'openid',
               data: res.info.openid,
             })
+            wx.setStorage({
+              key: 'session_key',
+              data: res.info.session_key,
+            })
           },function(){
             console.log('接口报错')
           })

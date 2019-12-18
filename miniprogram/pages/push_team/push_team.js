@@ -70,7 +70,7 @@ Page({
           list = JSON.parse(list_str);
           date.list = list;
           self.setData(date);
-          console.log(list);
+          console.log(res);
         }, function() {
           console.log('fail');
         })
