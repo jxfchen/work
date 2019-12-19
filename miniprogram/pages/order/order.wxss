@@ -52,10 +52,12 @@
 
 .card {
   width: 750rpx;
-  height: 348rpx;
+  height: auto;
   background: rgba(255, 255, 255, 1);
   border-radius: 10rpx;
   margin-top: 20rpx;
+  overflow: hidden;
+  padding-bottom: 30rpx;
 }
 
 .top {

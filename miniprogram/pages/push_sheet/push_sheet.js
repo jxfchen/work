@@ -13,20 +13,6 @@ Page({
     swiperCurrent: 0,
     background: ["/images/push_banner.png", "/images/push_banner.png", "/images/push_banner.png"],
     project_type_id: [],
-    contentList: [{
-      name: "联系我",
-      id: 0,
-    }, {
-      name: "直接联系客户",
-      id: 1,
-    }],
-    roleList: [{
-      name: "我是推荐人",
-      id: 1,
-    }, {
-      name: "我申请为项目合伙人",
-      id: 2,
-    }],
     pricesum: 0,
     peoplenum: 0,
       daynum:0,
@@ -274,6 +260,11 @@ Page({
             name: k[i].award
           })
         }
+        if (k[i].remark == 'num_name') {
+          that.setData({
+            namea: k[i].award
+          })
+        }
       }
     }, function() {})
     this.setData(date);
@@ -376,6 +367,7 @@ Page({
       contact_customer: that.data.customerPhone, //客户联系方式
       first_contact: that.data.content_id, //优先联系人
       role: that.data.role_id, //您的角色
+      days: that.data.daynum
     }, function(res) {
       if (2000 == res.code) {
         wx.showModal({

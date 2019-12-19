@@ -84,7 +84,10 @@ view{
     word-break:break-all;
     overflow:auto;
 }
-
+.wxParse-p image{
+  float: left;
+  width: 100%;
+}
 .wxParse-video{
     text-align: center;
     margin: 10px 0;

@@ -33,7 +33,7 @@
         </view>
         <view class="box" wx:if="{{emp}}">
             <view class="nav_a">
-                <image src="/images/decoration.png" class="cimg l"></image>餐次需求（可多选）
+                <image src="/images/decoration.png" class="cimg l"></image>{{namea}}
                 <image src="/images/decoration.png" class="cimg r"></image>
             </view>
             <view class="cen">
