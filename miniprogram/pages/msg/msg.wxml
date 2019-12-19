@@ -3,7 +3,7 @@
   <view class='{{status==2?"clk":""}}' bindtap="click2tap">我的消息</view>
 </view>
 <view class="list-box" style='{{status==1?"display:block":"display:none"}}'>
-  <view wx:for="{{list}}" wx:key="index">
+  <view wx:for="{{msgList}}" wx:key="index">
     <navigator url="/pages/msg_content/msg_content?title=msg_content1&id={{item.id}}&title={{item.title}}&page={{page1}}" hover-class="navigator-hover">
       <text class="text_nav">{{item.title}}</text>
       <text class="text_time">{{item.create_time}}</text>
@@ -11,7 +11,7 @@
   </view>
 </view>
 <view class="list-box" style='{{status==2?"display:block":"display:none"}}'>
-  <view wx:for="{{lists}}" wx:key="index">
+  <view wx:for="{{list}}" wx:key="index">
     <navigator url="/pages/msg_contenta/msg_contenta?title=msg_content2&id={{item.message_id}}&title={{item.name}}&page={{page2}}" hover-class="navigator-hover">
       <text class="text_nav">{{item.name}}</text>
       <text class="text_time">{{item.add_time}}</text>

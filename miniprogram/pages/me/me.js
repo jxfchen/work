@@ -11,6 +11,49 @@ Page({
         nicname: '',
         avatar: '',
         hide: false,
+        modalHidden: true,
+        tiplist: '',
+    },
+    /**
+   * 显示弹窗
+   */
+    buttonTap: function () {
+        var self = this;
+        var date = {
+            tiplist: '',
+        }
+        var tiplist = this.data.tiplist;
+        var type_id = this.data.type_id;
+        type_id = 64;
+        var that = this;
+        that.setData({
+            type_id: type_id,
+        })
+        c.request("index/getTips", {
+            type_id: type_id,
+        }, function (res) {
+            that.setData({
+                info: res.info,
+            });
+            var list_str = JSON.stringify(res.info);
+            tiplist = JSON.parse(list_str);
+            date.tiplist = tiplist;
+            self.setData(date);
+            console.log(tiplist);
+            wx.showModal({
+                title: '',
+                content: tiplist.content,
+                showCancel: false,
+                success(res) {
+                    if (res.confirm) {
+                        console.log('用户点击确定')
+                    }
+                }
+            })
+        }, function () {
+            console.log('fail');
+        })
+
     },
     msgList: function(e) {
         wx.navigateTo({

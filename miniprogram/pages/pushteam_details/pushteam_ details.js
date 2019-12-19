@@ -1,4 +1,3 @@
-// pages/push_team/push_team.js
 var c = require("../../utils/http.js");
 Page({
 
@@ -9,49 +8,7 @@ Page({
         flag: '1',
         avatar: '',
         code: '',
-        tiplist:[],
-        type_id:0,
-    },
-    /**
-   * 显示弹窗
-   */
-    buttonTap: function () {
-        var self = this;
-        var date = {
-            tiplist: '',
-        }
-        var tiplist = this.data.tiplist;
-        var type_id = this.data.type_id;
-        type_id=65;
-        var that=this;
-        that.setData({
-            type_id: type_id,
-        })
-        c.request("index/getTips", {
-            type_id: type_id,
-        }, function (res) {
-            that.setData({
-                info: res.info,
-            });
-            var list_str = JSON.stringify(res.info);
-            tiplist = JSON.parse(list_str);
-            date.tiplist = tiplist;
-            self.setData(date);
-            console.log(tiplist);
-            wx.showModal({
-                title: '',
-                content: tiplist.content,
-                showCancel:false,
-                success(res) {
-                    if (res.confirm) {
-                        console.log('用户点击确定')
-                    }
-                }
-            })
-        }, function () {
-            console.log('fail');
-        })
-        
+        tiplist: [],
     },
     button2Tap: function () {
         var self = this;
@@ -90,38 +47,10 @@ Page({
             console.log('fail');
         })
     },
-
-    navtap(){
-        wx.navigateTo({
-            url: '/pages/pushteam_details/pushteam_ details',
-            success: function(res) {},
-            fail: function(res) {},
-            complete: function(res) {},
-        })
-    },
-
-    bindManager(e) {
-        const that = this;
-        var flag = this.data.flag;
-        var flag = '1';
-        that.setData({
-            flag: flag,
-        })
-        console.log(flag)
-    },
-    bindstaff(e) {
-        const that = this;
-        var flag = this.data.flag;
-        var flag = '2';
-        that.setData({
-            flag: flag,
-        })
-        console.log(flag)
-    },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
+    onLoad: function (options) {
         var self = this;
         var date = {
             list: '',
@@ -140,7 +69,7 @@ Page({
         })
         wx.getStorage({
             key: 'openid',
-            success: function(res) {
+            success: function (res) {
                 that.setData({
                     openid: res.data,
                 })
@@ -155,7 +84,7 @@ Page({
                 }
                 c.request("wechatuser/getMyTeam", {
                     openid: that.data.openid
-                }, function(res) {
+                }, function (res) {
                     that.setData({
                         info: res.info,
                     });
@@ -164,12 +93,12 @@ Page({
                     date.list = list;
                     self.setData(date);
                     console.log(list);
-                }, function() {
+                }, function () {
                     console.log('fail');
                 })
                 c.request("wechatuser/index", {
                     openid: that.data.openid
-                }, function(res) {
+                }, function (res) {
                     that.setData({
                         info: res.info,
                     });
@@ -178,12 +107,11 @@ Page({
                     var code = codeList.user_info.invite_code;
                     date.code = code;
                     self.setData(date);
-                }, function() {
+                }, function () {
                     console.log('fail');
                 })
-                
             },
-            fail: function(res) {
+            fail: function (res) {
                 console.log(res + "fail")
             }
 
@@ -191,7 +119,7 @@ Page({
         this.setData(date);
     },
     // 分享
-    onShareAppMessage: function(res) {
+    onShareAppMessage: function (res) {
         console.log(res);
         if (res.from === 'button') {
             // 来自页面内转发按钮
@@ -206,49 +134,49 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })

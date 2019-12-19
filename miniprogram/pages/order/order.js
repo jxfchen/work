@@ -7,7 +7,7 @@ Page({
   data: {
     status: 100,
     pageNo: 1,
-    size: 10,
+    size: 5,
     list: [],
     role: 1,
     openid: '',
@@ -93,7 +93,7 @@ Page({
     });
     _this.getList(false);
   },
-  getList: function(isPage = false, isChangeTab = true) {
+    getList: function (isPage = false, isChangeTab=true) {
     let _this = this;
     c.request("pushersheet/getPusherSheetList", {
       openid: _this.data.openid,
@@ -102,27 +102,66 @@ Page({
       size: _this.data.size
     }, function(res) {
       console.log(res)
-      if (2000 == res.code) {
+        if (2000 == res.code) {
         if (res.info == null || res.info.length == 0) {
-          _this.setData({
-            hasMore: false,
-          });
-          return false;
+            _this.setData({
+                hasMore: false,
+            });
+            return false;
         }
         _this.setData({
-          list: res.info,
+            info: res.info,
         });
-      } else {
+        var list_str = JSON.stringify(res.info);
+        var list = JSON.parse(list_str);
+        for (let i = 0; i < list.length; i++) {
+            list[i].position = "center";
+            list[i].height = '';
+        }
+        if (isPage) {
+            //下一页的数据拼接在原有数据后面
+            list = _this.data.list.concat(list);
+            _this.setData({
+                list: list
+            });
+        } else {
+            //第一页数据直接赋值
+            _this.setData({
+                list: list
+            });
+        }
+        } else {
         if (isChangeTab) {
           _this.setData({
             list: []
           });
         }
         wx.showToast({
-          title: res.msg || "获取失败",
+            title: "没有更多了" || "获取失败",
           icon: "none"
         })
       }
+    //   if (2000 == res.code) {
+    //     if (res.info == null || res.info.length == 0) {
+    //       _this.setData({
+    //         hasMore: false,
+    //       });
+    //       return false;
+    //     }
+    //     _this.setData({
+    //       list: res.info,
+    //     });
+    //   } else {
+    //     if (isChangeTab) {
+    //       _this.setData({
+    //         list: []
+    //       });
+    //     }
+    //     wx.showToast({
+    //         title: "没有更多了" || "获取失败",
+    //       icon: "none"
+    //     })
+    //   }
     }, function() {
       console.log('fail');
     })
@@ -163,7 +202,12 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function() {
-
+      wx.showNavigationBarLoading() //在标题栏中显示加载
+      this.onLoad()
+      setTimeout(function () {
+          wx.hideNavigationBarLoading() //完成停止加载
+          wx.stopPullDownRefresh() //停止下拉刷新
+      }, 1500);
   },
 
   /**
@@ -175,7 +219,7 @@ Page({
       _this.setData({
         pageNo: _this.data.pageNo + 1
       })
-      _this.getList(true, false);
+      _this.getList(true,false);
     }
   },
 

@@ -47,7 +47,6 @@
 
 .weui-tab__panel {
   background-color: #f6f6f6;
-  height: 1048rpx;
   width: 749rpx;
 }
 
@@ -115,7 +114,6 @@
 }
 
 .card_btn {
-  width: 144rpx;
   height: 38rpx;
   background: linear-gradient(90deg, rgba(39, 203, 148, 1) 0%, rgba(6, 189, 127, 1) 100%);
   box-shadow: 0rpx 4rpx 14rpx 0rpx rgba(159, 255, 223, 1);
@@ -140,6 +138,7 @@
   color: rgba(244, 244, 244, 1);
   line-height: 37rpx;
   text-align: center;
+  padding: 0 15rpx;
 }
 
 .card_time {
@@ -160,6 +159,10 @@
   margin-top: 24rpx;
 }
 
+.td{
+    float: left;
+}
+
 .card_push {
   font-size: 24rpx;
   font-weight: 400;
@@ -170,7 +173,7 @@
 }
 
 .push_num {
-  width: 500rpx;
+  width: 300rpx;
   font-size: 24rpx;
   font-weight: 500;
   color: rgba(50, 50, 50, 1);
@@ -214,7 +217,7 @@
 
 .rt {
   float: right;
-  margin-top: 10rpx;
+  margin-top: 24rpx;
   margin-right: 40rpx;
 }
 

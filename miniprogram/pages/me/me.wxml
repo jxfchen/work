@@ -23,7 +23,7 @@
             <view class="money_num" bindtap="personaltap">{{list.money_info.single_invest}}</view>
             <view class="RMB2" bindtap="teamtap">￥</view>
             <view class="money_num2" bindtap="teamtap">{{list.money_info.team_invest}}</view>
-            <image src="/images/me/know.png" bindtap="teamtap" class="know_img"></image>
+            <image src="/images/me/know.png"  class="know_img" bindtap='buttonTap'></image>
         </view>
         <view class="personal_text" bindtap="personaltap">个人推单总收益</view>
         <view class="separate"></view>
@@ -77,7 +77,7 @@
             <view class="boxcen" data-id="getGuide" bindtap="guide">
                 <image class="guide_img" src="/images/me/guide.png"></image>
                 <view class="guide_text">新手指导</view>
-                <view class="guide_text2" style="">快速上手</view>
+                <view class="guide_text2">快速上手</view>
             </view>
 
             <view class="boxcen" data-id="getPusherrule" bindtap="guide">

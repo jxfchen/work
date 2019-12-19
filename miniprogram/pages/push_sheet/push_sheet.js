@@ -29,6 +29,7 @@ Page({
     }],
     pricesum: 0,
     peoplenum: 0,
+      daynum:0,
     status: true,
   },
   swiperChange(e) {
@@ -134,6 +135,20 @@ Page({
     })
     console.log(peoplenum)
   },
+  //天数
+    daynumInput: function (e) {
+        var daynum = this.data.daynum;
+        this.setData({
+            daynum: e.detail.value
+        })
+        var that = this;
+        daynum = parseInt(e.detail.value)
+        that.setData({
+            daynum: daynum
+        })
+        console.log(daynum)
+    },
+
   //联系方式
   mePhoneInput: function(e) {
     this.setData({
@@ -398,7 +413,13 @@ Page({
     var list = this.data.list;
     var pricesum = this.data.pricesum;
     var peoplenum = this.data.peoplenum;
-    var sum = pricesum * peoplenum * 30;
+    var daynum=this.data.daynum;
+      if (daynum == 0 || isNaN(daynum)){
+       var sum = pricesum * peoplenum
+    }else{
+        var sum = pricesum * peoplenum * daynum;
+    }
+    console.log(sum)
     var status = this.data.status;
     if (this.data.role_id == 1) {
       if (list.is_start_infomation == 0) {

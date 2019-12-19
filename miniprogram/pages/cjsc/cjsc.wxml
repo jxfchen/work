@@ -1,8 +1,12 @@
-<block wx:for="{{infos}}" wx:key="info">
-  <view class="box" data-id="{{item.id}}" bindtap="cen">
-    <view class="nav">{{item.title}} <text>{{item.create_time}}</text></view>
-    <view class="text">
-      {{item.description}}
-    </view>
-  </view>
-</block>
+<view class="main">
+    <block wx:for="{{list}}" wx:key="info">
+        <view class="box" data-id="{{item.id}}" bindtap="cen">
+            <view class="nav">{{item.title}}
+                <text>{{item.create_time}}</text>
+            </view>
+            <view class="text">
+                {{item.description}}
+            </view>
+        </view>
+    </block>
+</view>

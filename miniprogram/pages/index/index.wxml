@@ -6,7 +6,7 @@
       <image class="address_img" src="{{address_img}}"></image>
       <view class="section" bindtap="demotap">
         <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}"> -->
-          <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{address==""?region[1]:address}}' disabled>
+          <input class='picker' placeholder-class='plhStyle' type='number' maxlength='50' placeholder='' bindinput="bindKeyInput" value='{{address==""?nowcity:address}}' disabled>
           </input>
           <image class="arrow_img" src="{{arrow_img}}"></image>
       </view>
