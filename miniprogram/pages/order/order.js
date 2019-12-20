@@ -7,7 +7,7 @@ Page({
   data: {
     status: 100,
     pageNo: 1,
-    size: 5,
+    size: 10,
     list: [],
     role: 1,
     openid: '',
@@ -102,7 +102,7 @@ Page({
       size: _this.data.size
     }, function(res) {
       console.log(res)
-        if (2000 == res.code) {
+        if (res.code==2000) {
         if (res.info == null || res.info.length == 0) {
             _this.setData({
                 hasMore: false,
@@ -133,7 +133,7 @@ Page({
         } else {
         if (isChangeTab) {
           _this.setData({
-            list: []
+              list: []
           });
         }
         wx.showToast({
@@ -181,7 +181,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
     onShow: function () {
-        this.onLoad()
     },
 
   /**
@@ -201,9 +200,9 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
+        this.onLoad();
       wx.showNavigationBarLoading() //在标题栏中显示加载
-      this.onLoad()
       setTimeout(function () {
           wx.hideNavigationBarLoading() //完成停止加载
           wx.stopPullDownRefresh() //停止下拉刷新

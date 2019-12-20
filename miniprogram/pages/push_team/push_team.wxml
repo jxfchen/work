@@ -62,7 +62,7 @@
         </view>
 
 
-        <view class="pushList" style="{{list.pusher_award_list==[]?'display:block':'display:none'}}">
+        <view class="pushList" style="{{list.pusher_award_list.length==0?'':'display:none'}}">
             <button class="invbtn" open-type="share">邀请好友</button>
             <view class="invtext">暂无团队收益，赶快分享给好友，一起来挣钱吧！</view>
         </view>
