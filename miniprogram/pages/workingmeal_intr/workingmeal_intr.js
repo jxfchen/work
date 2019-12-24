@@ -1,5 +1,6 @@
 var c = require("../../utils/http.js");
 var wxParse = require('../../wxParse/wxParse.js');
+var app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -41,6 +42,9 @@ Page({
       id: id
     }, function(res) {
       console.log(res.info);
+      console.log(res.info.title)
+      app.title = res.info.title
+      console.log(app.title)
       var description = res.info.description
       var des = res.info.description.split(',')
       console.log(des)
@@ -50,6 +54,7 @@ Page({
         key: res.info.keywords.split(',')
       });
       var temp = wxParse.wxParse('article', 'html', res.info.article, that, 5);
+      
     }, function() {
       console.log('fail');
     })
