@@ -190,18 +190,7 @@ Page({
             console.log('fail');
         })
         this.setData(date);
-        wx.getSetting({
-            success: (res) => {
-                if (res.authSetting['scope.userInfo']) {
-                    // console.log(1) //已授权
-                } else {
-                    // console.log(2) //未授权
-                    wx.redirectTo({
-                        url: '/pages/authorized_login/authorized_login',
-                    })
-                }
-            }
-        })
+        
 
 
         // 实例化腾讯地图API核心类

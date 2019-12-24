@@ -190,6 +190,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+      wx.getSetting({
+          success: (res) => {
+              if (res.authSetting['scope.userInfo']) {
+                  // console.log(1) //已授权
+              } else {
+                  // console.log(2) //未授权
+                  wx.redirectTo({
+                      url: '/pages/authorized_login/authorized_login',
+                  })
+              }
+          }
+      })
     var self = this;
     self.setData({
       title: app.title
