@@ -107,8 +107,9 @@
             </view>
             <view style="font-size:24rpx;color:rgba(133,99,92,1);margin-left:70rpx;width:520rpx;height:68rpx;text-align:center;">推荐人获得一次性推荐奖励。项目合伙人成单后可按月获得收益。</view>
             <view class="content {{rol == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{roleList}}" wx:key="roleList" data-id="{{item.id}}" bindtap="wqd">{{item.name}}</view>
-            <view style="width:264rpx;height:204rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-left:44rpx;float:left;margin-top:20rpx;text-align:justify">推荐人指：您从任何渠道获得了有需求的客户信息，将信息推送给我们，我们核实客户信息真实性，有效性后获得一次性收益的个人。</view>
-            <view style="width:264rpx;height:204rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-right:40rpx;margin-top:20rpx;float:right;text-align:justify">合伙人指：能够帮助促成项目合作，并且能够协助维护客户</view>
+            <view style="width:264rpx;height:204rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-left:44rpx;float:left;margin-top:20rpx;text-align:justify">推客推单：仅提供信息给平台，并获取收益的推单。推客在本推单中扮演的角色并不能起到长期维护的作用。推客推单收益方式为一次性！</view>
+            <view style="width:264rpx;height:226rpx;font-size:24rpx;font-weight:400;color:rgba(158,158,158,1);line-height:34rpx;margin-right:40rpx;margin-top:20rpx;float:right;text-align:justify">合伙人推单：推客在某推单中扮演的角色可以起到对项目长期维护的作用，推客可按月享受合伙人推单带来的效益。
+即可获得佣金奖励，实时到账，通过微信随时提现。</view>
         </view>
 
         <view class="box">

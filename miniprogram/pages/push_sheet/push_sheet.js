@@ -442,6 +442,22 @@ Page({
     var pricesum = this.data.pricesum;
     var peoplenum = this.data.peoplenum;
     var daynum = this.data.daynum;
+      if (pricesum==0){
+          wx.showToast({
+              title: '请填写餐次价格后进行计算',
+              icon: 'none'
+          })
+      } else if (peoplenum == 0 || isNaN(peoplenum)){
+          wx.showToast({
+              title: '请填写餐次人数后进行计算',
+              icon: 'none'
+          })
+      } else if (daynum == 0 && list.is_days!=0) {
+          wx.showToast({
+              title: '请填写天数后进行计算',
+              icon: 'none'
+          })
+      }
     if (daynum == 0 || isNaN(daynum)) {
       var sum = pricesum * peoplenum
     } else {
