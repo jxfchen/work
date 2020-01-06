@@ -3,7 +3,7 @@
     <!-- <view class="card" style="background: url();background-size:706rpx 190rpx;background-repeat:no-repeat;"> -->
     <image src="/images/task_background.png" class="bgimg"></image>
     <view class="card_text">余额（元）</view>
-    <view class="RMB_num"><text class="RMB">￥</text>{{moneya}}</view>
+    <view class="RMB_num"><text class="RMB">￥</text>{{moneya==null?"0":moneya.use_money}}</view>
     <navigator url="/pages/withdrawals_record/withdrawals_record?title=withdrawals_record" hover-class="navigator-hover">
       <view class="record">提现记录</view>
     </navigator>
@@ -13,11 +13,6 @@
     <view class="page__bd">
       <view class="radio {{rad == index ? 'rad':''}}" data-index="{{index}}" data-name="{{item.name}}" wx:for="{{prolist}}" wx:key="prolist" bindtap="clas" data-id="{{item.id}}">{{item.name}}</view>
     </view>
-    <!-- <view class='{{status==false?"yuan100":"selection"}}' bindtap="clicktap">100元</view>
-        <view class="yuan100">200元</view>
-        <view class="yuan100">500元</view>
-        <view class="yuan100">1000元</view>
-        <view class="yuan100">2000元</view> -->
   </view>
   <view class="cash_way">
     <view class="cash_title">选择支付方式</view>

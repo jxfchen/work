@@ -1,4 +1,8 @@
 <view class="contain">
+    <view class="null" style="{{info.length==0?'':'display:none'}}">
+        <view class="null_text">您还没有提现记录</view>
+        <view bindtap="backtap" class="null_btn">返回</view>
+    </view>
   <view class="separate"></view>
   <view style='{{list.account_log==""?"display:none":"display:block"}}'>
     <block wx:for="{{info}}" wx:for-item="item" wx:key="">

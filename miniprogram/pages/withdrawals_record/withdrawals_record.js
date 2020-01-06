@@ -8,7 +8,11 @@ Page({
   data: {
     
   },
-
+    backtap(){
+        wx.switchTab({
+            url: '/pages/me/me'
+        })
+    },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -47,7 +51,7 @@ Page({
           list = JSON.parse(list_str);
           date.list = list;
           self.setData(date);
-          console.log(res.info.account_log);
+          console.log(res.info);
         }, function() {
           console.log('fail');
         })

@@ -65,7 +65,7 @@
            console.log(res)
            that.setData({
              info: res.info,
-             moneya: res.info.money_info.use_money
+             moneya: res.info.money_info
            });
          }, function () {
            console.log('fail');

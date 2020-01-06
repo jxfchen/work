@@ -10,7 +10,7 @@
         <view class="task_revenue">收益余额</view>
         <view class="task_mon">
             <text class="money_logo">￥</text>
-            <text class="task_num">{{info.use_money}}</text>
+            <text class="task_num">{{info.use_money==null?"0":info.use_money}}</text>
             <navigator url="/pages/income_details/income_details?title=income_details" hover-class="navigator-hover">
                 <image src="/images/task_arrow.png" class="arrow_img"></image>
             </navigator>

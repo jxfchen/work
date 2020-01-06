@@ -6,7 +6,7 @@
             <view>
                 <view class="team_income">团队累计收益</view>
                 <image src="/images/question_mark.png" class="question_mark" bindtap='buttonTap'></image>
-                <view class="RMB_num">￥{{list.money_info.total}}</view>
+                <view class="RMB_num">￥{{list.money_info==null?"0":list.money_info.total}}</view>
             </view>
             <view class="card_main">
                 <view class="transaction_orders">

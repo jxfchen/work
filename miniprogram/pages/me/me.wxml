@@ -20,9 +20,9 @@
         </view>
         <view class="money">
             <view class="RMB" bindtap="personaltap">￥</view>
-            <view class="money_num" bindtap="personaltap">{{list.money_info.single_invest}}</view>
+            <view class="money_num" bindtap="personaltap">{{list.money_info==null?"0":list.money_info.single_invest}}</view>
             <view class="RMB2" bindtap="teamtap">￥</view>
-            <view class="money_num2" bindtap="teamtap">{{list.money_info.team_invest}}</view>
+            <view class="money_num2" bindtap="teamtap">{{list.money_info==null?"0":list.money_info.team_invest}}</view>
             <image src="/images/me/know.png"  class="know_img" bindtap='buttonTap'></image>
         </view>
         <view class="personal_text" bindtap="personaltap">个人推单总收益</view>

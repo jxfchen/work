@@ -3,6 +3,30 @@
   height: 1624rpx;
   background: rgba(244, 244, 244, 1);
 }
+.null {
+    
+}
+
+.null_text {
+    padding-top: 300rpx;
+    color: #f35e51;
+    font-size: 34rpx;
+    text-align: center;
+}
+
+.null_btn {
+    width: 200rpx;
+    height: 70rpx;
+    background: linear-gradient(90deg, rgba(253, 140, 116, 1) 0%, rgba(243, 94, 81, 1) 100%);
+    border-radius: 48rpx;
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 70rpx;
+    text-align: center;
+    margin: 20rpx auto;
+}
 
 .separate {
   width: 750rpx;

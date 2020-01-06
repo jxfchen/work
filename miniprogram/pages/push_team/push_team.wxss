@@ -7,6 +7,7 @@
     margin-left: 30rpx;
 }
 
+
 .title {
     height: 30rpx;
     font-size: 32rpx;
@@ -358,7 +359,6 @@
     width: 300rpx;
     text-align: right;
 }
-
 
 .ranking_line {
     width: 660rpx;

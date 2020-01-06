@@ -15,22 +15,22 @@
         <view class="gocash">去提现</view>
       </navigator>
 
-      <view class="card_num">￥{{list.money_info.use_money}}</view>
+      <view class="card_num">￥{{list.money_info==null?"0":list.money_info.use_money}}</view>
     </view>
     <view style="margin-top:16rpx;">
       <view style="float:left;">
         <view class="myincome">我的累计收益(元)</view>
-        <view class="myincome_num">{{list.money_info.single_invest}}</view>
+        <view class="myincome_num">{{list.money_info==null?"0":list.money_info.single_invest}}</view>
       </view>
       <view class="vertical_line"></view>
       <view style="float:left;">
         <view class="teamincome">团队累计收益(元)</view>
-        <view class="teamincome_num">{{list.money_info.team_invest}}</view>
+        <view class="teamincome_num">{{list.money_info==null?"0":list.money_info.team_invest}}</view>
       </view>
       <view class="vertical_line"></view>
       <view style="float:left;">
         <view class="taskincome">任务累计收益(元)</view>
-        <view class="taskincome_num">{{list.money_info.total}}</view>
+        <view class="taskincome_num">{{list.money_info==null?"0":list.money_info.total}}</view>
       </view>
     </view>
   </view>
