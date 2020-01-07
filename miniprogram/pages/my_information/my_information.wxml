@@ -9,8 +9,8 @@
   <view class="information">
     <view class="account">
       <view class="account_title">账户管理</view>
-      <view class="account_btn">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
-      <navigator url="/pages/identity_authentication/identity_authentication?title=identity_authentication" wx:if="{{list.user_info.card_status == 0}}">
+      <view class="account_btn">{{list.user_info.card_status==1?"已认证":list.user_info.card_status==2?"未认证":"待审核"}}</view>
+      <navigator url="/pages/identity_authentication/identity_authentication?title=identity_authentication" wx:if="{{list.user_info.card_status == 2}}">
         <view class="account_text">去认证</view>
         <image class="arrow" src="/images/me/arrow.png"></image>
       </navigator>

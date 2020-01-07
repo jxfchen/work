@@ -9,7 +9,7 @@
         <view class="message">
             <view class="message_part">
                 <view class="nikname">{{nicname==''?list.user_info.nickname:nicname}}</view>
-                <view class="attestation" bindtap="rz">{{list.user_info.card_status==0?"未认证":"已认证"}}</view>
+                <view class="attestation" bindtap="rz">{{list.user_info.card_status==1?"已认证":list.user_info.card_status==2?"未认证":"待审核"}}</view>
             </view>
             <view class="text">{{list.user_info.invite_code}}</view>
             <view class="copy" bindtap="copyTBL">复制邀请码</view>
