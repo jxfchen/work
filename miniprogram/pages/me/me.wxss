@@ -149,9 +149,7 @@
 .know_img {
     width: 32rpx;
     height: 32rpx;
-    position: absolute;
-    top: 186rpx;
-    left: 584rpx;
+    float: right;
 }
 
 .personal_text {
@@ -463,4 +461,52 @@ button.guide_text::after {
     float: right;
     margin-top: 70rpx;
     margin-right: 20rpx;
+}
+
+.income_part {
+    padding-top: 200rpx;
+}
+
+.income_left {
+    float: left;
+    margin-left: 62rpx;
+}
+.income_right{
+    float: left;
+}
+.left_money {
+    
+}
+
+
+.mon_num {
+    font-size: 42rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(244, 92, 82, 1);
+    text-align: center;
+    white-space:nowrap;
+}
+
+.left_tit {
+    font-size: 26rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(148, 148, 148, 1);
+}
+
+.right_tit {
+    font-size: 26rpx;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: rgba(148, 148, 148, 1);
+}
+.income_center{
+    width:2rpx;
+    height:50rpx;
+    background-color:#DFDFDF;
+    float: left; 
+    margin-left: 100rpx;
+    margin-right: 106rpx;
+    margin-top: 22rpx;
 }

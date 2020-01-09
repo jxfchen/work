@@ -89,17 +89,18 @@ Page({
         c.request("wechatuser/getAttestation1", {
             openid: openid
         }, function(res) {
+            console.log(res)
             var yq = res.is_recommend //0:false,1:true
             var rz = that.data.rz //0:false,1:true
-            if (yq == 0) {
+            if (yq == 0 && rz == 2) {
                 wx.navigateTo({
                     url: '../identity_authentication/identity_authentication',
                 })
-            } else if (yq == 1 && rz == 0) {
+            } else if (yq == 1 && rz == 2) {
                 wx.navigateTo({
                     url: '../certification_first/certification_first',
                 })
-            } else if (yq == 1 || rz == 0) {
+            } else if (yq == 1 || rz == 2) {
                 return
             }
             console.log('yq:', yq, 'rz:', rz)

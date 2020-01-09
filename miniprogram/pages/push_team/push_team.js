@@ -175,9 +175,10 @@ Page({
                     });
                     var list_str = JSON.stringify(res.info);
                     var codeList = JSON.parse(list_str);
-                    var code = codeList.user_info.invite_code;
+                    var code = res.info.user_info.invite_code;
                     date.code = code;
                     self.setData(date);
+                    console.log(code)
                 }, function() {
                     console.log('fail');
                 })
@@ -196,11 +197,10 @@ Page({
         if (res.from === 'button') {
             // 来自页面内转发按钮
         }
-        var that = this
-        var code = that.data.code
+        var code = this.data.code;
         return {
             title: 'share',
-            path: '/pages/index/index?invest_code=that.data.code'
+            path: '/pages/index/index?invest_code=code'
         }
     },
     /**
