@@ -41,6 +41,10 @@
     color: rgba(46, 52, 55, 1);
     padding-top: 60rpx;
     float: left;
+    max-width:300rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .attestation {

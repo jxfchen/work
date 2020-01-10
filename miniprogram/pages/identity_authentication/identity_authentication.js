@@ -70,7 +70,7 @@ Page({
             invest_code: invest_code,
           }, function(res) {
             console.log(res)
-            if (that.data.card == 0) {
+            if (that.data.card == 2) {
               wx.navigateTo({
                 url: '/pages/certification_first/certification_first',
                 success: function(res) {},

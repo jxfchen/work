@@ -225,6 +225,8 @@ Page({
         });
       }
     })
+
+      
     if (options == undefined) { } else {
       var openid = wx.getStorageSync('openid')
       var code = options.invest_code;
@@ -233,7 +235,9 @@ Page({
         invest_code: code,
       },
         function (res) {
-          if (res.code == 2000) { } else {
+          if (res.code == 2000) { 
+          } else {
+              console.log(res)
             wx.showToast({
               title: res.msg,
               icon: 'none'

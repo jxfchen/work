@@ -1,60 +1,60 @@
 /**index.wxss**/
 
 .address {
-  background-color: #ff6d64;
-  height: 180rpx;
+    background-color: #ff6d64;
+    height: 180rpx;
 }
 
 .address_img {
-  width: 28rpx;
-  height: 32rpx;
-  float: left;
-  margin-left: 31rpx;
-  margin-right: 30rpx;
-  margin-top: 3.5px;
+    width: 28rpx;
+    height: 32rpx;
+    float: left;
+    margin-left: 31rpx;
+    margin-right: 30rpx;
+    margin-top: 3.5px;
 }
 
 .cen {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .cen .l {
-  display: table;
-  float: left;
+    display: table;
+    float: left;
 }
 
 .cen .r {
-  display: table;
-  float: right;
-  margin-top: 20rpx;
-  margin-right: 11rpx;
+    display: table;
+    float: right;
+    margin-top: 20rpx;
+    margin-right: 11rpx;
 }
 
 .section {
-  float: left;
+    float: left;
 }
 
 .picker {
-  color: white;
-  width: 96rpx;
-  float: left;
+    color: white;
+    width: 96rpx;
+    float: left;
 }
 
 .arrow_img {
-  margin-left: 15rpx;
-  width: 22rpx;
-  height: 24rpx;
-  margin-top: 18rpx;
+    margin-left: 15rpx;
+    width: 22rpx;
+    height: 24rpx;
+    margin-top: 18rpx;
 }
 
 .rotation_chart {
-  width: 690rpx;
-  height: 320rpx;
-  position: relative;
-  margin: 0 30rpx;
-  top: -60px;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
+    width: 690rpx;
+    height: 320rpx;
+    position: relative;
+    margin: 0 30rpx;
+    top: -60px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
 }
 
 /* .swiper_img {
@@ -64,289 +64,290 @@
 } */
 
 .notice {
-  background-color: #000;
-  opacity: 60%;
-  width: 495rpx;
-  height: 55rpx;
-  border-radius: 30rpx;
-  position: relative;
-  top: -95rpx;
-  margin: 0 auto;
+    background-color: #000;
+    opacity: 60%;
+    width: 495rpx;
+    height: 55rpx;
+    border-radius: 30rpx;
+    position: relative;
+    top: -95rpx;
+    margin: 0 auto;
 }
 
 .notice_img {
-  float: left;
-  margin: 17rpx 0 11rpx 43rpx;
-  width: 26rpx;
-  height: 23rpx;
+    float: left;
+    margin: 17rpx 0 11rpx 43rpx;
+    width: 26rpx;
+    height: 23rpx;
 }
 
-
 .middle {
-  position: relative;
-  top: -70rpx;
+    position: relative;
+    top: -70rpx;
 }
 
 .logo1 {
-  margin-left: 30rpx;
-  width: 44rpx;
-  height: 35rpx;
-  float: left;
-  margin-top: 6rpx;
+    margin-left: 30rpx;
+    width: 44rpx;
+    height: 35rpx;
+    float: left;
+    margin-top: 6rpx;
 }
 
 .push_text {
-  margin-left: 17rpx;
-  color: #333;
-  font-size: 34rpx;
-  line-height: 48rpx;
-  font-weight: bold;
+    margin-left: 17rpx;
+    color: #333;
+    font-size: 34rpx;
+    line-height: 48rpx;
+    font-weight: bold;
 }
 
 .more {
-  float: right;
-  font-size: 28rpx;
-  color: #666;
+    float: right;
+    font-size: 28rpx;
+    color: #666;
 }
 
 .more_img {
-  float: right;
-  width: 17rpx;
-  height: 27rpx;
-  margin-right: 30rpx;
-  margin-top: 8rpx;
-  margin-left: 10rpx;
+    float: right;
+    width: 17rpx;
+    height: 27rpx;
+    margin-right: 30rpx;
+    margin-top: 8rpx;
+    margin-left: 10rpx;
 }
 
 .card {
-  display: inline-block;
-  width: 374rpx;
-  height: 519rpx;
-  background: rgba(255, 246, 245, 1);
-  box-shadow: 0px 10px 7px 0px rgba(253, 224, 222, 1);
-  border-radius: 12px;
-  margin: 23rpx 30rpx 30rpx 30rpx;
+    display: inline-block;
+    width: 374rpx;
+    height: 519rpx;
+    background: rgba(255, 246, 245, 1);
+    box-shadow: 0px 10px 7px 0px rgba(253, 224, 222, 1);
+    border-radius: 12px;
+    margin: 23rpx 30rpx 30rpx 30rpx;
 }
 
 .card_ad {
-  width: 374rpx;
-  height: 44rpx;
-  background-color: #000;
-  background: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  bottom: 0;
-  text-align: center;
+    width: 374rpx;
+    height: 44rpx;
+    background-color: #000;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
 }
 
 .card_img {
-  width: 374rpx;
-  height: 287rpx;
-  position: relative;
-  border-radius: 12px 12px 0 0;
+    width: 374rpx;
+    height: 287rpx;
+    position: relative;
+    border-radius: 12px 12px 0 0;
 }
 
 .ad_img {
-  width: 90rpx;
-  height: 28rpx;
-  margin: 8rpx 11rpx 8rpx 11rpx;
-  float: left;
+    width: 90rpx;
+    height: 28rpx;
+    margin: 8rpx 11rpx 8rpx 11rpx;
+    float: left;
 }
 
 .ad_text {
-  font-size: 26rpx;
-  color: rgba(255, 255, 255, 1);
+    font-size: 26rpx;
+    color: rgba(255, 255, 255, 1);
 }
 
 .card_text {
-  /* position: relative;
+    /* position: relative;
   top: -30rpx; */
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .text_title {
-  width: auto;
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
-  height: 37rpx;
-  font-size: 26rpx;
-  font-weight: 600;
-  color: rgba(51, 51, 51, 1);
-  float: left;
-  margin: 0rpx 0 6rpx 24rpx;
-  /* padding-top: 35rpx; */
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    float: left;
+    margin: 0rpx 0 6rpx 24rpx;
+    /* padding-top: 35rpx; */
 }
-.card navigator{
-  float: left;
+
+.card navigator {
+    float: left;
 }
+
 .push_revenue {
-  font-size: 20rpx;
-  color: rgba(102, 102, 102, 1);
-  display: block;
-  float: left;
-  margin-left: 24rpx;
+    font-size: 20rpx;
+    color: rgba(102, 102, 102, 1);
+    display: block;
+    float: left;
+    margin-left: 24rpx;
 }
 
 .push_money {
-  font-size: 23rpx;
-  color: #fc6359;
-  font-weight: bold;
+    font-size: 23rpx;
+    color: #fc6359;
+    font-weight: bold;
 }
 
 .card_btn {
-  width: 303rpx;
-  height: 55rpx;
-  background: linear-gradient(270deg, rgba(251, 92, 81, 1) 0%, rgba(255, 127, 119, 1) 100%);
-  border-radius: 28rpx;
-  margin: 16rpx 39rpx 27rpx 32rpx;
-  color: rgba(255, 255, 255, 1);
-  font-size: 28rpx;
-  font-weight: 500;
-  line-height: 55rpx;
-  text-align: center;
+    width: 303rpx;
+    height: 55rpx;
+    background: linear-gradient(270deg, rgba(251, 92, 81, 1) 0%, rgba(255, 127, 119, 1) 100%);
+    border-radius: 28rpx;
+    margin: 16rpx 39rpx 27rpx 32rpx;
+    color: rgba(255, 255, 255, 1);
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 55rpx;
+    text-align: center;
 }
 
 .bottom {
-  width: 750rpx;
-  background: #f6f6f6;
-  position: absolute;
+    width: 750rpx;
+    background: #f6f6f6;
+    position: absolute;
 }
 
 .bottom_top {
-  padding-top: 16rpx;
-  padding-bottom: 29rpx;
+    padding-top: 16rpx;
+    padding-bottom: 29rpx;
 }
 
 .liLeft {
-  margin-left: 30rpx;
-  float: left;
+    margin-left: 30rpx;
+    float: left;
 }
 
 .liRight {
-  margin-left: 390rpx;
+    margin-left: 390rpx;
 }
 
 .li_warp {
-  width: 44%;
+    width: 44%;
 }
 
 .li {
-  width: 100%;
-  background-color: white;
-  border-radius: 12rpx;
-  margin-bottom: 20rpx;
+    width: 100%;
+    background-color: white;
+    border-radius: 12rpx;
+    margin-bottom: 20rpx;
 }
 
 .li_pic {
-  color: #fff;
-  border-radius: 12rpx;
-  overflow: hidden;
+    color: #fff;
+    border-radius: 12rpx;
+    overflow: hidden;
 }
 
 .li_pic .pic_warp {
-  width: 100%;
+    width: 100%;
 }
 
 .li_pic .pic_warp image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .li_pic .pic_text {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  font-size: 24rpx;
-  z-index: 1;
-  background: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 30%, #000 100%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 24rpx;
+    z-index: 1;
+    background: linear-gradient(-180deg, rgba(0, 0, 0, 0.00) 30%, #000 100%);
 }
 
 .li_pic .pic_text .label {
-  height: 40rpx;
-  line-height: 40rpx;
-  padding: 0 20rpx;
-  background: #000;
-  color: #fff;
-  display: inline-block;
-  border-radius: 40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    padding: 0 20rpx;
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    border-radius: 40rpx;
 }
 
 .li .tlt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-all;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  margin-top: 16rpx;
-  margin-bottom: 4rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    margin-top: 16rpx;
+    margin-bottom: 4rpx;
 }
 
 .view_notice_contain {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 120rpx;
-  background: white;
-  font-size: 26rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120rpx;
+    background: white;
+    font-size: 26rpx;
 }
 
 .image_notice {
-  margin-left: 5rpx;
+    margin-left: 5rpx;
 }
 
 .swiper_container {
-  font-size: 22rpx;
-  font-family: PingFangSC-Regular, PingFangSC;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 1);
-  position: relative;
-  top: -35rpx;
-  left: 90rpx;
-  height: 70%;
+    font-size: 22rpx;
+    font-family: PingFangSC-Regular, PingFangSC;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    position: relative;
+    top: -35rpx;
+    left: 90rpx;
+    height: 70%;
 }
 
 .swiper_container .swiper_item {
-  width: 65%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    width: 65%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .rotation_chart {
-  position: relative;
+    position: relative;
 }
 
 .swiper-block {
-  height: 480rpx;
-  width: 100%;
+    height: 480rpx;
+    width: 100%;
 }
 
 .notice_text {
-  top: 0;
-  right: 0;
-  width: 80rpx;
-  color: #fff;
-  height: 43rpx;
-  font-size: 20rpx;
-  line-height: 57rpx;
-  position: absolute;
+    top: 0;
+    right: 0;
+    width: 80rpx;
+    color: #fff;
+    height: 43rpx;
+    font-size: 20rpx;
+    line-height: 57rpx;
+    position: absolute;
 }
 
 .swiper-item {
-  border-radius: 12rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: unset;
+    border-radius: 12rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: unset;
 }
 
 .slide-image {
-  border-radius: 12rpx;
-  box-shadow: 0px 0px 30rpx rgba(0, 0, 0, 0.2);
-  z-index: 1;
+    border-radius: 12rpx;
+    box-shadow: 0px 0px 30rpx rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* .active {
@@ -358,95 +359,95 @@
 /* dot定位位置 */
 
 .rotation_chart .dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 15rpx;
-  display: flex;
-  justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15rpx;
+    display: flex;
+    justify-content: center;
 }
 
 /* 未经过前dot */
 
 .rotation_chart .dots .dot {
-  margin: 0 8rpx;
-  width: 14rpx;
-  height: 14rpx;
-  background-color: #ffdad2;
-  border-radius: 8rpx;
-  transition: all 0.6s ease-in-out;
+    margin: 0 8rpx;
+    width: 14rpx;
+    height: 14rpx;
+    background-color: #ffdad2;
+    border-radius: 8rpx;
+    transition: all 0.6s ease-in-out;
 }
 
 /* 经过后dot */
 
 .rotation_chart .dots .dot.active {
-  width: 24rpx;
-  background: #ff9d97;
+    width: 24rpx;
+    background: #ff9d97;
 }
 
 .foot {
-  clear: left;
+    clear: left;
 }
 
 .foot_line {
-  font-size: 24rpx;
-  font-family: PingFangSC-Light, PingFangSC;
-  font-weight: 300;
-  color: rgba(153, 153, 153, 1);
-  width: 100%;
-  text-align: center;
-  background-color: #f6f6f6;
-  height: 80rpx;
-  padding-top: 50rpx;
+    font-size: 24rpx;
+    font-family: PingFangSC-Light, PingFangSC;
+    font-weight: 300;
+    color: rgba(153, 153, 153, 1);
+    width: 100%;
+    text-align: center;
+    background-color: #f6f6f6;
+    height: 80rpx;
+    padding-top: 50rpx;
 }
 
 .num {
-  font-size: 26rpx;
-  color: rgba(255, 87, 75, 1);
-  float: right;
-  margin-right: 12rpx;
+    font-size: 26rpx;
+    color: rgba(255, 87, 75, 1);
+    float: right;
+    margin-right: 12rpx;
 }
 
 .fabulous {
-  width: 28rpx;
-  height: 24rpx;
-  float: right;
-  margin-right: 8rpx;
-  margin-top: 8rpx;
+    width: 28rpx;
+    height: 24rpx;
+    float: right;
+    margin-right: 8rpx;
+    margin-top: 8rpx;
 }
 
 .fabulous1 {
-  width: 40rpx;
-  height: 35rpx;
-  float: right;
-  margin-right: 8rpx;
-  margin-top: 6rpx;
+    width: 40rpx;
+    height: 35rpx;
+    float: right;
+    margin-right: 8rpx;
+    margin-top: 6rpx;
 }
 
 .nicname {
-  font-size: 24rpx;
-  color: rgba(102, 102, 102, 1);
-  padding-top: 18rpx;
-  float: left;
+    font-size: 24rpx;
+    color: rgba(102, 102, 102, 1);
+    padding-top: 18rpx;
+    float: left;
 }
 
 .header {
-  width: 50rpx;
-  height: 50rpx;
-  border: 1px solid rgba(255, 255, 255, 1);
-  border-radius: 40rpx;
-  margin: 7rpx 11rpx 0 22rpx;
-  float: left;
+    width: 50rpx;
+    height: 50rpx;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 40rpx;
+    margin: 7rpx 11rpx 0 22rpx;
+    float: left;
 }
 
 .tit {
-  font-size: 28rpx;
-  font-weight: bord;
-  margin-left: 22rpx;
-  margin-right: 22rpx;
+    font-size: 28rpx;
+    font-weight: bord;
+    margin-left: 22rpx;
+    margin-right: 22rpx;
 }
 
 .part {
-  width: 334rpx;
-  height: 144rpx;
+    width: 334rpx;
+    height: 144rpx;
 }

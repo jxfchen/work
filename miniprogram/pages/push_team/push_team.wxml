@@ -39,7 +39,7 @@
         <block wx:for-item="item" wx:key="" wx:for='{{list.user_list}}'>
             <image class="teamlist_header1" src='{{item.avatarurl}}'></image>
         </block>
-        <button class="header_num" open-type="share">＋</button>
+        <button class="header_num" open-type="share" >＋</button>
     </view>
     <view class="divide1"></view>
     <view class="team_ranking">

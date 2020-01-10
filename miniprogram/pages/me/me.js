@@ -90,6 +90,13 @@ Page({
             openid: openid
         }, function(res) {
             console.log(res)
+            // var invest_code = wx.getStorageSync('invest_code');
+            // console.log(invest_code);
+            // if (invest_code == undefined){
+            //     var yq=0;
+            // }else{
+            //     var yq=1;
+            // }
             var yq = res.is_recommend //0:false,1:true
             var rz = that.data.rz //0:false,1:true
             if (yq == 0 && rz == 2) {
@@ -100,9 +107,7 @@ Page({
                 wx.navigateTo({
                     url: '../certification_first/certification_first',
                 })
-            } else if (yq == 1 || rz == 2) {
-                return
-            }
+            } 
             console.log('yq:', yq, 'rz:', rz)
         }, function() {
             console.log('fail');
