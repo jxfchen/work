@@ -514,3 +514,6 @@ button.guide_text::after {
     margin-right: 106rpx;
     margin-top: 22rpx;
 }
+button::after{
+    border:none!important;
+}

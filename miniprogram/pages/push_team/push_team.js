@@ -199,8 +199,8 @@ Page({
         }
         var code = this.data.code;
         return {
-            title: 'share',
-            path: '/pages/index/index?invest_code=code'
+            title: '团餐推客',
+            path: '/pages/index/index?invest_code='+code
         }
     },
     /**
@@ -244,11 +244,4 @@ Page({
     onReachBottom: function() {
 
     },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {
-
-    }
 })

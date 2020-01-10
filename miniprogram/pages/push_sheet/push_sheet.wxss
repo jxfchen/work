@@ -783,6 +783,13 @@ radio .wx-radio-input {
   line-height: 100rpx;
 }
 
+.RMB_num{
+    width: 100rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .recommend_btn2 {
   width: 256rpx;
   height: 76rpx;

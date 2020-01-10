@@ -102,7 +102,6 @@ Page({
     that.setData({
         address: address
     })
-      console.log(address);
       wx.navigateBack({
           url:"/pages/index/index"
       })
@@ -115,7 +114,6 @@ Page({
         that.setData({
             address: hotcity
         })
-        console.log(address);
         wx.navigateBack({
             url: "/pages/index/index"
         })
@@ -128,7 +126,6 @@ Page({
         that.setData({
             address: mycity
         })
-        console.log(address);
         wx.navigateBack({
             url: "/pages/index/index"
         })

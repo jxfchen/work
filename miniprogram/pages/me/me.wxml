@@ -114,12 +114,12 @@
                 <view class="guide_text2">赚钱秘籍</view>
             </view>
 
-            <view class="boxcen">
+            <button class="boxcen"  open-type="contact" style="background-color:white">
                 <image class="guide_img" src="/images/me/service.png"></image>
-                <button class="guide_text" open-type="contact">专属客服</button>
+                <button class="guide_text">专属客服</button>
                 <!-- <view class="guide_text">专属客服</view> -->
                 <view class="guide_text2">来，交个朋友</view>
-            </view>
+            </button>
             <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
                 <view class="boxcen">
                     <image class="guide_img" src="/images/me/setup.png"></image>

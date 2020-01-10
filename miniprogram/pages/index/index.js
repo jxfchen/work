@@ -127,22 +127,23 @@ Page({
     var openid = wx.getStorageSync('openid')
 
     //地址
-    var address = this.data.address
+    var address = this.data.address;
     address = wx.getStorageSync('address');
+    console.log(address);
     that.setData({
       address: address
     })
-    c.request("index/getOpenCity", {}, function (res) {
-      that.setData({
-        open_city: res.open_city,
-      });
-      var addressList_str = JSON.stringify(res.open_city);
-      addressList = JSON.parse(addressList_str);
-      date.addressList = addressList;
-      self.setData(date);
-    }, function () {
-      console.log('fail');
-    })
+    // c.request("index/getOpenCity", {}, function (res) {
+    //   that.setData({
+    //     open_city: res.open_city,
+    //   });
+    //   var addressList_str = JSON.stringify(res.open_city);
+    //   addressList = JSON.parse(addressList_str);
+    //   date.addressList = addressList;
+    //   self.setData(date);
+    // }, function () {
+    //   console.log('fail');
+    // })
     // 公告
     c.request("index/getNotice", {}, function (res) {
       that.setData({
@@ -316,6 +317,7 @@ Page({
 
   },
   onShow: function () {
+      this.onLoad()
   },
 
   imageLoadLeft: function (e) {

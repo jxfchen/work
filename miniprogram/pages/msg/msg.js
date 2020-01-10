@@ -119,7 +119,6 @@ Page({
                 }
                 _this.setData({
                     info: res.info,
-                    code: code
                 });
                 var list_str = JSON.stringify(res.info);
                 var list = JSON.parse(list_str);

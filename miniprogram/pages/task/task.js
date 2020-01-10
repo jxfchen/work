@@ -72,7 +72,6 @@ Page({
             msg: res.info,
             code: res.invite_code
           })
-          console.log(res)
         }
       }, function() {
         console.log('fail');
@@ -133,7 +132,6 @@ Page({
   link: function(e) {
     var id = e.currentTarget.dataset.id;
     var taskid = this.data.taskid;
-    console.log(id)
     var that = this;
     that.setData({
       taskid: e.currentTarget.dataset.id
@@ -152,16 +150,14 @@ Page({
   },
   // 分享
   onShareAppMessage: function(res) {
-    console.log(res);
-    if (res.from === 'button') {
-      // 来自页面内转发按钮
-    }
+
     var that = this
     var code = that.data.code
     return {
-      title: 'share',
-      path: '/pages/index/index?invest_code=that.data.code'
+        title: '团餐推客 ',
+        path: '/pages/index/index?invest_code=' + code
     }
+    
   },
   //   close: function(e) {
   //     var that = this
@@ -211,10 +207,4 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  }
 })
