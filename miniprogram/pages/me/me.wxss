@@ -34,6 +34,20 @@
     float: left;
 }
 
+.login{
+    width: 150rpx;
+    height: 50rpx;
+    background: linear-gradient(180deg, rgba(98, 99, 113, 1) 0%, rgba(64, 64, 75, 1) 100%);
+    border-radius: 19rpx;
+    color: white;
+    float: left;
+    margin-top: 85rpx;
+    font-size: 20rpx;
+    line-height: 50rpx;
+    text-align: center;
+    margin-left: 20rpx;
+}
+
 .nikname {
     font-size: 40rpx;
     font-family: San Francisco Display;
@@ -516,4 +530,55 @@ button.guide_text::after {
 }
 button::after{
     border:none!important;
+}
+.bga{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+}
+.hq{
+  top: 50%;
+  left: 50%;
+  width: 500rpx;
+  height: 250rpx;
+  position:absolute;
+  background: #fff;
+  border-radius: 5px;
+  margin: -250rpx 0 0 -250rpx;
+}
+.hq-nav{
+  height: 30rpx;
+  margin: 50rpx 0;
+  font-size: 26rpx;
+}
+.but{
+  width: 80%;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.but button{
+  width: 45%;
+  padding: 0;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.but button.pop_btna{
+  color: #999;
+  border: 1px solid #eee;
+}
+.but button.pop_btn{
+  color: #fff;
+  border: 1px solid #F45C52;
+  background: #F45C52
+}
+.but button:nth-child(1){
+  float: left;
+}
+.but button:nth-child(2){
+  float: right;
 }

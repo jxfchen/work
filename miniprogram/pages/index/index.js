@@ -238,11 +238,11 @@ Page({
         function (res) {
           if (res.code == 2000) { 
           } else {
-              console.log(res)
-            wx.showToast({
-              title: res.msg,
-              icon: 'none'
-            })
+            //   console.log(res)
+            // wx.showToast({
+            //   title: res.msg,
+            //   icon: 'none'
+            // })
           }
         },
         function () {

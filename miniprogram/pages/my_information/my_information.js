@@ -240,7 +240,7 @@ Page({
                 })
             }else{
                 that.setData({
-                    avaurl: baseUrl.config.image_base_url +  list.user_info.avatarurl
+                    avaurl:  list.user_info.avatarurl
                 })
             }
         }, function() {
@@ -288,14 +288,19 @@ Page({
     var date = this.data.date;
     var nicname = this.data.nicname;
     console.log(avatar, nicname);
-    wx.setStorage({
-      key: 'nicname',
-      data: nicname,
-    })
-    wx.setStorage({
-      key: 'avatar',
-      data: avatar,
-    })
+      if (avatar == '') {
+
+      } else {
+          wx.setStorage({
+              key: 'avatar',
+              data: avatar,
+          })
+      }
+      wx.setStorage({
+          key: 'nicname',
+          data: nicname,
+      })
+    
     c.request("wechatuser/updateBirthday", {
       openid: openid,
       birthday: date,

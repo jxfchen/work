@@ -3,10 +3,8 @@
     </view>
     <view class="card">
         <image src="../../images/msg.png" mode="widthFix" class="msg" bindtap="msgList"></image>
-        <navigator url="/pages/my_information/my_information?title=my_information" hover-class="navigator-hover">
-            <image class="header" src='{{avatar}}'></image>
-        </navigator>
-        <view class="message">
+        <image class="header" src='{{!avatar?"../../images/startheader.png":avatar}}' bindtap="infortap"></image>
+        <view class="message" style="{{!avatar?'display:none':''}}">
             <view class="message_part">
                 <view class="nikname">{{nicname==''?list.user_info.nickname:nicname}}</view>
                 <view class="attestation" bindtap="rz">{{list.user_info.card_status==1?"已认证":list.user_info.card_status==2?"未认证":"待审核"}}</view>
@@ -18,16 +16,8 @@
             </navigator>
             <image src="/images/me/v.png" class="v_img"></image>
         </view>
-        <!-- <view class="money">
-            <view class="RMB" bindtap="personaltap">￥</view>
-            <view class="money_num" bindtap="personaltap">{{list.money_info==null?"0":list.money_info.single_invest}}</view>
-            <view class="RMB2" bindtap="teamtap">￥</view>
-            <view class="money_num2" bindtap="teamtap">{{list.money_info==null?"0":list.money_info.team_invest}}</view>
-            <image src="/images/me/know.png"  class="know_img" bindtap='buttonTap'></image>
-        </view>
-        <view class="personal_text" bindtap="personaltap">个人推单总收益</view>
-        <view class="separate"></view>
-        <view class="team_text" bindtap="teamtap">团队贡献收益</view> -->
+        <button class="login" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" style="{{!avatar?'':'display:none'}}">去登录</button>
+
         <view class="income_part">
             <view class="income_left" bindtap="personaltap">
                 <view class="left_money">
@@ -62,13 +52,13 @@
             </view>
         </view>
     </navigator>
-    <view bindtap="ewm" class="invite">
+    <view bindtap="ewm" class="invite" style="{{!avatar?'display:none':''}}">
         <image src="/images/me/invite.png" class="invite_img"></image>
         <view class="invite_text">
             邀请经理
         </view>
     </view>
-    <view class="treasure_chest">
+    <view class="treasure_chest" style="{{!avatar?'display:none':''}}">
         开宝箱
     </view>
 
@@ -170,4 +160,13 @@
         <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
         <text>长安保存二维码，推荐给好友吧</text>
     </view>
+</view>
+<view class="bga" wx:if="{{hide2}}">
+  <view class="hq">
+    <view class="hq-nav">获取手机号码后体验更佳哦</view>
+    <view class="but">
+      <button class='pop_btna' bindtap="ret">取消</button>
+      <button class='pop_btn' plain="true" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取手机号</button>
+    </view>
+  </view>
 </view>
