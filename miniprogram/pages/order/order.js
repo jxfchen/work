@@ -76,7 +76,7 @@ Page({
               } else {
                   // console.log(2) //未授权
                   wx.redirectTo({
-                      url: '/pages/authorized_login/authorized_login',
+                      url: '/pages/me/me',
                   })
               }
           }

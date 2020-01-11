@@ -1,7 +1,6 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/authorized_login/authorized_login",
         "pages/pushteam_details/pushteam_ details",
         "pages/demo/demo",
         "pages/cjsc/cjsc",
