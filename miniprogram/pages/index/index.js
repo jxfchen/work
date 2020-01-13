@@ -236,6 +236,7 @@ Page({
         invest_code: code,
       },
         function (res) {
+          console.log(res)
           if (res.code == 2000) { 
           } else {
             //   console.log(res)
