@@ -18,6 +18,7 @@ Page({
     peoplenum: 0,
     daynum: 0,
     status: true,
+    click:0,
     roleList: [{
         name: "推荐人",
         id: 1
@@ -392,37 +393,44 @@ Page({
       })
       return false;
     }
-    c.request("pushersheet/postPusherSheet", {
-      openid: that.data.openid,
-      title: that.data.title,//标题
-      restaurant_id: that.data.code, //服务id
-      project_type_id: that.data.restaurant_id, //项目类型id
-      meals: that.data.fwid, // 餐次，价格
-      eating_num: that.data.peopleNumber, //就餐人数
-      contact: that.data.mePhone, // 联系方式
-      contact_customer: that.data.customerPhone, //客户联系方式
-      first_contact: that.data.content_id, //优先联系人
-      role: that.data.role_id, //您的角色
-      days: that.data.daynum
-    }, function(res) {
-      if (2000 == res.code) {
-        wx.showModal({
-          title: '提示',
-          showCancel: false,
-          content: res.msg || '提交成功',
-          success(res) {
-            if (res.confirm) {
-              wx.navigateBack();
+    var click=this.data.click;
+    if(click==0){
+        that.setData({
+            click: 1
+        })
+        c.request("pushersheet/postPusherSheet", {
+            openid: that.data.openid,
+            title: that.data.title,//标题
+            restaurant_id: that.data.code, //服务id
+            project_type_id: that.data.restaurant_id, //项目类型id
+            meals: that.data.fwid, // 餐次，价格
+            eating_num: that.data.peopleNumber, //就餐人数
+            contact: that.data.mePhone, // 联系方式
+            contact_customer: that.data.customerPhone, //客户联系方式
+            first_contact: that.data.content_id, //优先联系人
+            role: that.data.role_id, //您的角色
+            days: that.data.daynum
+        }, function (res) {
+            if (2000 == res.code) {
+                wx.showModal({
+                    title: '提示',
+                    showCancel: false,
+                    content: res.msg || '提交成功',
+                    success(res) {
+                        if (res.confirm) {
+                            wx.navigateBack();
+                        }
+                    }
+                })
+            } else {
+                wx.showToast({
+                    title: res.msg || '提交失败',
+                    icon: 'none'
+                })
             }
-          }
-        })
-      } else {
-        wx.showToast({
-          title: res.msg || '提交失败',
-          icon: 'none'
-        })
-      }
-    }, function() {})
+        }, function () { })
+    }
+    
   },
   wqd: function(e) {
     var that = this
@@ -488,7 +496,7 @@ Page({
       }
       if (list.is_pusher_rate == 1) {
         that.setData({
-          max_profit: list.pusher_profit / 100 * sum,
+            max_profit: (list.pusher_profit / 100 * sum).toFixed(2),
         })
       } else {
         that.setData({
@@ -518,7 +526,7 @@ Page({
       }
       if (list.is_partner_rate == 1) {
         that.setData({
-          max_profit: list.partner_max_profit / 100 * sum,
+            max_profit: (list.partner_max_profit / 100 * sum).toFixed(2),
         })
       } else {
         that.setData({

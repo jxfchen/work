@@ -152,10 +152,10 @@ Page({
                             country: res.userInfo.country,
                             language: res.userInfo.language,
                         }, function (res) {
-                            wx.switchTab({
-                                url: '/pages/index/index',
+                            var scene = app.globalData.scene;
+                            wx.reLaunch({
+                                url: '/pages/me/me?scene=' + scene,
                             })
-                            console.log(res)
                         }, function () {
                             wx.showToast({
                                 title: '加载数据失败',
@@ -169,7 +169,28 @@ Page({
     },
     // 认证判断
     rz: function(e) {
-        var that = this
+        var that = this;
+        var code = app.globalData.scene;
+        if (code != '' && code !=undefined&&code!=null){
+            var openid = wx.getStorageSync('openid')
+            c.request("index/setRecommend", {
+                openid: openid,
+                invite_code: code,
+            },
+                function (res) {
+                    if (res.code == 2000) {
+                    } else {
+                        //   console.log(res)
+                        // wx.showToast({
+                        //   title: res.msg,
+                        //   icon: 'none'
+                        // })
+                    }
+                },
+                function () {
+                    console.log('fail');
+                })
+        }
         var openid = wx.getStorageSync('openid')
         c.request("wechatuser/getAttestation1", {
             openid: openid
@@ -215,6 +236,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+        if (options == undefined){}else{
+            console.log(options);
+            if (options.scene != '' && options.scene != undefined){
+                app.globalData.scene = options.scene;
+            }
+        }
+           
         wx.getSetting({
             success: (res) => {
                 if (res.authSetting['scope.userInfo']) {

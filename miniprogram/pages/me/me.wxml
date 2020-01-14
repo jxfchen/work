@@ -52,13 +52,13 @@
             </view>
         </view>
     </navigator>
-    <view bindtap="ewm" class="invite" style="{{!avatar?'display:none':''}}">
+    <view bindtap="ewm" class="invite">
         <image src="/images/me/invite.png" class="invite_img"></image>
         <view class="invite_text">
-            邀请经理
+            邀请好友
         </view>
     </view>
-    <view class="treasure_chest" style="{{!avatar?'display:none':''}}">
+    <view class="treasure_chest">
         开宝箱
     </view>
 
@@ -158,7 +158,7 @@
     <view class="ewm-box">
         <image src="{{ewm}}" mode="widthFix" class="ewm_img" bindlongtap='saveImg'></image>
         <image src="../../images/close1.png" mode="widthFix" class="close" bindtap="close"></image>
-        <text>长安保存二维码，推荐给好友吧</text>
+        <text>长按保存二维码，推荐给好友吧</text>
     </view>
 </view>
 <view class="bga" wx:if="{{hide2}}">

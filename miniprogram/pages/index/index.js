@@ -227,13 +227,15 @@ Page({
       }
     })
 
-      
     if (options == undefined) { } else {
-      var openid = wx.getStorageSync('openid')
-      var code = options.invest_code;
+        var openid = wx.getStorageSync('openid')
+        var code = options.scene;
+        if(code !=""&&code!=null&&code!=undefined){
+            app.globalData.scene = code;
+        }
       c.request("index/setRecommend", {
         openid: openid,
-        invest_code: code,
+          invite_code: app.globalData.scene,
       },
         function (res) {
           console.log(res)
