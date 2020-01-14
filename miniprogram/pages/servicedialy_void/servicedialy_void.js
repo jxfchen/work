@@ -68,7 +68,8 @@ Page({
       wx.hideLoading();
       if (2000 == res.code) {
         res.info.article = _this.delHtmlTag(res.info.article);
-        res.info.avatarurl = res.info.avatarurl.substr(0, 7).toLowerCase() == 'http://' ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
+          res.info.avatarurl = res.info.avatarurl.substr(0, 8).toLowerCase() == 'https://' ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
+        // res.info.avatarurl = res.info.avatarurl.substr(0, 7).toLowerCase() == 'http://' ? res.info.avatarurl : baseUrl.config.image_base_url + res.info.avatarurl;
         _this.setData({
           infos: res,
           oldInfos: res,
