@@ -236,6 +236,19 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
+
+        var phone = wx.getStorageSync('phone')
+        var hide2=this.data.hide2;
+        var that=this;
+        if (!phone){
+            that.setData({
+                hide2: true,
+            })
+        }else{
+            that.setData({
+                hide2: false,
+            })
+        }
         if (options == undefined){}else{
             console.log(options);
             if (options.scene != '' && options.scene != undefined){
