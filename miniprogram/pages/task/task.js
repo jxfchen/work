@@ -155,9 +155,8 @@ Page({
     var code = that.data.code
     return {
         title: '团餐推客 ',
-        path: '/pages/index/index?invest_code=' + code
+      path: '/pages/index/index?scene=' + code
     }
-    
   },
   //   close: function(e) {
   //     var that = this

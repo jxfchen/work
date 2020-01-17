@@ -163,7 +163,7 @@ Page({
                     list = JSON.parse(list_str);
                     date.list = list;
                     self.setData(date);
-                    console.log(list);
+                  console.log(res);
                 }, function() {
                     console.log('fail');
                 })
@@ -198,9 +198,10 @@ Page({
             // 来自页面内转发按钮
         }
         var code = this.data.code;
+        console.log(code)
         return {
             title: '团餐推客',
-            path: '/pages/index/index?invest_code='+code
+          path: '/pages/index/index?scene='+code
         }
     },
     /**
