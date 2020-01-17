@@ -93,7 +93,7 @@
         <view class='li ' wx:for='{{list}}' wx:if="{{item.position=='left' || (index%2 == 0&&item.position=='center')}}" wx:key=''>
           <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
             <view class='pic_warp '>
-              <image src='https://www.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
+              <image src='https://www.infinitybuild.cn{{item.cover_img}}' mode='widthFix' bindload="imageLoadLeft" data-index='{{index}}'></image>
             </view>
           </view>
           <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
@@ -118,7 +118,7 @@
         <view class='li' wx:for='{{list}}' wx:if="{{item.position=='right' || (index%2 == 1&&item.position=='center')}}" wx:key=''>
           <view class='li_pic' bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
             <view class='pic_warp'>
-              <image src='https://www.infinitybuild.cn/{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
+              <image src='https://www.infinitybuild.cn{{item.cover_img}}' mode='widthFix' bindload="imageLoadRight" data-index='{{index}}'></image>
             </view>
           </view>
           <view class="part" bindtap="goDetail" data-sid="{{item.id}}" data-stype="{{item.is_video}}">
